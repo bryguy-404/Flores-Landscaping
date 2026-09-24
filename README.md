@@ -21,7 +21,9 @@ npm run preview
 
 ## Current phase
 
-The homepage includes responsive navigation, a manually controlled photo hero, a horizontally scrolling service list, a keyboard-accessible project photo dialog, native FAQ accordions, reduced-motion support, and call/text/email links. All navigation stays on the homepage. The only other route is the 404 page.
+The homepage includes responsive navigation, an automatically rotating photo hero, a horizontally scrolling service carousel, a keyboard-accessible project photo dialog, native FAQ accordions, reduced-motion support, and call/text/email links. All navigation stays on the homepage. The only other route is the 404 page.
+
+The hero and services advance every five seconds while visible. Services reverse direction at the ends to avoid a long reset jump. Both have pause/play controls, pause during pointer interaction and while the tab is hidden, and stop on keyboard/manual focus until Play is pressed. Reduced-motion preferences disable automatic rotation and reveal motion while keeping manual navigation available. The page uses staggered, eased scroll reveals and gentle hero crossfades/zoom without an animation dependency.
 
 The design follows the supplied Lawnella reference’s two-level header, Nunito headings, Poppins text, full-width photo hero, overlapping property cards, service cards, dark feature band, and split contact section. Flores’s red, black, and white palette replaces the reference’s green. Reference-site awards, reviews, blog posts, counters, and contact details have not been copied.
 
@@ -77,7 +79,8 @@ Service areas, experience, licensing/insurance, free estimates, email, and both 
 
 ## Editing guide
 
-- `src/pages/index.astro`: homepage sections, service/project data, and small interactions.
+- `src/pages/index.astro`: homepage sections, service/project data, and gallery interactions.
+- `src/scripts/home-motion.ts`: autoplay, pause behavior, and staggered scroll reveals.
 - `src/styles/global.css`: visual tokens, layouts, motion, and responsive breakpoints.
 - `src/components/Header.astro` / `Footer.astro`: shared navigation and contact details.
 - `src/layouts/BaseLayout.astro`: fonts, metadata, and local-business structured data.

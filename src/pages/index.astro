@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, TreePine, Leaf, Sprout, House, Building, BadgeCheck, Phone, Mail, MapPin, Check, Flower2, Snowflake, Scissors, Shovel, Users, X, Plus } from '@lucide/astro';
+import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, TreePine, Leaf, Sprout, House, Building, BadgeCheck, Phone, Mail, MapPin, Check, Flower2, Snowflake, Scissors, Shovel, Users, X, Plus, Pause, Play } from '@lucide/astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -46,7 +46,7 @@ const faqs = [
   <Header />
   <main id="main">
     <section class="hero" aria-labelledby="hero-title" aria-roledescription="carousel" aria-label="Flores landscaping photos">
-      <div class="hero-images">
+      <div class="hero-images" id="hero-images" aria-live="off">
         <Image class="hero-image hero-image-hedge is-active" src={hedgeHero} alt="A landscaper carefully trimming a hedge" widths={[640, 960, 1440, 1920]} sizes="100vw" width={1920} format="webp" loading="eager" fetchpriority="high" />
         <Image class="hero-image" src={hero} alt="A freshly mowed Flores Landscaping lawn framed by mature trees" widths={[640, 960, 1440, 1920]} sizes="100vw" width={1920} format="webp" loading="lazy" aria-hidden="true" />
         <Image class="hero-image" src={beds} alt="Professionally maintained shrubs and landscape beds" widths={[640, 960, 1440, 1920]} sizes="100vw" width={1920} format="webp" loading="lazy" aria-hidden="true" />
@@ -68,13 +68,16 @@ const faqs = [
       <button class="hero-arrow hero-next" aria-label="Next landscape photo"><ChevronRight aria-hidden="true" /></button>
       <div class="container hero-bottom">
         <span class="hero-caption">LOCAL ROOTS. LASTING BEAUTY.</span>
-        <div class="hero-dots" role="group" aria-label="Choose landscape photo">
-          {[0, 1, 2, 3].map(i => <button class:list={[{ 'is-active': i === 0 }]} aria-label={`Show landscape photo ${i + 1}`} aria-pressed={i === 0} data-slide={i}></button>)}
+        <div class="hero-playback">
+          <div class="hero-dots" role="group" aria-label="Choose landscape photo">
+            {[0, 1, 2, 3].map(i => <button class:list={[{ 'is-active': i === 0 }]} aria-label={`Show landscape photo ${i + 1}`} aria-pressed={i === 0} data-slide={i}></button>)}
+          </div>
+          <button id="hero-autoplay" class="autoplay-toggle" aria-label="Pause hero slideshow" aria-controls="hero-images" data-carousel-label="hero slideshow" hidden><Pause class="pause-icon" size={14} aria-hidden="true" /><Play class="play-icon" size={14} aria-hidden="true" /></button>
         </div>
       </div>
     </section>
 
-    <section class="property-services container" aria-label="Residential and commercial landscaping">
+    <section class="property-services container" aria-label="Residential and commercial landscaping" data-reveal-group>
       <a class="property-card" href="#contact">
         <div class="property-label"><House size={43} stroke-width={1.25} aria-hidden="true" /><h2>Residential<br />Services</h2><span>GET IN TOUCH <ArrowUpRight size={18} aria-hidden="true" /></span></div>
         <Image src={beds} alt="Well-maintained landscaping in front of a home" width={600} height={350} format="webp" loading="lazy" />
@@ -93,7 +96,7 @@ const faqs = [
           <div class="experience-badge"><strong>20<span>+</span></strong><span>YEARS OF<br />HANDS-ON CARE</span></div>
           <span class="image-footnote">A little pride in every detail.</span>
         </div>
-        <div class="about-copy reveal">
+        <div class="about-copy reveal" style="--reveal-delay: 100ms">
           <div class="eyebrow"><Leaf size={19} aria-hidden="true" /> ABOUT FLORES LANDSCAPING</div>
           <h2>Your yard.<br />Our family’s <em>pride.</em></h2>
           <p class="lead">Good landscaping starts with people who care.</p>
@@ -111,21 +114,21 @@ const faqs = [
     <section id="services" class="services-section section-pad">
       <div class="container">
         <div class="section-heading reveal"><div class="eyebrow"><Leaf size={19} aria-hidden="true" /> A LITTLE CARE. A BIG DIFFERENCE.</div><h2>Good things grow<br />with the right <em>care.</em></h2><p>Everything your outdoor space needs, from the ground up.</p></div>
-        <div class="service-carousel">
-          <div class="service-track" id="service-track" tabindex="0" role="region" aria-label="Landscaping services; scroll to see more">
+        <div class="service-carousel reveal">
+          <div class="service-track" id="service-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Landscaping services" aria-live="off">
             {services.map(({ icon: Icon, ...service }, i) => <article class="service-card">
               <div class="service-photo"><Image src={service.image} alt={service.alt} width={700} height={510} format="webp" loading="lazy" /><span class="service-icon"><Icon size={30} stroke-width={1.5} aria-hidden="true" /></span><span class="service-number">0{i + 1}</span></div>
               <div class="service-content"><h3>{service.title}</h3><p>{service.description}</p><a href="#contact" class="text-link">LET’S GET STARTED <ArrowUpRight size={18} aria-hidden="true" /></a></div>
             </article>)}
           </div>
         </div>
-        <div class="service-controls"><span>Lawn care to seasonal cleanups. We’ve got you covered.</span><div class="flex gap-2"><button class="circle-button" id="service-prev" aria-label="Previous services" aria-controls="service-track"><ChevronLeft size={20} aria-hidden="true" /></button><button class="circle-button" id="service-next" aria-label="Next services" aria-controls="service-track"><ChevronRight size={20} aria-hidden="true" /></button></div></div>
+        <div class="service-controls"><span>Lawn care to seasonal cleanups. We’ve got you covered.</span><div class="service-playback flex gap-2"><button id="services-autoplay" class="circle-button autoplay-toggle" aria-label="Pause services carousel" aria-controls="service-track" data-carousel-label="services carousel" hidden><Pause class="pause-icon" size={16} aria-hidden="true" /><Play class="play-icon" size={16} aria-hidden="true" /></button><button class="circle-button" id="service-prev" aria-label="Previous services" aria-controls="service-track"><ChevronLeft size={20} aria-hidden="true" /></button><button class="circle-button" id="service-next" aria-label="Next services" aria-controls="service-track"><ChevronRight size={20} aria-hidden="true" /></button></div></div>
       </div>
     </section>
 
     <section id="projects" class="projects-section section-pad">
       <div class="container projects-heading reveal"><div><div class="eyebrow"><Leaf size={19} aria-hidden="true" /> A FEW OF OUR FAVORITES</div><h2>Real yards.<br /><em>Real transformations.</em></h2></div><p>There’s no better introduction than our work.<br />Take a look around some spaces we’ve cared for.</p></div>
-      <div class="project-grid">
+      <div class="project-grid" data-reveal-group>
         {projects.map((project, i) => <button class="project-card" data-project={i} aria-label={`View project: ${project.title}`}>
           <Image src={project.image} alt={project.alt} width={1000} height={800} format="webp" loading="lazy" />
           <span class="project-overlay"><span><small>{project.category}</small><strong>{project.title}</strong></span><span class="project-open"><Plus size={25} aria-hidden="true" /></span></span>
@@ -134,7 +137,7 @@ const faqs = [
     </section>
 
     <section class="promise-band" aria-label="The Flores difference">
-      <div class="container promise-grid">
+      <div class="container promise-grid" data-reveal-group>
         <div><TreePine size={39} stroke-width={1.3} aria-hidden="true" /><strong>20<span>+</span></strong><span>Years of experience</span></div>
         <div><Users size={39} stroke-width={1.3} aria-hidden="true" /><strong>Family</strong><span>Owned & operated</span></div>
         <div><BadgeCheck size={39} stroke-width={1.3} aria-hidden="true" /><strong>Local</strong><span>Care you can count on</span></div>
@@ -145,13 +148,13 @@ const faqs = [
     <section id="faq" class="faq-section section-pad">
       <div class="container faq-grid">
         <div class="reveal"><div class="eyebrow"><Leaf size={19} aria-hidden="true" /> GOOD TO KNOW</div><h2>A few questions,<br /><em>before we grow.</em></h2><p>Getting started should feel easy. Here are a few things you might be wondering.</p><a class="text-link" href="tel:+15743866078">WE’RE ALWAYS HAPPY TO HELP <ArrowUpRight size={20} aria-hidden="true" /></a></div>
-        <div class="faq-list reveal">{faqs.map((faq, i) => <details name="faq" open={i === 0}><summary>{faq.q}<Plus size={21} aria-hidden="true" /></summary><p>{faq.a}</p></details>)}</div>
+        <div class="faq-list reveal" style="--reveal-delay: 100ms">{faqs.map((faq, i) => <details name="faq" open={i === 0}><summary>{faq.q}<Plus size={21} aria-hidden="true" /></summary><p>{faq.a}</p></details>)}</div>
       </div>
     </section>
 
     <section id="contact" class="contact-section">
-      <div class="contact-image"><Image src={flowers} alt="A beautifully planted flower bed with red and pink blooms" width={1200} height={1200} format="webp" loading="lazy" /><div><div class="eyebrow">LET’S MAKE SOMETHING BEAUTIFUL</div><h2>A better yard<br />starts with<br />a <em>hello.</em></h2><p>Tell us what you have in mind.<br />We’ll take it from there.</p></div></div>
-      <div class="contact-content">
+      <div class="contact-image"><Image src={flowers} alt="A beautifully planted flower bed with red and pink blooms" width={1200} height={1200} format="webp" loading="lazy" /><div class="reveal"><div class="eyebrow">LET’S MAKE SOMETHING BEAUTIFUL</div><h2>A better yard<br />starts with<br />a <em>hello.</em></h2><p>Tell us what you have in mind.<br />We’ll take it from there.</p></div></div>
+      <div class="contact-content reveal" style="--reveal-delay: 100ms">
         <span class="eyebrow">YOUR NEXT CHAPTER STARTS OUTSIDE</span><h2>Let’s talk about<br />your outdoor space.</h2><p>From regular lawn care to a fresh start for your landscape, we’d love to help. Call or text for your free estimate.</p>
         <a class="contact-phone" href="tel:+15743866078"><span><Phone size={27} stroke-width={1.5} aria-hidden="true" /></span><div><small>CALL OR TEXT OUR TEAM</small><strong>(574) 386-6078</strong></div><ArrowUpRight size={24} aria-hidden="true" /></a>
         <div class="contact-actions"><a class="button button-red" href="sms:+15743866078">TEXT US ABOUT YOUR PROJECT <ArrowUpRight size={17} aria-hidden="true" /></a><a class="contact-email" href="mailto:floreslandscaping098@gmail.com"><Mail size={18} aria-hidden="true" /> Prefer email? Let’s talk.</a></div>
@@ -171,45 +174,7 @@ const faqs = [
   </dialog>
 
   <script>
-    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-    const revealElements = document.querySelectorAll<HTMLElement>('.reveal');
-    if (!reducedMotion.matches && 'IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } });
-      }, { threshold: 0.12 });
-      revealElements.forEach(el => { el.classList.add('will-reveal'); observer.observe(el); });
-    }
-
-    const heroImages = document.querySelectorAll<HTMLImageElement>('.hero-image');
-    const heroDots = document.querySelectorAll<HTMLButtonElement>('[data-slide]');
-    let currentSlide = 0;
-    function showSlide(index: number) {
-      currentSlide = (index + heroImages.length) % heroImages.length;
-      heroImages.forEach((img, i) => { img.classList.toggle('is-active', i === currentSlide); img.setAttribute('aria-hidden', String(i !== currentSlide)); });
-      heroDots.forEach((dot, i) => { dot.classList.toggle('is-active', i === currentSlide); dot.setAttribute('aria-pressed', String(i === currentSlide)); });
-    }
-    heroDots.forEach(dot => dot.addEventListener('click', () => showSlide(Number(dot.dataset.slide))));
-    document.querySelector('.hero-prev')?.addEventListener('click', () => showSlide(currentSlide - 1));
-    document.querySelector('.hero-next')?.addEventListener('click', () => showSlide(currentSlide + 1));
-
-    const serviceTrack = document.querySelector<HTMLElement>('#service-track');
-    const previousServices = document.querySelector<HTMLButtonElement>('#service-prev');
-    const nextServices = document.querySelector<HTMLButtonElement>('#service-next');
-    function updateServiceButtons() {
-      if (!serviceTrack || !previousServices || !nextServices) return;
-      previousServices.disabled = serviceTrack.scrollLeft < 5;
-      nextServices.disabled = serviceTrack.scrollLeft >= serviceTrack.scrollWidth - serviceTrack.clientWidth - 5;
-    }
-    function moveServices(direction: number) {
-      if (!serviceTrack) return;
-      const card = serviceTrack.querySelector<HTMLElement>('.service-card');
-      serviceTrack.scrollBy({ left: direction * ((card?.offsetWidth ?? 350) + 26), behavior: reducedMotion.matches ? 'instant' : 'smooth' });
-    }
-    previousServices?.addEventListener('click', () => moveServices(-1));
-    nextServices?.addEventListener('click', () => moveServices(1));
-    serviceTrack?.addEventListener('scroll', updateServiceButtons, { passive: true });
-    if (serviceTrack) new ResizeObserver(updateServiceButtons).observe(serviceTrack);
-    updateServiceButtons();
+    import '../scripts/home-motion';
 
     const projectCards = document.querySelectorAll<HTMLButtonElement>('[data-project]');
     const dialog = document.querySelector<HTMLDialogElement>('#project-dialog');
