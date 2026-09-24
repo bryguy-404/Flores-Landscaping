@@ -47,5 +47,10 @@
     "source": "User-provided file: imgi_22_hedge+.jpg",
     "providedBy": "User",
     "usage": "First hero slide"
+  },
+  "front-yard-before-after": {
+    "source": "https://images.squarespace-cdn.com/content/v1/685b534c6e81813d7aee78df/b63eafba-eff9-4a29-9116-b55737b72607/Beige+Minimalist+Beauty+Before+After+Collage+Instagram+Post.png",
+    "page": "https://www.flores-landscaping-llc.com/",
+    "usage": "First before-and-after project. Source collage preserved; CSS windows show the top (before) and bottom (after) photos. Download returned WebP. No generated landscaping or changes to the photographed results."
   }
 }

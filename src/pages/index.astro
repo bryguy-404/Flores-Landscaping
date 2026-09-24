@@ -4,6 +4,8 @@ import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, TreePine, Leaf, Sp
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ProjectComparison from '../components/ProjectComparison.astro';
+import frontYardComparison from '../assets/front-yard-before-after.webp';
 import hero from '../assets/lawn-stripes.jpg';
 import hedgeHero from '../assets/hedge-hero.jpg';
 import beds from '../assets/landscape-beds.jpg';
@@ -14,8 +16,6 @@ import sod from '../assets/sod-installation.jpg';
 import snow from '../assets/snow-removal.jpg';
 import trimming from '../assets/trimming.jpg';
 import garden from '../assets/garden-bed.jpg';
-import edging from '../assets/stone-edging.jpg';
-import backyard from '../assets/backyard.jpg';
 
 const services = [
   { title: 'Lawn Care', description: 'Fresh cuts, crisp edges, and a lawn you’ll love coming home to.', image: lawn, alt: 'Freshly mowed lawn with even stripes', icon: Leaf },
@@ -25,14 +25,6 @@ const services = [
   { title: 'Spring & Fall Cleanup', description: 'A little seasonal care goes a long way toward a beautiful yard.', image: garden, alt: 'Freshly maintained planting bed in a green lawn', icon: Shovel },
   { title: 'Trimming', description: 'Neat hedges and carefully shaped shrubs, season after season.', image: trimming, alt: 'Hedge trimming with a powered trimmer', icon: Scissors },
   { title: 'Snow Plowing', description: 'Keep your property accessible when winter weather rolls in.', image: snow, alt: 'Snow removal equipment working on a snowy property', icon: Snowflake },
-];
-const projects = [
-  { image: beds, title: 'A welcoming first impression', category: 'Landscaping', alt: 'Neatly shaped shrubs, stone beds and lawn in front of a home' },
-  { image: mulch, title: 'Beautiful down to the details', category: 'Mulch & garden beds', alt: 'Red mulch and white stone borders surrounding mature trees' },
-  { image: lawn, title: 'A greener everyday', category: 'Lawn care', alt: 'Fresh parallel mowing stripes across a green residential lawn' },
-  { image: edging, title: 'Room for something beautiful', category: 'Landscape maintenance', alt: 'Stone border curving around trimmed shrubs and a lawn' },
-  { image: flowers, title: 'Color around every corner', category: 'Planting', alt: 'Red and pink flowers beside a driveway and evergreen shrubs' },
-  { image: backyard, title: 'Your own backyard retreat', category: 'Garden beds', alt: 'Maintained stone garden bed beside a residential deck' },
 ];
 const faqs = [
   { q: 'What areas do you serve?', a: 'We serve residential and commercial properties in South Bend, Mishawaka, Granger, and Osceola. If you’re nearby and aren’t sure whether we cover your area, give us a call or send us a text.' },
@@ -126,13 +118,23 @@ const faqs = [
       </div>
     </section>
 
-    <section id="projects" class="projects-section section-pad">
-      <div class="container projects-heading reveal"><div><div class="eyebrow"><Leaf size={19} aria-hidden="true" /> A FEW OF OUR FAVORITES</div><h2>Real yards.<br /><em>Real transformations.</em></h2></div><p>There’s no better introduction than our work.<br />Take a look around some spaces we’ve cared for.</p></div>
-      <div class="project-grid" data-reveal-group>
-        {projects.map((project, i) => <button class="project-card" data-project={i} aria-label={`View project: ${project.title}`}>
-          <Image src={project.image} alt={project.alt} width={1000} height={800} format="webp" loading="lazy" />
-          <span class="project-overlay"><span><small>{project.category}</small><strong>{project.title}</strong></span><span class="project-open"><Plus size={25} aria-hidden="true" /></span></span>
-        </button>)}
+    <section id="projects" class="projects-section section-pad" aria-labelledby="projects-title">
+      <div class="container projects-heading reveal"><div><div class="eyebrow"><Leaf size={19} aria-hidden="true" /> A LITTLE BEFORE. A BEAUTIFUL AFTER.</div><h2 id="projects-title">Real yards.<br /><em>Real transformations.</em></h2></div><p>See the difference a little care and craftsmanship can make, one outdoor space at a time.</p></div>
+      <div class="project-grid reveal" id="project-track" role="region" aria-label="Before-and-after projects" tabindex="0">
+        <ProjectComparison id="front-yard" title="A fresh start out front" category="Landscaping & garden beds" before={frontYardComparison} after={frontYardComparison} beforeAlt="Before: overgrown planting beds in front of a brick home" afterAlt="After: refreshed stone beds and neatly spaced shrubs at the same home" collage />
+        {[{ number: '02', icon: Sprout }, { number: '03', icon: TreePine }].map(({ number, icon: Icon }) => <article class="project-card project-placeholder" aria-label={`Project ${number}: before-and-after photos coming soon`}>
+          <div class="comparison-stage">
+            <div class="placeholder-halves" aria-hidden="true"></div>
+            <div class="comparison-labels" aria-hidden="true"><span>BEFORE</span><span>AFTER</span></div>
+            <div class="placeholder-art" aria-hidden="true"><Icon size={64} stroke-width={1} /></div>
+            <div class="project-overlay"><div><small>Project {number} · Coming soon</small><h3>More beauty<br />in the making.</h3></div></div>
+          </div>
+          <div class="placeholder-footer">Before & after photos coming soon</div>
+        </article>)}
+      </div>
+      <div class="project-navigation container" hidden>
+        <span>Swipe to explore <span id="project-count" aria-live="polite" aria-atomic="true">01 / 03</span></span>
+        <div class="flex gap-2"><button class="circle-button" id="project-prev" aria-label="Previous transformation" aria-controls="project-track"><ChevronLeft size={20} aria-hidden="true" /></button><button class="circle-button" id="project-next" aria-label="Next transformation" aria-controls="project-track"><ChevronRight size={20} aria-hidden="true" /></button></div>
       </div>
     </section>
 
@@ -169,39 +171,14 @@ const faqs = [
     <div class="lightbox-shell">
       <button class="lightbox-close circle-button" aria-label="Close project photo"><X size={24} aria-hidden="true" /></button>
       <img id="project-dialog-image" src="" alt="" />
-      <div class="lightbox-caption"><div><p id="project-dialog-category"></p><h2 id="project-dialog-title"></h2></div><div class="flex gap-2"><button class="circle-button" id="project-prev" aria-label="Previous project"><ChevronLeft aria-hidden="true" /></button><button class="circle-button" id="project-next" aria-label="Next project"><ChevronRight aria-hidden="true" /></button></div></div>
+      <div class="lightbox-caption"><div><p id="project-dialog-category"></p><h2 id="project-dialog-title"></h2></div></div>
     </div>
   </dialog>
 
   <script>
     import '../scripts/home-motion';
 
-    const projectCards = document.querySelectorAll<HTMLButtonElement>('[data-project]');
-    const dialog = document.querySelector<HTMLDialogElement>('#project-dialog');
-    let currentProject = 0;
-    function updateProject(index: number) {
-      currentProject = (index + projectCards.length) % projectCards.length;
-      const card = projectCards[currentProject];
-      const source = card.querySelector('img');
-      const target = document.querySelector<HTMLImageElement>('#project-dialog-image');
-      if (!target || !source) return;
-      target.src = source.currentSrc || source.src;
-      target.alt = source.alt;
-      document.querySelector('#project-dialog-title')!.textContent = card.querySelector('strong')!.textContent;
-      document.querySelector('#project-dialog-category')!.textContent = card.querySelector('small')!.textContent;
-    }
-    projectCards.forEach((card, i) => card.addEventListener('click', () => {
-      updateProject(i); dialog?.showModal(); document.body.classList.add('dialog-open');
-    }));
-    document.querySelector('.lightbox-close')?.addEventListener('click', () => dialog?.close());
-    dialog?.addEventListener('close', () => document.body.classList.remove('dialog-open'));
-    dialog?.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
-    document.querySelector('#project-prev')?.addEventListener('click', () => updateProject(currentProject - 1));
-    document.querySelector('#project-next')?.addEventListener('click', () => updateProject(currentProject + 1));
-    dialog?.addEventListener('keydown', event => {
-      if (event.key === 'ArrowRight') { event.preventDefault(); updateProject(currentProject + 1); }
-      if (event.key === 'ArrowLeft') { event.preventDefault(); updateProject(currentProject - 1); }
-    });
+    import '../scripts/project-comparisons';
 
     const sectionLinks = document.querySelectorAll<HTMLAnchorElement>('.desktop-nav a');
     const navObserver = new IntersectionObserver(entries => {

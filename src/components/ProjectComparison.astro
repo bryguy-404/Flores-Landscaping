@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { ChevronLeft, ChevronRight, Expand } from '@lucide/astro';
+
+interface Props {
+  id: string;
+  title: string;
+  category: string;
+  before: ImageMetadata;
+  after: ImageMetadata;
+  beforeAlt: string;
+  afterAlt: string;
+  collage?: boolean;
+}
+
+const { id, title, category, before, after, beforeAlt, afterAlt, collage = false } = Astro.props;
+---
+<article class="project-card comparison-card" data-comparison aria-labelledby={`${id}-title`}>
+  <div class="comparison-stage" id={`${id}-images`}>
+    <div class="comparison-layer comparison-after">
+      <Image class:list={['comparison-photo', { 'collage-after': collage }]} src={after} alt={afterAlt} width={1080} format="webp" loading="lazy" />
+    </div>
+    <div class="comparison-layer comparison-before">
+      <Image class:list={['comparison-photo', { 'collage-before': collage }]} src={before} alt={beforeAlt} width={1080} format="webp" loading="lazy" />
+    </div>
+    <div class="comparison-labels" aria-hidden="true"><span>BEFORE</span><span>AFTER</span></div>
+    <div class="comparison-divider" aria-hidden="true"><span><ChevronLeft size={16} /><ChevronRight size={16} /></span></div>
+    <input class="comparison-range" type="range" min="0" max="100" value="50" aria-label={`Compare before and after: ${title}`} aria-valuetext="Before 50%, after 50%" aria-controls={`${id}-images`} hidden />
+    <div class="project-overlay"><div><small>{category}</small><h3 id={`${id}-title`}>{title}</h3></div>
+      {collage && <button class="project-open" data-project-image aria-label={`Enlarge before and after: ${title}`}><Expand size={19} aria-hidden="true" /></button>}
+    </div>
+  </div>
+  <div class="comparison-toolbar" hidden>
+    <span class="comparison-hint">Drag to see the difference</span>
+    <div class="comparison-toggle" role="group" aria-label={`View ${title}`}>
+      <button type="button" data-comparison-view="before" aria-pressed="false" aria-controls={`${id}-images`}>Before</button>
+      <button type="button" data-comparison-view="after" aria-pressed="false" aria-controls={`${id}-images`}>After</button>
+    </div>
+  </div>
+</article>

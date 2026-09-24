@@ -21,13 +21,15 @@ npm run preview
 
 ## Current phase
 
-The homepage includes responsive navigation, an automatically rotating photo hero, a horizontally scrolling service carousel, a keyboard-accessible project photo dialog, native FAQ accordions, reduced-motion support, and call/text/email links. All navigation stays on the homepage. The only other route is the 404 page.
+The homepage includes responsive navigation, an automatically rotating photo hero, a horizontally scrolling service carousel, a before-and-after project section with a keyboard-accessible original-photo dialog, native FAQ accordions, reduced-motion support, and call/text/email links. All navigation stays on the homepage. The only other route is the 404 page.
 
 The hero and services advance every five seconds while visible. Services reverse direction at the ends to avoid a long reset jump. Both have pause/play controls, pause during pointer interaction and while the tab is hidden, and stop on keyboard/manual focus until Play is pressed. Reduced-motion preferences disable automatic rotation and reveal motion while keeping manual navigation available. The page uses staggered, eased scroll reveals and gentle hero crossfades/zoom without an animation dependency.
 
 The design follows the supplied Lawnella reference’s two-level header, Nunito headings, Poppins text, full-width photo hero, overlapping property cards, service cards, dark feature band, and split contact section. Flores’s red, black, and white palette replaces the reference’s green. Reference-site awards, reviews, blog posts, counters, and contact details have not been copied.
 
 The estimate form and email delivery are intentionally deferred. The contact section currently opens real phone, SMS, and email links; it does not pretend to submit a form.
+
+The projects section previews three transformations: one real front-yard before/after collage from the current site, plus two explicitly labeled photo placeholders. Desktop uses a keyboard-accessible comparison slider. Tablet and phone show swipeable cards with Before/After buttons for the real project and previous/next navigation. This section never auto-advances. Replace the placeholders with approved matching pairs before the production content review.
 
 ## Packages
 
@@ -79,7 +81,9 @@ Service areas, experience, licensing/insurance, free estimates, email, and both 
 
 ## Editing guide
 
-- `src/pages/index.astro`: homepage sections, service/project data, and gallery interactions.
+- `src/pages/index.astro`: homepage sections, service data, the real comparison, and two project placeholders.
+- `src/components/ProjectComparison.astro`: reusable before/after card. Supply separate `before` and `after` image imports, descriptive alt text, a unique `id`, title, and category for each new project; omit `collage` for separate photos. Replace a placeholder article with this component.
+- `src/scripts/project-comparisons.ts`: accessible comparison controls, compact project navigation, and the original-collage dialog.
 - `src/scripts/home-motion.ts`: autoplay, pause behavior, and staggered scroll reveals.
 - `src/styles/global.css`: visual tokens, layouts, motion, and responsive breakpoints.
 - `src/components/Header.astro` / `Footer.astro`: shared navigation and contact details.
