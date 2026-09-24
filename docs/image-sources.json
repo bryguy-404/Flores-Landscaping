@@ -1,0 +1,51 @@
+{
+  "lawn-stripes": {
+    "source": "https://images.squarespace-cdn.com/content/v1/685b534c6e81813d7aee78df/2842e812-242f-47af-b463-5399676fc53d/IMG_3102.jpeg",
+    "page": "https://www.flores-landscaping-llc.com/"
+  },
+  "landscape-beds": {
+    "source": "https://images.squarespace-cdn.com/content/v1/685b534c6e81813d7aee78df/1338d835-c31b-4f91-945a-9fbfd2326d9d/IMG_7620.jpeg",
+    "page": "https://www.flores-landscaping-llc.com/"
+  },
+  "flower-garden": {
+    "source": "https://images.squarespace-cdn.com/content/v1/685b534c6e81813d7aee78df/14621b77-f985-4e33-a9df-18106a9b2106/IMG_3907.jpeg",
+    "page": "https://www.flores-landscaping-llc.com/"
+  },
+  "lawn-care": {
+    "source": "https://images.squarespace-cdn.com/content/v1/685b534c6e81813d7aee78df/fd5e17b2-3ed3-43e2-abe8-0dbf2185d46d/IMG_2097.jpeg",
+    "page": "https://www.flores-landscaping-llc.com/"
+  },
+  "mulch": {
+    "source": "https://images.squarespace-cdn.com/content/v1/685b534c6e81813d7aee78df/57c6b7f2-afcc-44d5-953c-fce9578592bc/IMG_2989.jpeg",
+    "page": "https://www.flores-landscaping-llc.com/"
+  },
+  "snow-removal": {
+    "source": "https://images.squarespace-cdn.com/content/v1/685b534c6e81813d7aee78df/1f679c48-954a-4b5b-857b-c055abe0bedb/D7795892-FECC-49F8-A41A-59D9C93D44FB_1_102_o.jpeg",
+    "page": "https://www.flores-landscaping-llc.com/"
+  },
+  "sod-installation": {
+    "source": "https://images.squarespace-cdn.com/content/v1/685b534c6e81813d7aee78df/84c41481-3639-456f-8390-cfb2845b5936/2FDF9C31-5495-418E-9F66-C8B896F7524D.jpeg",
+    "page": "https://www.flores-landscaping-llc.com/"
+  },
+  "trimming": {
+    "source": "https://images.squarespace-cdn.com/content/v1/685b534c6e81813d7aee78df/7cceab0e-ddb2-41d8-890f-5de8dd3ecde1/hedge+.jpeg",
+    "page": "https://www.flores-landscaping-llc.com/"
+  },
+  "garden-bed": {
+    "source": "https://images.squarespace-cdn.com/content/v1/685b534c6e81813d7aee78df/3ea2c214-3a05-4c26-b5d1-85a0ae5a8351/IMG_3267.jpeg",
+    "page": "https://www.flores-landscaping-llc.com/"
+  },
+  "stone-edging": {
+    "source": "https://images.squarespace-cdn.com/content/v1/685b534c6e81813d7aee78df/90513785-2aa2-4691-be3f-cde69c994eef/IMG_7608.jpeg",
+    "page": "https://www.flores-landscaping-llc.com/"
+  },
+  "backyard": {
+    "source": "https://images.squarespace-cdn.com/content/v1/685b534c6e81813d7aee78df/aa9cd516-1df2-4842-8080-5621e13c90b6/IMG_8008+4.jpeg",
+    "page": "https://www.flores-landscaping-llc.com/"
+  },
+  "hedge-hero": {
+    "source": "User-provided file: imgi_22_hedge+.jpg",
+    "providedBy": "User",
+    "usage": "First hero slide"
+  }
+}

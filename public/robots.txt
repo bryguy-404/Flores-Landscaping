@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.flores-landscaping-llc.com/sitemap-index.xml

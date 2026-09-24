@@ -1,0 +1,44 @@
+---
+import '@fontsource-variable/nunito';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '../styles/global.css';
+
+interface Props { title?: string; description?: string; }
+const {
+  title = 'Flores Landscaping | Lawn Care & Landscaping in South Bend, IN',
+  description = 'Family-owned landscaping with over 20 years of experience. Lawn care, planting, mulch, sod, seasonal cleanups, and snow plowing in South Bend and surrounding communities. Free estimates.',
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const business = {
+  '@context': 'https://schema.org',
+  '@type': 'LandscapingBusiness',
+  name: 'Flores Landscaping LLC',
+  url: Astro.site?.toString(),
+  telephone: '+1-574-386-6078',
+  email: 'floreslandscaping098@gmail.com',
+  areaServed: ['South Bend', 'Mishawaka', 'Granger', 'Osceola'],
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#c81022" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(business)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <slot />
+  </body>
+</html>

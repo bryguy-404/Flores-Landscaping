@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+import { MapPin, Phone, ArrowUpRight, Menu, X } from '@lucide/astro';
+import logo from '../assets/flores-logo-transparent.png';
+const links = [['Home', '#home'], ['About Us', '#about'], ['Our Services', '#services'], ['Our Work', '#projects'], ['Contact', '#contact']];
+---
+<div class="topbar">
+  <div class="container flex items-center justify-between gap-4">
+    <span class="flex items-center gap-2"><MapPin size={16} aria-hidden="true" /> Proudly serving South Bend & surrounding communities</span>
+    <a href="#contact" class="topbar-quote">Let’s bring your outdoor space to life <ArrowUpRight size={15} aria-hidden="true" /></a>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#home" aria-label="Flores Landscaping home">
+      <Image src={logo} alt="Flores Landscaping" width={480} format="webp" loading="eager" />
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      {links.map(([label, href], i) => <a href={href} class:list={[{ active: i === 0 }]}>{label}</a>)}
+    </nav>
+    <a class="header-phone" href="tel:+15743866078">
+      <span class="phone-icon"><Phone size={23} stroke-width={1.5} aria-hidden="true" /></span>
+      <span><small>CALL FOR A FREE ESTIMATE</small><strong>(574) 386-6078</strong></span>
+    </a>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Open navigation menu" aria-controls="mobile-nav" aria-expanded="false">
+      <Menu class="menu-open-icon" aria-hidden="true" /><X class="menu-close-icon" aria-hidden="true" />
+    </button>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
+    {links.map(([label, href]) => <a href={href}>{label}<ArrowUpRight size={18} aria-hidden="true" /></a>)}
+    <a class="mobile-call" href="tel:+15743866078"><Phone size={18} aria-hidden="true" /> (574) 386-6078</a>
+  </nav>
+</header>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('#menu-toggle');
+  const nav = document.querySelector<HTMLElement>('#mobile-nav');
+  function closeMenu() {
+    if (!toggle || !nav) return;
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open navigation menu');
+    nav.hidden = true;
+  }
+  toggle?.addEventListener('click', () => {
+    if (!nav) return;
+    const opening = toggle.getAttribute('aria-expanded') !== 'true';
+    toggle.setAttribute('aria-expanded', String(opening));
+    toggle.setAttribute('aria-label', opening ? 'Close navigation menu' : 'Open navigation menu');
+    nav.hidden = !opening;
+  });
+  nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') {
+      closeMenu(); toggle.focus();
+    }
+  });
+  document.addEventListener('click', event => {
+    if (event.target instanceof Node && !document.querySelector('.site-header')?.contains(event.target)) closeMenu();
+  });
+  matchMedia('(min-width: 1024px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+</script>
