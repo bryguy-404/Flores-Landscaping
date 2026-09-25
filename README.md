@@ -87,6 +87,8 @@ The supplied original logo is preserved in `src/assets/flores-logo.png` and rema
 
 Initial photos were selected from the existing Flores website with the user’s permission; URLs are recorded in `docs/image-sources.json`. The client supplied 83 additional photos in six batches. A review selected 40 unique source files for web use, including the two originals replacing the existing collage. `docs/photo-review/placements.json` maps each selection to its original filename and placement; the original Desktop folders are untouched. Web copies under `src/assets/client/` are resized with metadata removed. The inspection sheets and catalog under `docs/photo-review/` are not part of the public build. The site generates optimized WebP files at build time. Confirm the rights to any third-party-looking images, particularly the trimming photograph, before launch.
 
+The separately supplied `IMG_8128.jpeg` replaces the homepage Lawn Care card photo. Its source and checksum are recorded in `docs/image-sources.json`; it is additional to the six-batch review above.
+
 Service areas, experience, licensing/insurance, free estimates, email, and both phone numbers come from the existing business website. The logo’s phone number is used as primary. New prose is based on those facts and should be reviewed by the business before launch.
 
 ## Editing guide

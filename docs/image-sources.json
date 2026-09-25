@@ -52,5 +52,14 @@
     "source": "https://images.squarespace-cdn.com/content/v1/685b534c6e81813d7aee78df/b63eafba-eff9-4a29-9116-b55737b72607/Beige+Minimalist+Beauty+Before+After+Collage+Instagram+Post.png",
     "page": "https://www.flores-landscaping-llc.com/",
     "usage": "First before-and-after project. Source collage preserved; CSS windows show the top (before) and bottom (after) photos. Download returned WebP. No generated landscaping or changes to the photographed results."
+  },
+  "home-lawn-care": {
+    "source": "/Users/bryanarambula/Desktop/IMG_8128.jpeg",
+    "providedBy": "User",
+    "usage": "Homepage Lawn Care service card; replaces lawn-care.jpg",
+    "sourceSha256": "1087784ce6b41f0a2dba4c643b383e4b07e5abdd7184bc8ac36156cefd82b031",
+    "asset": "src/assets/client/home-lawn-care.jpg",
+    "width": 2200,
+    "height": 1530
   }
 }

@@ -11,7 +11,7 @@ import hero from '../assets/lawn-stripes.jpg';
 import hedgeHero from '../assets/hedge-hero.jpg';
 import beds from '../assets/landscape-beds.jpg';
 import flowers from '../assets/flower-garden.jpg';
-import lawn from '../assets/lawn-care.jpg';
+import lawn from '../assets/client/home-lawn-care.jpg';
 import mulch from '../assets/mulch.jpg';
 import sod from '../assets/sod-installation.jpg';
 import snow from '../assets/snow-removal.jpg';
@@ -20,7 +20,7 @@ import garden from '../assets/garden-bed.jpg';
 import { serviceOfferings } from '../data/services';
 
 const servicePhotos = {
-  'lawn-care': { image: lawn, alt: 'Freshly mowed lawn with even stripes' },
+  'lawn-care': { image: lawn, alt: 'Fresh mowing stripes across a lawn in front of a modern home' },
   'landscaping': { image: beds, alt: 'Curved planting beds with shrubs and decorative stone' },
   'mulch-planting': { image: flowers, alt: 'Colorful flowering plants in a landscaped garden bed' },
   'sod-installation': { image: sod, alt: 'Newly installed sod alongside a residential walkway' },
@@ -112,7 +112,7 @@ const faqs = [
         <div class="service-carousel reveal">
           <div class="service-track" id="service-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Landscaping services" aria-live="off">
             {services.map(({ icon: Icon, ...service }, i) => <article class="service-card">
-              <div class="service-photo"><Image src={service.image} alt={service.alt} width={700} height={510} format="webp" loading="lazy" /><span class="service-icon"><Icon size={30} stroke-width={1.5} aria-hidden="true" /></span><span class="service-number">0{i + 1}</span></div>
+              <div class="service-photo"><Image src={service.image} alt={service.alt} width={700} height={510} format="webp" loading="lazy" style={service.id === 'lawn-care' ? 'object-position: center bottom' : undefined} /><span class="service-icon"><Icon size={30} stroke-width={1.5} aria-hidden="true" /></span><span class="service-number">0{i + 1}</span></div>
               <div class="service-content"><h3>{service.title}</h3><p>{service.summary}</p><a href={`/services/${service.id}/`} class="text-link" aria-label={`Explore ${service.title}`}>EXPLORE THIS SERVICE <ArrowUpRight size={18} aria-hidden="true" /></a></div>
             </article>)}
           </div>

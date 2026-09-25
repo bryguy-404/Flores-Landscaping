@@ -102,3 +102,9 @@ Real Resend inbox delivery, a production Turnstile challenge, production domain 
 - `npm run check`: 32 files, 0 errors, warnings, or hints. `npm run build`: 13 static pages, with responsive WebP generation successful. `git diff --check` passes.
 - All three lower images load at 1440×1000 desktop and 390×844 phone sizes, with no remaining placeholder in those slots or horizontal page overflow. All six screenshots visually inspected for crops and layout. Browser error log is empty and the test browser was closed.
 - Snow Plowing keeps its two photo placeholders pending client photos. Contact integrations and Cloudflare deployment remain deferred.
+
+## Homepage Lawn Care card photo — September 25
+
+- Replaced the homepage Lawn Care service-card photo with the separately supplied `IMG_8128.jpeg`. The web copy is 2200×1530 with embedded metadata removed; the original is untouched and its checksum is recorded in `docs/image-sources.json`. Updated alt text and bottom-aligned the card crop to retain the lawn.
+- `npm run check`: 32 files, no errors, warnings, or hints. `npm run build`: all 13 pages generated, including the optimized 64 kB WebP card image.
+- Verified the image loads and visually inspected its crop at 1440×1000 and 390×844. No horizontal page overflow or browser errors. Paused the carousel for the phone inspection and closed both test browser sessions afterward.
