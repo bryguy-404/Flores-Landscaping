@@ -1,11 +1,12 @@
 ---
 import { Image } from 'astro:assets';
-import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, TreePine, Leaf, Sprout, House, Building, BadgeCheck, Phone, Mail, MapPin, Check, Shovel, Users, X, Plus, Pause, Play } from '@lucide/astro';
+import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, TreePine, Leaf, Sprout, House, Building, BadgeCheck, Phone, Mail, MapPin, Check, Shovel, Users, Plus, Pause, Play } from '@lucide/astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ProjectComparison from '../components/ProjectComparison.astro';
-import frontYardComparison from '../assets/front-yard-before-after.webp';
+import { homeComparisons } from '../data/work';
+import PhotoViewer from '../components/PhotoViewer.astro';
 import hero from '../assets/lawn-stripes.jpg';
 import hedgeHero from '../assets/hedge-hero.jpg';
 import beds from '../assets/landscape-beds.jpg';
@@ -123,16 +124,7 @@ const faqs = [
     <section id="projects" class="projects-section section-pad" aria-labelledby="projects-title">
       <div class="container projects-heading reveal"><div><div class="eyebrow"><Leaf size={19} aria-hidden="true" /> A LITTLE BEFORE. A BEAUTIFUL AFTER.</div><h2 id="projects-title">Real yards.<br /><em>Real transformations.</em></h2></div><p>See the difference a little care and craftsmanship can make, one outdoor space at a time.</p></div>
       <div class="project-grid reveal" id="project-track" role="region" aria-label="Before-and-after projects" tabindex="0">
-        <ProjectComparison id="front-yard" title="A fresh start out front" category="Landscaping & garden beds" before={frontYardComparison} after={frontYardComparison} beforeAlt="Before: overgrown planting beds in front of a brick home" afterAlt="After: refreshed stone beds and neatly spaced shrubs at the same home" collage />
-        {[{ number: '02', icon: Sprout }, { number: '03', icon: TreePine }].map(({ number, icon: Icon }) => <article class="project-card project-placeholder" aria-label={`Project ${number}: before-and-after photos coming soon`}>
-          <div class="comparison-stage">
-            <div class="placeholder-halves" aria-hidden="true"></div>
-            <div class="comparison-labels" aria-hidden="true"><span>BEFORE</span><span>AFTER</span></div>
-            <div class="placeholder-art" aria-hidden="true"><Icon size={64} stroke-width={1} /></div>
-            <div class="project-overlay"><div><small>Project {number} · Coming soon</small><h3>More beauty<br />in the making.</h3></div></div>
-          </div>
-          <div class="placeholder-footer">Before & after photos coming soon</div>
-        </article>)}
+        {homeComparisons.map(comparison => <ProjectComparison {...comparison} />)}
       </div>
       <div class="project-navigation container" hidden>
         <span>Swipe to explore <span id="project-count" aria-live="polite" aria-atomic="true">01 / 03</span></span>
@@ -170,13 +162,7 @@ const faqs = [
   </main>
   <Footer />
 
-  <dialog id="project-dialog" aria-labelledby="project-dialog-title">
-    <div class="lightbox-shell">
-      <button class="lightbox-close circle-button" aria-label="Close project photo"><X size={24} aria-hidden="true" /></button>
-      <img id="project-dialog-image" src="" alt="" />
-      <div class="lightbox-caption"><div><p id="project-dialog-category"></p><h2 id="project-dialog-title"></h2></div></div>
-    </div>
-  </dialog>
+  <PhotoViewer />
 
   <script>
     import '../scripts/home-motion';

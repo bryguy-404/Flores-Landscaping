@@ -27,17 +27,17 @@ The hero and services advance every five seconds while visible. Services reverse
 
 The design follows the supplied Lawnella reference’s two-level header, Nunito headings, Poppins text, full-width photo hero, overlapping property cards, service cards, dark feature band, and split contact section. Flores’s red, black, and white palette replaces the reference’s green. Reference-site awards, reviews, blog posts, counters, and contact details have not been copied.
 
-The Contact page includes an estimate form, direct phone/text/email links, service-area information, four FAQs, and one team-photo placeholder. Estimate links throughout the site lead to the form; individual service pages preselect the matching service. The Cloudflare endpoint includes server validation, Turnstile, rate limiting, and Resend retry protection. Live delivery remains disabled until the account settings are configured. See `docs/contact-setup.md` for setup and testing; no credentials or deployment are required to review the design.
+The Contact page includes an estimate form, direct phone/text/email links, service-area information, four FAQs, and a client project photo. Estimate links throughout the site lead to the form; individual service pages preselect the matching service. The Cloudflare endpoint includes server validation, Turnstile, rate limiting, and Resend retry protection. Live delivery remains disabled until the account settings are configured. See `docs/contact-setup.md` for setup and testing; no credentials or deployment are required to review the design.
 
-The projects section previews three transformations: one real front-yard before/after collage from the current site, plus two explicitly labeled photo placeholders. Desktop uses a keyboard-accessible comparison slider. Tablet and phone show swipeable cards with Before/After buttons for the real project and previous/next navigation. This section never auto-advances. Replace the placeholders with approved matching pairs before the production content review.
+The homepage shows three real transformations: the existing front-yard project now uses its original separate photos, joined by a leaf cleanup and front-garden refresh. Our Work features three different project comparisons. Desktop uses keyboard-accessible sliders; phone and tablet use Before/After buttons and manual project navigation. Every comparison opens both uncropped photos in a native dialog. These sections never auto-advance.
 
-The Services overview carries through the homepage typography, palette, and motion with a split introduction, interactive service list, residential/commercial band, three-step introduction to working together, and estimate contact section. All photography slots on this new page are descriptive placeholders; only the shared branding uses existing images. Native service disclosures work without JavaScript. With JavaScript, the desktop placeholder follows the selected service and links such as `/services/#snow-plowing` open the correct entry. Phone layouts show a compact placeholder within the open service. No additional package is required.
+The Services overview carries through the homepage typography, palette, and motion with a split introduction, interactive service list, residential/commercial band, three-step introduction to working together, and estimate contact section. Selected client photographs fill the introductory visual and four service previews; unmatched slots remain labeled placeholders. Native service disclosures work without JavaScript. With JavaScript, the desktop visual follows the selected service and links such as `/services/#snow-plowing` open the correct entry. Phone layouts show the corresponding photo or placeholder within the open service. No additional package is required.
 
-The seven service pages live at `/services/lawn-care/`, `/services/landscaping/`, `/services/mulch-planting/`, `/services/sod-installation/`, `/services/seasonal-cleanup/`, `/services/trimming/`, and `/services/snow-plowing/`. A shared Astro template gives each page its own introduction, service details, planning guidance, three FAQs, related services, and estimate links. Each page has two labeled photo placeholders. On desktop devices with a mouse or trackpad, hovering over Our Services opens the dropdown, with a short grace period when the pointer leaves. A separate disclosure button also supports click and keyboard controls, while the Our Services link continues to open the overview. The phone menu expands to show the same seven links and scrolls on short screens. Keyboard navigation, Escape, current-page states, and reduced motion are supported.
+The seven service pages live at `/services/lawn-care/`, `/services/landscaping/`, `/services/mulch-planting/`, `/services/sod-installation/`, `/services/seasonal-cleanup/`, `/services/trimming/`, and `/services/snow-plowing/`. A shared Astro template gives each page its own introduction, service details, planning guidance, three FAQs, related services, and estimate links. Six service heroes and three detail slots now use client photos. Snow plowing and other unmatched detail slots retain labeled placeholders. On desktop devices with a mouse or trackpad, hovering over Our Services opens the dropdown, with a short grace period when the pointer leaves. A separate disclosure button also supports click and keyboard controls, while the Our Services link continues to open the overview. The phone menu expands to show the same seven links and scrolls on short screens. Keyboard navigation, Escape, current-page states, and reduced motion are supported.
 
-The About Us page introduces the family-owned business, its experience, approach to property care, and four service-area communities. It uses two descriptive photo placeholders for a family/team portrait and a candid work photo. The header, footer, and homepage About introduction link to it; the existing homepage `#about` section remains available. Copy uses the current company information without adding founder names, a founding year, awards, or a fabricated company timeline. Shared scroll reveals respect reduced-motion preferences.
+The About Us page introduces the family-owned business, its experience, approach to property care, and four service-area communities. It uses a candid client work photo in the story section; the family/team portrait remains a labeled placeholder. The header, footer, and homepage About introduction link to it; the existing homepage `#about` section remains available. Copy uses the current company information without adding founder names, a founding year, awards, or a fabricated company timeline. Shared scroll reveals respect reduced-motion preferences.
 
-The Our Work page combines three interactive before-and-after placeholders with six gallery photo slots, filterable by service. Desktop comparisons use a pointer- and keyboard-accessible slider; phone and tablet use Before/After buttons and a manually navigated row. All photo slots are clearly labeled as pending, and the gallery cards will become photo previews when the client images are selected. The header, footer, homepage, and Services overview link to this page. The original homepage comparison section remains intact. Video is deferred until after photography.
+The Our Work page combines three reviewed before-and-after pairs with nine curated gallery photographs, filterable by lawn care, landscaping, or garden beds. Cards open full photos in a keyboard-accessible viewer; Escape closes it and returns focus. Homepage comparisons and gallery selections use different photos. Video is deferred. See [the complete photo review](docs/photo-review/README.md) for all 83 source files, reserved pairs, duplicates, and remaining questions.
 
 ## Packages
 
@@ -76,7 +76,7 @@ For Cloudflare Workers Builds, use `npm run build` for the build command and `np
 
 1. Review Contact and the completed page structure with the client.
 2. Configure the implemented estimate form's Resend sender/recipient and Turnstile keys, then perform an approved delivery test. Follow `docs/contact-setup.md`.
-3. Select the client photos, confirm before/after pairs, and replace the remaining placeholders. Add video to the Gallery after the photography.
+3. Review the photo selections, supply a family/team portrait and unmatched service photos, and clarify reserved sequences in `docs/photo-review/README.md`. Add video after photography.
 4. Complete production content checks, domain setup, email verification, and launch validation.
 
 Resend will need a verified sending domain, a chosen recipient address, and a `RESEND_API_KEY` stored as a Cloudflare secret. Never put an API key in a public frontend variable. No credentials are needed for the current design phase.
@@ -85,15 +85,15 @@ Resend will need a verified sending domain, a chosen recipient address, and a `R
 
 The supplied original logo is preserved in `src/assets/flores-logo.png` and remains in the dark footer. The white header uses an AI-assisted transparent preview adaptation in `src/assets/flores-logo-transparent.png`; the exact editing prompt is recorded in `docs/logo-edit.md`. An original vector master from the designer can replace this raster adaptation if one becomes available.
 
-Photos were selected from the existing Flores website with the user’s permission. Original URLs are recorded in `docs/image-sources.json`. The site generates optimized WebP files at build time. Confirm the rights to any third-party-looking images, particularly the trimming photograph, before launch.
+Initial photos were selected from the existing Flores website with the user’s permission; URLs are recorded in `docs/image-sources.json`. The client supplied 83 additional photos in six batches. A review selected 37 unique source files for web use, including the two originals replacing the existing collage. `docs/photo-review/placements.json` maps each selection to its original filename and placement; the original Desktop folders are untouched. Web copies under `src/assets/client/` are resized with metadata removed. The inspection sheets and catalog under `docs/photo-review/` are not part of the public build. The site generates optimized WebP files at build time. Confirm the rights to any third-party-looking images, particularly the trimming photograph, before launch.
 
 Service areas, experience, licensing/insurance, free estimates, email, and both phone numbers come from the existing business website. The logo’s phone number is used as primary. New prose is based on those facts and should be reviewed by the business before launch.
 
 ## Editing guide
 
-- `src/pages/index.astro`: homepage sections, service data, the real comparison, and two project placeholders.
-- `src/components/ProjectComparison.astro`: reusable before/after card. Supply separate `before` and `after` image imports, descriptive alt text, a unique `id`, title, and category for each new project; omit `collage` for separate photos. Replace a placeholder article with this component.
-- `src/scripts/project-comparisons.ts`: accessible comparison controls, compact project navigation, and the original-collage dialog.
+- `src/pages/index.astro`: homepage sections, service data, and three real project comparisons.
+- `src/components/ProjectComparison.astro`: reusable before/after card. Supply separate `before` and `after` image imports, descriptive alt text, a unique `id`, title, and category for each new project; `variant="work"` uses a caption beneath the photo.
+- `src/scripts/project-comparisons.ts`: accessible comparison controls, and compact project navigation.
 - `src/scripts/home-motion.ts`: homepage autoplay and pause behavior.
 - `src/scripts/scroll-reveals.ts`: shared staggered, reduced-motion-aware scroll reveals.
 - `src/pages/about.astro` / `src/styles/about.css`: About Us content, photo placeholders, and responsive design.
@@ -102,8 +102,10 @@ Service areas, experience, licensing/insurance, free estimates, email, and both 
 - `worker/index.ts` / `worker/contact.ts`: Cloudflare routing, validation, spam protection, and Resend email handling.
 - `tests/contact.test.ts` / `docs/contact-setup.md`: isolated endpoint tests and prelaunch configuration guidance.
 - `src/pages/our-work.astro` / `src/styles/work.css`: before-and-after collection, gallery, and responsive page styling.
-- `src/data/work.ts`: comparison and gallery photo slots, captions, and filter categories.
-- `src/components/ComparisonPlaceholder.astro`: interactive comparison previews, using the shared comparison controls.
+- `src/data/work.ts`: reviewed comparison pairs, gallery selections, captions, and filter categories.
+- `src/components/PhotoViewer.astro`: full-photo gallery and comparison dialog, focus restoration, and keyboard dismissal.
+- `src/data/client-photos.ts`: selected photos, factual alt text, and service placement map.
+- `src/components/ClientPhoto.astro`: responsive page photographs.
 - `src/scripts/work-gallery.ts`: gallery filtering, pressed states, and accessible result counts.
 - `src/pages/services.astro` / `src/styles/services.css`: Services overview content and page styling.
 - `src/data/services.ts`: shared service titles, summaries, descriptions, and photo guidance; reused across service pages and navigation.
@@ -115,7 +117,7 @@ Service areas, experience, licensing/insurance, free estimates, email, and both 
 - `src/styles/global.css`: visual tokens, layouts, motion, and responsive breakpoints.
 - `src/components/Header.astro` / `Footer.astro`: shared navigation and contact details.
 - `src/layouts/BaseLayout.astro`: fonts, metadata, and local-business structured data.
-- `src/assets/`: local image originals.
+- `src/assets/`: existing local assets and client web copies.
 
 ## Sources
 

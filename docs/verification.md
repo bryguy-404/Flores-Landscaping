@@ -81,3 +81,16 @@ Homepage checked locally on September 24, 2026; About Us, Our Work, Contact, Ser
 - Sender, recipient, Resend key, and Turnstile keys remain unset. The form shows an honest availability notice and disables sending while retaining direct contact links. Setup is documented in `docs/contact-setup.md`.
 
 Real Resend inbox delivery, a production Turnstile challenge, production domain configuration, and live Cloudflare deployment still require configured accounts and launch verification. They have not been performed.
+
+## Client photo review and placement — September 25
+
+- All 83 photos in six client batches were visually reviewed, with enlarged paired sheets for likely transformations. The catalog accounts for every source file, project grouping, duplicate, reserved alternative, uncertainty, and selected placement in `docs/photo-review/`.
+- Selected 37 unique source photos: 12 comparison images, nine gallery photos, and 16 other page placements. The two original front-yard images replace their existing collage; resized existing images were not re-imported. Distinct responsive variants use one source file.
+- SHA-256 verification confirms all 83 Desktop originals are unchanged. All 37 web copies are uniquely sourced, correctly oriented, limited to a 2,200-pixel edge, and free of embedded EXIF/XMP/IPTC metadata. The public build contains no review catalog or original Desktop files.
+- `npm run check`: 32 files, 0 errors, warnings, or hints. `npm run build`: 13 static pages; responsive WebP images and full-view images generated successfully. Full-view images are capped at a 1,600-pixel longest edge; gallery cards do not upscale the smaller brick-building photo.
+- Visually inspected desktop and phone homepage comparisons, desktop/phone Our Work, desktop Services, and desktop/tablet/phone Lawn Care. All ten interior routes were checked at 320px: no page overflow and no broken images after decoding. Our Work was also checked at 390, 768 and 1440px; Lawn Care at 390, 768 and 1440px.
+- Desktop comparison ArrowRight changes 50 to 51 and announces “Before 51%, after 49%.” Phone Before/After buttons change the visible photo and pressed state; homepage Next advances the count to 02 / 03. Tablet keeps the compact buttons and hides the slider.
+- Gallery Lawn Care filter shows three matching photos; All Work restores all nine. Desktop comparison viewer loads both complete images. Phone gallery viewer loads one complete image without horizontal overflow. Escape dismisses the dialog, unlocks page scrolling, and returns focus to the opener. Browser error log is empty.
+- Client photo selection leaves the approved hero and other existing homepage sections intact. No videos added. Family/team portrait, snow images and unmatched detail slots remain explicit placeholders. Uncertain and preparation-to-finish sequences are documented rather than labeled as confirmed untouched before/after pairs.
+- Contact integrations, secrets, deployment configuration and backend behavior are unchanged. No emails, account activation, or Cloudflare publication performed.
+- Final reduced-motion check: homepage project content remains visible, with no overflow. Local `/api/contact` still returns `available: false` and a null Turnstile site key. Test browser closed after verification.

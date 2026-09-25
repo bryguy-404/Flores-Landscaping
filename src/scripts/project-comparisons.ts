@@ -49,22 +49,3 @@ if (track && previous && next && count && controls) {
   controls.hidden = false;
   sync();
 }
-
-const dialog = document.querySelector<HTMLDialogElement>('#project-dialog');
-document.querySelectorAll<HTMLButtonElement>('[data-project-image]').forEach(button => {
-  button.addEventListener('click', () => {
-    const card = button.closest('[data-comparison]');
-    const source = card?.querySelector<HTMLImageElement>('img');
-    const target = dialog?.querySelector<HTMLImageElement>('#project-dialog-image');
-    if (!dialog || !card || !source || !target) return;
-    target.src = source.currentSrc || source.src;
-    target.alt = 'Original before-and-after collage: overgrown front garden above, refreshed stone beds and shrubs below.';
-    dialog.querySelector('#project-dialog-title')!.textContent = card.querySelector('h3')!.textContent;
-    dialog.querySelector('#project-dialog-category')!.textContent = 'BEFORE (TOP) / AFTER (BOTTOM)';
-    dialog.showModal();
-    document.body.classList.add('dialog-open');
-  });
-});
-dialog?.querySelector('.lightbox-close')?.addEventListener('click', () => dialog.close());
-dialog?.addEventListener('close', () => document.body.classList.remove('dialog-open'));
-dialog?.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });

@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets';
+import type { ClientPhoto } from '../data/client-photos';
+interface Props extends ClientPhoto { eager?: boolean; }
+const { src, alt, position = '50% 50%', eager = false } = Astro.props;
+---
+<div class="site-photo" style={`--photo-position: ${position}`}>
+  <Image src={src} alt={alt} width={1200} widths={[480, 800, 1200]} sizes="(max-width: 767px) 100vw, 50vw" format="webp" loading={eager ? 'eager' : 'lazy'} />
+</div>
+<style>
+  .site-photo { position: relative; min-height: 290px; overflow: hidden; background: #eae5df; }
+  .site-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--photo-position); }
+</style>

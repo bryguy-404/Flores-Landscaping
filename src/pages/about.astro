@@ -3,6 +3,8 @@ import { ArrowDown, ArrowRight, ArrowUpRight, BadgeCheck, Building, ChevronRight
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ClientPhoto from '../components/ClientPhoto.astro';
+import { clientPhotos } from '../data/client-photos';
 import ImagePlaceholder from '../components/ImagePlaceholder.astro';
 import '../styles/about.css';
 
@@ -43,7 +45,7 @@ const communities = ['South Bend', 'Mishawaka', 'Granger', 'Osceola'];
     <section id="our-story" class="company-story section-pad" aria-labelledby="company-story-title">
       <div class="container company-story-grid">
         <div class="company-story-visual reveal">
-          <ImagePlaceholder label="The Flores team caring for a property here" description="A natural, in-progress photo showing the people and the work behind a finished yard." />
+          <ClientPhoto {...clientPhotos.p8289} />
           <div class="company-story-caption"><Leaf size={19} aria-hidden="true" /><span>Good people. Thoughtful work. A little pride in every detail.</span></div>
         </div>
         <div class="company-story-copy reveal" style="--reveal-delay: 100ms">

@@ -1,0 +1,59 @@
+---
+import { X } from '@lucide/astro';
+---
+<dialog id="photo-viewer" aria-labelledby="photo-viewer-title">
+  <header><h2 id="photo-viewer-title"></h2><button type="button" aria-label="Close photos" autofocus><X size={23} aria-hidden="true" /></button></header>
+  <div class="photo-viewer-images"></div>
+</dialog>
+<script>
+  const viewer = document.querySelector<HTMLDialogElement>('#photo-viewer');
+  const images = viewer?.querySelector<HTMLElement>('.photo-viewer-images');
+  let opener: HTMLAnchorElement | null = null;
+  document.querySelectorAll<HTMLAnchorElement>('[data-photo-open]').forEach(link => {
+    link.addEventListener('click', event => {
+      if (!viewer || !images || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      opener = link;
+      images.replaceChildren();
+      viewer.querySelector('#photo-viewer-title')!.textContent = link.dataset.photoTitle || 'Flores project photo';
+      const photos = [];
+      if (link.dataset.photoBefore) photos.push({ src: link.dataset.photoBefore, alt: link.dataset.photoBeforeAlt || '', label: 'Before' });
+      photos.push({ src: link.href, alt: link.dataset.photoAlt || '', label: link.dataset.photoBefore ? 'After' : '' });
+      viewer.classList.toggle('photo-viewer-pair', photos.length === 2);
+      photos.forEach(photo => {
+        const figure = document.createElement('figure');
+        const img = new Image();
+        img.src = photo.src; img.alt = photo.alt;
+        const caption = document.createElement('figcaption');
+        caption.textContent = photo.label;
+        figure.append(img, caption); images.append(figure);
+      });
+      viewer.showModal();
+      document.body.classList.add('dialog-open');
+    });
+  });
+  viewer?.querySelector('button')?.addEventListener('click', () => viewer.close());
+  viewer?.addEventListener('click', event => { if (event.target === viewer) viewer.close(); });
+  viewer?.addEventListener('close', () => {
+    document.body.classList.remove('dialog-open');
+    images?.replaceChildren();
+    opener?.focus({ preventScroll: true });
+  });
+</script>
+<style>
+  dialog { margin: auto; border: 1px solid #ffffff25; border-radius: 8px; padding: 0; width: min(1150px, calc(100% - 32px)); max-height: 94dvh; overflow-y: auto; background: #202020; color: white; }
+  dialog::backdrop { background: #000e; }
+  header { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 14px 20px; background: #202020; position: sticky; top: 0; z-index: 1; }
+  h2 { font-size: 1.3rem; }
+  button { display: grid; place-items: center; min-width: 44px; height: 44px; border: 1px solid #ffffff65; border-radius: 50%; background: transparent; color: white; }
+  button:hover { background: var(--red); }
+  .photo-viewer-images { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 0 16px 16px; }
+  .photo-viewer-pair .photo-viewer-images { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .photo-viewer-images :global(img) { width: 100%; height: 72dvh; object-fit: contain; background: #151515; }
+  .photo-viewer-images :global(figcaption) { font-size: .78rem; padding-top: 9px; text-align: center; }
+  @media(max-width: 767px) {
+    h2 { font-size: 1.1rem; }
+    .photo-viewer-pair .photo-viewer-images { grid-template-columns: minmax(0, 1fr); }
+    .photo-viewer-images :global(img) { height: auto; max-height: 72dvh; }
+  }
+</style>

@@ -14,6 +14,6 @@ if (galleryFilters && galleryStatus) {
       if (matches) visible += 1;
     });
     galleryButtons.forEach(option => option.setAttribute('aria-pressed', String(option === button)));
-    galleryStatus.textContent = `${visible} photo placeholder${visible === 1 ? '' : 's'}${category === 'all' ? '' : ` · ${button.textContent?.trim()}`}`;
+    galleryStatus.textContent = `${visible} project photo${visible === 1 ? '' : 's'}${category === 'all' ? '' : ` · ${button.textContent?.trim()}`}`;
   }));
 }

@@ -3,6 +3,8 @@ import { ArrowDown, ArrowRight, ArrowUpRight, BadgeCheck, Building, Check, Chevr
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ClientPhoto from '../components/ClientPhoto.astro';
+import { clientPhotos, servicePhotos } from '../data/client-photos';
 import ImagePlaceholder from '../components/ImagePlaceholder.astro';
 import { serviceOfferings } from '../data/services';
 import '../styles/services.css';
@@ -29,7 +31,7 @@ const steps = [
             <div class="services-intro-note"><Users size={18} aria-hidden="true" /><span>Family owned. Locally rooted. Here for your yard.</span></div>
           </div>
           <div class="services-intro-visual reveal" style="--reveal-delay: 170ms">
-            <ImagePlaceholder label="A beautiful finished landscape photo here" description="A wide view of a Flores project, with the lawn and garden beds together." tone="dark" number="01" />
+            <ClientPhoto {...clientPhotos.p8285} eager />
             <div class="services-experience"><strong>20<span>+</span></strong><span>YEARS OF<br />HANDS-ON CARE</span></div>
             <div class="services-photo-caption"><Leaf size={20} aria-hidden="true" /><span>A little pride in every detail.</span><span>FLORES LANDSCAPING</span></div>
           </div>
@@ -45,7 +47,7 @@ const steps = [
           <div class="service-preview reveal">
             <div class="service-preview-panels">
               {serviceOfferings.map((service, i) => <div class="service-preview-panel" data-service-preview={service.id} hidden={i !== 0}>
-                <ImagePlaceholder label={service.photo} description={service.photoDetail} number={`0${i + 1} / 07`} />
+                {servicePhotos[service.id]?.preview ? <ClientPhoto {...servicePhotos[service.id]!.preview!} /> : <ImagePlaceholder label={service.photo} description={service.photoDetail} number={`0${i + 1} / 07`} />}
                 <div class="service-preview-caption"><span>{service.title}</span><p>{service.caption}</p></div>
               </div>)}
             </div>
@@ -57,7 +59,7 @@ const steps = [
               <div class="service-detail-body">
                 <p>{service.description}</p>
                 <ul>{service.highlights.map(highlight => <li><Check size={14} aria-hidden="true" />{highlight}</li>)}</ul>
-                <div class="service-mobile-photo"><ImagePlaceholder label={service.photo} compact /></div>
+                <div class="service-mobile-photo">{servicePhotos[service.id]?.preview ? <ClientPhoto {...servicePhotos[service.id]!.preview!} /> : <ImagePlaceholder label={service.photo} compact />}</div>
                 <a class="text-link" href={`/services/${service.id}/`} aria-label={`Explore ${service.title}`}>EXPLORE THIS SERVICE <ArrowUpRight size={17} aria-hidden="true" /></a>
               </div>
             </details>)}
