@@ -1,9 +1,9 @@
 # Website verification
 
-Homepage checked locally on September 24, 2026; Services overview, individual service pages, and navigation checked September 25, 2026.
+Homepage checked locally on September 24, 2026; About Us, Services overview, individual service pages, and navigation checked September 25, 2026.
 
 - `npm run check`: 0 errors, 0 warnings, 0 hints.
-- `npm run build`: successful static build with 10 pages: homepage, Services overview, seven individual service pages, and custom 404 page. Sitemap and 31 optimized images generated.
+- `npm run build`: successful static build with 11 pages: homepage, About Us, Services overview, seven individual service pages, and custom 404 page. Sitemap and 31 optimized images generated.
 - `npx wrangler deploy --dry-run --outdir /tmp/flores-worker-dry-run`: successful static-asset bundle validation; no publication.
 - Browser layout checks at 320, 390, 768, and 1440 pixels: no page-level horizontal overflow.
 - All homepage anchor targets exist. All loaded image sources resolved successfully.
@@ -45,5 +45,17 @@ Homepage checked locally on September 24, 2026; Services overview, individual se
 - Reduced-motion emulation: all reveal content remains visible. Normal-motion scroll reveals, placeholder layouts, and estimate sections visually reviewed.
 - Homepage regression: hero advances from slide 0 to slide 1 after five seconds; all seven service links remain present. No browser errors detected.
 - No calls, texts, emails, or Cloudflare publication performed during verification.
+
+## About Us — September 25
+
+- `npm run check`: 19 files, 0 errors, 0 warnings, 0 hints. Static build generates `/about/index.html`; sitemap includes `/about/`.
+- Browser checks at 320, 390, 768, 1024, and 1440px: no horizontal page or heading overflow. Both placeholder captions fit within their photo slots. Desktop, tablet, and phone screenshots visually reviewed.
+- Main content contains two descriptive photo placeholders and no images or videos. Shared header/footer logos remain.
+- Header and footer About links, plus the homepage introduction CTA, point to `/about/`. All internal routes and fragment links across the 10 public content pages resolve correctly. The original homepage `#about` section remains intact.
+- One H1, page-specific title/description/canonical, and About Us current-page navigation state verified.
+- Get to Know Us scrolls to the story section below the sticky header. Mobile Home → About navigation resolves, closes the menu, and marks About Us current.
+- Normal-motion scroll reveals visually reviewed. With reduced motion enabled, all content remains visible and the layout stays within the viewport.
+- Company facts were checked against the [current Flores site](https://www.flores-landscaping-llc.com/): family ownership, 20+ years of experience, licensing/insurance, residential/commercial work, and the four listed service areas. No founder names, founding year, awards, or timeline were invented.
+- Contact links retain the existing phone, SMS, and email destinations. No calls, texts, or emails were sent. Browser error log was empty.
 
 Resend delivery, Turnstile, production domain configuration, and live Cloudflare deployment are outside this design phase and have not been tested.

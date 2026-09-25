@@ -21,7 +21,7 @@ npm run preview
 
 ## Current phase
 
-The homepage includes responsive navigation, an automatically rotating photo hero, a horizontally scrolling service carousel, a before-and-after project section with a keyboard-accessible original-photo dialog, native FAQ accordions, reduced-motion support, and call/text/email links. The Services overview is available at `/services/`, with seven individual service pages linked through the header dropdown, overview, homepage cards, and footer; links to About, Our Work, and Contact still lead to the approved homepage sections until those pages are built. A custom 404 page is also included.
+The homepage includes responsive navigation, an automatically rotating photo hero, a horizontally scrolling service carousel, a before-and-after project section with a keyboard-accessible original-photo dialog, native FAQ accordions, reduced-motion support, and call/text/email links. The Services overview is available at `/services/`, with seven individual service pages linked through the header dropdown, overview, homepage cards, and footer; the About Us page is available at `/about/`. Our Work and Contact still lead to the approved homepage sections until those pages are built. A custom 404 page is also included.
 
 The hero and services advance every five seconds while visible. Services reverse direction at the ends to avoid a long reset jump. Both have pause/play controls, pause during pointer interaction and while the tab is hidden, and stop on keyboard/manual focus until Play is pressed. Reduced-motion preferences disable automatic rotation and reveal motion while keeping manual navigation available. The page uses staggered, eased scroll reveals and gentle hero crossfades/zoom without an animation dependency.
 
@@ -34,6 +34,8 @@ The projects section previews three transformations: one real front-yard before/
 The Services overview carries through the homepage typography, palette, and motion with a split introduction, interactive service list, residential/commercial band, three-step introduction to working together, and estimate contact section. All photography slots on this new page are descriptive placeholders; only the shared branding uses existing images. Native service disclosures work without JavaScript. With JavaScript, the desktop placeholder follows the selected service and links such as `/services/#snow-plowing` open the correct entry. Phone layouts show a compact placeholder within the open service. No additional package is required.
 
 The seven service pages live at `/services/lawn-care/`, `/services/landscaping/`, `/services/mulch-planting/`, `/services/sod-installation/`, `/services/seasonal-cleanup/`, `/services/trimming/`, and `/services/snow-plowing/`. A shared Astro template gives each page its own introduction, service details, planning guidance, three FAQs, related services, and estimate links. Each page has two labeled photo placeholders. On desktop devices with a mouse or trackpad, hovering over Our Services opens the dropdown, with a short grace period when the pointer leaves. A separate disclosure button also supports click and keyboard controls, while the Our Services link continues to open the overview. The phone menu expands to show the same seven links and scrolls on short screens. Keyboard navigation, Escape, current-page states, and reduced motion are supported.
+
+The About Us page introduces the family-owned business, its experience, approach to property care, and four service-area communities. It uses two descriptive photo placeholders for a family/team portrait and a candid work photo. The header, footer, and homepage About introduction link to it; the existing homepage `#about` section remains available. Copy uses the current company information without adding founder names, a founding year, awards, or a fabricated company timeline. Shared scroll reveals respect reduced-motion preferences.
 
 ## Packages
 
@@ -68,7 +70,7 @@ For Cloudflare Workers Builds, use `npm run build` for the build command and `np
 
 ## Next phases
 
-1. Review the individual service pages, then build About, Gallery, and Contact. Continue using image placeholders until the client photos are selected.
+1. Review About Us, then build Our Work (before-and-after section followed by a gallery) and Contact, one page at a time. Continue using image placeholders until the client photos are selected.
 2. Add a Resend estimate form. Install `@astrojs/cloudflare`, `resend`, and `zod`; retain prerendered marketing pages and add a server endpoint for validated requests. Add Cloudflare Turnstile with server verification and keep email credentials in Worker secrets. The form should handle loading, errors, success, duplicate submissions, and rate limiting.
 3. Select the client photos, confirm before/after pairs, and replace the remaining placeholders. Add video to the Gallery after the photography.
 4. Complete production content checks, domain setup, email verification, and launch validation.
@@ -90,6 +92,7 @@ Service areas, experience, licensing/insurance, free estimates, email, and both 
 - `src/scripts/project-comparisons.ts`: accessible comparison controls, compact project navigation, and the original-collage dialog.
 - `src/scripts/home-motion.ts`: homepage autoplay and pause behavior.
 - `src/scripts/scroll-reveals.ts`: shared staggered, reduced-motion-aware scroll reveals.
+- `src/pages/about.astro` / `src/styles/about.css`: About Us content, photo placeholders, and responsive design.
 - `src/pages/services.astro` / `src/styles/services.css`: Services overview content and page styling.
 - `src/data/services.ts`: shared service titles, summaries, descriptions, and photo guidance; reused across service pages and navigation.
 - `src/data/service-pages.ts`: tailored copy, FAQs, related services, and detail photo guidance for all seven service pages.

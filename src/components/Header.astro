@@ -9,7 +9,7 @@ const isServicesOverview = Astro.url.pathname.replace(/\/$/, '') === '/services'
 const homeAnchor = (id: string) => isHome ? `#${id}` : `/#${id}`;
 const links = [
   { label: 'Home', href: isHome ? '#home' : '/', section: 'home', current: isHome },
-  { label: 'About Us', href: homeAnchor('about'), section: 'about', current: false },
+  { label: 'About Us', href: '/about/', section: 'about', current: Astro.url.pathname.replace(/\/$/, '') === '/about' },
   { label: 'Our Services', href: '/services/', section: 'services', current: Astro.url.pathname.startsWith('/services') },
   { label: 'Our Work', href: homeAnchor('projects'), section: 'projects', current: false },
   { label: 'Contact', href: homeAnchor('contact'), section: 'contact', current: false },
