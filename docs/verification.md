@@ -108,3 +108,8 @@ Real Resend inbox delivery, a production Turnstile challenge, production domain 
 - Replaced the homepage Lawn Care service-card photo with the separately supplied `IMG_8128.jpeg`. The web copy is 2200×1530 with embedded metadata removed; the original is untouched and its checksum is recorded in `docs/image-sources.json`. Updated alt text and bottom-aligned the card crop to retain the lawn.
 - `npm run check`: 32 files, no errors, warnings, or hints. `npm run build`: all 13 pages generated, including the optimized 64 kB WebP card image.
 - Verified the image loads and visually inspected its crop at 1440×1000 and 390×844. No horizontal page overflow or browser errors. Paused the carousel for the phone inspection and closed both test browser sessions afterward.
+
+## Footer design credit — September 25
+
+- Added “A design by Bryan Develops” to the shared footer, using the existing footer red accent for the linked name. The destination is exactly the supplied `https://bryandevolves.com`; hover and keyboard focus underline the link.
+- Check and build pass with zero diagnostics. All 12 content pages include the credit; the standalone 404 has no shared footer. Desktop (1440×1000) and phone (390×844) screenshots visually inspected, with no horizontal overflow or browser errors. The link destination was inspected without opening the external site. Test browser closed.
