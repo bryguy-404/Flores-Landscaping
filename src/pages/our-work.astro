@@ -47,7 +47,7 @@ const videos = await Promise.all(workVideos.map(async video => ({ ...video, play
 
     <section id="videos" class="work-videos section-pad" aria-labelledby="work-videos-title">
       <div class="container">
-        <div class="work-section-heading reveal"><div><div class="eyebrow"><Play size={18} aria-hidden="true" /> A FEW MOMENTS OUTSIDE</div><h2 id="work-videos-title">Our work.<br /><em>In motion.</em></h2></div><p>Fresh cuts, seasonal changes, and a closer look around. Short videos from the spaces we care for, throughout the year.</p></div>
+        <div class="work-section-heading reveal"><div><div class="eyebrow"><Play size={18} aria-hidden="true" /> A FEW MOMENTS OUTSIDE</div><h2 id="work-videos-title">Our work.<br /><em>In action.</em></h2></div><p>Fresh cuts, seasonal changes, and a closer look around. Short videos from the spaces we care for, throughout the year.</p></div>
         <div class="work-video-grid" id="work-video-grid" data-reveal-group>
           {videos.map(video => <article class="work-video-card" data-video-card>
             <a class="work-video-preview" href={video.src} data-video-open data-video-title={video.title} data-video-description={video.description} data-video-poster={video.playerPoster} aria-label={`Play ${video.title} ${video.duration}`}>
