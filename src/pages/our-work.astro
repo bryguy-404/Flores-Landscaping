@@ -1,16 +1,19 @@
 ---
-import { ArrowDown, ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Images, Leaf, MapPin, MessageCircle } from '@lucide/astro';
+import { ArrowDown, ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Images, Leaf, MapPin, MessageCircle, Play } from '@lucide/astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image, getImage } from 'astro:assets';
 import PhotoViewer from '../components/PhotoViewer.astro';
+import VideoViewer from '../components/VideoViewer.astro';
 import ProjectComparison from '../components/ProjectComparison.astro';
 import { comparisons, galleryCategories, galleryPhotos } from '../data/work';
+import { workVideos } from '../data/videos';
 import '../styles/work.css';
 const gallery = await Promise.all(galleryPhotos.map(async photo => ({ ...photo, full: (await getImage({ src: photo.src, width: Math.min(photo.src.width, Math.round(1600 * photo.src.width / Math.max(photo.src.width, photo.src.height))), format: 'webp', quality: 80 })).src })));
+const videos = await Promise.all(workVideos.map(async video => ({ ...video, playerPoster: (await getImage({ src: video.poster, width: 720, format: 'webp', quality: 80 })).src })));
 ---
-<BaseLayout title="Our Work & Landscaping Gallery | Flores Landscaping, South Bend" description="Explore the Flores Landscaping project gallery and before-and-after collection. Lawn care, landscaping, garden beds, and trimming around South Bend.">
+<BaseLayout title="Our Work & Landscaping Gallery | Flores Landscaping, South Bend" description="Explore Flores Landscaping before-and-afters, project photos, and videos. See lawn care, garden beds, seasonal cleanup, and snow plowing around South Bend.">
   <div id="top"></div>
   <Header />
   <main id="main" class="work-page">
@@ -42,15 +45,34 @@ const gallery = await Promise.all(galleryPhotos.map(async photo => ({ ...photo, 
       </div>
     </section>
 
+    <section id="videos" class="work-videos section-pad" aria-labelledby="work-videos-title">
+      <div class="container">
+        <div class="work-section-heading reveal"><div><div class="eyebrow"><Play size={18} aria-hidden="true" /> A FEW MOMENTS OUTSIDE</div><h2 id="work-videos-title">Our work.<br /><em>In motion.</em></h2></div><p>Fresh cuts, seasonal changes, and a closer look around. Short videos from the spaces we care for, throughout the year.</p></div>
+        <div class="work-video-grid" id="work-video-grid" data-reveal-group>
+          {videos.map(video => <article class="work-video-card" data-video-card>
+            <a class="work-video-preview" href={video.src} data-video-open data-video-title={video.title} data-video-description={video.description} data-video-poster={video.playerPoster} aria-label={`Play ${video.title} ${video.duration}`}>
+              <Image src={video.poster} alt="" width={540} widths={[270, 540, 720]} sizes="(max-width: 767px) 45vw, (max-width: 1023px) 45vw, 25vw" format="webp" loading="lazy" />
+              <span class="work-video-play"><Play size={23} fill="currentColor" aria-hidden="true" /></span>
+              <span class="work-video-duration" aria-hidden="true">{video.duration}</span>
+            </a>
+            <div class="work-video-caption"><span>{video.category}</span><h3>{video.title}</h3></div>
+          </article>)}
+        </div>
+        <div class="work-video-controls"><p id="work-video-status" role="status" aria-atomic="true">{videos.length} videos</p><button type="button" class="button button-red" id="work-videos-more" aria-expanded="false" aria-controls="work-video-grid" hidden>View more videos</button></div>
+      </div>
+    </section>
+
     <section id="estimate" class="work-estimate" aria-labelledby="work-estimate-title">
       <div class="container work-estimate-grid"><div class="reveal"><div class="eyebrow">A LITTLE INSPIRATION. YOUR NEXT STEP.</div><h2 id="work-estimate-title">Picture the possibilities<br /><em>for your own yard.</em></h2><p>Tell us about the space you’d love to change. We’ll talk through your ideas and start with a free estimate.</p><a class="text-link" href="/services/">EXPLORE OUR SERVICES <ArrowRight size={18} aria-hidden="true" /></a></div><div class="work-estimate-contact reveal" style="--reveal-delay: 100ms"><span>CALL OR TEXT OUR TEAM</span><a class="work-phone" href="tel:+15743866078">(574) 386-6078 <ArrowUpRight size={26} aria-hidden="true" /></a><a class="button button-red" href="/contact/#estimate">REQUEST A FREE ESTIMATE <MessageCircle size={18} aria-hidden="true" /></a><a class="work-email" href="mailto:floreslandscaping098@gmail.com">Prefer email? Let’s talk. <ArrowRight size={16} aria-hidden="true" /></a></div></div>
     </section>
   </main>
   <Footer />
   <PhotoViewer />
+  <VideoViewer />
   <script>
     import '../scripts/project-comparisons';
     import '../scripts/work-gallery';
+    import '../scripts/work-videos';
     import { initReveals } from '../scripts/scroll-reveals';
     initReveals();
   </script>

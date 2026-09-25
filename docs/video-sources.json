@@ -1,0 +1,97 @@
+{
+  "sourceFolder": "/Users/bryanarambula/Desktop/Flores Videos",
+  "encoding": {
+    "format": "MP4",
+    "videoCodec": "H.264",
+    "audio": "Original AAC retained",
+    "resolution": "720 × 1280 portrait",
+    "crf": 24,
+    "maxRateKbps": 4500,
+    "bufferKbits": 9000,
+    "fastStart": true,
+    "hdrConversion": "scale=720:1280:out_color_matrix=bt709:out_primaries=bt709:out_transfer=bt709:intent=perceptual,format=yuv420p,setsar=1",
+    "originalsUnchanged": true
+  },
+  "videos": [
+    {
+      "source": "IMG_5880.MOV",
+      "sourceSha256": "7d9d1e23457ec9755e5c45143e8a9ecb11cc441b544951bef56c98da0c601393",
+      "originalBytes": 14390261,
+      "durationSeconds": 6.955011,
+      "asset": "public/videos/project-5880.mp4",
+      "bytes": 4483289,
+      "poster": "src/assets/video-posters/project-5880.jpg",
+      "posterSeconds": 3.4775055
+    },
+    {
+      "source": "IMG_5903.MOV",
+      "sourceSha256": "57f5b1bce8c0cc25e6810a4c5210f709764ee7c5d469176ca0c9d0e7640519d3",
+      "originalBytes": 4667330,
+      "durationSeconds": 3.666667,
+      "asset": "public/videos/project-5903.mp4",
+      "bytes": 2417175,
+      "poster": "src/assets/video-posters/project-5903.jpg",
+      "posterSeconds": 1.8333335
+    },
+    {
+      "source": "IMG_6618.MOV",
+      "sourceSha256": "be9b2de877edc938a1845272441c3cb1c4e027c6d5c003962cad67a44b3e36eb",
+      "originalBytes": 3874539,
+      "durationSeconds": 3.133333,
+      "asset": "public/videos/project-6618.mp4",
+      "bytes": 1492226,
+      "poster": "src/assets/video-posters/project-6618.jpg",
+      "posterSeconds": 1.5666665
+    },
+    {
+      "source": "IMG_6622.MOV",
+      "sourceSha256": "71a748ae5dfc84599b1207487ed0e9bc8c0425de90817c628599354afaf3964a",
+      "originalBytes": 2811554,
+      "durationSeconds": 2.366667,
+      "asset": "public/videos/project-6622.mp4",
+      "bytes": 1326640,
+      "poster": "src/assets/video-posters/project-6622.jpg",
+      "posterSeconds": 1.1833335
+    },
+    {
+      "source": "IMG_6879.MOV",
+      "sourceSha256": "753424e1501ef82772e253b470da6901dc2374ced3cd68cd53bfdaa1c0e248dc",
+      "originalBytes": 12722275,
+      "durationSeconds": 11.47,
+      "asset": "public/videos/project-6879.mp4",
+      "bytes": 2211928,
+      "poster": "src/assets/video-posters/project-6879.jpg",
+      "posterSeconds": 5.735
+    },
+    {
+      "source": "IMG_7712.MOV",
+      "sourceSha256": "d45d6964c2dd61fdc5f0f9df8aa4a47ff6ca76218f229d01b4227408254135e9",
+      "originalBytes": 9274000,
+      "durationSeconds": 7.533333,
+      "asset": "public/videos/project-7712.mp4",
+      "bytes": 4813141,
+      "poster": "src/assets/video-posters/project-7712.jpg",
+      "posterSeconds": 3.7666665
+    },
+    {
+      "source": "IMG_7713.MOV",
+      "sourceSha256": "bf85519f3180edb51fc5e2f542cbfa8404f252848176d1ea963a800856d72536",
+      "originalBytes": 7621857,
+      "durationSeconds": 5.868333,
+      "asset": "public/videos/project-7713.mp4",
+      "bytes": 3900295,
+      "poster": "src/assets/video-posters/project-7713.jpg",
+      "posterSeconds": 2.9341665
+    },
+    {
+      "source": "IMG_7804.MOV",
+      "sourceSha256": "5804924661079b314fe420ff5e200ea1a0a9c262aa234daf7edd8bbdcacc2006",
+      "originalBytes": 8000110,
+      "durationSeconds": 6.77,
+      "asset": "public/videos/project-7804.mp4",
+      "bytes": 4307331,
+      "poster": "src/assets/video-posters/project-7804.jpg",
+      "posterSeconds": 3.385
+    }
+  ]
+}

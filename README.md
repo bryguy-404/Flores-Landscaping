@@ -37,7 +37,11 @@ The seven service pages live at `/services/lawn-care/`, `/services/landscaping/`
 
 The About Us page introduces the family-owned business, its experience, approach to property care, and four service-area communities. It uses a candid client work photo in the story section; the family/team portrait remains a labeled placeholder. The header, footer, and homepage About introduction link to it; the existing homepage `#about` section remains available. Copy uses the current company information without adding founder names, a founding year, awards, or a fabricated company timeline. Shared scroll reveals respect reduced-motion preferences.
 
-The Our Work page combines three reviewed before-and-after pairs with nine curated gallery photographs, filterable by lawn care, landscaping, or garden beds. Cards open full photos in a keyboard-accessible viewer; Escape closes it and returns focus. Homepage comparisons and gallery selections use different photos. Video is deferred. See [the complete photo review](docs/photo-review/README.md) for all 83 source files, reserved pairs, duplicates, and remaining questions.
+The Our Work page combines three reviewed before-and-after pairs with nine curated gallery photographs, filterable by lawn care, landscaping, or garden beds. Cards open full photos in a keyboard-accessible viewer; Escape closes it and returns focus. Homepage comparisons and gallery selections use different photos. See [the complete photo review](docs/photo-review/README.md) for all 83 source files, reserved pairs, duplicates, and remaining questions.
+
+Eight client videos appear beneath the photos in “Our work. In motion.” Four thumbnail cards are shown initially; View more reveals the other four. Selecting a card opens a native video player with full portrait framing and the original audio. Video files are requested only on selection; closing the viewer stops playback, unloads the file, and returns focus. With JavaScript disabled, all eight direct video links remain accessible. `src/data/videos.ts` controls the titles, order, descriptions, and posters.
+
+The videos are local H.264/AAC MP4 assets with fast-start metadata, 720×1280 resolution, and HDR-to-SDR conversion for web playback. They total approximately 25 MB; the largest is 4.81 MB, below Cloudflare’s 25 MiB per-asset limit. `docs/video-sources.json` records the eight original MOV filenames, checksums, conversion settings, sizes, and poster timestamps. Original Desktop files are untouched; no third-party player or package was added. See [Cloudflare’s asset limits](https://developers.cloudflare.com/workers/platform/limits/#static-assets), [MDN’s codec guide](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Video_codecs), and [FFmpeg’s scale filter](https://ffmpeg.org/ffmpeg-filters.html#scale) for the platform and conversion references.
 
 ## Packages
 
@@ -76,7 +80,7 @@ For Cloudflare Workers Builds, use `npm run build` for the build command and `np
 
 1. Review Contact and the completed page structure with the client.
 2. Configure the implemented estimate form's Resend sender/recipient and Turnstile keys, then perform an approved delivery test. Follow `docs/contact-setup.md`.
-3. Review the photo selections, supply a family/team portrait and unmatched service photos, and clarify reserved sequences in `docs/photo-review/README.md`. Add video after photography.
+3. Review the photo and video selections, supply a family/team portrait and unmatched service photos, and clarify reserved sequences in `docs/photo-review/README.md`.
 4. Complete production content checks, domain setup, email verification, and launch validation.
 
 Resend will need a verified sending domain, a chosen recipient address, and a `RESEND_API_KEY` stored as a Cloudflare secret. Never put an API key in a public frontend variable. No credentials are needed for the current design phase.
@@ -103,7 +107,8 @@ Service areas, experience, licensing/insurance, free estimates, email, and both 
 - `src/data/contact.ts` / `src/scripts/contact-form.ts`: shared form choices, service preselection, verification, and submission states.
 - `worker/index.ts` / `worker/contact.ts`: Cloudflare routing, validation, spam protection, and Resend email handling.
 - `tests/contact.test.ts` / `docs/contact-setup.md`: isolated endpoint tests and prelaunch configuration guidance.
-- `src/pages/our-work.astro` / `src/styles/work.css`: before-and-after collection, gallery, and responsive page styling.
+- `src/pages/our-work.astro` / `src/styles/work.css`: before-and-after collection, photo/video galleries, and responsive page styling.
+- `src/data/videos.ts` / `src/components/VideoViewer.astro`: video selection and click-to-play viewer; web videos live under `public/videos/`.
 - `src/data/work.ts`: reviewed comparison pairs, gallery selections, captions, and filter categories.
 - `src/components/PhotoViewer.astro`: full-photo gallery and comparison dialog, focus restoration, and keyboard dismissal.
 - `src/data/client-photos.ts`: selected photos, factual alt text, and service placement map.

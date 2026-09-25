@@ -1,0 +1,73 @@
+---
+import { X } from '@lucide/astro';
+---
+<dialog id="video-viewer" aria-labelledby="video-viewer-title" aria-describedby="video-viewer-description">
+  <header>
+    <h2 id="video-viewer-title">Our work in action</h2>
+    <button type="button" aria-label="Close video" autofocus><X size={23} aria-hidden="true" /></button>
+  </header>
+  <video controls playsinline preload="none" aria-labelledby="video-viewer-title" aria-describedby="video-viewer-description"></video>
+  <div class="video-viewer-caption">
+    <p id="video-viewer-description"></p>
+    <p id="video-viewer-error" role="alert" hidden>This video couldn’t load. Try opening the video directly.</p>
+    <a id="video-viewer-direct">Open video directly</a>
+  </div>
+</dialog>
+<script>
+  const viewer = document.querySelector<HTMLDialogElement>('#video-viewer');
+  const player = viewer?.querySelector('video');
+  const title = viewer?.querySelector<HTMLElement>('#video-viewer-title');
+  const description = viewer?.querySelector<HTMLElement>('#video-viewer-description');
+  const errorMessage = viewer?.querySelector<HTMLElement>('#video-viewer-error');
+  const directLink = viewer?.querySelector<HTMLAnchorElement>('#video-viewer-direct');
+  let opener: HTMLAnchorElement | null = null;
+
+  if (viewer && player && title && description && errorMessage && directLink) {
+    document.querySelectorAll<HTMLAnchorElement>('[data-video-open]').forEach(link => {
+      link.addEventListener('click', event => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+        event.preventDefault();
+        opener = link;
+        title.textContent = link.dataset.videoTitle || 'Our work in action';
+        description.textContent = link.dataset.videoDescription || '';
+        errorMessage.hidden = true;
+        directLink.href = link.href;
+        player.poster = link.dataset.videoPoster || '';
+        viewer.showModal();
+        document.body.classList.add('dialog-open');
+        // Attach media only after a visitor chooses a clip.
+        player.src = link.href;
+        void player.play().catch(() => { /* Native controls remain available if playback is blocked. */ });
+      });
+    });
+    player.addEventListener('error', () => {
+      if (viewer.open && player.hasAttribute('src')) errorMessage.hidden = false;
+    });
+    viewer.querySelector('button')?.addEventListener('click', () => viewer.close());
+    viewer.addEventListener('click', event => { if (event.target === viewer) viewer.close(); });
+    viewer.addEventListener('close', () => {
+      player.pause();
+      player.removeAttribute('src');
+      player.removeAttribute('poster');
+      player.load();
+      document.body.classList.remove('dialog-open');
+      opener?.focus({ preventScroll: true });
+    });
+    document.addEventListener('visibilitychange', () => { if (document.hidden) player.pause(); });
+    window.addEventListener('pagehide', () => player.pause());
+  }
+</script>
+<style>
+  dialog { margin: auto; padding: 0; width: min(560px, calc(100% - 24px)); max-height: 94dvh; overflow-y: auto; border: 1px solid #ffffff25; border-radius: 8px; background: #202020; color: white; }
+  dialog::backdrop { background: #000e; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 18px; }
+  h2 { font-size: 1.3rem; }
+  button { display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; border: 1px solid #ffffff65; border-radius: 50%; background: transparent; color: white; }
+  button:hover { background: var(--red); }
+  video { display: block; width: 100%; height: min(64dvh, 720px); object-fit: contain; background: #111; }
+  .video-viewer-caption { padding: 14px 18px 18px; font-size: .78rem; color: #ddd; }
+  .video-viewer-caption a { display: inline-block; margin-top: 8px; color: #f09aa4; text-decoration: underline; text-underline-offset: 3px; }
+  #video-viewer-error { margin-top: 8px; color: #ffbac2; }
+  #video-viewer-error[hidden] { display: none; }
+  @media (max-width: 767px) { h2 { font-size: 1.1rem; } }
+</style>
