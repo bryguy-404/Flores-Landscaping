@@ -21,13 +21,13 @@ npm run preview
 
 ## Current phase
 
-The homepage includes responsive navigation, an automatically rotating photo hero, a horizontally scrolling service carousel, a before-and-after project section with a keyboard-accessible original-photo dialog, native FAQ accordions, reduced-motion support, and call/text/email links. The Services overview is available at `/services/`, with seven individual service pages linked through the header dropdown, overview, homepage cards, and footer; About Us is at `/about/` and Our Work is at `/our-work/`. Contact still leads to the approved homepage section until its page is built. A custom 404 page is also included.
+The homepage includes responsive navigation, an automatically rotating photo hero, a horizontally scrolling service carousel, a before-and-after project section with a keyboard-accessible original-photo dialog, native FAQ accordions, reduced-motion support, and contact links. The Services overview is available at `/services/`, with seven individual service pages linked through the header dropdown, overview, homepage cards, and footer; About Us is at `/about/`, Our Work is at `/our-work/`, and Contact is at `/contact/`. A custom 404 page is also included.
 
 The hero and services advance every five seconds while visible. Services reverse direction at the ends to avoid a long reset jump. Both have pause/play controls, pause during pointer interaction and while the tab is hidden, and stop on keyboard/manual focus until Play is pressed. Reduced-motion preferences disable automatic rotation and reveal motion while keeping manual navigation available. The page uses staggered, eased scroll reveals and gentle hero crossfades/zoom without an animation dependency.
 
 The design follows the supplied Lawnella reference’s two-level header, Nunito headings, Poppins text, full-width photo hero, overlapping property cards, service cards, dark feature band, and split contact section. Flores’s red, black, and white palette replaces the reference’s green. Reference-site awards, reviews, blog posts, counters, and contact details have not been copied.
 
-The estimate form and email delivery are intentionally deferred. The contact section currently opens real phone, SMS, and email links; it does not pretend to submit a form.
+The Contact page includes an estimate form, direct phone/text/email links, service-area information, four FAQs, and one team-photo placeholder. Estimate links throughout the site lead to the form; individual service pages preselect the matching service. The Cloudflare endpoint includes server validation, Turnstile, rate limiting, and Resend retry protection. Live delivery remains disabled until the account settings are configured. See `docs/contact-setup.md` for setup and testing; no credentials or deployment are required to review the design.
 
 The projects section previews three transformations: one real front-yard before/after collage from the current site, plus two explicitly labeled photo placeholders. Desktop uses a keyboard-accessible comparison slider. Tablet and phone show swipeable cards with Before/After buttons for the real project and previous/next navigation. This section never auto-advances. Replace the placeholders with approved matching pairs before the production content review.
 
@@ -53,7 +53,9 @@ No React, database, animation library, or component framework is needed for thes
 
 ## Cloudflare
 
-`wrangler.jsonc` configures a static-asset Worker serving `dist/`, with the custom 404 page. The build performs image optimization in Node; no Sharp or Node-only image runtime is needed on Cloudflare. Fonts and photographs are hosted with the site.
+`wrangler.jsonc` configures a Worker serving static files from `dist/`, with the custom 404 page. Only `/api/*` routes run the Worker first; `/api/contact` handles estimate requests and all marketing pages remain static. The build performs image optimization in Node; no Sharp or Node-only image runtime is needed on Cloudflare. Fonts and photographs are hosted with the site. The email endpoint uses native `fetch` with Resend's API, so it does not require an Astro server adapter or additional runtime package.
+
+Use `npm run preview:worker` after building to check the real Worker locally. The regular Astro dev server returns an unavailable form configuration for safe design review. Run `npm test` for provider-mocked contact endpoint tests.
 
 Validate the deployment bundle without publishing:
 
@@ -72,8 +74,8 @@ For Cloudflare Workers Builds, use `npm run build` for the build command and `np
 
 ## Next phases
 
-1. Review Our Work, then build Contact. Continue using image placeholders until the client photos are selected.
-2. Add a Resend estimate form. Install `@astrojs/cloudflare`, `resend`, and `zod`; retain prerendered marketing pages and add a server endpoint for validated requests. Add Cloudflare Turnstile with server verification and keep email credentials in Worker secrets. The form should handle loading, errors, success, duplicate submissions, and rate limiting.
+1. Review Contact and the completed page structure with the client.
+2. Configure the implemented estimate form's Resend sender/recipient and Turnstile keys, then perform an approved delivery test. Follow `docs/contact-setup.md`.
 3. Select the client photos, confirm before/after pairs, and replace the remaining placeholders. Add video to the Gallery after the photography.
 4. Complete production content checks, domain setup, email verification, and launch validation.
 
@@ -95,6 +97,10 @@ Service areas, experience, licensing/insurance, free estimates, email, and both 
 - `src/scripts/home-motion.ts`: homepage autoplay and pause behavior.
 - `src/scripts/scroll-reveals.ts`: shared staggered, reduced-motion-aware scroll reveals.
 - `src/pages/about.astro` / `src/styles/about.css`: About Us content, photo placeholders, and responsive design.
+- `src/pages/contact.astro` / `src/styles/contact.css`: Contact page, form, service area, and FAQs.
+- `src/data/contact.ts` / `src/scripts/contact-form.ts`: shared form choices, service preselection, verification, and submission states.
+- `worker/index.ts` / `worker/contact.ts`: Cloudflare routing, validation, spam protection, and Resend email handling.
+- `tests/contact.test.ts` / `docs/contact-setup.md`: isolated endpoint tests and prelaunch configuration guidance.
 - `src/pages/our-work.astro` / `src/styles/work.css`: before-and-after collection, gallery, and responsive page styling.
 - `src/data/work.ts`: comparison and gallery photo slots, captions, and filter categories.
 - `src/components/ComparisonPlaceholder.astro`: interactive comparison previews, using the shared comparison controls.

@@ -1,9 +1,9 @@
 # Website verification
 
-Homepage checked locally on September 24, 2026; About Us, Our Work, Services overview, individual service pages, and navigation checked September 25, 2026.
+Homepage checked locally on September 24, 2026; About Us, Our Work, Contact, Services overview, individual service pages, and navigation checked September 25, 2026.
 
 - `npm run check`: 0 errors, 0 warnings, 0 hints.
-- `npm run build`: successful static build with 12 pages: homepage, About Us, Our Work, Services overview, seven individual service pages, and custom 404 page. Sitemap and 31 optimized images generated.
+- `npm run build`: successful static build with 13 pages: homepage, About Us, Our Work, Contact, Services overview, seven individual service pages, and custom 404 page. Sitemap and 31 optimized images generated.
 - `npx wrangler deploy --dry-run --outdir /tmp/flores-worker-dry-run`: successful static-asset bundle validation; no publication.
 - Browser layout checks at 320, 390, 768, and 1440 pixels: no page-level horizontal overflow.
 - All homepage anchor targets exist. All loaded image sources resolved successfully.
@@ -69,4 +69,15 @@ Homepage checked locally on September 24, 2026; About Us, Our Work, Services ove
 - Mobile Home → Our Work navigation resolves, closes the menu, and marks Our Work current. Browser error log was empty.
 - Reduced-motion emulation keeps every reveal visible. Comparisons do not auto-advance. No calls, texts, emails, or deployment were performed during verification.
 
-Resend delivery, Turnstile, production domain configuration, and live Cloudflare deployment are outside this design phase and have not been tested.
+## Contact — September 25
+
+- `npm run check`: 29 files, 0 errors, 0 warnings, 0 hints. Static build generates `/contact/index.html` and includes the route in the sitemap.
+- `npm test`: all 22 tests pass. The contact endpoint is tested with simulated providers for validation, request origin, unsupported methods/content types, payload limits, throttling, expired/mismatched challenges, provider rejection/timeouts, missing send confirmation, retry idempotency, and success. No external email is sent by the tests.
+- Browser checks at 320, 360, 390, 768, 1024, and 1440px show no page, field, or heading overflow. Desktop, tablet, and phone layouts visually inspected. Main content has one labeled photo placeholder and no images or videos.
+- Browser-only provider mocks verify invalid-form constraints, actual submit-button activation, locked fields/button during sending, duplicate-submit suppression, failure messages, preservation of entered details, stable request ID on retry, and clearing only after confirmed success. All mocks are removed on navigation; no test behavior is included in production code.
+- Cloudflare dry-run succeeds with the static assets binding and contact rate limiter. The real local Wrangler runtime serves Contact/About successfully, preserves the custom 404, returns JSON for `/api/contact`, and returns 503 for unconfigured submissions. No publication performed.
+- All internal routes/fragments across the 12 public pages resolve. Header/footer/estimate links reach Contact; service links preselect the matching service. The form anchor lands below the sticky header. Mobile Our Work → Contact navigation closes the menu and marks Contact current.
+- FAQ pointer and Enter-key controls work; opening a second answer closes the first. Reduced motion keeps all reveal content visible. Browser error log is empty after the checks.
+- Sender, recipient, Resend key, and Turnstile keys remain unset. The form shows an honest availability notice and disables sending while retaining direct contact links. Setup is documented in `docs/contact-setup.md`.
+
+Real Resend inbox delivery, a production Turnstile challenge, production domain configuration, and live Cloudflare deployment still require configured accounts and launch verification. They have not been performed.

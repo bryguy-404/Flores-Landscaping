@@ -35,7 +35,7 @@ const related = detail.related.map(id => serviceOfferings.find(item => item.id =
             <div class="eyebrow"><Icon size={23} stroke-width={1.4} aria-hidden="true" /> {service.title}</div>
             <h1 id="offering-title">{detail.headline}<br /><em>{detail.accent}</em></h1>
             <p>{detail.introduction}</p>
-            <div class="offering-hero-actions"><a class="button button-red" href="#estimate">GET A FREE ESTIMATE <ArrowUpRight size={18} aria-hidden="true" /></a><a class="text-link" href="#service-details">TAKE A CLOSER LOOK <ArrowRight size={18} aria-hidden="true" /></a></div>
+            <div class="offering-hero-actions"><a class="button button-red" href={`/contact/?service=${service.id}#estimate`}>GET A FREE ESTIMATE <ArrowUpRight size={18} aria-hidden="true" /></a><a class="text-link" href="#service-details">TAKE A CLOSER LOOK <ArrowRight size={18} aria-hidden="true" /></a></div>
           </div>
           <div class="offering-hero-visual reveal" style="--reveal-delay: 170ms">
             <ImagePlaceholder label={service.photo} tone="dark" number={`0${index + 1} / 07`} />
@@ -80,7 +80,7 @@ const related = detail.related.map(id => serviceOfferings.find(item => item.id =
 
     <section id="estimate" class="offering-estimate" aria-labelledby="offering-estimate-title">
       <div class="container offering-estimate-grid"><div class="reveal"><div class="eyebrow">YOUR LOCAL FLORES TEAM</div><h2 id="offering-estimate-title">{detail.estimateTitle}<br /><em>{detail.estimateAccent}</em></h2><p>Call or text to tell us about your property.<br />Your estimate is free. The conversation is easy.</p><div class="offering-service-area"><MapPin size={17} aria-hidden="true" /><span>South Bend · Mishawaka · Granger · Osceola</span></div></div>
-        <div class="offering-estimate-contact reveal" style="--reveal-delay: 100ms"><span>CALL OR TEXT OUR TEAM</span><a class="offering-phone" href="tel:+15743866078">(574) 386-6078 <ArrowUpRight size={26} aria-hidden="true" /></a><a class="button button-red" href="sms:+15743866078">LET’S TALK ABOUT YOUR PROJECT <MessageCircle size={18} aria-hidden="true" /></a><a class="offering-email" href="mailto:floreslandscaping098@gmail.com">Prefer email? Let’s talk. <ArrowRight size={16} aria-hidden="true" /></a></div>
+        <div class="offering-estimate-contact reveal" style="--reveal-delay: 100ms"><span>CALL OR TEXT OUR TEAM</span><a class="offering-phone" href="tel:+15743866078">(574) 386-6078 <ArrowUpRight size={26} aria-hidden="true" /></a><a class="button button-red" href={`/contact/?service=${service.id}#estimate`}>REQUEST A FREE ESTIMATE <MessageCircle size={18} aria-hidden="true" /></a><a class="offering-email" href="mailto:floreslandscaping098@gmail.com">Prefer email? Let’s talk. <ArrowRight size={16} aria-hidden="true" /></a></div>
       </div>
     </section>
   </main>

@@ -6,19 +6,18 @@ import { serviceOfferings } from '../data/services';
 import '../styles/navigation.css';
 const isHome = Astro.url.pathname === '/';
 const isServicesOverview = Astro.url.pathname.replace(/\/$/, '') === '/services';
-const homeAnchor = (id: string) => isHome ? `#${id}` : `/#${id}`;
 const links = [
   { label: 'Home', href: isHome ? '#home' : '/', section: 'home', current: isHome },
   { label: 'About Us', href: '/about/', section: 'about', current: Astro.url.pathname.replace(/\/$/, '') === '/about' },
   { label: 'Our Services', href: '/services/', section: 'services', current: Astro.url.pathname.startsWith('/services') },
   { label: 'Our Work', href: '/our-work/', section: 'projects', current: Astro.url.pathname.replace(/\/$/, '') === '/our-work' },
-  { label: 'Contact', href: homeAnchor('contact'), section: 'contact', current: false },
+  { label: 'Contact', href: '/contact/', section: 'contact', current: Astro.url.pathname.replace(/\/$/, '') === '/contact' },
 ];
 ---
 <div class="topbar">
   <div class="container flex items-center justify-between gap-4">
     <span class="flex items-center gap-2"><MapPin size={16} aria-hidden="true" /> Proudly serving South Bend & surrounding communities</span>
-    <a href={isHome ? '#contact' : '#estimate'} class="topbar-quote">Let’s bring your outdoor space to life <ArrowUpRight size={15} aria-hidden="true" /></a>
+    <a href="/contact/#estimate" class="topbar-quote">Let’s bring your outdoor space to life <ArrowUpRight size={15} aria-hidden="true" /></a>
   </div>
 </div>
 <header class="site-header">

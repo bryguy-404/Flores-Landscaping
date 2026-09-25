@@ -1,9 +1,15 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "flores-landscaping",
+  "main": "./worker/index.ts",
   "compatibility_date": "2026-09-24",
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "404-page"
-  }
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  "ratelimits": [
+    { "name": "CONTACT_RATE_LIMITER", "namespace_id": "5743866078", "simple": { "limit": 5, "period": 60 } }
+  ]
 }

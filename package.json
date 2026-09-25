@@ -11,6 +11,8 @@
     "check": "astro check",
     "build": "astro build",
     "preview": "astro preview --host 127.0.0.1",
+    "preview:worker": "wrangler dev --ip 127.0.0.1",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
     "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {

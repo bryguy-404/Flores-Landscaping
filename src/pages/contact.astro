@@ -1,0 +1,84 @@
+---
+import { ArrowDown, ArrowRight, ArrowUpRight, BadgeCheck, Check, ChevronRight, Leaf, Mail, MapPin, MessageCircle, Phone, Plus, Send } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ImagePlaceholder from '../components/ImagePlaceholder.astro';
+import { contactServices, propertyTypes } from '../data/contact';
+import '../styles/contact.css';
+
+const questions = [
+  { question: 'Is the estimate really free?', answer: 'Yes. Tell us what you have in mind, and we’ll start with a conversation about your property and a free estimate.' },
+  { question: 'What should I include in my message?', answer: 'Your city, the kind of care you’re looking for, and a little about your outdoor space are a great start. If you have a preferred time of year or a particular area that needs attention, mention that too.' },
+  { question: 'Can I ask about more than one service?', answer: 'Absolutely. Choose “A few things / not sure yet” and tell us about the work you’re considering. We can talk through the options together.' },
+  { question: 'Do you work with businesses as well as homeowners?', answer: 'Yes. Flores offers landscaping and property care for residential and commercial properties in South Bend and nearby communities.' },
+];
+---
+<BaseLayout title="Contact & Free Estimates | Flores Landscaping, South Bend" description="Tell Flores Landscaping about your yard. Request a free estimate for lawn care, landscaping, and seasonal services in South Bend, Mishawaka, Granger, and Osceola.">
+  <div id="top"></div>
+  <Header />
+  <main id="main" class="inquiry-page">
+    <section class="inquiry-intro" aria-labelledby="inquiry-title">
+      <div class="container">
+        <nav class="inquiry-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={13} aria-hidden="true" /><span aria-current="page">Contact</span></nav>
+        <div class="inquiry-intro-grid">
+          <div data-reveal-group><div class="eyebrow"><Leaf size={19} aria-hidden="true" /> LET’S MAKE SOMETHING BEAUTIFUL</div><h1 id="inquiry-title">A better yard<br /><em>starts with hello.</em></h1></div>
+          <div class="inquiry-intro-note reveal"><p>A fresh start. A little upkeep. Something you’ve been imagining for a while. We’d love to hear what you have in mind.</p><a class="text-link" href="#estimate">TELL US ABOUT YOUR SPACE <ArrowDown size={18} aria-hidden="true" /></a></div>
+        </div>
+        <div class="inquiry-trust"><span><Check size={18} aria-hidden="true" /> FREE ESTIMATES</span><span><BadgeCheck size={18} aria-hidden="true" /> LICENSED & INSURED</span><span><MapPin size={18} aria-hidden="true" /> LOCALLY ROOTED</span></div>
+      </div>
+    </section>
+
+    <section class="inquiry-main section-pad" aria-labelledby="estimate-title">
+      <div class="container inquiry-layout">
+        <aside class="inquiry-details reveal" aria-labelledby="inquiry-details-title">
+          <div class="eyebrow"><MessageCircle size={18} aria-hidden="true" /> YOUR LOCAL FLORES TEAM</div><h2 id="inquiry-details-title">Good people.<br /><em>Easy to reach.</em></h2><p>Prefer a conversation? Call or text our team. We’re happy to talk through your ideas.</p>
+          <div class="inquiry-direct-links">
+            <div><span class="inquiry-link-icon"><Phone size={22} stroke-width={1.4} aria-hidden="true" /></span><div><span class="inquiry-link-label">GIVE US A CALL</span><a class="inquiry-primary-phone" href="tel:+15743866078">(574) 386-6078 <ArrowUpRight size={19} aria-hidden="true" /></a><a class="inquiry-secondary-phone" href="tel:+15744720183">Also available: (574) 472-0183</a></div></div>
+            <div><span class="inquiry-link-icon"><MessageCircle size={22} stroke-width={1.4} aria-hidden="true" /></span><div><span class="inquiry-link-label">START WITH A TEXT</span><a href="sms:+15743866078">Tell us about your project <ArrowUpRight size={17} aria-hidden="true" /></a></div></div>
+            <div><span class="inquiry-link-icon"><Mail size={22} stroke-width={1.4} aria-hidden="true" /></span><div><span class="inquiry-link-label">DROP US A NOTE</span><a class="inquiry-email" href="mailto:floreslandscaping098@gmail.com">floreslandscaping098@gmail.com <ArrowUpRight size={17} aria-hidden="true" /></a></div></div>
+          </div>
+          <div class="inquiry-next"><span class="inquiry-small-label">WHAT HAPPENS NEXT?</span><ol><li><span>01</span><div><h3>You share the idea.</h3><p>A few details about your space help us get to know your project.</p></div></li><li><span>02</span><div><h3>We talk it through.</h3><p>Our team follows up to discuss the work and the next step for your estimate.</p></div></li></ol></div>
+        </aside>
+
+        <div id="estimate" class="inquiry-form-card reveal" style="--reveal-delay: 100ms">
+          <span class="inquiry-small-label">YOUR NEXT CHAPTER STARTS OUTSIDE</span><h2 id="estimate-title">Let’s hear your ideas.</h2><p class="inquiry-form-intro">Tell us a little about yourself and your property.<br />Fields marked <span aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+          <form id="estimate-form" action="/api/contact" method="post" aria-labelledby="estimate-title">
+            <div class="inquiry-fields">
+              <div class="inquiry-field"><label for="full-name">Your name <span aria-hidden="true">*</span></label><input id="full-name" name="name" autocomplete="name" required minlength="2" maxlength="100" placeholder="First and last name" /></div>
+              <div class="inquiry-field"><label for="email">Email address <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com" /></div>
+              <div class="inquiry-field"><label for="phone">Phone number <span class="inquiry-optional">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="30" placeholder="(574) 000-0000" /></div>
+              <div class="inquiry-field"><label for="city">Property city / town <span aria-hidden="true">*</span></label><input id="city" name="city" autocomplete="address-level2" required minlength="2" maxlength="100" placeholder="Where’s your property?" /></div>
+              <div class="inquiry-field"><label for="service">How can we help? <span aria-hidden="true">*</span></label><select id="service" name="service" required><option value="" disabled selected>Select a service</option>{contactServices.map(service => <option value={service.id}>{service.title}</option>)}</select></div>
+              <div class="inquiry-field"><label for="property-type">Property type <span aria-hidden="true">*</span></label><select id="property-type" name="propertyType" required><option value="" disabled selected>Select a property type</option>{propertyTypes.map(type => <option value={type}>{type}</option>)}</select></div>
+              <div class="inquiry-field inquiry-field-wide"><label for="message">A little about your project <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="5" required minlength="10" maxlength="3000" aria-describedby="message-hint" placeholder="Tell us about your outdoor space and what you’d like help with…"></textarea><small id="message-hint">A few details are plenty to get the conversation started.</small></div>
+            </div>
+            <div class="inquiry-honeypot" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+            <div id="estimate-verification"></div>
+            <p class="inquiry-form-status" id="estimate-status" role="status" aria-live="polite" aria-atomic="true">Online requests are coming soon. For now, please call, text, or email our team.</p>
+            <button class="button button-red inquiry-submit" id="estimate-submit" type="submit" disabled><span>SEND MY REQUEST</span><Send size={17} aria-hidden="true" /></button>
+            <p class="inquiry-form-note">We’ll use these details to follow up about your request.</p>
+            <noscript><p class="inquiry-noscript">Please enable JavaScript to use the form, or <a href="tel:+15743866078">call (574) 386-6078</a>.</p></noscript>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="inquiry-area" aria-labelledby="inquiry-area-title">
+      <div class="container inquiry-area-grid">
+        <div class="inquiry-area-photo reveal"><ImagePlaceholder label="A Flores team at work photo here" number="01" /><p><Leaf size={18} aria-hidden="true" /> Familiar faces. Thoughtful care.</p></div>
+        <div class="inquiry-area-copy reveal" style="--reveal-delay: 100ms"><div class="eyebrow"><MapPin size={18} aria-hidden="true" /> AROUND THE NEIGHBORHOOD</div><h2 id="inquiry-area-title">Rooted here.<br /><em>Ready to help.</em></h2><p>We care for homes and businesses in South Bend and the surrounding communities.</p><ul>{['South Bend', 'Mishawaka', 'Granger', 'Osceola'].map(city => <li><MapPin size={17} aria-hidden="true" />{city}</li>)}</ul><p class="inquiry-area-note">Nearby, but don’t see your town?<br /><a href="tel:+15743866078">Call to check your area. <ArrowUpRight size={16} aria-hidden="true" /></a></p></div>
+      </div>
+    </section>
+
+    <section class="inquiry-faq section-pad" aria-labelledby="inquiry-faq-title">
+      <div class="container inquiry-faq-grid"><div class="reveal"><div class="eyebrow"><Leaf size={18} aria-hidden="true" /> BEFORE WE SAY HELLO</div><h2 id="inquiry-faq-title">A few things<br /><em>you might wonder.</em></h2><a class="text-link" href="/services/">EXPLORE OUR SERVICES <ArrowRight size={17} aria-hidden="true" /></a></div><div class="inquiry-questions reveal">{questions.map(item => <details name="contact-faq"><summary>{item.question}<Plus size={19} aria-hidden="true" /></summary><p>{item.answer}</p></details>)}</div></div>
+    </section>
+  </main>
+  <Footer />
+  <script>
+    import '../scripts/contact-form';
+    import { initReveals } from '../scripts/scroll-reveals';
+    initReveals();
+  </script>
+</BaseLayout>

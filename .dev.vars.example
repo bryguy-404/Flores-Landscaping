@@ -1,0 +1,7 @@
+# Copy to .dev.vars for LOCAL testing. Never commit real values.
+# In production, configure these as Cloudflare Worker secrets/variables.
+RESEND_API_KEY=""
+CONTACT_FROM_EMAIL=""
+CONTACT_TO_EMAIL=""
+TURNSTILE_SITE_KEY=""
+TURNSTILE_SECRET_KEY=""
