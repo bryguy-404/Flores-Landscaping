@@ -1,6 +1,6 @@
 # Flores Landscaping
 
-An Astro homepage for Flores Landscaping LLC, styled with Tailwind CSS and built as static files for Cloudflare Workers.
+An Astro website for Flores Landscaping LLC, styled with Tailwind CSS and built as static files for Cloudflare Workers.
 
 ## Local development
 
@@ -21,7 +21,7 @@ npm run preview
 
 ## Current phase
 
-The homepage includes responsive navigation, an automatically rotating photo hero, a horizontally scrolling service carousel, a before-and-after project section with a keyboard-accessible original-photo dialog, native FAQ accordions, reduced-motion support, and call/text/email links. All navigation stays on the homepage. The only other route is the 404 page.
+The homepage includes responsive navigation, an automatically rotating photo hero, a horizontally scrolling service carousel, a before-and-after project section with a keyboard-accessible original-photo dialog, native FAQ accordions, reduced-motion support, and call/text/email links. The Services overview is available at `/services/`. Header, footer, and homepage service links connect to this page; links to About, Our Work, and Contact still lead to the approved homepage sections until those pages are built. A custom 404 page is also included.
 
 The hero and services advance every five seconds while visible. Services reverse direction at the ends to avoid a long reset jump. Both have pause/play controls, pause during pointer interaction and while the tab is hidden, and stop on keyboard/manual focus until Play is pressed. Reduced-motion preferences disable automatic rotation and reveal motion while keeping manual navigation available. The page uses staggered, eased scroll reveals and gentle hero crossfades/zoom without an animation dependency.
 
@@ -30,6 +30,8 @@ The design follows the supplied Lawnella reference’s two-level header, Nunito 
 The estimate form and email delivery are intentionally deferred. The contact section currently opens real phone, SMS, and email links; it does not pretend to submit a form.
 
 The projects section previews three transformations: one real front-yard before/after collage from the current site, plus two explicitly labeled photo placeholders. Desktop uses a keyboard-accessible comparison slider. Tablet and phone show swipeable cards with Before/After buttons for the real project and previous/next navigation. This section never auto-advances. Replace the placeholders with approved matching pairs before the production content review.
+
+The Services overview carries through the homepage typography, palette, and motion with a split introduction, interactive service list, residential/commercial band, three-step introduction to working together, and estimate contact section. All photography slots on this new page are descriptive placeholders; only the shared branding uses existing images. Native service disclosures work without JavaScript. With JavaScript, the desktop placeholder follows the selected service and links such as `/services/#snow-plowing` open the correct entry. Phone layouts show a compact placeholder within the open service. No additional package is required.
 
 ## Packages
 
@@ -64,9 +66,9 @@ For Cloudflare Workers Builds, use `npm run build` for the build command and `np
 
 ## Next phases
 
-1. Review the homepage layout and branding; tune the sections, photography, and copy.
+1. Review the Services overview, then build individual service pages, About, Gallery, and Contact in that order. Use image placeholders until the client photos are selected.
 2. Add a Resend estimate form. Install `@astrojs/cloudflare`, `resend`, and `zod`; retain prerendered marketing pages and add a server endpoint for validated requests. Add Cloudflare Turnstile with server verification and keep email credentials in Worker secrets. The form should handle loading, errors, success, duplicate submissions, and rate limiting.
-3. Build About, Services, individual service pages, Projects, and Contact one at a time, as selected by the owner.
+3. Select the client photos, confirm before/after pairs, and replace the remaining placeholders. Add video to the Gallery after the photography.
 4. Complete production content checks, domain setup, email verification, and launch validation.
 
 Resend will need a verified sending domain, a chosen recipient address, and a `RESEND_API_KEY` stored as a Cloudflare secret. Never put an API key in a public frontend variable. No credentials are needed for the current design phase.
@@ -84,7 +86,12 @@ Service areas, experience, licensing/insurance, free estimates, email, and both 
 - `src/pages/index.astro`: homepage sections, service data, the real comparison, and two project placeholders.
 - `src/components/ProjectComparison.astro`: reusable before/after card. Supply separate `before` and `after` image imports, descriptive alt text, a unique `id`, title, and category for each new project; omit `collage` for separate photos. Replace a placeholder article with this component.
 - `src/scripts/project-comparisons.ts`: accessible comparison controls, compact project navigation, and the original-collage dialog.
-- `src/scripts/home-motion.ts`: autoplay, pause behavior, and staggered scroll reveals.
+- `src/scripts/home-motion.ts`: homepage autoplay and pause behavior.
+- `src/scripts/scroll-reveals.ts`: shared staggered, reduced-motion-aware scroll reveals.
+- `src/pages/services.astro` / `src/styles/services.css`: Services overview content and page styling.
+- `src/data/services.ts`: shared service titles, summaries, descriptions, and photo guidance; reused by the homepage and Services overview.
+- `src/components/ImagePlaceholder.astro`: reusable labeled photo slots.
+- `src/scripts/services-page.ts`: service selection and direct-link handling.
 - `src/styles/global.css`: visual tokens, layouts, motion, and responsive breakpoints.
 - `src/components/Header.astro` / `Footer.astro`: shared navigation and contact details.
 - `src/layouts/BaseLayout.astro`: fonts, metadata, and local-business structured data.

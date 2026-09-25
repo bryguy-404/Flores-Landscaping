@@ -2,21 +2,29 @@
 import { Image } from 'astro:assets';
 import { MapPin, Phone, ArrowUpRight, Menu, X } from '@lucide/astro';
 import logo from '../assets/flores-logo-transparent.png';
-const links = [['Home', '#home'], ['About Us', '#about'], ['Our Services', '#services'], ['Our Work', '#projects'], ['Contact', '#contact']];
+const isHome = Astro.url.pathname === '/';
+const homeAnchor = (id: string) => isHome ? `#${id}` : `/#${id}`;
+const links = [
+  { label: 'Home', href: isHome ? '#home' : '/', section: 'home', current: isHome },
+  { label: 'About Us', href: homeAnchor('about'), section: 'about', current: false },
+  { label: 'Our Services', href: '/services/', section: 'services', current: Astro.url.pathname.startsWith('/services') },
+  { label: 'Our Work', href: homeAnchor('projects'), section: 'projects', current: false },
+  { label: 'Contact', href: homeAnchor('contact'), section: 'contact', current: false },
+];
 ---
 <div class="topbar">
   <div class="container flex items-center justify-between gap-4">
     <span class="flex items-center gap-2"><MapPin size={16} aria-hidden="true" /> Proudly serving South Bend & surrounding communities</span>
-    <a href="#contact" class="topbar-quote">Let’s bring your outdoor space to life <ArrowUpRight size={15} aria-hidden="true" /></a>
+    <a href={isHome ? '#contact' : '#estimate'} class="topbar-quote">Let’s bring your outdoor space to life <ArrowUpRight size={15} aria-hidden="true" /></a>
   </div>
 </div>
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="#home" aria-label="Flores Landscaping home">
+    <a class="brand" href={isHome ? '#home' : '/'} aria-label="Flores Landscaping home">
       <Image src={logo} alt="Flores Landscaping" width={480} format="webp" loading="eager" />
     </a>
     <nav class="desktop-nav" aria-label="Main navigation">
-      {links.map(([label, href], i) => <a href={href} class:list={[{ active: i === 0 }]}>{label}</a>)}
+      {links.map(link => <a href={link.href} data-section={link.section} class:list={[{ active: link.current }]} aria-current={link.current ? 'page' : undefined}>{link.label}</a>)}
     </nav>
     <a class="header-phone" href="tel:+15743866078">
       <span class="phone-icon"><Phone size={23} stroke-width={1.5} aria-hidden="true" /></span>
@@ -27,7 +35,7 @@ const links = [['Home', '#home'], ['About Us', '#about'], ['Our Services', '#ser
     </button>
   </div>
   <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" hidden>
-    {links.map(([label, href]) => <a href={href}>{label}<ArrowUpRight size={18} aria-hidden="true" /></a>)}
+    {links.map(link => <a href={link.href} aria-current={link.current ? 'page' : undefined}>{link.label}<ArrowUpRight size={18} aria-hidden="true" /></a>)}
     <a class="mobile-call" href="tel:+15743866078"><Phone size={18} aria-hidden="true" /> (574) 386-6078</a>
   </nav>
 </header>

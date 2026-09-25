@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, TreePine, Leaf, Sprout, House, Building, BadgeCheck, Phone, Mail, MapPin, Check, Flower2, Snowflake, Scissors, Shovel, Users, X, Plus, Pause, Play } from '@lucide/astro';
+import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, TreePine, Leaf, Sprout, House, Building, BadgeCheck, Phone, Mail, MapPin, Check, Shovel, Users, X, Plus, Pause, Play } from '@lucide/astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -16,16 +16,18 @@ import sod from '../assets/sod-installation.jpg';
 import snow from '../assets/snow-removal.jpg';
 import trimming from '../assets/trimming.jpg';
 import garden from '../assets/garden-bed.jpg';
+import { serviceOfferings } from '../data/services';
 
-const services = [
-  { title: 'Lawn Care', description: 'Fresh cuts, crisp edges, and a lawn you’ll love coming home to.', image: lawn, alt: 'Freshly mowed lawn with even stripes', icon: Leaf },
-  { title: 'Landscaping', description: 'Thoughtful landscapes that bring out the best in your property.', image: beds, alt: 'Curved planting beds with shrubs and decorative stone', icon: TreePine },
-  { title: 'Mulch & Planting', description: 'A fresh layer of mulch and the right plants make all the difference.', image: flowers, alt: 'Colorful flowering plants in a landscaped garden bed', icon: Flower2 },
-  { title: 'Sod Installation', description: 'Give your outdoor space a fresh start with a new lawn.', image: sod, alt: 'Newly installed sod alongside a residential walkway', icon: Sprout },
-  { title: 'Spring & Fall Cleanup', description: 'A little seasonal care goes a long way toward a beautiful yard.', image: garden, alt: 'Freshly maintained planting bed in a green lawn', icon: Shovel },
-  { title: 'Trimming', description: 'Neat hedges and carefully shaped shrubs, season after season.', image: trimming, alt: 'Hedge trimming with a powered trimmer', icon: Scissors },
-  { title: 'Snow Plowing', description: 'Keep your property accessible when winter weather rolls in.', image: snow, alt: 'Snow removal equipment working on a snowy property', icon: Snowflake },
-];
+const servicePhotos = {
+  'lawn-care': { image: lawn, alt: 'Freshly mowed lawn with even stripes' },
+  'landscaping': { image: beds, alt: 'Curved planting beds with shrubs and decorative stone' },
+  'mulch-planting': { image: flowers, alt: 'Colorful flowering plants in a landscaped garden bed' },
+  'sod-installation': { image: sod, alt: 'Newly installed sod alongside a residential walkway' },
+  'seasonal-cleanup': { image: garden, alt: 'Freshly maintained planting bed in a green lawn' },
+  'trimming': { image: trimming, alt: 'Hedge trimming with a powered trimmer' },
+  'snow-plowing': { image: snow, alt: 'Snow removal equipment working on a snowy property' },
+};
+const services = serviceOfferings.map(service => ({ ...service, ...servicePhotos[service.id] }));
 const faqs = [
   { q: 'What areas do you serve?', a: 'We serve residential and commercial properties in South Bend, Mishawaka, Granger, and Osceola. If you’re nearby and aren’t sure whether we cover your area, give us a call or send us a text.' },
   { q: 'Do you offer free estimates?', a: 'Yes! We offer free estimates for lawn care and landscaping projects. Call or text us to tell us about your property and schedule a consultation.' },
@@ -110,7 +112,7 @@ const faqs = [
           <div class="service-track" id="service-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Landscaping services" aria-live="off">
             {services.map(({ icon: Icon, ...service }, i) => <article class="service-card">
               <div class="service-photo"><Image src={service.image} alt={service.alt} width={700} height={510} format="webp" loading="lazy" /><span class="service-icon"><Icon size={30} stroke-width={1.5} aria-hidden="true" /></span><span class="service-number">0{i + 1}</span></div>
-              <div class="service-content"><h3>{service.title}</h3><p>{service.description}</p><a href="#contact" class="text-link">LET’S GET STARTED <ArrowUpRight size={18} aria-hidden="true" /></a></div>
+              <div class="service-content"><h3>{service.title}</h3><p>{service.summary}</p><a href={`/services/#${service.id}`} class="text-link" aria-label={`Explore ${service.title}`}>EXPLORE THIS SERVICE <ArrowUpRight size={18} aria-hidden="true" /></a></div>
             </article>)}
           </div>
         </div>
@@ -183,7 +185,7 @@ const faqs = [
     const sectionLinks = document.querySelectorAll<HTMLAnchorElement>('.desktop-nav a');
     const navObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) sectionLinks.forEach(link => link.classList.toggle('active', link.hash === `#${entry.target.id}`));
+        if (entry.isIntersecting) sectionLinks.forEach(link => link.classList.toggle('active', link.dataset.section === entry.target.id));
       });
     }, { rootMargin: '-15% 0px -60% 0px' });
     ['home', 'about', 'services', 'projects', 'contact'].forEach(id => { const el = document.getElementById(id); if (el) navObserver.observe(el); });

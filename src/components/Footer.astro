@@ -2,29 +2,31 @@
 import { Image } from 'astro:assets';
 import { Phone, Mail, MapPin, ArrowUpRight } from '@lucide/astro';
 import logo from '../assets/flores-logo.png';
+const isHome = Astro.url.pathname === '/';
+const homeAnchor = (id: string) => isHome ? `#${id}` : `/#${id}`;
 ---
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a href="#home" aria-label="Flores Landscaping home"><Image src={logo} alt="Flores Landscaping" width={300} height={200} format="webp" loading="lazy" /></a>
+      <a href={isHome ? '#home' : '/'} aria-label="Flores Landscaping home"><Image src={logo} alt="Flores Landscaping" width={300} height={200} format="webp" loading="lazy" /></a>
       <p>Family owned. Locally rooted.<br />Taking pride in every property.</p>
     </div>
     <div>
       <h3>Explore</h3>
       <ul>
-        <li><a href="#about">About Flores</a></li>
-        <li><a href="#services">Our services</a></li>
-        <li><a href="#projects">Our recent work</a></li>
-        <li><a href="#faq">Common questions</a></li>
+        <li><a href={homeAnchor('about')}>About Flores</a></li>
+        <li><a href="/services/">Our services</a></li>
+        <li><a href={homeAnchor('projects')}>Our recent work</a></li>
+        <li><a href={homeAnchor('faq')}>Common questions</a></li>
       </ul>
     </div>
     <div>
       <h3>Our services</h3>
       <ul>
-        <li><a href="#services">Lawn care & landscaping</a></li>
-        <li><a href="#services">Mulch & planting</a></li>
-        <li><a href="#services">Trimming & seasonal cleanup</a></li>
-        <li><a href="#services">Sod & snow plowing</a></li>
+        <li><a href="/services/#lawn-care">Lawn care & landscaping</a></li>
+        <li><a href="/services/#mulch-planting">Mulch & planting</a></li>
+        <li><a href="/services/#trimming">Trimming & seasonal cleanup</a></li>
+        <li><a href="/services/#sod-installation">Sod & snow plowing</a></li>
       </ul>
     </div>
     <div class="footer-contact">
@@ -37,6 +39,6 @@ import logo from '../assets/flores-logo.png';
   </div>
   <div class="container footer-bottom">
     <span>© {new Date().getFullYear()} Flores Landscaping LLC. All rights reserved.</span>
-    <a href="#home">Back to top <ArrowUpRight size={16} aria-hidden="true" /></a>
+    <a href={isHome ? '#home' : '#top'}>Back to top <ArrowUpRight size={16} aria-hidden="true" /></a>
   </div>
 </footer>

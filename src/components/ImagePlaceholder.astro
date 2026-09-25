@@ -1,0 +1,49 @@
+---
+import { Image as ImageIcon, Leaf } from '@lucide/astro';
+interface Props {
+  label: string;
+  description?: string;
+  tone?: 'light' | 'dark';
+  number?: string;
+  compact?: boolean;
+}
+const { label, description, tone = 'light', number, compact = false } = Astro.props;
+---
+<div class:list={['image-placeholder', `image-placeholder-${tone}`, { 'image-placeholder-compact': compact }]}>
+  <div class="placeholder-contours" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="placeholder-meta"><span><ImageIcon size={14} aria-hidden="true" /> PHOTO PLACEHOLDER</span>{number && <span>{number}</span>}</div>
+  <div class="placeholder-center"><Leaf size={54} stroke-width={1} aria-hidden="true" /><p>{label}</p>{description && <span>{description}</span>}</div>
+  <span class="placeholder-corner placeholder-corner-first" aria-hidden="true"></span><span class="placeholder-corner placeholder-corner-last" aria-hidden="true"></span>
+</div>
+
+<style>
+  .image-placeholder { --placeholder-surface: #eeeae5; --placeholder-ink: #574f4a; --placeholder-line: #d2c9c2; position: relative; display: grid; place-items: center; min-height: 290px; height: 100%; overflow: hidden; background: var(--placeholder-surface); color: var(--placeholder-ink); isolation: isolate; }
+  .image-placeholder-dark { --placeholder-surface: #302326; --placeholder-ink: #f2e3e4; --placeholder-line: #765155; }
+  .placeholder-contours { position: absolute; z-index: -1; inset: 0; opacity: .45; }
+  .placeholder-contours i { position: absolute; width: 130%; height: 135%; border: 1px solid var(--placeholder-line); border-radius: 45% 60% 30% 60%; transform: rotate(-30deg); top: 30%; left: 12%; }
+  .placeholder-contours i:nth-child(2) { width: 106%; height: 110%; top: 42%; left: 24%; }
+  .placeholder-contours i:nth-child(3) { width: 80%; height: 86%; top: 54%; left: 36%; }
+  .placeholder-meta { position: absolute; top: 24px; left: 24px; right: 24px; display: flex; justify-content: space-between; gap: 12px; font-size: .56rem; font-weight: 500; letter-spacing: .12em; }
+  .placeholder-meta > span:first-child { display: inline-flex; align-items: center; gap: 8px; }
+  .placeholder-center { display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center; width: min(80%, 320px); padding-block: 60px; }
+  .placeholder-center > svg { color: var(--red); }
+  .image-placeholder-dark .placeholder-center > svg { color: #ea8c98; }
+  .placeholder-center p { font-family: var(--font-heading); font-size: 1.55rem; font-weight: 700; line-height: 1.25; letter-spacing: -.02em; }
+  .placeholder-center > span { max-width: 280px; font-size: .72rem; line-height: 1.8; opacity: .85; }
+  .placeholder-corner { position: absolute; width: 24px; height: 24px; border-color: var(--placeholder-line); }
+  .placeholder-corner-first { left: 20px; bottom: 20px; border-bottom-width: 1px; border-left-width: 1px; }
+  .placeholder-corner-last { top: 20px; right: 20px; border-top-width: 1px; border-right-width: 1px; }
+  .image-placeholder-compact { min-height: 160px; }
+  .image-placeholder-compact .placeholder-center { padding-block: 45px 25px; gap: 12px; }
+  .image-placeholder-compact .placeholder-center svg { width: 28px; height: 28px; }
+  .image-placeholder-compact .placeholder-center p { font-size: 1rem; }
+  .image-placeholder-compact .placeholder-meta { top: 14px; left: 15px; font-size: .5rem; }
+  @media (max-width: 767px) {
+    .image-placeholder { min-height: 290px; }
+    .placeholder-center { gap: 14px; }
+    .placeholder-center p { font-size: 1.35rem; }
+    .placeholder-center > span { font-size: .68rem; }
+    .image-placeholder-compact { min-height: 160px; }
+    .placeholder-meta { top: 20px; left: 20px; right: 20px; }
+  }
+</style>
