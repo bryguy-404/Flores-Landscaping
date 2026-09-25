@@ -11,7 +11,7 @@ const links = [
   { label: 'Home', href: isHome ? '#home' : '/', section: 'home', current: isHome },
   { label: 'About Us', href: '/about/', section: 'about', current: Astro.url.pathname.replace(/\/$/, '') === '/about' },
   { label: 'Our Services', href: '/services/', section: 'services', current: Astro.url.pathname.startsWith('/services') },
-  { label: 'Our Work', href: homeAnchor('projects'), section: 'projects', current: false },
+  { label: 'Our Work', href: '/our-work/', section: 'projects', current: Astro.url.pathname.replace(/\/$/, '') === '/our-work' },
   { label: 'Contact', href: homeAnchor('contact'), section: 'contact', current: false },
 ];
 ---

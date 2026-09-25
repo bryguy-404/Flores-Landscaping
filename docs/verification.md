@@ -1,9 +1,9 @@
 # Website verification
 
-Homepage checked locally on September 24, 2026; About Us, Services overview, individual service pages, and navigation checked September 25, 2026.
+Homepage checked locally on September 24, 2026; About Us, Our Work, Services overview, individual service pages, and navigation checked September 25, 2026.
 
 - `npm run check`: 0 errors, 0 warnings, 0 hints.
-- `npm run build`: successful static build with 11 pages: homepage, About Us, Services overview, seven individual service pages, and custom 404 page. Sitemap and 31 optimized images generated.
+- `npm run build`: successful static build with 12 pages: homepage, About Us, Our Work, Services overview, seven individual service pages, and custom 404 page. Sitemap and 31 optimized images generated.
 - `npx wrangler deploy --dry-run --outdir /tmp/flores-worker-dry-run`: successful static-asset bundle validation; no publication.
 - Browser layout checks at 320, 390, 768, and 1440 pixels: no page-level horizontal overflow.
 - All homepage anchor targets exist. All loaded image sources resolved successfully.
@@ -57,5 +57,16 @@ Homepage checked locally on September 24, 2026; About Us, Services overview, ind
 - Normal-motion scroll reveals visually reviewed. With reduced motion enabled, all content remains visible and the layout stays within the viewport.
 - Company facts were checked against the [current Flores site](https://www.flores-landscaping-llc.com/): family ownership, 20+ years of experience, licensing/insurance, residential/commercial work, and the four listed service areas. No founder names, founding year, awards, or timeline were invented.
 - Contact links retain the existing phone, SMS, and email destinations. No calls, texts, or emails were sent. Browser error log was empty.
+
+## Our Work — September 25
+
+- `npm run check`: 23 files, 0 errors, 0 warnings, 0 hints. Static build generates `/our-work/index.html`; sitemap includes `/our-work/`.
+- Browser checks at 320, 360, 390, 768, 1024, and 1440px: no page-level horizontal overflow or overflowing headings. Estimate phone number fits. Desktop, tablet, and phone screenshots visually reviewed.
+- Three interactive comparison placeholders and six labeled gallery photo slots; no images or videos in the page's main content. Shared logos remain.
+- Desktop range responds to ArrowRight and real pointer dragging, updating both the visible split and accessible percentage. Phone Before/After controls update the view and pressed state. Previous/next controls advance through all three previews, update the count, and disable at the ends.
+- Gallery service filters show matching cards and update the live result count and pressed states. Garden Beds shows two slots, Lawn Care and Trimming show one each, and All Work restores six. Keyboard Enter activates the focused filter.
+- All internal routes and fragment links across the 11 public content pages resolve. One H1, page-specific canonical, and Our Work current-page navigation state verified. The homepage retains its original comparison section.
+- Mobile Home → Our Work navigation resolves, closes the menu, and marks Our Work current. Browser error log was empty.
+- Reduced-motion emulation keeps every reveal visible. Comparisons do not auto-advance. No calls, texts, emails, or deployment were performed during verification.
 
 Resend delivery, Turnstile, production domain configuration, and live Cloudflare deployment are outside this design phase and have not been tested.

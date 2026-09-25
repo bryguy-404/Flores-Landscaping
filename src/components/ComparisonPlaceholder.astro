@@ -1,0 +1,16 @@
+---
+import { ChevronLeft, ChevronRight, Leaf, Sprout } from '@lucide/astro';
+interface Props { id: string; title: string; category: string; }
+const { id, title, category } = Astro.props;
+---
+<article class="project-card comparison-card work-pair" data-comparison aria-labelledby={`${id}-title`} aria-describedby={`${id}-note`}>
+  <div class="comparison-stage" id={`${id}-images`}>
+    <div class="comparison-layer comparison-after work-comparison-surface work-comparison-after"><Leaf class="work-photo-icon" size={38} stroke-width={1.1} aria-hidden="true" /><span class="work-photo-message">After photo<br />here</span></div>
+    <div class="comparison-layer comparison-before work-comparison-surface work-comparison-before"><Sprout class="work-photo-icon" size={38} stroke-width={1.1} aria-hidden="true" /><span class="work-photo-message">Before photo<br />here</span></div>
+    <div class="comparison-labels" aria-hidden="true"><span>BEFORE</span><span>AFTER</span></div>
+    <div class="comparison-divider" aria-hidden="true"><span><ChevronLeft size={16} /><ChevronRight size={16} /></span></div>
+    <input class="comparison-range" type="range" min="0" max="100" value="50" aria-label={`Preview photo comparison: ${title}`} aria-valuetext="Before 50%, after 50%" aria-controls={`${id}-images`} aria-describedby={`${id}-note`} hidden />
+  </div>
+  <div class="comparison-toolbar" hidden><span class="comparison-hint">Drag to preview the comparison</span><div class="comparison-toggle" role="group" aria-label={`Preview ${title}`}><button type="button" data-comparison-view="before" aria-pressed="false" aria-controls={`${id}-images`}>Before</button><button type="button" data-comparison-view="after" aria-pressed="false" aria-controls={`${id}-images`}>After</button></div></div>
+  <div class="work-pair-caption"><span>{category}</span><h3 id={`${id}-title`}>{title}</h3><p id={`${id}-note`}>Matching project photos coming soon.</p></div>
+</article>

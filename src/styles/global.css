@@ -202,6 +202,8 @@ em { color: var(--red); font-style: normal; }
 .project-placeholder .project-overlay { background: linear-gradient(transparent 55%, #0006); }
 .placeholder-footer { background: #302426; color: #e4c4c8; }
 .project-navigation { display: none; }
+.work-projects-link { display: flex; justify-content: center; padding-block: 29px 34px; }
+.work-projects-link .text-link { font-size: .68rem; }
 .comparison-toolbar[hidden], .project-navigation[hidden], .comparison-range[hidden] { display: none; }
 .promise-band { padding-block: 65px; color: white; background: #202020; }
 .promise-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
@@ -375,6 +377,8 @@ em { color: var(--red); font-style: normal; }
   .comparison-card[data-view] .comparison-before { transition: clip-path .3s ease; }
   .placeholder-art > svg { width: 64px; height: 64px; }
   .project-navigation { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 15px 25px; }
+  .work-projects-link { padding-block: 5px 29px; }
+  .work-projects-link .text-link { font-size: .64rem; }
   .project-navigation > span { font-size: .7rem; color: var(--muted); }
   #project-count { margin-left: 18px; color: var(--red); font-weight: 600; font-variant-numeric: tabular-nums; }
   .promise-grid strong { font-size: 1.7rem; }
