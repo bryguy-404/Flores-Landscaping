@@ -1,17 +1,34 @@
 const header = document.querySelector<HTMLElement>('.site-header');
 const toggle = document.querySelector<HTMLButtonElement>('#menu-toggle');
 const nav = document.querySelector<HTMLElement>('#mobile-nav');
+const desktopHover = matchMedia('(min-width: 1024px) and (hover: hover) and (pointer: fine)');
 
 const disclosures = [...document.querySelectorAll<HTMLElement>('[data-nav-disclosure]')].flatMap(group => {
   const button = group.querySelector<HTMLButtonElement>('.services-nav-toggle');
   const panel = document.getElementById(button?.getAttribute('aria-controls') ?? '');
   if (!button || !panel) return [];
+  let closeTimer: number | undefined;
 
   const setOpen = (open: boolean) => {
+    window.clearTimeout(closeTimer);
+    closeTimer = undefined;
     button.setAttribute('aria-expanded', String(open));
     button.setAttribute('aria-label', open ? 'Hide service pages' : 'Show service pages');
     panel.hidden = !open;
   };
+  if (group.classList.contains('services-nav-group')) {
+    group.addEventListener('pointerenter', event => {
+      if (desktopHover.matches && event.pointerType !== 'touch') setOpen(true);
+    });
+    group.addEventListener('pointerleave', event => {
+      if (!desktopHover.matches || event.pointerType === 'touch') return;
+      // A short grace period keeps diagonal movement into the dropdown forgiving.
+      closeTimer = window.setTimeout(() => {
+        closeTimer = undefined;
+        if (!group.contains(document.activeElement)) setOpen(false);
+      }, 180);
+    });
+  }
   button.addEventListener('click', () => setOpen(button.getAttribute('aria-expanded') !== 'true'));
   button.addEventListener('keydown', event => {
     if (event.key !== 'ArrowDown') return;

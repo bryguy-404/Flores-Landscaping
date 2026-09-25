@@ -38,6 +38,7 @@ Homepage checked locally on September 24, 2026; Services overview, individual se
 - All seven pages have one H1, unique title/description, a matching canonical URL, three FAQs, and two labeled photo placeholders. No photos or videos were added to their main content; shared logos remain.
 - Internal route and fragment links across the homepage, overview, and seven service pages resolve correctly.
 - Desktop service dropdown: pointer opening, navigation to Landscaping, ArrowDown focus, Escape closure/focus return, and current-page marking checked. Our Services remains a direct link to the overview.
+- Hover enhancement: real pointer movement opens the desktop dropdown, keeps it open over its links, and closes it after leaving. Escape dismisses it; keyboard focus keeps the panel open when the pointer leaves. Phone disclosure click-to-open/click-to-close behavior remains functional. Check and build pass with the enhancement.
 - Phone menu: expandable service list, two-stage Escape behavior/focus return, scrolling within a 320×568 viewport, and closure after navigation checked. Navigation to Snow Plowing, Trimming, and the Services overview verified.
 - Overview Lawn Care link opens its standalone page. The homepage's seven service cards and footer links point to the individual pages.
 - FAQ pointer and Enter-key toggles checked. Opening a second FAQ closes the first.
