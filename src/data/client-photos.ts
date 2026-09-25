@@ -35,6 +35,9 @@ import photo8290 from '../assets/client/fresh-courtyard-mulch.jpg';
 import photo7604 from '../assets/client/rounded-border-shrubs.jpg';
 import photo8289 from '../assets/client/garden-work-in-progress.jpg';
 import photo8281 from '../assets/client/welcoming-front-garden.jpg';
+import photo1852 from '../assets/client/ground-preparation.jpg';
+import photo8369 from '../assets/client/finished-path-garden.jpg';
+import photo7612 from '../assets/client/shaped-shrub-detail.jpg';
 import type { ImageMetadata } from 'astro';
 import type { serviceOfferings } from './services';
 
@@ -79,6 +82,9 @@ export const clientPhotos = {
   p7604: { src: photo7604, alt: "Rounded shrubs beside a freshly edged stone garden bed" },
   p8289: { src: photo8289, alt: "A person working near newly mulched beds beside a porch" },
   p8281: { src: photo8281, alt: "Flowering plants and dark mulch beside a welcoming front walkway" },
+  p1852: { src: photo1852, alt: "Loose soil, a wheelbarrow, and lawn tools beside an area being prepared", position: '50% 65%' },
+  p8369: { src: photo8369, alt: "A tidy planted stone bed beside a curved brick path", position: '50% 60%' },
+  p7612: { src: photo7612, alt: "Neatly shaped shrubs along a stone bed beside a brick home", position: '50% 40%' },
 } satisfies Record<string, ClientPhoto>;
 
 type ServiceId = (typeof serviceOfferings)[number]['id'];
@@ -86,7 +92,7 @@ export const servicePhotos: Partial<Record<ServiceId, { hero?: ClientPhoto; deta
   'lawn-care': { hero: clientPhotos.p7788, detail: clientPhotos.p8026, preview: clientPhotos.p1915 },
   landscaping: { hero: clientPhotos.p8415, detail: clientPhotos.p8005, preview: clientPhotos.p7678 },
   'mulch-planting': { hero: clientPhotos.p8380, detail: clientPhotos.p8009, preview: clientPhotos.p8290 },
-  trimming: { hero: clientPhotos.p7948, preview: clientPhotos.p7604 },
-  'seasonal-cleanup': { hero: clientPhotos.p5292 },
-  'sod-installation': { hero: clientPhotos.p7527 },
+  trimming: { hero: clientPhotos.p7948, detail: clientPhotos.p7612, preview: clientPhotos.p7604 },
+  'seasonal-cleanup': { hero: clientPhotos.p5292, detail: clientPhotos.p8369 },
+  'sod-installation': { hero: clientPhotos.p7527, detail: clientPhotos.p1852 },
 };

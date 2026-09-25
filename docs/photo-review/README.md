@@ -2,11 +2,13 @@
 
 Reviewed all **83 photos in six batches**. The original Desktop folders were not renamed, edited, or moved. No videos were included in these batches.
 
-**37 unique source photos selected:** 12 for six comparisons (three on the homepage and three different projects on Our Work), nine gallery images, and 16 other page placements. Two of those 37 replace the existing collage with its original photos. Other selected photos are not repeated across new placements; desktop/mobile versions share the same source. Existing homepage imagery outside the comparison section is unchanged.
+**40 unique source photos selected:** 12 for six comparisons (three on the homepage and three different projects on Our Work), nine gallery images, and 19 other page placements. Two of those 40 replace the existing collage with its original photos. Other selected photos are not repeated across new placements; desktop/mobile versions share the same source. Existing homepage imagery outside the comparison section is unchanged.
 
 Matching used visible buildings, windows, fences, paving, trees and bed outlines, supported by capture times where present. Capture metadata supports a sequence but is not independent proof of project dates. Camera positions differ: comparisons are not geometrically registered and the full-photo viewer preserves both original frames. No AI retouching or invented results were used.
 
 Web copies were oriented and resized to a maximum 2,200-pixel edge, with metadata stripped. Astro generates responsive WebP outputs; originals stay untouched. `placements.json` records source filenames, checksums and destinations. The catalog and inspection sheets live under `docs/`, not the public website.
+
+The lower Sod Installation, Spring & Fall Cleanup, and Trimming sections now use the three approved standalone photos (IMG_1852, IMG_8369, IMG_7612). Existing before-and-after sections are unchanged.
 
 ## Before-and-after selections
 
@@ -31,7 +33,7 @@ There are no byte-identical or full-resolution pixel-identical files among the 8
 - **Batch 5:** likely mulch refreshes, but the earlier beds are already maintained. Use standalone shots; confirm scope before making before/after claims.
 - **Batch 6 IMG_8407/8409:** work had already started. Their matches are preparation-to-finish sequences, not untouched before photos.
 - **Remaining genuine pairs:** spring bed (5290/5292), deck (7991/8005), additional front-bed and path-bed angles are recorded below. Kept out of duplicate comparison cards to avoid showing the same property repeatedly.
-- A clear **family/team portrait**, **snow-plowing photos**, and additional service detail shots are still needed. A distant person working appears in the About story; it is not labeled as a particular family member. Video remains deferred.
+- A clear **family/team portrait**, **snow-plowing photos**, and snow-service detail shots are still needed. A distant person working appears in the About story; it is not labeled as a particular family member. Video remains deferred.
 
 ## All batches
 
@@ -43,7 +45,7 @@ The table accounts for every file, including reserved photos. See `index.html` f
 
 | File | Assessment | Placement | Notes |
 | --- | --- | --- | --- |
-| IMG_1852.jpeg | Needs confirmation | Reserved — not added to website | Soil preparation. Same capture date as IMG_7527, but opposite-facing views do not conclusively establish a matching before/after area. Do not pair automatically. |
+| IMG_1852.jpeg | Standalone / pairing unconfirmed | Sod installation detail | Approved as a standalone ground-preparation image for the lower sod-service section. Shows loose soil, a wheelbarrow, and tools; not labeled as a verified sod installation or as the before image for IMG_7527. The exact relationship between those two views remains unconfirmed. |
 | IMG_1915.jpeg | Standalone | Services lawn preview | Finished mowing view; no verified before photo. Choose for lawn care, not sod installation claims. |
 | IMG_3104.jpeg | Existing-project alternate | Reserved — not added to website | Same lawn scene as existing lawn-stripes.jpg, photographed from a nearby position. Retain as an alternative; do not add another near-duplicate. |
 | IMG_3150.jpeg | Standalone | Gallery | Finished mowing view; no verified before photo. Choose for lawn care, not sod installation claims. |
@@ -74,7 +76,7 @@ The table accounts for every file, including reserved photos. See `index.html` f
 | IMG_7601.jpeg | Strong project sequence / existing coverage | Reserved — not added to website | Same rounded shrubs, house walls and sweeping bed edges. Early pictures show layout marking/loose edging and red mulch; later pictures show stone and borders. IMG_7599→7608 and IMG_7601→7604 are the clearest area matches. Work has already begun in IMG_7597. Existing site already covers this project. |
 | IMG_7604.jpeg | Strong project sequence / existing coverage | Services trimming preview | Same rounded shrubs, house walls and sweeping bed edges. Early pictures show layout marking/loose edging and red mulch; later pictures show stone and borders. IMG_7599→7608 and IMG_7601→7604 are the clearest area matches. Work has already begun in IMG_7597. Existing site already covers this project. |
 | IMG_7608.jpeg | Existing image duplicate | Reserved — not added to website | Visually the same photograph as stone-edging.jpg at a different size/encoding. Do not import again. |
-| IMG_7612.jpeg | Strong project sequence / existing coverage | Reserved — not added to website | Same rounded shrubs, house walls and sweeping bed edges. Early pictures show layout marking/loose edging and red mulch; later pictures show stone and borders. IMG_7599→7608 and IMG_7601→7604 are the clearest area matches. Work has already begun in IMG_7597. Existing site already covers this project. |
+| IMG_7612.jpeg | Standalone detail / existing project alternate | Trimming detail | Approved as a standalone shrub detail for the lower trimming section. Shows shaped shrubs beside a brick home. Other photographs from this property remain in their existing placements; this source was previously unused. |
 | IMG_7620.jpeg | Existing image duplicate | Reserved — not added to website | Visually the same photograph as landscape-beds.jpg at a different size/encoding. Do not import again. |
 | IMG_7644.jpeg | Strong pair | Our Work comparison | Same evergreen trunk, white/wood fence junction, shrub and scattered rocks. Ground cover refreshed into a curved mulch bed. Same-day capture sequence; slight change in position. |
 | IMG_7651.jpeg | Strong pair | Our Work comparison | Same evergreen trunk, white/wood fence junction, shrub and scattered rocks. Ground cover refreshed into a curved mulch bed. Same-day capture sequence; slight change in position. |
@@ -130,7 +132,7 @@ The table accounts for every file, including reserved photos. See `index.html` f
 | IMG_8362.jpeg | Strong project sequence | Reserved — not added to website | Same curved brick paving, wooden enclosure/roof, house siding and AC/window identify this project. IMG_8257→8361 is the clearest path-side match; IMG_8258→8364 and IMG_8259→8366 cover adjoining beds. Later frames show stone and small plants. Use one comparison plus one distinct foundation detail. |
 | IMG_8364.jpeg | Strong project sequence | Reserved — not added to website | Same curved brick paving, wooden enclosure/roof, house siding and AC/window identify this project. IMG_8257→8361 is the clearest path-side match; IMG_8258→8364 and IMG_8259→8366 cover adjoining beds. Later frames show stone and small plants. Use one comparison plus one distinct foundation detail. |
 | IMG_8366.jpeg | Strong project sequence | Gallery | Same curved brick paving, wooden enclosure/roof, house siding and AC/window identify this project. IMG_8257→8361 is the clearest path-side match; IMG_8258→8364 and IMG_8259→8366 cover adjoining beds. Later frames show stone and small plants. Use one comparison plus one distinct foundation detail. |
-| IMG_8369.jpeg | Strong project sequence | Reserved — not added to website | Same curved brick paving, wooden enclosure/roof, house siding and AC/window identify this project. IMG_8257→8361 is the clearest path-side match; IMG_8258→8364 and IMG_8259→8366 cover adjoining beds. Later frames show stone and small plants. Use one comparison plus one distinct foundation detail. |
+| IMG_8369.jpeg | Standalone detail / existing project alternate | Seasonal cleanup detail | Approved as a standalone finished garden image for the lower seasonal-cleanup section. Shows a tidy planted stone bed and brick path. The existing brick-path before-and-after comparison is unchanged; this is a different photograph. |
 
 ### Batch 5
 

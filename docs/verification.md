@@ -94,3 +94,11 @@ Real Resend inbox delivery, a production Turnstile challenge, production domain 
 - Client photo selection leaves the approved hero and other existing homepage sections intact. No videos added. Family/team portrait, snow images and unmatched detail slots remain explicit placeholders. Uncertain and preparation-to-finish sequences are documented rather than labeled as confirmed untouched before/after pairs.
 - Contact integrations, secrets, deployment configuration and backend behavior are unchanged. No emails, account activation, or Cloudflare publication performed.
 - Final reduced-motion check: homepage project content remains visible, with no overflow. Local `/api/contact` still returns `available: false` and a null Turnstile site key. Test browser closed after verification.
+
+## Supporting service photos — September 25
+
+- Filled the lower photo slots on Sod Installation (`IMG_1852.jpeg`, ground preparation), Spring & Fall Cleanup (`IMG_8369.jpeg`, tidy planted stone bed), and Trimming (`IMG_7612.jpeg`, shaped shrubs). These are standalone supporting photos; all existing before-and-after sections remain unchanged.
+- Verified the three originals against their inventory SHA-256 checksums. Web copies are correctly oriented, limited to a 2,200-pixel edge, and free of EXIF/XMP/IPTC metadata. The review catalog now records 40 unique selected sources; original files are untouched.
+- `npm run check`: 32 files, 0 errors, warnings, or hints. `npm run build`: 13 static pages, with responsive WebP generation successful. `git diff --check` passes.
+- All three lower images load at 1440×1000 desktop and 390×844 phone sizes, with no remaining placeholder in those slots or horizontal page overflow. All six screenshots visually inspected for crops and layout. Browser error log is empty and the test browser was closed.
+- Snow Plowing keeps its two photo placeholders pending client photos. Contact integrations and Cloudflare deployment remain deferred.

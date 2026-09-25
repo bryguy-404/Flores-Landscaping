@@ -405,5 +405,38 @@
     "width": 1650,
     "height": 2200,
     "bytes": 958697
+  },
+  {
+    "number": 1852,
+    "name": "ground-preparation",
+    "placement": "Sod installation detail",
+    "source": "Flores Images batch 1/IMG_1852.jpeg",
+    "sourceSha256": "511af2f54ff035a92c4bb383de9fc8e225e22902e65db66277bfe5057e222e74",
+    "asset": "src/assets/client/ground-preparation.jpg",
+    "width": 2200,
+    "height": 1650,
+    "bytes": 1637962
+  },
+  {
+    "number": 8369,
+    "name": "finished-path-garden",
+    "placement": "Seasonal cleanup detail",
+    "source": "Flores Images Batch 4/IMG_8369.jpeg",
+    "sourceSha256": "033d82595055cb1d530e47bb449e7bd7b1ce4d7c4b72b7da3c3bf1503576361f",
+    "asset": "src/assets/client/finished-path-garden.jpg",
+    "width": 1650,
+    "height": 2200,
+    "bytes": 1428287
+  },
+  {
+    "number": 7612,
+    "name": "shaped-shrub-detail",
+    "placement": "Trimming detail",
+    "source": "Flores Images Batch 2/IMG_7612.jpeg",
+    "sourceSha256": "1969e2524d05650a9075456a91198bc21ae268680b34cb2c8f47b6ad66935a31",
+    "asset": "src/assets/client/shaped-shrub-detail.jpg",
+    "width": 1650,
+    "height": 2200,
+    "bytes": 1662653
   }
 ]

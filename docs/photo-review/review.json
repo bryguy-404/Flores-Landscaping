@@ -11,10 +11,10 @@
     "pixels_sha256": "56777d8dd3d9f9fdb2505219f89dddd07fb05acff31905b9753d5875783969fc",
     "dhash": "19191143e0f878f8",
     "project": "Wooded turf area",
-    "assessment": "Needs confirmation",
-    "notes": "Soil preparation. Same capture date as IMG_7527, but opposite-facing views do not conclusively establish a matching before/after area. Do not pair automatically.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "assessment": "Standalone / pairing unconfirmed",
+    "notes": "Approved as a standalone ground-preparation image for the lower sod-service section. Shows loose soil, a wheelbarrow, and tools; not labeled as a verified sod installation or as the before image for IMG_7527. The exact relationship between those two views remains unconfirmed.",
+    "placement": "Sod installation detail",
+    "webAsset": "src/assets/client/ground-preparation.jpg"
   },
   {
     "batch": 1,
@@ -419,10 +419,10 @@
     "pixels_sha256": "9e57d26d244a7740e0d6266d8a353fc9cd3e173b116f9bd8c659d194b5721971",
     "dhash": "c7c684e29f13872f",
     "project": "Brick and siding stone borders",
-    "assessment": "Strong project sequence / existing coverage",
-    "notes": "Same rounded shrubs, house walls and sweeping bed edges. Early pictures show layout marking/loose edging and red mulch; later pictures show stone and borders. IMG_7599\u21927608 and IMG_7601\u21927604 are the clearest area matches. Work has already begun in IMG_7597. Existing site already covers this project.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "assessment": "Standalone detail / existing project alternate",
+    "notes": "Approved as a standalone shrub detail for the lower trimming section. Shows shaped shrubs beside a brick home. Other photographs from this property remain in their existing placements; this source was previously unused.",
+    "placement": "Trimming detail",
+    "webAsset": "src/assets/client/shaped-shrub-detail.jpg"
   },
   {
     "batch": 2,
@@ -1133,10 +1133,10 @@
     "pixels_sha256": "6cf6fcb62871cf38a179315457a2edd653f9c68b3c187857e2e499193cb5720e",
     "dhash": "7ef6e7dce8638c4e",
     "project": "Brick-path stone gardens",
-    "assessment": "Strong project sequence",
-    "notes": "Same curved brick paving, wooden enclosure/roof, house siding and AC/window identify this project. IMG_8257\u21928361 is the clearest path-side match; IMG_8258\u21928364 and IMG_8259\u21928366 cover adjoining beds. Later frames show stone and small plants. Use one comparison plus one distinct foundation detail.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "assessment": "Standalone detail / existing project alternate",
+    "notes": "Approved as a standalone finished garden image for the lower seasonal-cleanup section. Shows a tidy planted stone bed and brick path. The existing brick-path before-and-after comparison is unchanged; this is a different photograph.",
+    "placement": "Seasonal cleanup detail",
+    "webAsset": "src/assets/client/finished-path-garden.jpg"
   },
   {
     "batch": 5,
