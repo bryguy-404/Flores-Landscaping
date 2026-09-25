@@ -112,7 +112,7 @@ const faqs = [
           <div class="service-track" id="service-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Landscaping services" aria-live="off">
             {services.map(({ icon: Icon, ...service }, i) => <article class="service-card">
               <div class="service-photo"><Image src={service.image} alt={service.alt} width={700} height={510} format="webp" loading="lazy" /><span class="service-icon"><Icon size={30} stroke-width={1.5} aria-hidden="true" /></span><span class="service-number">0{i + 1}</span></div>
-              <div class="service-content"><h3>{service.title}</h3><p>{service.summary}</p><a href={`/services/#${service.id}`} class="text-link" aria-label={`Explore ${service.title}`}>EXPLORE THIS SERVICE <ArrowUpRight size={18} aria-hidden="true" /></a></div>
+              <div class="service-content"><h3>{service.title}</h3><p>{service.summary}</p><a href={`/services/${service.id}/`} class="text-link" aria-label={`Explore ${service.title}`}>EXPLORE THIS SERVICE <ArrowUpRight size={18} aria-hidden="true" /></a></div>
             </article>)}
           </div>
         </div>
@@ -182,7 +182,7 @@ const faqs = [
 
     import '../scripts/project-comparisons';
 
-    const sectionLinks = document.querySelectorAll<HTMLAnchorElement>('.desktop-nav a');
+    const sectionLinks = document.querySelectorAll<HTMLAnchorElement>('.desktop-nav [data-section]');
     const navObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) sectionLinks.forEach(link => link.classList.toggle('active', link.dataset.section === entry.target.id));

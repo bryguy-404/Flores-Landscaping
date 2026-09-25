@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import { Phone, Mail, MapPin, ArrowUpRight } from '@lucide/astro';
 import logo from '../assets/flores-logo.png';
+import { serviceOfferings } from '../data/services';
 const isHome = Astro.url.pathname === '/';
 const homeAnchor = (id: string) => isHome ? `#${id}` : `/#${id}`;
 ---
@@ -23,10 +24,7 @@ const homeAnchor = (id: string) => isHome ? `#${id}` : `/#${id}`;
     <div>
       <h3>Our services</h3>
       <ul>
-        <li><a href="/services/#lawn-care">Lawn care & landscaping</a></li>
-        <li><a href="/services/#mulch-planting">Mulch & planting</a></li>
-        <li><a href="/services/#trimming">Trimming & seasonal cleanup</a></li>
-        <li><a href="/services/#sod-installation">Sod & snow plowing</a></li>
+        {serviceOfferings.map(service => <li><a href={`/services/${service.id}/`}>{service.title}</a></li>)}
       </ul>
     </div>
     <div class="footer-contact">

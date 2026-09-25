@@ -1,9 +1,9 @@
 # Website verification
 
-Homepage checked locally on September 24, 2026; Services overview and navigation update checked September 25, 2026.
+Homepage checked locally on September 24, 2026; Services overview, individual service pages, and navigation checked September 25, 2026.
 
 - `npm run check`: 0 errors, 0 warnings, 0 hints.
-- `npm run build`: successful static build, homepage, Services overview, and custom 404 page, sitemap, 31 optimized images in the latest build.
+- `npm run build`: successful static build with 10 pages: homepage, Services overview, seven individual service pages, and custom 404 page. Sitemap and 31 optimized images generated.
 - `npx wrangler deploy --dry-run --outdir /tmp/flores-worker-dry-run`: successful static-asset bundle validation; no publication.
 - Browser layout checks at 320, 390, 768, and 1440 pixels: no page-level horizontal overflow.
 - All homepage anchor targets exist. All loaded image sources resolved successfully.
@@ -30,5 +30,19 @@ Homepage checked locally on September 24, 2026; Services overview and navigation
 - All local fragment links on the Services page resolve. One H1, Services navigation current-page state, and page-specific title/description/canonical are present.
 - Integration check: mobile Services → Home → homepage Lawn Care link → Services → About anchor all resolve correctly and close the mobile menu. Homepage hero still advances from slide 0 to slide 1 after five seconds; all seven service cards remain present.
 - No browser errors or Vite error overlay detected. No external calls, texts, or emails were sent.
+
+## Individual service pages — September 25
+
+- `npm run check`: 18 files, 0 errors, 0 warnings, 0 hints. Static build generates all seven service routes.
+- Each service page checked in a browser at 320, 390, 768, 1024, and 1440px: no page-level horizontal overflow or overflowing H1. Desktop, tablet, and phone screenshots visually reviewed.
+- All seven pages have one H1, unique title/description, a matching canonical URL, three FAQs, and two labeled photo placeholders. No photos or videos were added to their main content; shared logos remain.
+- Internal route and fragment links across the homepage, overview, and seven service pages resolve correctly.
+- Desktop service dropdown: pointer opening, navigation to Landscaping, ArrowDown focus, Escape closure/focus return, and current-page marking checked. Our Services remains a direct link to the overview.
+- Phone menu: expandable service list, two-stage Escape behavior/focus return, scrolling within a 320×568 viewport, and closure after navigation checked. Navigation to Snow Plowing, Trimming, and the Services overview verified.
+- Overview Lawn Care link opens its standalone page. The homepage's seven service cards and footer links point to the individual pages.
+- FAQ pointer and Enter-key toggles checked. Opening a second FAQ closes the first.
+- Reduced-motion emulation: all reveal content remains visible. Normal-motion scroll reveals, placeholder layouts, and estimate sections visually reviewed.
+- Homepage regression: hero advances from slide 0 to slide 1 after five seconds; all seven service links remain present. No browser errors detected.
+- No calls, texts, emails, or Cloudflare publication performed during verification.
 
 Resend delivery, Turnstile, production domain configuration, and live Cloudflare deployment are outside this design phase and have not been tested.
