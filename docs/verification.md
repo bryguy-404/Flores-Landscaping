@@ -137,3 +137,10 @@ Real Resend inbox delivery, a production Turnstile challenge, production domain 
 - Verified the original against its inventory SHA-256 checksum. Prepared a correctly oriented 2200×1650 web copy without embedded EXIF/XMP/IPTC metadata; the Desktop original is untouched.
 - `npm run check`: 35 files, zero errors, warnings, or hints. `npm run build`: all 13 pages built successfully. `git diff --check` passes.
 - Visually inspected the new hero at 1440×1000 and 390×844. The responsive image loads at both sizes, the finished beds remain visible, and there is no horizontal page overflow or browser runtime error. Test browser closed.
+
+## Sod and seasonal cleanup overview photos — September 26
+
+- Filled the Services overview previews for 04 Sod Installation and 05 Spring & Fall Cleanup on desktop and in the mobile accordion. Reused the completed sod photo already on the homepage and the finished spring-bed photo IMG_5292 already on the cleanup page. No duplicate image files imported; source records describe both uses.
+- `npm run check`: 35 files, zero errors, warnings, or hints. `npm run build`: 13 pages generated successfully. `git diff --check` passes.
+- Real accordion clicks select the matching desktop preview. All four desktop (1440×1000) and phone (390×844) screenshots visually inspected; both photos load, fit their slots, and show no page overflow. Snow Plowing is the only remaining Services overview photo placeholder.
+- Audited both services across the site: their homepage cards load, and both standalone service pages load their hero and lower detail photos with zero placeholders or phone overflow. Related-service links have intentional icon cards, not empty image slots. Browser runtime error log is empty; test browser closed.

@@ -2,7 +2,7 @@
 
 Reviewed all **83 photos in six batches**. The original Desktop folders were not renamed, edited, or moved. No videos were included in these batches.
 
-**40 unique source photos selected:** 12 for six comparisons (three on the homepage and three different projects on Our Work), nine gallery images, and 19 other page placements. Two of those 40 replace the existing collage with its original photos. Other selected photos are not repeated across new placements; desktop/mobile versions share the same source. The separately supplied homepage Lawn Care card photo is tracked in `docs/image-sources.json`.
+**40 unique source photos selected:** 12 for six comparisons (three on the homepage and three different projects on Our Work), nine gallery images, and 19 other source photos for page imagery. Two of those 40 replace the existing collage with its original photos. The finished spring-bed photo also appears in its Services overview preview; desktop/mobile versions share the same source. The separately supplied homepage Lawn Care card photo is tracked in `docs/image-sources.json`.
 
 Matching used visible buildings, windows, fences, paving, trees and bed outlines, supported by capture times where present. Capture metadata supports a sequence but is not independent proof of project dates. Camera positions differ: comparisons are not geometrically registered and the full-photo viewer preserves both original frames. No AI retouching or invented results were used.
 
@@ -11,6 +11,8 @@ Web copies were oriented and resized to a maximum 2,200-pixel edge, with metadat
 The lower Sod Installation, Spring & Fall Cleanup, and Trimming sections now use the three approved standalone photos (IMG_1852, IMG_8369, IMG_7612). On September 26, the client selected IMG_7992 → IMG_8008 for the third homepage comparison. Both exact requested photos were found in Batch 3; the after image reuses `src/assets/backyard.jpg`.
 
 The Services overview hero now uses the client-confirmed finished mulch photo IMG_8291, replacing the earlier IMG_8285 view on September 26.
+
+The Services overview previews for Sod Installation and Spring & Fall Cleanup reuse the existing completed sod photo and IMG_5292 respectively. No duplicate files were imported. Their homepage cards and standalone hero/detail photos were already present.
 
 ## Before-and-after selections
 
@@ -56,7 +58,7 @@ The table accounts for every file, including reserved photos. See `index.html` f
 | IMG_5254.jpeg | Standalone / alternate views | Reserved — not added to website | Same completed front garden from two angles. Not a before/after pair. Use IMG_5253; reserve IMG_5254. |
 | IMG_5267.jpeg | Standalone | Gallery | Finished long mulch border; no matching before photo found. |
 | IMG_5290.jpeg | Strong pair / reserve comparison | Reserved — not added to website | Same twin-trunk tree, wall vent, small window, edging, and large background tree. Same-day capture sequence; sparse/debris-strewn bed becomes freshly mulched. Angles differ. IMG_5292 used as a seasonal service photo, so the pair is reserved to avoid repetition. |
-| IMG_5292.jpeg | Strong pair / reserve comparison | Seasonal cleanup hero | Same twin-trunk tree, wall vent, small window, edging, and large background tree. Same-day capture sequence; sparse/debris-strewn bed becomes freshly mulched. Angles differ. IMG_5292 used as a seasonal service photo, so the pair is reserved to avoid repetition. |
+| IMG_5292.jpeg | Strong pair / reserve comparison | Seasonal cleanup hero and Services preview | Same twin-trunk tree, wall vent, small window, edging, and large background tree. Same-day capture sequence; sparse/debris-strewn bed becomes freshly mulched. Angles differ. IMG_5292 used as a seasonal service photo, so the pair is reserved to avoid repetition. September 26: also reused for the Services overview preview on desktop and mobile; no duplicate asset imported. |
 | IMG_5988.jpeg | Progress sequence / reserve | Reserved — not added to website | Same elevated deck, string lights, railings and walkout. Different ends of the site; stone edging and straw-covered ground visible later. Not a finished green-lawn after shot; do not label as sod without confirmation. |
 | IMG_5997.jpeg | Progress sequence / reserve | Reserved — not added to website | Same elevated deck, string lights, railings and walkout. Different ends of the site; stone edging and straw-covered ground visible later. Not a finished green-lawn after shot; do not label as sod without confirmation. |
 | IMG_6401.jpeg | Needs confirmation | Reserved — not added to website | Broad straw-covered yard. No verified green-lawn counterpart; method and completed outcome cannot be inferred from this image. |

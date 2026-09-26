@@ -38,12 +38,13 @@ import photo8281 from '../assets/client/welcoming-front-garden.jpg';
 import photo1852 from '../assets/client/ground-preparation.jpg';
 import photo8369 from '../assets/client/finished-path-garden.jpg';
 import photo7612 from '../assets/client/shaped-shrub-detail.jpg';
+import sodPreview from '../assets/sod-installation.jpg';
 import type { ImageMetadata } from 'astro';
 import type { serviceOfferings } from './services';
 
 export interface ClientPhoto { src: ImageMetadata; alt: string; position?: string; }
-// Source filenames and the only assigned placement for each photo are recorded
-// in docs/photo-review/placements.json. Responsive variants share one source.
+// Client source filenames and placements are recorded in docs/photo-review/.
+// Existing-site sources are in docs/image-sources.json. Reused previews share assets.
 export const clientPhotos = {
   p7669: { src: photo7669, alt: "Overgrown beds along a single-story brick home" },
   p7679: { src: photo7679, alt: "Stone beds and spaced shrubs along the same brick home" },
@@ -93,6 +94,6 @@ export const servicePhotos: Partial<Record<ServiceId, { hero?: ClientPhoto; deta
   landscaping: { hero: clientPhotos.p8415, detail: clientPhotos.p8005, preview: clientPhotos.p7678 },
   'mulch-planting': { hero: clientPhotos.p8380, detail: clientPhotos.p8009, preview: clientPhotos.p8290 },
   trimming: { hero: clientPhotos.p7948, detail: clientPhotos.p7612, preview: clientPhotos.p7604 },
-  'seasonal-cleanup': { hero: clientPhotos.p5292, detail: clientPhotos.p8369 },
-  'sod-installation': { hero: clientPhotos.p7527, detail: clientPhotos.p1852 },
+  'seasonal-cleanup': { hero: clientPhotos.p5292, detail: clientPhotos.p8369, preview: clientPhotos.p5292 },
+  'sod-installation': { hero: clientPhotos.p7527, detail: clientPhotos.p1852, preview: { src: sodPreview, alt: 'Newly installed sod alongside a residential walkway', position: '50% 65%' } },
 };
