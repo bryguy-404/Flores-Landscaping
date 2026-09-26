@@ -1150,9 +1150,9 @@
     "pixels_sha256": "b12c6fee1cf94ffa878ebe55e696b28aa57ab306c9a53bd4717a0d98d95cdd8f",
     "dhash": "341c9998c8e137c6",
     "project": "Porch and courtyard beds",
-    "assessment": "Same-project refresh / subtle comparison",
-    "notes": "Matching white porch, windows, walkway and courtyard trees/fence. Earlier views are already maintained; later views show darker fresh mulch. IMG_8282\u21928288 and IMG_8284\u21928290 likely show a mulch refresh, not a dramatic landscape replacement. Lighting/angle differences amplify appearance. Use distinct standalone views; reserve before/after claims for client confirmation.",
-    "placement": "Contact area",
+    "assessment": "Client-confirmed before mulch",
+    "notes": "Client confirmed on September 26 that this view was before mulch was added. Replaced in Contact with the supplied completed-mulch view IMG_8289. Original and converted copy retained for reference.",
+    "placement": "Reserved \u2014 previous Contact photo",
     "webAsset": "src/assets/client/welcoming-front-garden.jpg"
   },
   {
@@ -1235,9 +1235,9 @@
     "pixels_sha256": "2266f76835e69ac7f74340593f7a29aba78cc2ca150bfcb1460d869467d9050d",
     "dhash": "a89a19581c21c1f3",
     "project": "Porch and courtyard beds",
-    "assessment": "Same-project refresh / subtle comparison",
-    "notes": "Matching white porch, windows, walkway and courtyard trees/fence. Earlier views are already maintained; later views show darker fresh mulch. IMG_8282\u21928288 and IMG_8284\u21928290 likely show a mulch refresh, not a dramatic landscape replacement. Lighting/angle differences amplify appearance. Use distinct standalone views; reserve before/after claims for client confirmation.",
-    "placement": "About story",
+    "assessment": "Client-confirmed completed mulch",
+    "notes": "Client selected this completed-mulch view on September 26 for Contact, replacing IMG_8281. Reuses the existing web copy also shown in the About story; no duplicate file imported. Contact uses a lower crop to emphasize the fresh mulch and plants. A person is visible working in the original frame.",
+    "placement": "About story and Contact area",
     "webAsset": "src/assets/client/garden-work-in-progress.jpg"
   },
   {

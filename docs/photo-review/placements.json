@@ -365,24 +365,13 @@
   {
     "number": 8289,
     "name": "garden-work-in-progress",
-    "placement": "About story",
+    "placement": "About story and Contact area",
     "source": "Flores Images Batch 5/IMG_8289.jpeg",
     "sourceSha256": "3f7ae75ab26364718ae23469d5f36879ebdaed86c36ca42b3afe4b9dee3bc0f5",
     "asset": "src/assets/client/garden-work-in-progress.jpg",
     "width": 1650,
     "height": 2200,
     "bytes": 1230174
-  },
-  {
-    "number": 8281,
-    "name": "welcoming-front-garden",
-    "placement": "Contact area",
-    "source": "Flores Images Batch 5/IMG_8281.jpeg",
-    "sourceSha256": "ed2c9a6f079759324b259d5c57a339325d19770b89ab283e9ce98da1ac259719",
-    "asset": "src/assets/client/welcoming-front-garden.jpg",
-    "width": 1650,
-    "height": 2200,
-    "bytes": 958697
   },
   {
     "number": 1852,

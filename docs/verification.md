@@ -144,3 +144,10 @@ Real Resend inbox delivery, a production Turnstile challenge, production domain 
 - `npm run check`: 35 files, zero errors, warnings, or hints. `npm run build`: 13 pages generated successfully. `git diff --check` passes.
 - Real accordion clicks select the matching desktop preview. All four desktop (1440×1000) and phone (390×844) screenshots visually inspected; both photos load, fit their slots, and show no page overflow. Snow Plowing is the only remaining Services overview photo placeholder.
 - Audited both services across the site: their homepage cards load, and both standalone service pages load their hero and lower detail photos with zero placeholders or phone overflow. Related-service links have intentional icon cards, not empty image slots. Browser runtime error log is empty; test browser closed.
+
+## Contact completed mulch photo — September 26
+
+- Replaced the lower Contact service-area photo with the explicitly supplied IMG_8289, reusing `garden-work-in-progress.jpg` already used on About. Applied a Contact-only lower crop and descriptive alt text to emphasize the fresh mulch and plants. About retains its existing photo and crop; no duplicate image file imported.
+- Verified the supplied Desktop original against its recorded SHA-256 checksum. The former IMG_8281 is now marked as a client-confirmed before photo and reserved in the catalog. There are 39 currently selected unique batch photos.
+- `npm run check`: 35 files, zero errors, warnings, or hints. `npm run build`: all 13 pages built. `git diff --check` passes.
+- Desktop (1440×1000) and phone (390×844) crops visually inspected. The new responsive image loads at both sizes with no horizontal page overflow or browser runtime errors. Test browser closed. Form and email integration behavior are unchanged.

@@ -34,7 +34,6 @@ import photo7678 from '../assets/client/brick-house-stone-bed.jpg';
 import photo8290 from '../assets/client/fresh-courtyard-mulch.jpg';
 import photo7604 from '../assets/client/rounded-border-shrubs.jpg';
 import photo8289 from '../assets/client/garden-work-in-progress.jpg';
-import photo8281 from '../assets/client/welcoming-front-garden.jpg';
 import photo1852 from '../assets/client/ground-preparation.jpg';
 import photo8369 from '../assets/client/finished-path-garden.jpg';
 import photo7612 from '../assets/client/shaped-shrub-detail.jpg';
@@ -82,7 +81,6 @@ export const clientPhotos = {
   p8290: { src: photo8290, alt: "Fresh dark mulch around courtyard trees and shrubs" },
   p7604: { src: photo7604, alt: "Rounded shrubs beside a freshly edged stone garden bed" },
   p8289: { src: photo8289, alt: "A person working near newly mulched beds beside a porch" },
-  p8281: { src: photo8281, alt: "Flowering plants and dark mulch beside a welcoming front walkway" },
   p1852: { src: photo1852, alt: "Loose soil, a wheelbarrow, and lawn tools beside an area being prepared", position: '50% 65%' },
   p8369: { src: photo8369, alt: "A tidy planted stone bed beside a curved brick path", position: '50% 60%' },
   p7612: { src: photo7612, alt: "Neatly shaped shrubs along a stone bed beside a brick home", position: '50% 40%' },
