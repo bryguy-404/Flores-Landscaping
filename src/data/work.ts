@@ -1,4 +1,6 @@
 import { clientPhotos as photos } from './client-photos';
+import { galleryPhotosById } from './gallery-photos';
+export { galleryPhotos } from './gallery-photos';
 
 // Matches reviewed against fixed landmarks and capture times. Camera positions
 // differ; the full-photo viewer preserves the original framing of both photos.
@@ -20,15 +22,18 @@ export const galleryCategories = [
   { id: 'lawn-care', label: 'Lawn care' },
   { id: 'landscaping', label: 'Landscaping' },
   { id: 'garden-beds', label: 'Garden beds' },
+  { id: 'progress', label: 'Before & in progress' },
 ] as const;
-export const galleryPhotos = [
-  { id: 'pondside', category: 'lawn-care', title: 'A greener everyday.', ...photos.p3150 },
-  { id: 'front-entry', category: 'landscaping', title: 'A welcome you can see.', ...photos.p5253 },
-  { id: 'porch', category: 'garden-beds', title: 'Good things at your doorstep.', ...photos.p8288 },
-  { id: 'curving-lawn', category: 'lawn-care', title: 'Care around every curve.', ...photos.p7769 },
-  { id: 'spring-garden', category: 'garden-beds', title: 'Room for spring to grow.', ...photos.p7562 },
-  { id: 'stone-border', category: 'landscaping', title: 'The details bring it together.', ...photos.p8419 },
-  { id: 'tree-border', category: 'garden-beds', title: 'A fresh frame for familiar trees.', ...photos.p5267 },
-  { id: 'backyard-lawn', category: 'lawn-care', title: 'Your own stretch of green.', ...photos.p7936 },
-  { id: 'foundation-bed', category: 'landscaping', title: 'A clean finish, close to home.', ...photos.p8366 },
-] as const;
+
+function galleryPair(id: string, title: string, category: string, beforeId: number, afterId: number) {
+  const before = galleryPhotosById['img-' + beforeId];
+  const after = galleryPhotosById['img-' + afterId];
+  return { id, title, category, before: before.src, after: after.src, beforeAlt: before.alt, afterAlt: after.alt };
+}
+
+export const moreComparisons = [
+  ...homeComparisons,
+  galleryPair('spring-garden', 'A fresh season starts here.', 'Spring garden refresh', 5290, 5292),
+  { ...galleryPair('front-garden', 'Room for something beautiful.', 'Garden cleanup & planting', 8238, 8248), beforePosition: '50% 35%', afterPosition: '50% 25%' },
+  galleryPair('courtyard-mulch', 'The finishing touch.', 'Courtyard mulch refresh', 8285, 8291),
+];

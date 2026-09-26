@@ -13,8 +13,10 @@
     "project": "Wooded turf area",
     "assessment": "Standalone / pairing unconfirmed",
     "notes": "Approved as a standalone ground-preparation image for the lower sod-service section. Shows loose soil, a wheelbarrow, and tools; not labeled as a verified sod installation or as the before image for IMG_7527. The exact relationship between those two views remains unconfirmed.",
-    "placement": "Sod installation detail",
-    "webAsset": "src/assets/client/ground-preparation.jpg"
+    "placement": "Sod installation detail; Our Work gallery",
+    "webAsset": "src/assets/client/ground-preparation.jpg",
+    "previousPlacement": "Sod installation detail",
+    "galleryStage": "progress"
   },
   {
     "batch": 1,
@@ -30,8 +32,10 @@
     "project": "Standalone lawn work",
     "assessment": "Standalone",
     "notes": "Finished mowing view; no verified before photo. Choose for lawn care, not sod installation claims. Replaced with the client-selected IMG_8445 on September 26. Original and converted copy retained for reference.",
-    "placement": "Reserved \u2014 previous Services lawn preview",
-    "webAsset": "src/assets/client/summer-lawn.jpg"
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/summer-lawn.jpg",
+    "previousPlacement": "Reserved \u2014 previous Services lawn preview",
+    "galleryStage": "finished"
   },
   {
     "batch": 1,
@@ -47,8 +51,10 @@
     "project": "Split-rail fence lawn",
     "assessment": "Existing-project alternate",
     "notes": "Same lawn scene as existing lawn-stripes.jpg, photographed from a nearby position. Retain as an alternative; do not add another near-duplicate.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-3104.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 1,
@@ -64,8 +70,10 @@
     "project": "Standalone lawn work",
     "assessment": "Standalone",
     "notes": "Finished mowing view; no verified before photo. Choose for lawn care, not sod installation claims.",
-    "placement": "Gallery",
-    "webAsset": "src/assets/client/pondside-lawn.jpg"
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/pondside-lawn.jpg",
+    "previousPlacement": "Gallery",
+    "galleryStage": "finished"
   },
   {
     "batch": 1,
@@ -81,8 +89,10 @@
     "project": "Standalone lawn work",
     "assessment": "Reserve / tilted framing",
     "notes": "Completed mowing, with strong camera tilt or distracting foreground. Better upright selections are available. No before/after evidence.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-4354.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 1,
@@ -98,8 +108,10 @@
     "project": "Light-sided front entrance",
     "assessment": "Standalone / alternate views",
     "notes": "Same completed front garden from two angles. Not a before/after pair. Use IMG_5253; reserve IMG_5254.",
-    "placement": "Gallery",
-    "webAsset": "src/assets/client/front-entry-beds.jpg"
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/front-entry-beds.jpg",
+    "previousPlacement": "Gallery",
+    "galleryStage": "finished"
   },
   {
     "batch": 1,
@@ -115,8 +127,10 @@
     "project": "Light-sided front entrance",
     "assessment": "Standalone / alternate views",
     "notes": "Same completed front garden from two angles. Not a before/after pair. Use IMG_5253; reserve IMG_5254.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-5254.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 1,
@@ -132,8 +146,10 @@
     "project": "Red mulch tree border",
     "assessment": "Standalone",
     "notes": "Finished long mulch border; no matching before photo found.",
-    "placement": "Gallery",
-    "webAsset": "src/assets/client/red-mulch-border.jpg"
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/red-mulch-border.jpg",
+    "previousPlacement": "Gallery",
+    "galleryStage": "finished"
   },
   {
     "batch": 1,
@@ -149,8 +165,10 @@
     "project": "Spring side bed",
     "assessment": "Strong pair / reserve comparison",
     "notes": "Same twin-trunk tree, wall vent, small window, edging, and large background tree. Same-day capture sequence; sparse/debris-strewn bed becomes freshly mulched. Angles differ. IMG_5292 used as a seasonal service photo, so the pair is reserved to avoid repetition.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-5290.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "before"
   },
   {
     "batch": 1,
@@ -166,8 +184,10 @@
     "project": "Spring side bed",
     "assessment": "Strong pair / reserve comparison",
     "notes": "Same twin-trunk tree, wall vent, small window, edging, and large background tree. Same-day capture sequence; sparse/debris-strewn bed becomes freshly mulched. Angles differ. IMG_5292 used as a seasonal service photo, so the pair is reserved to avoid repetition. September 26: also reused for the Services overview preview on desktop and mobile; no duplicate asset imported.",
-    "placement": "Seasonal cleanup hero and Services preview",
-    "webAsset": "src/assets/client/spring-bed-refresh.jpg"
+    "placement": "Seasonal cleanup hero and Services preview; Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/spring-bed-refresh.jpg",
+    "previousPlacement": "Seasonal cleanup hero and Services preview",
+    "galleryStage": "finished"
   },
   {
     "batch": 1,
@@ -183,8 +203,10 @@
     "project": "Raised wooden deck",
     "assessment": "Progress sequence / reserve",
     "notes": "Same elevated deck, string lights, railings and walkout. Different ends of the site; stone edging and straw-covered ground visible later. Not a finished green-lawn after shot; do not label as sod without confirmation.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-5988.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "progress"
   },
   {
     "batch": 1,
@@ -200,8 +222,10 @@
     "project": "Raised wooden deck",
     "assessment": "Progress sequence / reserve",
     "notes": "Same elevated deck, string lights, railings and walkout. Different ends of the site; stone edging and straw-covered ground visible later. Not a finished green-lawn after shot; do not label as sod without confirmation.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-5997.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "progress"
   },
   {
     "batch": 1,
@@ -217,8 +241,10 @@
     "project": "Straw-covered yard",
     "assessment": "Needs confirmation",
     "notes": "Broad straw-covered yard. No verified green-lawn counterpart; method and completed outcome cannot be inferred from this image.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-6401.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "progress"
   },
   {
     "batch": 1,
@@ -234,8 +260,10 @@
     "project": "Leaf cleanup",
     "assessment": "Strong pair",
     "notes": "Same forked tree, shed, rear fence and distant red roof. Leaf-covered lawn becomes clear; same-day timestamps support sequence. Camera shifts slightly.",
-    "placement": "Homepage comparison",
-    "webAsset": "src/assets/client/leaf-cleanup-before.jpg"
+    "placement": "Homepage comparison; Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/leaf-cleanup-before.jpg",
+    "previousPlacement": "Homepage comparison",
+    "galleryStage": "before"
   },
   {
     "batch": 1,
@@ -251,8 +279,10 @@
     "project": "Leaf cleanup",
     "assessment": "Strong pair",
     "notes": "Same forked tree, shed, rear fence and distant red roof. Leaf-covered lawn becomes clear; same-day timestamps support sequence. Camera shifts slightly.",
-    "placement": "Homepage comparison",
-    "webAsset": "src/assets/client/leaf-cleanup-after.jpg"
+    "placement": "Homepage comparison; Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/leaf-cleanup-after.jpg",
+    "previousPlacement": "Homepage comparison",
+    "galleryStage": "finished"
   },
   {
     "batch": 1,
@@ -268,8 +298,10 @@
     "project": "Wooded turf area",
     "assessment": "Standalone / work in progress",
     "notes": "Visible newly laid turf patch and equipment. Useful for sod service; not paired with IMG_1852 until matching area is confirmed. Do not present as a completed whole-property project.",
-    "placement": "Sod installation hero",
-    "webAsset": "src/assets/client/new-turf-area.jpg"
+    "placement": "Sod installation hero; Our Work gallery",
+    "webAsset": "src/assets/client/new-turf-area.jpg",
+    "previousPlacement": "Sod installation hero",
+    "galleryStage": "progress"
   },
   {
     "batch": 1,
@@ -285,8 +317,10 @@
     "project": "Brick building planting beds",
     "assessment": "Standalone / alternate views",
     "notes": "Matching brick building and arched windows, two finished angles. Lower-resolution exports. Use IMG_7562 at card size; keep IMG_7564 as alternate.",
-    "placement": "Gallery",
-    "webAsset": "src/assets/client/brick-building-garden.jpg"
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/brick-building-garden.jpg",
+    "previousPlacement": "Gallery",
+    "galleryStage": "finished"
   },
   {
     "batch": 1,
@@ -302,8 +336,10 @@
     "project": "Outbuilding planting bed",
     "assessment": "Standalone reserve",
     "notes": "Finished narrow planting bed beside an outbuilding. No matching before view; relationship to adjacent brick-building images is not proven.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7563.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 1,
@@ -319,8 +355,10 @@
     "project": "Brick building planting beds",
     "assessment": "Standalone / alternate views",
     "notes": "Matching brick building and arched windows, two finished angles. Lower-resolution exports. Use IMG_7562 at card size; keep IMG_7564 as alternate.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7564.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 2,
@@ -336,8 +374,10 @@
     "project": "Brick and siding stone borders",
     "assessment": "Strong project sequence / existing coverage",
     "notes": "Same rounded shrubs, house walls and sweeping bed edges. Early pictures show layout marking/loose edging and red mulch; later pictures show stone and borders. IMG_7599\u21927608 and IMG_7601\u21927604 are the clearest area matches. Work has already begun in IMG_7597. Existing site already covers this project.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7597.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "progress"
   },
   {
     "batch": 2,
@@ -353,8 +393,10 @@
     "project": "Brick and siding stone borders",
     "assessment": "Strong project sequence / existing coverage",
     "notes": "Same rounded shrubs, house walls and sweeping bed edges. Early pictures show layout marking/loose edging and red mulch; later pictures show stone and borders. IMG_7599\u21927608 and IMG_7601\u21927604 are the clearest area matches. Work has already begun in IMG_7597. Existing site already covers this project.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7599.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "before"
   },
   {
     "batch": 2,
@@ -370,8 +412,10 @@
     "project": "Brick and siding stone borders",
     "assessment": "Strong project sequence / existing coverage",
     "notes": "Same rounded shrubs, house walls and sweeping bed edges. Early pictures show layout marking/loose edging and red mulch; later pictures show stone and borders. IMG_7599\u21927608 and IMG_7601\u21927604 are the clearest area matches. Work has already begun in IMG_7597. Existing site already covers this project.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7601.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "before"
   },
   {
     "batch": 2,
@@ -387,8 +431,10 @@
     "project": "Brick and siding stone borders",
     "assessment": "Strong project sequence / existing coverage",
     "notes": "Same rounded shrubs, house walls and sweeping bed edges. Early pictures show layout marking/loose edging and red mulch; later pictures show stone and borders. IMG_7599\u21927608 and IMG_7601\u21927604 are the clearest area matches. Work has already begun in IMG_7597. Existing site already covers this project.",
-    "placement": "Services trimming preview",
-    "webAsset": "src/assets/client/rounded-border-shrubs.jpg"
+    "placement": "Services trimming preview; Our Work gallery",
+    "webAsset": "src/assets/client/rounded-border-shrubs.jpg",
+    "previousPlacement": "Services trimming preview",
+    "galleryStage": "finished"
   },
   {
     "batch": 2,
@@ -404,8 +450,10 @@
     "project": "Brick and siding stone borders",
     "assessment": "Existing image duplicate",
     "notes": "Visually the same photograph as stone-edging.jpg at a different size/encoding. Do not import again.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/stone-edging.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 2,
@@ -421,8 +469,10 @@
     "project": "Brick and siding stone borders",
     "assessment": "Standalone detail / existing project alternate",
     "notes": "Approved as a standalone shrub detail for the lower trimming section. Shows shaped shrubs beside a brick home. Other photographs from this property remain in their existing placements; this source was previously unused.",
-    "placement": "Trimming detail",
-    "webAsset": "src/assets/client/shaped-shrub-detail.jpg"
+    "placement": "Trimming detail; Our Work gallery",
+    "webAsset": "src/assets/client/shaped-shrub-detail.jpg",
+    "previousPlacement": "Trimming detail",
+    "galleryStage": "finished"
   },
   {
     "batch": 2,
@@ -438,8 +488,10 @@
     "project": "Brick and siding stone borders",
     "assessment": "Existing image duplicate",
     "notes": "Visually the same photograph as landscape-beds.jpg at a different size/encoding. Do not import again.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/landscape-beds.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 2,
@@ -455,8 +507,10 @@
     "project": "Evergreen border",
     "assessment": "Strong pair",
     "notes": "Same evergreen trunk, white/wood fence junction, shrub and scattered rocks. Ground cover refreshed into a curved mulch bed. Same-day capture sequence; slight change in position.",
-    "placement": "Our Work comparison",
-    "webAsset": "src/assets/client/evergreen-border-before.jpg"
+    "placement": "Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/evergreen-border-before.jpg",
+    "previousPlacement": "Our Work comparison",
+    "galleryStage": "before"
   },
   {
     "batch": 2,
@@ -472,8 +526,10 @@
     "project": "Evergreen border",
     "assessment": "Strong pair",
     "notes": "Same evergreen trunk, white/wood fence junction, shrub and scattered rocks. Ground cover refreshed into a curved mulch bed. Same-day capture sequence; slight change in position.",
-    "placement": "Our Work comparison",
-    "webAsset": "src/assets/client/evergreen-border-after.jpg"
+    "placement": "Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/evergreen-border-after.jpg",
+    "previousPlacement": "Our Work comparison",
+    "galleryStage": "finished"
   },
   {
     "batch": 2,
@@ -489,8 +545,10 @@
     "project": "Single-story brick home",
     "assessment": "Strong project sequence",
     "notes": "Brick walls, window layout, front door and roofline identify one project. Overgrown beds become stone with small spaced shrubs. IMG_7669\u21927679 is the existing homepage collage; IMG_7671\u21927680 is an additional side-wall match. Retain extra angles rather than making multiple cards for one property.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7667.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "before"
   },
   {
     "batch": 2,
@@ -506,8 +564,10 @@
     "project": "Single-story brick home",
     "assessment": "Strong project sequence",
     "notes": "Brick walls, window layout, front door and roofline identify one project. Overgrown beds become stone with small spaced shrubs. IMG_7669\u21927679 is the existing homepage collage; IMG_7671\u21927680 is an additional side-wall match. Retain extra angles rather than making multiple cards for one property.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7668.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "before"
   },
   {
     "batch": 2,
@@ -523,8 +583,10 @@
     "project": "Single-story brick home",
     "assessment": "Existing collage originals / replacement",
     "notes": "These are the two original photographs already combined in front-yard-before-after.webp. Use sharper separate images in that existing comparison, not a second copy of the project.",
-    "placement": "Homepage comparison",
-    "webAsset": "src/assets/client/front-yard-before.jpg"
+    "placement": "Homepage comparison; Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/front-yard-before.jpg",
+    "previousPlacement": "Homepage comparison",
+    "galleryStage": "before"
   },
   {
     "batch": 2,
@@ -540,8 +602,10 @@
     "project": "Single-story brick home",
     "assessment": "Strong project sequence",
     "notes": "Brick walls, window layout, front door and roofline identify one project. Overgrown beds become stone with small spaced shrubs. IMG_7669\u21927679 is the existing homepage collage; IMG_7671\u21927680 is an additional side-wall match. Retain extra angles rather than making multiple cards for one property.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7671.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "before"
   },
   {
     "batch": 2,
@@ -557,8 +621,10 @@
     "project": "Single-story brick home",
     "assessment": "Strong project sequence",
     "notes": "Brick walls, window layout, front door and roofline identify one project. Overgrown beds become stone with small spaced shrubs. IMG_7669\u21927679 is the existing homepage collage; IMG_7671\u21927680 is an additional side-wall match. Retain extra angles rather than making multiple cards for one property.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7676.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 2,
@@ -574,8 +640,10 @@
     "project": "Single-story brick home",
     "assessment": "Strong project sequence",
     "notes": "Brick walls, window layout, front door and roofline identify one project. Overgrown beds become stone with small spaced shrubs. IMG_7669\u21927679 is the existing homepage collage; IMG_7671\u21927680 is an additional side-wall match. Retain extra angles rather than making multiple cards for one property.",
-    "placement": "Services landscaping preview",
-    "webAsset": "src/assets/client/brick-house-stone-bed.jpg"
+    "placement": "Services landscaping preview; Our Work gallery",
+    "webAsset": "src/assets/client/brick-house-stone-bed.jpg",
+    "previousPlacement": "Services landscaping preview",
+    "galleryStage": "finished"
   },
   {
     "batch": 2,
@@ -591,8 +659,10 @@
     "project": "Single-story brick home",
     "assessment": "Existing collage originals / replacement",
     "notes": "These are the two original photographs already combined in front-yard-before-after.webp. Use sharper separate images in that existing comparison, not a second copy of the project.",
-    "placement": "Homepage comparison",
-    "webAsset": "src/assets/client/front-yard-after.jpg"
+    "placement": "Homepage comparison; Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/front-yard-after.jpg",
+    "previousPlacement": "Homepage comparison",
+    "galleryStage": "finished"
   },
   {
     "batch": 2,
@@ -608,8 +678,10 @@
     "project": "Single-story brick home",
     "assessment": "Strong project sequence",
     "notes": "Brick walls, window layout, front door and roofline identify one project. Overgrown beds become stone with small spaced shrubs. IMG_7669\u21927679 is the existing homepage collage; IMG_7671\u21927680 is an additional side-wall match. Retain extra angles rather than making multiple cards for one property.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7680.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 2,
@@ -625,8 +697,10 @@
     "project": "Backyard border",
     "assessment": "Strong pair",
     "notes": "Same fence, branching trees, pale flowering shrub, and garden statue. Overgrown undergrowth becomes dark mulch and a clean edge. Same-day capture sequence supports the change; camera positions differ.",
-    "placement": "Our Work comparison",
-    "webAsset": "src/assets/client/backyard-border-before.jpg"
+    "placement": "Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/backyard-border-before.jpg",
+    "previousPlacement": "Our Work comparison",
+    "galleryStage": "before"
   },
   {
     "batch": 2,
@@ -642,8 +716,10 @@
     "project": "Backyard border",
     "assessment": "Strong pair",
     "notes": "Same fence, branching trees, pale flowering shrub, and garden statue. Overgrown undergrowth becomes dark mulch and a clean edge. Same-day capture sequence supports the change; camera positions differ.",
-    "placement": "Our Work comparison",
-    "webAsset": "src/assets/client/backyard-border-after.jpg"
+    "placement": "Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/backyard-border-after.jpg",
+    "previousPlacement": "Our Work comparison",
+    "galleryStage": "finished"
   },
   {
     "batch": 2,
@@ -659,8 +735,10 @@
     "project": "Standalone lawn work",
     "assessment": "Standalone",
     "notes": "Finished mowing view; no verified before photo. Choose for lawn care, not sod installation claims.",
-    "placement": "Gallery",
-    "webAsset": "src/assets/client/curving-lawn.jpg"
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/curving-lawn.jpg",
+    "previousPlacement": "Gallery",
+    "galleryStage": "finished"
   },
   {
     "batch": 3,
@@ -676,8 +754,10 @@
     "project": "Standalone lawn work",
     "assessment": "Standalone",
     "notes": "Finished mowing view; no verified before photo. Choose for lawn care, not sod installation claims.",
-    "placement": "Lawn care hero",
-    "webAsset": "src/assets/client/tree-lined-lawn.jpg"
+    "placement": "Lawn care hero; Our Work gallery",
+    "webAsset": "src/assets/client/tree-lined-lawn.jpg",
+    "previousPlacement": "Lawn care hero",
+    "galleryStage": "finished"
   },
   {
     "batch": 3,
@@ -693,8 +773,10 @@
     "project": "Standalone lawn work",
     "assessment": "Reserve / tilted framing",
     "notes": "Completed mowing, with strong camera tilt or distracting foreground. Better upright selections are available. No before/after evidence.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7925.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 3,
@@ -710,8 +792,10 @@
     "project": "Standalone lawn work",
     "assessment": "Reserve / tilted framing",
     "notes": "Completed mowing, with strong camera tilt or distracting foreground. Better upright selections are available. No before/after evidence.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7935.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 3,
@@ -727,8 +811,10 @@
     "project": "Standalone lawn work",
     "assessment": "Standalone",
     "notes": "Finished mowing view; no verified before photo. Choose for lawn care, not sod installation claims.",
-    "placement": "Gallery",
-    "webAsset": "src/assets/client/backyard-lawn.jpg"
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/backyard-lawn.jpg",
+    "previousPlacement": "Gallery",
+    "galleryStage": "finished"
   },
   {
     "batch": 3,
@@ -744,8 +830,10 @@
     "project": "Shaped foundation shrubs",
     "assessment": "Standalone",
     "notes": "Rounded and squared shrubs beside brick walls. Good trimming result; no matching before view.",
-    "placement": "Trimming hero",
-    "webAsset": "src/assets/client/shaped-foundation-shrubs.jpg"
+    "placement": "Trimming hero; Our Work gallery",
+    "webAsset": "src/assets/client/shaped-foundation-shrubs.jpg",
+    "previousPlacement": "Trimming hero",
+    "galleryStage": "finished"
   },
   {
     "batch": 3,
@@ -761,8 +849,10 @@
     "project": "Tall evergreens by fence",
     "assessment": "Unmatched before or standalone",
     "notes": "No clearly matching later view. Do not assume the nearby deck project is the after, or claim tree removal occurred.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7990.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "project"
   },
   {
     "batch": 3,
@@ -778,8 +868,10 @@
     "project": "Deck garden renovation",
     "assessment": "Strong project sequence / reserve comparison",
     "notes": "Same deck railings, corner posts, patio doors, siding/windows and surrounding houses. Large shrubs become small plants in stone beds. IMG_7991\u21928005 is a useful same-area pair, but perspective differs substantially. IMG_7993\u21928004 shows another side. Site already has the broad finished view; use only one distinct close-up.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7991.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "before"
   },
   {
     "batch": 3,
@@ -795,8 +887,10 @@
     "project": "Deck garden renovation",
     "assessment": "Client-selected before-and-after pair",
     "notes": "Exact before photo requested in the September 26 client screenshot, paired with IMG_8008. Same deck, siding, windows, umbrella and surrounding house identify the project. Viewpoints differ; the full-photo viewer preserves both frames.",
-    "placement": "Homepage comparison",
-    "webAsset": "src/assets/client/deck-garden-before.jpg"
+    "placement": "Homepage comparison; Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/deck-garden-before.jpg",
+    "previousPlacement": "Homepage comparison",
+    "galleryStage": "before"
   },
   {
     "batch": 3,
@@ -812,8 +906,10 @@
     "project": "Deck garden renovation",
     "assessment": "Strong project sequence / reserve comparison",
     "notes": "Same deck railings, corner posts, patio doors, siding/windows and surrounding houses. Large shrubs become small plants in stone beds. IMG_7991\u21928005 is a useful same-area pair, but perspective differs substantially. IMG_7993\u21928004 shows another side. Site already has the broad finished view; use only one distinct close-up.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-7993.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "before"
   },
   {
     "batch": 3,
@@ -829,8 +925,10 @@
     "project": "Deck garden renovation",
     "assessment": "Strong project sequence / reserve comparison",
     "notes": "Same deck railings, corner posts, patio doors, siding/windows and surrounding houses. Large shrubs become small plants in stone beds. IMG_7991\u21928005 is a useful same-area pair, but perspective differs substantially. IMG_7993\u21928004 shows another side. Site already has the broad finished view; use only one distinct close-up.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8004.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 3,
@@ -846,8 +944,10 @@
     "project": "Deck garden renovation",
     "assessment": "Strong project sequence / reserve comparison",
     "notes": "Same deck railings, corner posts, patio doors, siding/windows and surrounding houses. Large shrubs become small plants in stone beds. IMG_7991\u21928005 is a useful same-area pair, but perspective differs substantially. IMG_7993\u21928004 shows another side. Site already has the broad finished view; use only one distinct close-up.",
-    "placement": "Landscaping detail",
-    "webAsset": "src/assets/client/deck-stone-bed.jpg"
+    "placement": "Landscaping detail; Our Work gallery",
+    "webAsset": "src/assets/client/deck-stone-bed.jpg",
+    "previousPlacement": "Landscaping detail",
+    "galleryStage": "finished"
   },
   {
     "batch": 3,
@@ -863,8 +963,10 @@
     "project": "Deck garden renovation",
     "assessment": "Strong project sequence / reserve comparison",
     "notes": "Same deck railings, corner posts, patio doors, siding/windows and surrounding houses. Large shrubs become small plants in stone beds. IMG_7991\u21928005 is a useful same-area pair, but perspective differs substantially. IMG_7993\u21928004 shows another side. Site already has the broad finished view; use only one distinct close-up.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8006.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 3,
@@ -880,8 +982,10 @@
     "project": "Deck garden renovation",
     "assessment": "Client-selected pair / existing asset reused",
     "notes": "Exact after photo requested in the September 26 client screenshot, paired with IMG_7992. Reuses the existing backyard.jpg copy of this photograph; no duplicate asset imported.",
-    "placement": "Homepage comparison",
-    "webAsset": "src/assets/backyard.jpg"
+    "placement": "Homepage comparison; Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/backyard.jpg",
+    "previousPlacement": "Homepage comparison",
+    "galleryStage": "finished"
   },
   {
     "batch": 3,
@@ -897,8 +1001,10 @@
     "project": "Evergreen mulch island",
     "assessment": "Standalone",
     "notes": "Completed island of evergreen shrubs with red mulch. Do not pair with the unrelated tall trees in IMG_7990.",
-    "placement": "Mulch and planting detail",
-    "webAsset": "src/assets/client/evergreen-mulch-island.jpg"
+    "placement": "Mulch and planting detail; Our Work gallery",
+    "webAsset": "src/assets/client/evergreen-mulch-island.jpg",
+    "previousPlacement": "Mulch and planting detail",
+    "galleryStage": "finished"
   },
   {
     "batch": 3,
@@ -914,8 +1020,10 @@
     "project": "Standalone lawn work",
     "assessment": "Standalone",
     "notes": "Finished mowing view; no verified before photo. Choose for lawn care, not sod installation claims.",
-    "placement": "Lawn care detail",
-    "webAsset": "src/assets/client/crosscut-lawn.jpg"
+    "placement": "Lawn care detail; Our Work gallery",
+    "webAsset": "src/assets/client/crosscut-lawn.jpg",
+    "previousPlacement": "Lawn care detail",
+    "galleryStage": "finished"
   },
   {
     "batch": 3,
@@ -931,8 +1039,10 @@
     "project": "Standalone lawn work",
     "assessment": "Reserve / tilted framing",
     "notes": "Completed mowing, with strong camera tilt or distracting foreground. Better upright selections are available. No before/after evidence.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8129.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 4,
@@ -948,8 +1058,10 @@
     "project": "Blue-shutter front beds",
     "assessment": "Strong project sequence",
     "notes": "Same blue shutters, windows, entry steps, chain-link fence and neighboring brick house. IMG_8238\u21928248 is the right/front bed; IMG_8237\u21928249 is the other entry-side bed. Both show overgrowth cleared for mulch and shrubs. Use one card for this property.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8237.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "before"
   },
   {
     "batch": 4,
@@ -965,8 +1077,10 @@
     "project": "Blue-shutter front beds",
     "assessment": "Strong project sequence",
     "notes": "Same blue shutters, windows, entry steps, chain-link fence and neighboring brick house. IMG_8238\u21928248 is the right/front bed; IMG_8237\u21928249 is the other entry-side bed. Both show overgrowth cleared for mulch and shrubs. Use one card for this property. Replaced on the homepage by the client-selected deck pair on September 26. Original and converted web copy retained for future use.",
-    "placement": "Reserved \u2014 previous homepage comparison",
-    "webAsset": "src/assets/client/front-garden-before.jpg"
+    "placement": "Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/front-garden-before.jpg",
+    "previousPlacement": "Reserved \u2014 previous homepage comparison",
+    "galleryStage": "before"
   },
   {
     "batch": 4,
@@ -982,8 +1096,10 @@
     "project": "Blue-shutter front beds",
     "assessment": "Strong project sequence",
     "notes": "Same blue shutters, windows, entry steps, chain-link fence and neighboring brick house. IMG_8238\u21928248 is the right/front bed; IMG_8237\u21928249 is the other entry-side bed. Both show overgrowth cleared for mulch and shrubs. Use one card for this property. Replaced on the homepage by the client-selected deck pair on September 26. Original and converted web copy retained for future use.",
-    "placement": "Reserved \u2014 previous homepage comparison",
-    "webAsset": "src/assets/client/front-garden-after.jpg"
+    "placement": "Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/front-garden-after.jpg",
+    "previousPlacement": "Reserved \u2014 previous homepage comparison",
+    "galleryStage": "finished"
   },
   {
     "batch": 4,
@@ -999,8 +1115,10 @@
     "project": "Blue-shutter front beds",
     "assessment": "Strong project sequence",
     "notes": "Same blue shutters, windows, entry steps, chain-link fence and neighboring brick house. IMG_8238\u21928248 is the right/front bed; IMG_8237\u21928249 is the other entry-side bed. Both show overgrowth cleared for mulch and shrubs. Use one card for this property.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8249.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 4,
@@ -1016,8 +1134,10 @@
     "project": "Brick-path stone gardens",
     "assessment": "Strong project sequence",
     "notes": "Same curved brick paving, wooden enclosure/roof, house siding and AC/window identify this project. IMG_8257\u21928361 is the clearest path-side match; IMG_8258\u21928364 and IMG_8259\u21928366 cover adjoining beds. Later frames show stone and small plants. Use one comparison plus one distinct foundation detail.",
-    "placement": "Our Work comparison",
-    "webAsset": "src/assets/client/brick-path-before.jpg"
+    "placement": "Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/brick-path-before.jpg",
+    "previousPlacement": "Our Work comparison",
+    "galleryStage": "before"
   },
   {
     "batch": 4,
@@ -1033,8 +1153,10 @@
     "project": "Brick-path stone gardens",
     "assessment": "Strong project sequence",
     "notes": "Same curved brick paving, wooden enclosure/roof, house siding and AC/window identify this project. IMG_8257\u21928361 is the clearest path-side match; IMG_8258\u21928364 and IMG_8259\u21928366 cover adjoining beds. Later frames show stone and small plants. Use one comparison plus one distinct foundation detail.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8258.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "before"
   },
   {
     "batch": 4,
@@ -1050,8 +1172,10 @@
     "project": "Brick-path stone gardens",
     "assessment": "Strong project sequence",
     "notes": "Same curved brick paving, wooden enclosure/roof, house siding and AC/window identify this project. IMG_8257\u21928361 is the clearest path-side match; IMG_8258\u21928364 and IMG_8259\u21928366 cover adjoining beds. Later frames show stone and small plants. Use one comparison plus one distinct foundation detail.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8259.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "before"
   },
   {
     "batch": 4,
@@ -1067,8 +1191,10 @@
     "project": "Brick-path stone gardens",
     "assessment": "Strong project sequence",
     "notes": "Same curved brick paving, wooden enclosure/roof, house siding and AC/window identify this project. IMG_8257\u21928361 is the clearest path-side match; IMG_8258\u21928364 and IMG_8259\u21928366 cover adjoining beds. Later frames show stone and small plants. Use one comparison plus one distinct foundation detail.",
-    "placement": "Our Work comparison",
-    "webAsset": "src/assets/client/brick-path-after.jpg"
+    "placement": "Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/brick-path-after.jpg",
+    "previousPlacement": "Our Work comparison",
+    "galleryStage": "finished"
   },
   {
     "batch": 4,
@@ -1084,8 +1210,10 @@
     "project": "Brick-path stone gardens",
     "assessment": "Strong project sequence",
     "notes": "Same curved brick paving, wooden enclosure/roof, house siding and AC/window identify this project. IMG_8257\u21928361 is the clearest path-side match; IMG_8258\u21928364 and IMG_8259\u21928366 cover adjoining beds. Later frames show stone and small plants. Use one comparison plus one distinct foundation detail.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8362.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 4,
@@ -1101,8 +1229,10 @@
     "project": "Brick-path stone gardens",
     "assessment": "Strong project sequence",
     "notes": "Same curved brick paving, wooden enclosure/roof, house siding and AC/window identify this project. IMG_8257\u21928361 is the clearest path-side match; IMG_8258\u21928364 and IMG_8259\u21928366 cover adjoining beds. Later frames show stone and small plants. Use one comparison plus one distinct foundation detail.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8364.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 4,
@@ -1118,8 +1248,10 @@
     "project": "Brick-path stone gardens",
     "assessment": "Strong project sequence",
     "notes": "Same curved brick paving, wooden enclosure/roof, house siding and AC/window identify this project. IMG_8257\u21928361 is the clearest path-side match; IMG_8258\u21928364 and IMG_8259\u21928366 cover adjoining beds. Later frames show stone and small plants. Use one comparison plus one distinct foundation detail.",
-    "placement": "Gallery",
-    "webAsset": "src/assets/client/stone-foundation-bed.jpg"
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/stone-foundation-bed.jpg",
+    "previousPlacement": "Gallery",
+    "galleryStage": "finished"
   },
   {
     "batch": 4,
@@ -1135,8 +1267,10 @@
     "project": "Brick-path stone gardens",
     "assessment": "Standalone detail / existing project alternate",
     "notes": "Approved as a standalone finished garden image for the lower seasonal-cleanup section. Shows a tidy planted stone bed and brick path. The existing brick-path before-and-after comparison is unchanged; this is a different photograph.",
-    "placement": "Seasonal cleanup detail",
-    "webAsset": "src/assets/client/finished-path-garden.jpg"
+    "placement": "Seasonal cleanup detail; Our Work gallery",
+    "webAsset": "src/assets/client/finished-path-garden.jpg",
+    "previousPlacement": "Seasonal cleanup detail",
+    "galleryStage": "finished"
   },
   {
     "batch": 5,
@@ -1152,8 +1286,10 @@
     "project": "Porch and courtyard beds",
     "assessment": "Client-confirmed before mulch",
     "notes": "Client confirmed on September 26 that this view was before mulch was added. Replaced in Contact with the supplied completed-mulch view IMG_8289. Original and converted copy retained for reference.",
-    "placement": "Reserved \u2014 previous Contact photo",
-    "webAsset": "src/assets/client/welcoming-front-garden.jpg"
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/welcoming-front-garden.jpg",
+    "previousPlacement": "Reserved \u2014 previous Contact photo",
+    "galleryStage": "before"
   },
   {
     "batch": 5,
@@ -1169,8 +1305,10 @@
     "project": "Porch and courtyard beds",
     "assessment": "Same-project refresh / subtle comparison",
     "notes": "Matching white porch, windows, walkway and courtyard trees/fence. Earlier views are already maintained; later views show darker fresh mulch. IMG_8282\u21928288 and IMG_8284\u21928290 likely show a mulch refresh, not a dramatic landscape replacement. Lighting/angle differences amplify appearance. Use distinct standalone views; reserve before/after claims for client confirmation.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8282.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "before"
   },
   {
     "batch": 5,
@@ -1186,8 +1324,10 @@
     "project": "Porch and courtyard beds",
     "assessment": "Same-project refresh / subtle comparison",
     "notes": "Matching white porch, windows, walkway and courtyard trees/fence. Earlier views are already maintained; later views show darker fresh mulch. IMG_8282\u21928288 and IMG_8284\u21928290 likely show a mulch refresh, not a dramatic landscape replacement. Lighting/angle differences amplify appearance. Use distinct standalone views; reserve before/after claims for client confirmation.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8284.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "before"
   },
   {
     "batch": 5,
@@ -1203,8 +1343,10 @@
     "project": "Porch and courtyard beds",
     "assessment": "Client-confirmed before mulch",
     "notes": "Client confirmed on September 26 that this view was taken before mulch was added. Replaced in the Services overview hero with the completed IMG_8291 photo. Original and previous web copy retained for reference.",
-    "placement": "Reserved \u2014 previous Services hero",
-    "webAsset": "src/assets/client/courtyard-garden.jpg"
+    "placement": "Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/courtyard-garden.jpg",
+    "previousPlacement": "Reserved \u2014 previous Services hero",
+    "galleryStage": "before"
   },
   {
     "batch": 5,
@@ -1220,8 +1362,10 @@
     "project": "Porch and courtyard beds",
     "assessment": "Same-project refresh / subtle comparison",
     "notes": "Matching white porch, windows, walkway and courtyard trees/fence. Earlier views are already maintained; later views show darker fresh mulch. IMG_8282\u21928288 and IMG_8284\u21928290 likely show a mulch refresh, not a dramatic landscape replacement. Lighting/angle differences amplify appearance. Use distinct standalone views; reserve before/after claims for client confirmation.",
-    "placement": "Gallery",
-    "webAsset": "src/assets/client/porch-garden.jpg"
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/porch-garden.jpg",
+    "previousPlacement": "Gallery",
+    "galleryStage": "finished"
   },
   {
     "batch": 5,
@@ -1237,8 +1381,10 @@
     "project": "Porch and courtyard beds",
     "assessment": "Client-confirmed completed mulch",
     "notes": "Client selected this completed-mulch view on September 26 for Contact, replacing IMG_8281. Reuses the existing web copy also shown in the About story; no duplicate file imported. Contact uses a lower crop to emphasize the fresh mulch and plants. A person is visible working in the original frame.",
-    "placement": "About story and Contact area",
-    "webAsset": "src/assets/client/garden-work-in-progress.jpg"
+    "placement": "About story and Contact area; Our Work gallery",
+    "webAsset": "src/assets/client/garden-work-in-progress.jpg",
+    "previousPlacement": "About story and Contact area",
+    "galleryStage": "finished"
   },
   {
     "batch": 5,
@@ -1254,8 +1400,10 @@
     "project": "Porch and courtyard beds",
     "assessment": "Same-project refresh / subtle comparison",
     "notes": "Matching white porch, windows, walkway and courtyard trees/fence. Earlier views are already maintained; later views show darker fresh mulch. IMG_8282\u21928288 and IMG_8284\u21928290 likely show a mulch refresh, not a dramatic landscape replacement. Lighting/angle differences amplify appearance. Use distinct standalone views; reserve before/after claims for client confirmation.",
-    "placement": "Services mulch preview",
-    "webAsset": "src/assets/client/fresh-courtyard-mulch.jpg"
+    "placement": "Services mulch preview; Our Work gallery",
+    "webAsset": "src/assets/client/fresh-courtyard-mulch.jpg",
+    "previousPlacement": "Services mulch preview",
+    "galleryStage": "finished"
   },
   {
     "batch": 5,
@@ -1271,8 +1419,10 @@
     "project": "Porch and courtyard beds",
     "assessment": "Client-confirmed completed mulch",
     "notes": "Client selected this completed view on September 26 to replace IMG_8285 in the Services overview hero. Shows the courtyard after fresh mulch was added.",
-    "placement": "Services overview hero",
-    "webAsset": "src/assets/client/courtyard-after-mulch.jpg"
+    "placement": "Services overview hero; Our Work comparison; Our Work gallery",
+    "webAsset": "src/assets/client/courtyard-after-mulch.jpg",
+    "previousPlacement": "Services overview hero",
+    "galleryStage": "finished"
   },
   {
     "batch": 5,
@@ -1288,8 +1438,10 @@
     "project": "Standalone lawn work",
     "assessment": "Reserve / tilted framing",
     "notes": "Completed mowing, with strong camera tilt or distracting foreground. Better upright selections are available. No before/after evidence.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8345.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 6,
@@ -1305,8 +1457,10 @@
     "project": "Yellow flower border",
     "assessment": "Standalone",
     "notes": "Fresh mulch, yellow flowers and rounded shrubs. Worker visible in distance; no matching before view.",
-    "placement": "Mulch and planting hero",
-    "webAsset": "src/assets/client/yellow-flower-border.jpg"
+    "placement": "Mulch and planting hero; Our Work gallery",
+    "webAsset": "src/assets/client/yellow-flower-border.jpg",
+    "previousPlacement": "Mulch and planting hero",
+    "galleryStage": "finished"
   },
   {
     "batch": 6,
@@ -1322,8 +1476,10 @@
     "project": "Brown-sided stone borders",
     "assessment": "Preparation-to-finish sequence",
     "notes": "Matching brick bay window/entry and brown siding, timber post and AC. IMG_8407\u21928415 and IMG_8409\u21928416 match, but earlier photos already show lifted edging and dug borders. Label Preparation/After if used as a pair, not untouched Before. Finished front and distinct side detail selected.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8407.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "progress"
   },
   {
     "batch": 6,
@@ -1339,8 +1495,10 @@
     "project": "Brown-sided stone borders",
     "assessment": "Preparation-to-finish sequence",
     "notes": "Matching brick bay window/entry and brown siding, timber post and AC. IMG_8407\u21928415 and IMG_8409\u21928416 match, but earlier photos already show lifted edging and dug borders. Label Preparation/After if used as a pair, not untouched Before. Finished front and distinct side detail selected.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8409.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "progress"
   },
   {
     "batch": 6,
@@ -1356,8 +1514,10 @@
     "project": "Brown-sided stone borders",
     "assessment": "Preparation-to-finish sequence",
     "notes": "Matching brick bay window/entry and brown siding, timber post and AC. IMG_8407\u21928415 and IMG_8409\u21928416 match, but earlier photos already show lifted edging and dug borders. Label Preparation/After if used as a pair, not untouched Before. Finished front and distinct side detail selected.",
-    "placement": "Landscaping hero",
-    "webAsset": "src/assets/client/curved-stone-entry.jpg"
+    "placement": "Landscaping hero; Our Work gallery",
+    "webAsset": "src/assets/client/curved-stone-entry.jpg",
+    "previousPlacement": "Landscaping hero",
+    "galleryStage": "finished"
   },
   {
     "batch": 6,
@@ -1373,8 +1533,10 @@
     "project": "Brown-sided stone borders",
     "assessment": "Preparation-to-finish sequence",
     "notes": "Matching brick bay window/entry and brown siding, timber post and AC. IMG_8407\u21928415 and IMG_8409\u21928416 match, but earlier photos already show lifted edging and dug borders. Label Preparation/After if used as a pair, not untouched Before. Finished front and distinct side detail selected.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/gallery/img-8416.jpg",
+    "previousPlacement": "Reserved \u2014 not added to website",
+    "galleryStage": "finished"
   },
   {
     "batch": 6,
@@ -1390,8 +1552,10 @@
     "project": "Brown-sided stone borders",
     "assessment": "Preparation-to-finish sequence",
     "notes": "Matching brick bay window/entry and brown siding, timber post and AC. IMG_8407\u21928415 and IMG_8409\u21928416 match, but earlier photos already show lifted edging and dug borders. Label Preparation/After if used as a pair, not untouched Before. Finished front and distinct side detail selected.",
-    "placement": "Gallery",
-    "webAsset": "src/assets/client/side-yard-stone.jpg"
+    "placement": "Our Work gallery",
+    "webAsset": "src/assets/client/side-yard-stone.jpg",
+    "previousPlacement": "Gallery",
+    "galleryStage": "finished"
   },
   {
     "batch": 6,
@@ -1407,7 +1571,9 @@
     "project": "Standalone lawn work",
     "assessment": "Client-selected completed mowing photo",
     "notes": "Explicitly selected by the client on September 26 for 01 Lawn Care in the Services overview. Original camera tilt preserved; the preview crop emphasizes the mowing stripes. No before/after pairing claimed.",
-    "placement": "Services lawn preview",
-    "webAsset": "src/assets/client/backyard-mowing-stripes.jpg"
+    "placement": "Services lawn preview; Our Work gallery",
+    "webAsset": "src/assets/client/backyard-mowing-stripes.jpg",
+    "previousPlacement": "Services lawn preview",
+    "galleryStage": "finished"
   }
 ]

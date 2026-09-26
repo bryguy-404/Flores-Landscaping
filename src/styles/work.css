@@ -201,3 +201,49 @@
 }
 @media(prefers-reduced-motion: reduce) { .work-video-preview img { transition: none; } .work-video-preview:hover img { transform: none; } }
 @media(prefers-reduced-motion: reduce) { .work-gallery-photo img { transition: none; } .work-gallery-photo:hover img { transform: none; } }
+
+/* Full collection: photo proportions stay intact, with a compact masonry view. */
+.work-jump-links { display: flex; flex-wrap: wrap; gap: 22px; font-size: .7rem; }
+.work-jump-links a { border-bottom: 1px solid #cfb8bb; padding-block: 5px; }
+.work-jump-links a:hover { color: var(--red); border-color: var(--red); }
+.work-more-comparisons { margin-top: 28px; }
+.work-more-comparisons > summary { display: flex; align-items: center; justify-content: center; gap: 14px; width: fit-content; margin-inline: auto; min-height: 48px; border: 1px solid #d5b4b8; border-radius: 4px; padding: 12px 23px; color: var(--red); font-size: .76rem; cursor: pointer; list-style: none; }
+.work-more-comparisons > summary::-webkit-details-marker { display: none; }
+.work-more-comparisons > summary:hover { background: #fcf0f1; }
+.work-more-comparisons > summary:focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
+.comparison-less-label, .work-more-comparisons[open] .comparison-more-label { display: none; }
+.work-more-comparisons[open] .comparison-less-label { display: inline; }
+.work-more-comparisons[open] > summary svg { transform: rotate(180deg); }
+.work-extra-comparison-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 34px; }
+.work-gallery-grid { --gallery-columns: 4; --gallery-gap: 16px; position: relative; display: grid; grid-template-columns: repeat(var(--gallery-columns), minmax(0, 1fr)); gap: var(--gallery-gap); align-items: start; }
+.work-gallery-grid.is-masonry { display: block; }
+.work-gallery-grid.is-masonry > .work-gallery-card { position: absolute; }
+.work-gallery-card { border: 0; background: transparent; min-width: 0; }
+.work-gallery-photo { border-radius: 4px; }
+.work-gallery-photo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.work-gallery-photo .work-gallery-enlarge { padding: 0; width: 36px; height: 36px; justify-content: center; right: 10px; bottom: 10px; border: 1px solid #ffffff70; border-radius: 50%; background: #202020a6; opacity: 0; transform: translateY(4px); transition: opacity .25s, transform .25s; }
+.work-gallery-photo:is(:hover, :focus-visible) .work-gallery-enlarge { opacity: 1; transform: none; }
+.work-gallery-photo .work-gallery-stage { top: 10px; left: 10px; bottom: auto; right: auto; padding: 5px 8px; font-size: .59rem; letter-spacing: .025em; background: #242020db; }
+.work-gallery-filters { scroll-margin-top: 125px; }
+.work-gallery-controls { display: flex; flex-direction: column; align-items: center; gap: 19px; padding-top: 34px; text-align: center; }
+.work-gallery-controls p { font-size: .72rem; color: var(--muted); }
+.work-gallery-controls .button { min-height: 48px; font-size: .72rem; padding: 13px 27px; }
+.work-gallery-controls .text-link { font-size: .63rem; margin-top: 7px; }
+.work-gallery-controls [hidden] { display: none; }
+@media(max-width: 1023px) {
+  .work-gallery-grid { --gallery-columns: 3; --gallery-gap: 14px; }
+  .work-extra-comparison-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .work-gallery-photo .work-gallery-enlarge { opacity: 1; transform: none; }
+}
+@media(max-width: 767px) {
+  .work-gallery-grid { --gallery-columns: 2; --gallery-gap: 12px; }
+  .work-extra-comparison-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .work-jump-links { gap: 18px; font-size: .66rem; }
+  .work-gallery-photo .work-gallery-enlarge { width: 28px; height: 28px; right: 7px; bottom: 7px; }
+  .work-gallery-photo .work-gallery-enlarge svg { width: 14px; }
+  .work-gallery-photo .work-gallery-stage { top: 7px; left: 7px; font-size: .53rem; }
+  .work-gallery-filters { scroll-margin-top: 96px; }
+}
+@media(prefers-reduced-motion: reduce) {
+  .work-gallery-photo .work-gallery-enlarge { transition: none; transform: none; }
+}

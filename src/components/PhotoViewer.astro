@@ -1,42 +1,79 @@
 ---
-import { X } from '@lucide/astro';
+import { ChevronLeft, ChevronRight, X } from '@lucide/astro';
 ---
 <dialog id="photo-viewer" aria-labelledby="photo-viewer-title">
   <header><h2 id="photo-viewer-title"></h2><button type="button" aria-label="Close photos" autofocus><X size={23} aria-hidden="true" /></button></header>
   <div class="photo-viewer-images"></div>
+  <nav class="photo-viewer-navigation" aria-label="Gallery photos" hidden><button type="button" data-photo-prev aria-label="Previous photo"><ChevronLeft size={20} aria-hidden="true" /></button><p role="status" aria-atomic="true"></p><button type="button" data-photo-next aria-label="Next photo"><ChevronRight size={20} aria-hidden="true" /></button></nav>
 </dialog>
 <script>
   const viewer = document.querySelector<HTMLDialogElement>('#photo-viewer');
   const images = viewer?.querySelector<HTMLElement>('.photo-viewer-images');
+  const navigation = viewer?.querySelector<HTMLElement>('.photo-viewer-navigation');
+  const previous = viewer?.querySelector<HTMLButtonElement>('[data-photo-prev]');
+  const next = viewer?.querySelector<HTMLButtonElement>('[data-photo-next]');
   let opener: HTMLAnchorElement | null = null;
+  let sequence: HTMLAnchorElement[] = [];
+  let index = 0;
+
+  function showPhoto(link: HTMLAnchorElement) {
+    if (!viewer || !images) return;
+    images.replaceChildren();
+    viewer.querySelector('#photo-viewer-title')!.textContent = link.dataset.photoTitle || 'Flores project photo';
+    const photos = [];
+    if (link.dataset.photoBefore) photos.push({ src: link.dataset.photoBefore, alt: link.dataset.photoBeforeAlt || '', label: 'Before' });
+    photos.push({ src: link.href, alt: link.dataset.photoAlt || '', label: link.dataset.photoBefore ? 'After' : link.dataset.photoCaption || '' });
+    viewer.classList.toggle('photo-viewer-pair', photos.length === 2);
+    photos.forEach(photo => {
+      const figure = document.createElement('figure');
+      const img = new Image();
+      img.src = photo.src; img.alt = photo.alt;
+      const caption = document.createElement('figcaption');
+      caption.textContent = photo.label;
+      figure.append(img, caption); images.append(figure);
+    });
+    if (navigation && previous && next) {
+      navigation.hidden = sequence.length < 2;
+      navigation.querySelector('p')!.textContent = (index + 1) + ' / ' + sequence.length;
+      previous.disabled = index === 0;
+      next.disabled = index === sequence.length - 1;
+    }
+  }
+  function move(direction: number) {
+    const target = index + direction;
+    if (target < 0 || target >= sequence.length) return;
+    index = target;
+    showPhoto(sequence[index]);
+    // A disabled boundary button must not strand keyboard focus.
+    if (document.activeElement === previous && previous?.disabled) next?.focus();
+    if (document.activeElement === next && next?.disabled) previous?.focus();
+  }
   document.querySelectorAll<HTMLAnchorElement>('[data-photo-open]').forEach(link => {
     link.addEventListener('click', event => {
-      if (!viewer || !images || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (!viewer || !images || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       opener = link;
-      images.replaceChildren();
-      viewer.querySelector('#photo-viewer-title')!.textContent = link.dataset.photoTitle || 'Flores project photo';
-      const photos = [];
-      if (link.dataset.photoBefore) photos.push({ src: link.dataset.photoBefore, alt: link.dataset.photoBeforeAlt || '', label: 'Before' });
-      photos.push({ src: link.href, alt: link.dataset.photoAlt || '', label: link.dataset.photoBefore ? 'After' : '' });
-      viewer.classList.toggle('photo-viewer-pair', photos.length === 2);
-      photos.forEach(photo => {
-        const figure = document.createElement('figure');
-        const img = new Image();
-        img.src = photo.src; img.alt = photo.alt;
-        const caption = document.createElement('figcaption');
-        caption.textContent = photo.label;
-        figure.append(img, caption); images.append(figure);
-      });
+      sequence = link.hasAttribute('data-photo-gallery')
+        ? Array.from(document.querySelectorAll<HTMLAnchorElement>('[data-photo-gallery]')).filter(item => item.closest<HTMLElement>('[data-gallery-category]')?.dataset.galleryMatches !== 'false')
+        : [];
+      index = Math.max(0, sequence.indexOf(link));
+      showPhoto(link);
       viewer.showModal();
       document.body.classList.add('dialog-open');
     });
   });
-  viewer?.querySelector('button')?.addEventListener('click', () => viewer.close());
+  previous?.addEventListener('click', () => move(-1));
+  next?.addEventListener('click', () => move(1));
+  viewer?.addEventListener('keydown', event => {
+    if (sequence.length < 2 || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault(); move(event.key === 'ArrowRight' ? 1 : -1);
+  });
+  viewer?.querySelector('header button')?.addEventListener('click', () => viewer.close());
   viewer?.addEventListener('click', event => { if (event.target === viewer) viewer.close(); });
   viewer?.addEventListener('close', () => {
     document.body.classList.remove('dialog-open');
     images?.replaceChildren();
+    sequence = [];
     opener?.focus({ preventScroll: true });
   });
 </script>
@@ -51,6 +88,10 @@ import { X } from '@lucide/astro';
   .photo-viewer-pair .photo-viewer-images { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .photo-viewer-images :global(img) { width: 100%; height: 72dvh; object-fit: contain; background: #151515; }
   .photo-viewer-images :global(figcaption) { font-size: .78rem; padding-top: 9px; text-align: center; }
+  .photo-viewer-navigation { position: sticky; bottom: 0; display: flex; align-items: center; justify-content: center; gap: 24px; padding: 10px 16px; background: #202020; border-top: 1px solid #ffffff25; }
+  .photo-viewer-navigation[hidden] { display: none; }
+  .photo-viewer-navigation p { min-width: 68px; text-align: center; font-size: .8rem; font-variant-numeric: tabular-nums; }
+  .photo-viewer-navigation button:disabled { opacity: .3; cursor: default; }
   @media(max-width: 767px) {
     h2 { font-size: 1.1rem; }
     .photo-viewer-pair .photo-viewer-images { grid-template-columns: minmax(0, 1fr); }
