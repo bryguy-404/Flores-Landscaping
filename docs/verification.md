@@ -130,3 +130,10 @@ Real Resend inbox delivery, a production Turnstile challenge, production domain 
 - `npm run check`: 35 files, zero errors, warnings, or hints. `npm run build`: all 13 pages generated successfully.
 - Visually inspected desktop (1440×1000) and phone (390×844) crops. Both images load, with no horizontal page overflow. Desktop ArrowRight updates the comparison to “Before 51%, after 49%.” Phone Before/After controls show the corresponding photo and pressed state, with the third project count at 03 / 03.
 - The phone full-photo viewer loads both complete frames; Escape closes it, unlocks scrolling, and returns focus to the opener. No browser runtime errors; test browser closed.
+
+## Services hero finished mulch photo — September 26
+
+- Replaced the Services overview hero (IMG_8285, confirmed by the client as before mulch) with the supplied completed view IMG_8291. Updated alt text and the review catalog; retained the previous source as a reserved before photo.
+- Verified the original against its inventory SHA-256 checksum. Prepared a correctly oriented 2200×1650 web copy without embedded EXIF/XMP/IPTC metadata; the Desktop original is untouched.
+- `npm run check`: 35 files, zero errors, warnings, or hints. `npm run build`: all 13 pages built successfully. `git diff --check` passes.
+- Visually inspected the new hero at 1440×1000 and 390×844. The responsive image loads at both sizes, the finished beds remain visible, and there is no horizontal page overflow or browser runtime error. Test browser closed.

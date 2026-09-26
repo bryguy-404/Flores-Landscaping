@@ -28,7 +28,7 @@ import photo8009 from '../assets/client/evergreen-mulch-island.jpg';
 import photo7948 from '../assets/client/shaped-foundation-shrubs.jpg';
 import photo5292 from '../assets/client/spring-bed-refresh.jpg';
 import photo7527 from '../assets/client/new-turf-area.jpg';
-import photo8285 from '../assets/client/courtyard-garden.jpg';
+import photo8291 from '../assets/client/courtyard-after-mulch.jpg';
 import photo1915 from '../assets/client/summer-lawn.jpg';
 import photo7678 from '../assets/client/brick-house-stone-bed.jpg';
 import photo8290 from '../assets/client/fresh-courtyard-mulch.jpg';
@@ -75,7 +75,7 @@ export const clientPhotos = {
   p7948: { src: photo7948, alt: "Rounded and box-shaped shrubs beside a brick home" },
   p5292: { src: photo5292, alt: "A refreshed mulch bed around trees and shrubs in spring" },
   p7527: { src: photo7527, alt: "A newly laid patch of turf beside mature trees with work equipment nearby" },
-  p8285: { src: photo8285, alt: "A green courtyard lawn enclosed by planted garden beds" },
+  p8291: { src: photo8291, alt: "Fresh dark mulch around courtyard trees and shrubs bordering a green lawn" },
   p1915: { src: photo1915, alt: "Parallel mowing stripes across a summer lawn", position: '50% 25%' },
   p7678: { src: photo7678, alt: "Light-colored stone beds and small shrubs along a brick house" },
   p8290: { src: photo8290, alt: "Fresh dark mulch around courtyard trees and shrubs" },

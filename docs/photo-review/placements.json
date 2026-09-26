@@ -308,15 +308,15 @@
     "bytes": 1312287
   },
   {
-    "number": 8285,
-    "name": "courtyard-garden",
+    "number": 8291,
+    "name": "courtyard-after-mulch",
     "placement": "Services overview hero",
-    "source": "Flores Images Batch 5/IMG_8285.jpeg",
-    "sourceSha256": "3d19093f379521b66a00f6591f6a51d76aaf3166ed3314c215717ef1b212ce35",
-    "asset": "src/assets/client/courtyard-garden.jpg",
+    "source": "Flores Images Batch 5/IMG_8291.jpeg",
+    "sourceSha256": "786a25807bf2b399cf6763b84797fd4ba7f23f7f733686299f3407a21ebea438",
+    "asset": "src/assets/client/courtyard-after-mulch.jpg",
     "width": 2200,
     "height": 1650,
-    "bytes": 1522667
+    "bytes": 1546529
   },
   {
     "number": 1915,

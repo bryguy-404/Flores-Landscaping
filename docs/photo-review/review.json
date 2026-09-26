@@ -1201,9 +1201,9 @@
     "pixels_sha256": "8ddd5a91d8750f919187a67d1cc6e567524e7a2e8e7bc8bc23b9d3d56b3decea",
     "dhash": "2e4eca13139acbe8",
     "project": "Porch and courtyard beds",
-    "assessment": "Same-project refresh / subtle comparison",
-    "notes": "Matching white porch, windows, walkway and courtyard trees/fence. Earlier views are already maintained; later views show darker fresh mulch. IMG_8282\u21928288 and IMG_8284\u21928290 likely show a mulch refresh, not a dramatic landscape replacement. Lighting/angle differences amplify appearance. Use distinct standalone views; reserve before/after claims for client confirmation.",
-    "placement": "Services overview hero",
+    "assessment": "Client-confirmed before mulch",
+    "notes": "Client confirmed on September 26 that this view was taken before mulch was added. Replaced in the Services overview hero with the completed IMG_8291 photo. Original and previous web copy retained for reference.",
+    "placement": "Reserved \u2014 previous Services hero",
     "webAsset": "src/assets/client/courtyard-garden.jpg"
   },
   {
@@ -1269,10 +1269,10 @@
     "pixels_sha256": "f8614a9c0aad0a93e7ee20452bf17ee63d23caaebeb33ad661cdbeda79e05332",
     "dhash": "240dc88c0d8cc8c0",
     "project": "Porch and courtyard beds",
-    "assessment": "Same-project refresh / subtle comparison",
-    "notes": "Matching white porch, windows, walkway and courtyard trees/fence. Earlier views are already maintained; later views show darker fresh mulch. IMG_8282\u21928288 and IMG_8284\u21928290 likely show a mulch refresh, not a dramatic landscape replacement. Lighting/angle differences amplify appearance. Use distinct standalone views; reserve before/after claims for client confirmation.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "assessment": "Client-confirmed completed mulch",
+    "notes": "Client selected this completed view on September 26 to replace IMG_8285 in the Services overview hero. Shows the courtyard after fresh mulch was added.",
+    "placement": "Services overview hero",
+    "webAsset": "src/assets/client/courtyard-after-mulch.jpg"
   },
   {
     "batch": 5,
