@@ -44,28 +44,6 @@
     "bytes": 1487613
   },
   {
-    "number": 8238,
-    "name": "front-garden-before",
-    "placement": "Homepage comparison",
-    "source": "Flores Images Batch 4/IMG_8238.jpeg",
-    "sourceSha256": "54e80432cc97bb8de8d630e7f016636a5717c2632aecb10c9dd99c3f97a8af8e",
-    "asset": "src/assets/client/front-garden-before.jpg",
-    "width": 1650,
-    "height": 2200,
-    "bytes": 1469311
-  },
-  {
-    "number": 8248,
-    "name": "front-garden-after",
-    "placement": "Homepage comparison",
-    "source": "Flores Images Batch 4/IMG_8248.jpeg",
-    "sourceSha256": "6bd2c4d3f59d3c3fb79980f4ab73ec4880a47f152a931e33502f52f193beeec7",
-    "asset": "src/assets/client/front-garden-after.jpg",
-    "width": 1650,
-    "height": 2200,
-    "bytes": 1495668
-  },
-  {
     "number": 7644,
     "name": "evergreen-border-before",
     "placement": "Our Work comparison",
@@ -438,5 +416,28 @@
     "width": 1650,
     "height": 2200,
     "bytes": 1662653
+  },
+  {
+    "number": 7992,
+    "name": "deck-garden-before",
+    "placement": "Homepage comparison",
+    "source": "Flores Images Batch 3/IMG_7992.jpeg",
+    "sourceSha256": "e4db3797003d1abb35e98adf6fc8c883292cc81760384ff49709935bd510ce3a",
+    "asset": "src/assets/client/deck-garden-before.jpg",
+    "width": 1650,
+    "height": 2200,
+    "bytes": 1401821
+  },
+  {
+    "number": 8008,
+    "name": "deck-garden-after",
+    "placement": "Homepage comparison",
+    "source": "Flores Images Batch 3/IMG_8008.jpeg",
+    "sourceSha256": "e495c71f4a9bc343a7b801dacac1797d79dc714c8488d102b64569b1b04cec3b",
+    "asset": "src/assets/backyard.jpg",
+    "width": 2500,
+    "height": 1875,
+    "bytes": 1657784,
+    "reusedExistingAsset": true
   }
 ]

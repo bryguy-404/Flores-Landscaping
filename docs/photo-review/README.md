@@ -2,13 +2,13 @@
 
 Reviewed all **83 photos in six batches**. The original Desktop folders were not renamed, edited, or moved. No videos were included in these batches.
 
-**40 unique source photos selected:** 12 for six comparisons (three on the homepage and three different projects on Our Work), nine gallery images, and 19 other page placements. Two of those 40 replace the existing collage with its original photos. Other selected photos are not repeated across new placements; desktop/mobile versions share the same source. Existing homepage imagery outside the comparison section is unchanged.
+**40 unique source photos selected:** 12 for six comparisons (three on the homepage and three different projects on Our Work), nine gallery images, and 19 other page placements. Two of those 40 replace the existing collage with its original photos. Other selected photos are not repeated across new placements; desktop/mobile versions share the same source. The separately supplied homepage Lawn Care card photo is tracked in `docs/image-sources.json`.
 
 Matching used visible buildings, windows, fences, paving, trees and bed outlines, supported by capture times where present. Capture metadata supports a sequence but is not independent proof of project dates. Camera positions differ: comparisons are not geometrically registered and the full-photo viewer preserves both original frames. No AI retouching or invented results were used.
 
 Web copies were oriented and resized to a maximum 2,200-pixel edge, with metadata stripped. Astro generates responsive WebP outputs; originals stay untouched. `placements.json` records source filenames, checksums and destinations. The catalog and inspection sheets live under `docs/`, not the public website.
 
-The lower Sod Installation, Spring & Fall Cleanup, and Trimming sections now use the three approved standalone photos (IMG_1852, IMG_8369, IMG_7612). Existing before-and-after sections are unchanged.
+The lower Sod Installation, Spring & Fall Cleanup, and Trimming sections now use the three approved standalone photos (IMG_1852, IMG_8369, IMG_7612). On September 26, the client selected IMG_7992 → IMG_8008 for the third homepage comparison. Both exact requested photos were found in Batch 3; the after image reuses `src/assets/backyard.jpg`.
 
 ## Before-and-after selections
 
@@ -16,14 +16,14 @@ The lower Sod Installation, Spring & Fall Cleanup, and Trimming sections now use
 | --- | --- | --- | --- |
 | Homepage | Front stone beds | IMG_7669 → IMG_7679 | Same brick home, windows and roofline; these are the original collage photos. |
 | Homepage | Leaf cleanup | IMG_6619 → IMG_6621 | Same forked tree, shed and rear fence; leaves cleared. |
-| Homepage | Front garden | IMG_8238 → IMG_8248 | Same blue shutters, window, chain-link fence and neighboring house. |
+| Homepage | Deck garden | IMG_7992 → IMG_8008 | Client-selected views of the same deck, siding, windows and umbrella; large shrubs replaced with small plants in stone beds. |
 | Our Work | Evergreen border | IMG_7644 → IMG_7651 | Same evergreen, fence junction and rocks; fresh mulch and edge. |
 | Our Work | Backyard border | IMG_7696 → IMG_7701 | Same fence, small trees and garden statue; overgrowth cleared and mulched. |
 | Our Work | Brick path | IMG_8257 → IMG_8361 | Same curved paving, wooden enclosure and roof; stone bed and plants. |
 
 ## Duplicates and alternates
 
-There are no byte-identical or full-resolution pixel-identical files among the 83. Visual inspection was necessary because existing website copies were resized/re-encoded. IMG_7620 matches `landscape-beds.jpg`, IMG_7608 matches `stone-edging.jpg`, and IMG_8008 matches `backyard.jpg`; these were not imported again. IMG_7669/7679 replace the existing collage in its existing slot. IMG_3104 is a nearby alternate view of the lawn already in `lawn-stripes.jpg`, and was reserved.
+There are no byte-identical or full-resolution pixel-identical files among the 83. Visual inspection was necessary because existing website copies were resized/re-encoded. IMG_7620 matches `landscape-beds.jpg`, IMG_7608 matches `stone-edging.jpg`, and IMG_8008 matches `backyard.jpg`; these were not imported again. The existing `backyard.jpg` is now reused in the third homepage comparison. IMG_7669/7679 replace the existing collage in its existing slot. IMG_3104 is a nearby alternate view of the lawn already in `lawn-stripes.jpg`, and was reserved.
 
 ## Items to confirm or save for later
 
@@ -33,7 +33,7 @@ There are no byte-identical or full-resolution pixel-identical files among the 8
 - **Batch 5:** likely mulch refreshes, but the earlier beds are already maintained. Use standalone shots; confirm scope before making before/after claims.
 - **Batch 6 IMG_8407/8409:** work had already started. Their matches are preparation-to-finish sequences, not untouched before photos.
 - **Remaining genuine pairs:** spring bed (5290/5292), deck (7991/8005), additional front-bed and path-bed angles are recorded below. Kept out of duplicate comparison cards to avoid showing the same property repeatedly.
-- A clear **family/team portrait**, **snow-plowing photos**, and snow-service detail shots are still needed. A distant person working appears in the About story; it is not labeled as a particular family member. Video remains deferred.
+- A clear **family/team portrait**, **snow-plowing photos**, and snow-service detail shots are still needed. A distant person working appears in the About story; it is not labeled as a particular family member. The separately supplied eight videos are now on Our Work; this photo review covers only the six image batches.
 
 ## All batches
 
@@ -105,12 +105,12 @@ The table accounts for every file, including reserved photos. See `index.html` f
 | IMG_7948.jpeg | Standalone | Trimming hero | Rounded and squared shrubs beside brick walls. Good trimming result; no matching before view. |
 | IMG_7990.jpeg | Unmatched before or standalone | Reserved — not added to website | No clearly matching later view. Do not assume the nearby deck project is the after, or claim tree removal occurred. |
 | IMG_7991.jpeg | Strong project sequence / reserve comparison | Reserved — not added to website | Same deck railings, corner posts, patio doors, siding/windows and surrounding houses. Large shrubs become small plants in stone beds. IMG_7991→8005 is a useful same-area pair, but perspective differs substantially. IMG_7993→8004 shows another side. Site already has the broad finished view; use only one distinct close-up. |
-| IMG_7992.jpeg | Strong project sequence / reserve comparison | Reserved — not added to website | Same deck railings, corner posts, patio doors, siding/windows and surrounding houses. Large shrubs become small plants in stone beds. IMG_7991→8005 is a useful same-area pair, but perspective differs substantially. IMG_7993→8004 shows another side. Site already has the broad finished view; use only one distinct close-up. |
+| IMG_7992.jpeg | Client-selected before-and-after pair | Homepage comparison | Exact before photo requested in the September 26 client screenshot, paired with IMG_8008. Same deck, siding, windows, umbrella and surrounding house identify the project. Viewpoints differ; the full-photo viewer preserves both frames. |
 | IMG_7993.jpeg | Strong project sequence / reserve comparison | Reserved — not added to website | Same deck railings, corner posts, patio doors, siding/windows and surrounding houses. Large shrubs become small plants in stone beds. IMG_7991→8005 is a useful same-area pair, but perspective differs substantially. IMG_7993→8004 shows another side. Site already has the broad finished view; use only one distinct close-up. |
 | IMG_8004.jpeg | Strong project sequence / reserve comparison | Reserved — not added to website | Same deck railings, corner posts, patio doors, siding/windows and surrounding houses. Large shrubs become small plants in stone beds. IMG_7991→8005 is a useful same-area pair, but perspective differs substantially. IMG_7993→8004 shows another side. Site already has the broad finished view; use only one distinct close-up. |
 | IMG_8005.jpeg | Strong project sequence / reserve comparison | Landscaping detail | Same deck railings, corner posts, patio doors, siding/windows and surrounding houses. Large shrubs become small plants in stone beds. IMG_7991→8005 is a useful same-area pair, but perspective differs substantially. IMG_7993→8004 shows another side. Site already has the broad finished view; use only one distinct close-up. |
 | IMG_8006.jpeg | Strong project sequence / reserve comparison | Reserved — not added to website | Same deck railings, corner posts, patio doors, siding/windows and surrounding houses. Large shrubs become small plants in stone beds. IMG_7991→8005 is a useful same-area pair, but perspective differs substantially. IMG_7993→8004 shows another side. Site already has the broad finished view; use only one distinct close-up. |
-| IMG_8008.jpeg | Existing image duplicate | Reserved — not added to website | Visually the same photograph as backyard.jpg at a different size/encoding. Do not import again. |
+| IMG_8008.jpeg | Client-selected pair / existing asset reused | Homepage comparison | Exact after photo requested in the September 26 client screenshot, paired with IMG_7992. Reuses the existing backyard.jpg copy of this photograph; no duplicate asset imported. |
 | IMG_8009.jpeg | Standalone | Mulch and planting detail | Completed island of evergreen shrubs with red mulch. Do not pair with the unrelated tall trees in IMG_7990. |
 | IMG_8026.jpeg | Standalone | Lawn care detail | Finished mowing view; no verified before photo. Choose for lawn care, not sod installation claims. |
 | IMG_8129.jpeg | Reserve / tilted framing | Reserved — not added to website | Completed mowing, with strong camera tilt or distracting foreground. Better upright selections are available. No before/after evidence. |
@@ -122,8 +122,8 @@ The table accounts for every file, including reserved photos. See `index.html` f
 | File | Assessment | Placement | Notes |
 | --- | --- | --- | --- |
 | IMG_8237.jpeg | Strong project sequence | Reserved — not added to website | Same blue shutters, windows, entry steps, chain-link fence and neighboring brick house. IMG_8238→8248 is the right/front bed; IMG_8237→8249 is the other entry-side bed. Both show overgrowth cleared for mulch and shrubs. Use one card for this property. |
-| IMG_8238.jpeg | Strong project sequence | Homepage comparison | Same blue shutters, windows, entry steps, chain-link fence and neighboring brick house. IMG_8238→8248 is the right/front bed; IMG_8237→8249 is the other entry-side bed. Both show overgrowth cleared for mulch and shrubs. Use one card for this property. |
-| IMG_8248.jpeg | Strong project sequence | Homepage comparison | Same blue shutters, windows, entry steps, chain-link fence and neighboring brick house. IMG_8238→8248 is the right/front bed; IMG_8237→8249 is the other entry-side bed. Both show overgrowth cleared for mulch and shrubs. Use one card for this property. |
+| IMG_8238.jpeg | Strong project sequence | Reserved — previous homepage comparison | Same blue shutters, windows, entry steps, chain-link fence and neighboring brick house. IMG_8238→8248 is the right/front bed; IMG_8237→8249 is the other entry-side bed. Both show overgrowth cleared for mulch and shrubs. Use one card for this property. Replaced on the homepage by the client-selected deck pair on September 26. Original and converted web copy retained for future use. |
+| IMG_8248.jpeg | Strong project sequence | Reserved — previous homepage comparison | Same blue shutters, windows, entry steps, chain-link fence and neighboring brick house. IMG_8238→8248 is the right/front bed; IMG_8237→8249 is the other entry-side bed. Both show overgrowth cleared for mulch and shrubs. Use one card for this property. Replaced on the homepage by the client-selected deck pair on September 26. Original and converted web copy retained for future use. |
 | IMG_8249.jpeg | Strong project sequence | Reserved — not added to website | Same blue shutters, windows, entry steps, chain-link fence and neighboring brick house. IMG_8238→8248 is the right/front bed; IMG_8237→8249 is the other entry-side bed. Both show overgrowth cleared for mulch and shrubs. Use one card for this property. |
 | IMG_8257.jpeg | Strong project sequence | Our Work comparison | Same curved brick paving, wooden enclosure/roof, house siding and AC/window identify this project. IMG_8257→8361 is the clearest path-side match; IMG_8258→8364 and IMG_8259→8366 cover adjoining beds. Later frames show stone and small plants. Use one comparison plus one distinct foundation detail. |
 | IMG_8258.jpeg | Strong project sequence | Reserved — not added to website | Same curved brick paving, wooden enclosure/roof, house siding and AC/window identify this project. IMG_8257→8361 is the clearest path-side match; IMG_8258→8364 and IMG_8259→8366 cover adjoining beds. Later frames show stone and small plants. Use one comparison plus one distinct foundation detail. |

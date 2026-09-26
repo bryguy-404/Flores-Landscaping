@@ -793,10 +793,10 @@
     "pixels_sha256": "a12f5ad93baf3d1b4c0fd944d2beb130feee27d4a4c313b3dd8e0c0f25cd9d9c",
     "dhash": "e3f57b0d2421f2f8",
     "project": "Deck garden renovation",
-    "assessment": "Strong project sequence / reserve comparison",
-    "notes": "Same deck railings, corner posts, patio doors, siding/windows and surrounding houses. Large shrubs become small plants in stone beds. IMG_7991\u21928005 is a useful same-area pair, but perspective differs substantially. IMG_7993\u21928004 shows another side. Site already has the broad finished view; use only one distinct close-up.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "assessment": "Client-selected before-and-after pair",
+    "notes": "Exact before photo requested in the September 26 client screenshot, paired with IMG_8008. Same deck, siding, windows, umbrella and surrounding house identify the project. Viewpoints differ; the full-photo viewer preserves both frames.",
+    "placement": "Homepage comparison",
+    "webAsset": "src/assets/client/deck-garden-before.jpg"
   },
   {
     "batch": 3,
@@ -878,10 +878,10 @@
     "pixels_sha256": "0962c176234a0a1cec829877c5f8e2db93afb5ff5dbb028ab52e7b56a8048e8d",
     "dhash": "8199c968c0c3c078",
     "project": "Deck garden renovation",
-    "assessment": "Existing image duplicate",
-    "notes": "Visually the same photograph as backyard.jpg at a different size/encoding. Do not import again.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "assessment": "Client-selected pair / existing asset reused",
+    "notes": "Exact after photo requested in the September 26 client screenshot, paired with IMG_7992. Reuses the existing backyard.jpg copy of this photograph; no duplicate asset imported.",
+    "placement": "Homepage comparison",
+    "webAsset": "src/assets/backyard.jpg"
   },
   {
     "batch": 3,
@@ -964,8 +964,8 @@
     "dhash": "e6a763f01420e48e",
     "project": "Blue-shutter front beds",
     "assessment": "Strong project sequence",
-    "notes": "Same blue shutters, windows, entry steps, chain-link fence and neighboring brick house. IMG_8238\u21928248 is the right/front bed; IMG_8237\u21928249 is the other entry-side bed. Both show overgrowth cleared for mulch and shrubs. Use one card for this property.",
-    "placement": "Homepage comparison",
+    "notes": "Same blue shutters, windows, entry steps, chain-link fence and neighboring brick house. IMG_8238\u21928248 is the right/front bed; IMG_8237\u21928249 is the other entry-side bed. Both show overgrowth cleared for mulch and shrubs. Use one card for this property. Replaced on the homepage by the client-selected deck pair on September 26. Original and converted web copy retained for future use.",
+    "placement": "Reserved \u2014 previous homepage comparison",
     "webAsset": "src/assets/client/front-garden-before.jpg"
   },
   {
@@ -981,8 +981,8 @@
     "dhash": "173726000323791c",
     "project": "Blue-shutter front beds",
     "assessment": "Strong project sequence",
-    "notes": "Same blue shutters, windows, entry steps, chain-link fence and neighboring brick house. IMG_8238\u21928248 is the right/front bed; IMG_8237\u21928249 is the other entry-side bed. Both show overgrowth cleared for mulch and shrubs. Use one card for this property.",
-    "placement": "Homepage comparison",
+    "notes": "Same blue shutters, windows, entry steps, chain-link fence and neighboring brick house. IMG_8238\u21928248 is the right/front bed; IMG_8237\u21928249 is the other entry-side bed. Both show overgrowth cleared for mulch and shrubs. Use one card for this property. Replaced on the homepage by the client-selected deck pair on September 26. Original and converted web copy retained for future use.",
+    "placement": "Reserved \u2014 previous homepage comparison",
     "webAsset": "src/assets/client/front-garden-after.jpg"
   },
   {

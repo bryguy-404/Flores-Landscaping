@@ -2,8 +2,8 @@ import photo7669 from '../assets/client/front-yard-before.jpg';
 import photo7679 from '../assets/client/front-yard-after.jpg';
 import photo6619 from '../assets/client/leaf-cleanup-before.jpg';
 import photo6621 from '../assets/client/leaf-cleanup-after.jpg';
-import photo8238 from '../assets/client/front-garden-before.jpg';
-import photo8248 from '../assets/client/front-garden-after.jpg';
+import photo7992 from '../assets/client/deck-garden-before.jpg';
+import photo8008 from '../assets/backyard.jpg';
 import photo7644 from '../assets/client/evergreen-border-before.jpg';
 import photo7651 from '../assets/client/evergreen-border-after.jpg';
 import photo7696 from '../assets/client/backyard-border-before.jpg';
@@ -49,8 +49,8 @@ export const clientPhotos = {
   p7679: { src: photo7679, alt: "Stone beds and spaced shrubs along the same brick home" },
   p6619: { src: photo6619, alt: "Fallen leaves covering a backyard around a large tree" },
   p6621: { src: photo6621, alt: "The same backyard lawn after fallen leaves have been cleared" },
-  p8238: { src: photo8238, alt: "Overgrown garden bed below a window with blue shutters" },
-  p8248: { src: photo8248, alt: "The same bed with dark mulch, small shrubs, and a stone border" },
+  p7992: { src: photo7992, alt: "Large overgrown shrubs hiding the railing of a backyard deck" },
+  p8008: { src: photo8008, alt: "The same backyard deck with a curved stone bed and small, spaced shrubs" },
   p7644: { src: photo7644, alt: "Thin ground cover beneath an evergreen beside a wooden and white fence" },
   p7651: { src: photo7651, alt: "Fresh mulch and a defined curved border around the same evergreen" },
   p7696: { src: photo7696, alt: "Overgrown planting area along a backyard fence" },

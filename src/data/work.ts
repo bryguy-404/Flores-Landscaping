@@ -8,7 +8,7 @@ function pair(id: string, title: string, category: string, before: keyof typeof 
 export const homeComparisons = [
   pair('front-yard', 'A fresh start out front', 'Landscaping & garden beds', 'p7669', 'p7679'),
   pair('fall-cleanup', 'A yard ready to enjoy again', 'Fall cleanup', 'p6619', 'p6621'),
-  { ...pair('front-garden', 'A little room to grow', 'Garden bed refresh', 'p8238', 'p8248'), beforePosition: '50% 35%', afterPosition: '50% 20%' },
+  { ...pair('deck-garden', 'A little room to grow', 'Garden bed refresh', 'p7992', 'p8008'), beforePosition: '50% 45%' },
 ];
 export const comparisons = [
   pair('evergreen-border', 'A softer edge. A fresh finish.', 'Mulch & garden beds', 'p7644', 'p7651'),
