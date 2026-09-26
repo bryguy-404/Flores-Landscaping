@@ -151,3 +151,10 @@ Real Resend inbox delivery, a production Turnstile challenge, production domain 
 - Verified the supplied Desktop original against its recorded SHA-256 checksum. The former IMG_8281 is now marked as a client-confirmed before photo and reserved in the catalog. There are 39 currently selected unique batch photos.
 - `npm run check`: 35 files, zero errors, warnings, or hints. `npm run build`: all 13 pages built. `git diff --check` passes.
 - Desktop (1440×1000) and phone (390×844) crops visually inspected. The new responsive image loads at both sizes with no horizontal page overflow or browser runtime errors. Test browser closed. Form and email integration behavior are unchanged.
+
+## Client-selected Lawn Care overview photo — September 26
+
+- Replaced only the Services overview's 01 Lawn Care preview with the explicitly supplied Batch 6 IMG_8445. Desktop and mobile use the same asset and a crop focused on the mowing stripes. The original camera tilt is preserved; homepage and standalone Lawn Care photos are unchanged.
+- Source SHA-256 matches the inventory. The new web copy is correctly oriented at 1650×2200, with embedded metadata stripped. The Desktop original is untouched, and IMG_1915 is reserved in the catalog as the former preview.
+- `npm run check`: 35 files, zero errors, warnings, or hints. `npm run build`: 13 pages generated successfully. `git diff --check` passes.
+- Desktop (1440×1000) and mobile (390×844) screenshots visually inspected. The correct image loads in both previews, without horizontal page overflow or browser runtime errors. Test browser closed.

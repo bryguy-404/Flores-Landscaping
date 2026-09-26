@@ -16,6 +16,8 @@ The Services overview previews for Sod Installation and Spring & Fall Cleanup re
 
 Contact now uses the client-selected finished mulch view IMG_8289, reusing the existing About photo. The previous IMG_8281 is reserved as a client-confirmed before view.
 
+The Services Lawn Care preview uses client-selected IMG_8445 from Batch 6, replacing IMG_1915 on September 26. Its original camera angle is preserved.
+
 ## Before-and-after selections
 
 | Placement | Project | Before → after | Evidence |
@@ -52,7 +54,7 @@ The table accounts for every file, including reserved photos. See `index.html` f
 | File | Assessment | Placement | Notes |
 | --- | --- | --- | --- |
 | IMG_1852.jpeg | Standalone / pairing unconfirmed | Sod installation detail | Approved as a standalone ground-preparation image for the lower sod-service section. Shows loose soil, a wheelbarrow, and tools; not labeled as a verified sod installation or as the before image for IMG_7527. The exact relationship between those two views remains unconfirmed. |
-| IMG_1915.jpeg | Standalone | Services lawn preview | Finished mowing view; no verified before photo. Choose for lawn care, not sod installation claims. |
+| IMG_1915.jpeg | Standalone | Reserved — previous Services lawn preview | Finished mowing view; no verified before photo. Choose for lawn care, not sod installation claims. Replaced with the client-selected IMG_8445 on September 26. Original and converted copy retained for reference. |
 | IMG_3104.jpeg | Existing-project alternate | Reserved — not added to website | Same lawn scene as existing lawn-stripes.jpg, photographed from a nearby position. Retain as an alternative; do not add another near-duplicate. |
 | IMG_3150.jpeg | Standalone | Gallery | Finished mowing view; no verified before photo. Choose for lawn care, not sod installation claims. |
 | IMG_4354.jpeg | Reserve / tilted framing | Reserved — not added to website | Completed mowing, with strong camera tilt or distracting foreground. Better upright selections are available. No before/after evidence. |
@@ -168,4 +170,4 @@ The table accounts for every file, including reserved photos. See `index.html` f
 | IMG_8415.jpeg | Preparation-to-finish sequence | Landscaping hero | Matching brick bay window/entry and brown siding, timber post and AC. IMG_8407→8415 and IMG_8409→8416 match, but earlier photos already show lifted edging and dug borders. Label Preparation/After if used as a pair, not untouched Before. Finished front and distinct side detail selected. |
 | IMG_8416.jpeg | Preparation-to-finish sequence | Reserved — not added to website | Matching brick bay window/entry and brown siding, timber post and AC. IMG_8407→8415 and IMG_8409→8416 match, but earlier photos already show lifted edging and dug borders. Label Preparation/After if used as a pair, not untouched Before. Finished front and distinct side detail selected. |
 | IMG_8419.jpeg | Preparation-to-finish sequence | Gallery | Matching brick bay window/entry and brown siding, timber post and AC. IMG_8407→8415 and IMG_8409→8416 match, but earlier photos already show lifted edging and dug borders. Label Preparation/After if used as a pair, not untouched Before. Finished front and distinct side detail selected. |
-| IMG_8445.jpeg | Reserve / tilted framing | Reserved — not added to website | Completed mowing, with strong camera tilt or distracting foreground. Better upright selections are available. No before/after evidence. |
+| IMG_8445.jpeg | Client-selected completed mowing photo | Services lawn preview | Explicitly selected by the client on September 26 for 01 Lawn Care in the Services overview. Original camera tilt preserved; the preview crop emphasizes the mowing stripes. No before/after pairing claimed. |

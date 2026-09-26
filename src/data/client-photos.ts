@@ -29,7 +29,7 @@ import photo7948 from '../assets/client/shaped-foundation-shrubs.jpg';
 import photo5292 from '../assets/client/spring-bed-refresh.jpg';
 import photo7527 from '../assets/client/new-turf-area.jpg';
 import photo8291 from '../assets/client/courtyard-after-mulch.jpg';
-import photo1915 from '../assets/client/summer-lawn.jpg';
+import photo8445 from '../assets/client/backyard-mowing-stripes.jpg';
 import photo7678 from '../assets/client/brick-house-stone-bed.jpg';
 import photo8290 from '../assets/client/fresh-courtyard-mulch.jpg';
 import photo7604 from '../assets/client/rounded-border-shrubs.jpg';
@@ -76,7 +76,7 @@ export const clientPhotos = {
   p5292: { src: photo5292, alt: "A refreshed mulch bed around trees and shrubs in spring" },
   p7527: { src: photo7527, alt: "A newly laid patch of turf beside mature trees with work equipment nearby" },
   p8291: { src: photo8291, alt: "Fresh dark mulch around courtyard trees and shrubs bordering a green lawn" },
-  p1915: { src: photo1915, alt: "Parallel mowing stripes across a summer lawn", position: '50% 25%' },
+  p8445: { src: photo8445, alt: "Fresh mowing stripes across a green backyard beside homes and a wooden fence", position: '50% 65%' },
   p7678: { src: photo7678, alt: "Light-colored stone beds and small shrubs along a brick house" },
   p8290: { src: photo8290, alt: "Fresh dark mulch around courtyard trees and shrubs" },
   p7604: { src: photo7604, alt: "Rounded shrubs beside a freshly edged stone garden bed" },
@@ -88,7 +88,7 @@ export const clientPhotos = {
 
 type ServiceId = (typeof serviceOfferings)[number]['id'];
 export const servicePhotos: Partial<Record<ServiceId, { hero?: ClientPhoto; detail?: ClientPhoto; preview?: ClientPhoto }>> = {
-  'lawn-care': { hero: clientPhotos.p7788, detail: clientPhotos.p8026, preview: clientPhotos.p1915 },
+  'lawn-care': { hero: clientPhotos.p7788, detail: clientPhotos.p8026, preview: clientPhotos.p8445 },
   landscaping: { hero: clientPhotos.p8415, detail: clientPhotos.p8005, preview: clientPhotos.p7678 },
   'mulch-planting': { hero: clientPhotos.p8380, detail: clientPhotos.p8009, preview: clientPhotos.p8290 },
   trimming: { hero: clientPhotos.p7948, detail: clientPhotos.p7612, preview: clientPhotos.p7604 },

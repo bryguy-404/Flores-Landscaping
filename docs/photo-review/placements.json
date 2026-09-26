@@ -319,15 +319,15 @@
     "bytes": 1546529
   },
   {
-    "number": 1915,
-    "name": "summer-lawn",
+    "number": 8445,
+    "name": "backyard-mowing-stripes",
     "placement": "Services lawn preview",
-    "source": "Flores Images batch 1/IMG_1915.jpeg",
-    "sourceSha256": "58026f1e38dab1253c6b7214e7ab995872a2788487e25cb9da8123fd6ec08e47",
-    "asset": "src/assets/client/summer-lawn.jpg",
-    "width": 2200,
-    "height": 1650,
-    "bytes": 1346881
+    "source": "Flores Images Batch 6/IMG_8445.jpeg",
+    "sourceSha256": "86c7f13d6da6d485117d90f474734618f14dc129bd9b2add0da72df7206391b2",
+    "asset": "src/assets/client/backyard-mowing-stripes.jpg",
+    "width": 1650,
+    "height": 2200,
+    "bytes": 1514772
   },
   {
     "number": 7678,

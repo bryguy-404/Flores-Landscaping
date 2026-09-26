@@ -29,8 +29,8 @@
     "dhash": "e6ceec0f2f53d2aa",
     "project": "Standalone lawn work",
     "assessment": "Standalone",
-    "notes": "Finished mowing view; no verified before photo. Choose for lawn care, not sod installation claims.",
-    "placement": "Services lawn preview",
+    "notes": "Finished mowing view; no verified before photo. Choose for lawn care, not sod installation claims. Replaced with the client-selected IMG_8445 on September 26. Original and converted copy retained for reference.",
+    "placement": "Reserved \u2014 previous Services lawn preview",
     "webAsset": "src/assets/client/summer-lawn.jpg"
   },
   {
@@ -1405,9 +1405,9 @@
     "pixels_sha256": "130a2e741e76882c1953bdd208aaf80e8bb01059bd11287e66e185d49635f2a5",
     "dhash": "e161d9e888989990",
     "project": "Standalone lawn work",
-    "assessment": "Reserve / tilted framing",
-    "notes": "Completed mowing, with strong camera tilt or distracting foreground. Better upright selections are available. No before/after evidence.",
-    "placement": "Reserved \u2014 not added to website",
-    "webAsset": null
+    "assessment": "Client-selected completed mowing photo",
+    "notes": "Explicitly selected by the client on September 26 for 01 Lawn Care in the Services overview. Original camera tilt preserved; the preview crop emphasizes the mowing stripes. No before/after pairing claimed.",
+    "placement": "Services lawn preview",
+    "webAsset": "src/assets/client/backyard-mowing-stripes.jpg"
   }
 ]
