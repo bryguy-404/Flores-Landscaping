@@ -18,7 +18,8 @@
 .review-person time { display: block; color: var(--muted); font-size: .68rem; margin-top: 3px; }
 .review-source { margin-top: 18px; font-size: .68rem; color: #5e5e5e; }
 .reviews-bottom { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 20px; }
-.reviews-attribution img { width: auto; height: 18px; margin: 10px 10px 8px; }
+.reviews-attribution .reviews-google-wordmark { display: block; width: 92px; height: 30px; margin: 10px 0 12px; }
+.reviews-maps-credit { display: block; color: #5e5e5e; font: 400 12px/1.5 var(--font-body, sans-serif); letter-spacing: normal; white-space: nowrap; margin-bottom: 4px; }
 .reviews-attribution p, [data-review-providers] { font-size: .68rem; color: #5e5e5e; }
 [data-review-providers] a { text-decoration: underline; margin-right: 10px; }
 .reviews-controls { display: flex; flex-shrink: 0; gap: 8px; }

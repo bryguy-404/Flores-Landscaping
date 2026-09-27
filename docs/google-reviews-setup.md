@@ -19,7 +19,7 @@ Enable Places API (New) and billing in the Flores Website Reviews Google Cloud p
 
 Review responses use `no-store` and are not persisted in the repository, browser storage, a database, or Cloudflare cache. The server accepts only the configured Place ID and key. One visitor reaching the section causes one Google request, including the billable reviews field; the endpoint is public, so Google quotas remain important. It rejects cross-site browser requests but that is not authentication or complete abuse prevention.
 
-The Google Maps logo is the unmodified official attribution asset reused from CIDWP-New. Reviews include author/profile links, avatars when available, dates, individual source links, and the selection notice. `/google-reviews/` contains the feature's terms and privacy information.
+The review footer displays the unmodified official full-color Google wordmark (`https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png`) with a separate 12 px Google Maps text credit. Reviews include author/profile links, avatars when available, dates, individual source links, and the selection notice. `/google-reviews/` contains the feature's terms and privacy information.
 
 ## Verification
 
