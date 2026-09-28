@@ -5,23 +5,21 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import ClientPhoto from '../../components/ClientPhoto.astro';
 import { servicePhotos } from '../../data/client-photos';
-import ImagePlaceholder from '../../components/ImagePlaceholder.astro';
 import { serviceOfferings } from '../../data/services';
 import { servicePages, type ServicePageContent } from '../../data/service-pages';
 import '../../styles/service-page.css';
 
 export function getStaticPaths() {
-  return serviceOfferings.map((service, index) => ({
+  return serviceOfferings.map((service) => ({
     params: { service: service.id },
-    props: { service, detail: servicePages[service.id], index },
+    props: { service, detail: servicePages[service.id] },
   }));
 }
 interface Props {
   service: (typeof serviceOfferings)[number];
   detail: ServicePageContent;
-  index: number;
 }
-const { service, detail, index } = Astro.props;
+const { service, detail } = Astro.props;
 const Icon = service.icon;
 const photos = servicePhotos[service.id];
 const related = detail.related.map(id => serviceOfferings.find(item => item.id === id)!);
@@ -33,17 +31,17 @@ const related = detail.related.map(id => serviceOfferings.find(item => item.id =
     <section class="offering-hero" aria-labelledby="offering-title">
       <div class="container">
         <nav class="offering-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><ChevronRight size={12} aria-hidden="true" /><a href="/services/">Our services</a><ChevronRight size={12} aria-hidden="true" /><span aria-current="page">{service.title}</span></nav>
-        <div class="offering-hero-grid">
+        <div class:list={["offering-hero-grid", { "offering-hero-grid-text": !photos?.hero }]}>
           <div class="offering-hero-copy" data-reveal-group>
             <div class="eyebrow"><Icon size={23} stroke-width={1.4} aria-hidden="true" /> {service.title}</div>
             <h1 id="offering-title">{detail.headline}<br /><em>{detail.accent}</em></h1>
             <p>{detail.introduction}</p>
             <div class="offering-hero-actions"><a class="button button-red" href={`/contact/?service=${service.id}#estimate`}>GET A FREE ESTIMATE <ArrowUpRight size={18} aria-hidden="true" /></a><a class="text-link" href="#service-details">TAKE A CLOSER LOOK <ArrowRight size={18} aria-hidden="true" /></a></div>
           </div>
-          <div class="offering-hero-visual reveal" style="--reveal-delay: 170ms">
-            {photos?.hero ? <ClientPhoto {...photos.hero} eager /> : <ImagePlaceholder label={service.photo} tone="dark" number={`0${index + 1} / 07`} />}
+          {photos?.hero && <div class="offering-hero-visual reveal" style="--reveal-delay: 170ms">
+            <ClientPhoto {...photos.hero} eager />
             <div class="offering-photo-note"><span><Icon size={20} stroke-width={1.4} aria-hidden="true" />{service.caption}</span><span>FLORES LANDSCAPING</span></div>
-          </div>
+          </div>}
         </div>
         <div class="offering-trust" data-reveal-group><span><Users size={18} aria-hidden="true" /> FAMILY OWNED</span><span><BadgeCheck size={18} aria-hidden="true" /> LICENSED & INSURED</span><span><Check size={18} aria-hidden="true" /> FREE ESTIMATES</span></div>
       </div>
@@ -64,7 +62,7 @@ const related = detail.related.map(id => serviceOfferings.find(item => item.id =
         </section>
 
         <section class="offering-project reveal" aria-labelledby="offering-planning-title">
-          {photos?.detail ? <ClientPhoto {...photos.detail} /> : <ImagePlaceholder label={detail.detailPhoto} description={detail.detailPhotoNote} number="A CLOSER LOOK" />}
+          {photos?.detail && <ClientPhoto {...photos.detail} />}
           <div class="offering-project-caption"><div class="eyebrow">LET’S START WITH YOUR SPACE</div><h2 id="offering-planning-title">{detail.planningTitle}</h2><p>{detail.planningCopy}</p></div>
         </section>
 

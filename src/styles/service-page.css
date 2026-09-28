@@ -2,6 +2,9 @@
 .offering-breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; font-size: .65rem; color: var(--muted); }
 .offering-breadcrumb a:hover, .offering-breadcrumb [aria-current] { color: var(--red); }
 .offering-hero-grid { display: grid; grid-template-columns: 1.13fr 1fr; align-items: center; gap: 75px; padding-block: 58px 57px; }
+.offering-hero-grid.offering-hero-grid-text { grid-template-columns: minmax(0, 1fr); }
+.offering-hero-grid-text .offering-hero-copy { max-width: 760px; }
+.offering-hero-grid-text .offering-hero-copy > p { max-width: 640px; }
 .offering-hero-copy .eyebrow { font-size: .72rem; text-transform: uppercase; }
 .offering-hero-copy h1 { font-size: clamp(2.9rem, 4.1vw, 3.8rem); line-height: 1.12; letter-spacing: -.04em; }
 .offering-hero-copy > p { margin-top: 23px; max-width: 520px; color: var(--muted); font-size: .91rem; line-height: 1.95; }
