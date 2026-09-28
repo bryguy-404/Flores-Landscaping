@@ -50,8 +50,8 @@ if (form && submit && status && widget) {
         if (!window.turnstile || !widget) return;
         ready = true;
         widgetId = window.turnstile.render(widget, {
-          // Compact also fits the form's narrowest 320px phone layout.
-          sitekey: siteKey, action: 'estimate', theme: 'light', size: 'compact',
+          // Use the slim 300px-wide widget unless the form is too narrow for it.
+          sitekey: siteKey, action: 'estimate', theme: 'light', size: widget.clientWidth >= 300 ? 'normal' : 'compact',
           callback: value => {
             token = value;
             if (status?.dataset.state !== 'success' && status?.dataset.state !== 'error') announce('');
