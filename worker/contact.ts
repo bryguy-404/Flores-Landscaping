@@ -15,7 +15,7 @@ const reply = (status: number, message: string, extra: Record<string, unknown> =
   { message, ...extra }, { status, headers: { 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' } },
 );
 const configured = (env: ContactEnv) => Boolean(
-  env.RESEND_API_KEY && env.TURNSTILE_SITE_KEY && env.TURNSTILE_SECRET_KEY && env.CONTACT_RATE_LIMITER &&
+  env.RESEND_API_KEY && env.TURNSTILE_SITE_KEY && env.TURNSTILE_SECRET_KEY &&
   emailPattern.test(env.CONTACT_FROM_EMAIL ?? '') && emailPattern.test(env.CONTACT_TO_EMAIL ?? ''),
 );
 
@@ -59,11 +59,15 @@ export async function handleContact(request: Request, env: ContactEnv, fetcher: 
   try {
     const ip = request.headers.get('CF-Connecting-IP');
     if (!ip) return reply(503, unavailable);
-    const allowed = await env.CONTACT_RATE_LIMITER!.limit({ key: `flores-contact:${ip}` });
-    if (!allowed.success) {
-      const response = reply(429, 'Please wait a minute before trying again, or call our team.');
-      response.headers.set('Retry-After', '60');
-      return response;
+    // Workers can add native throttling; Pages does not support this binding.
+    // Both deployments still require server-verified Turnstile for every email.
+    if (env.CONTACT_RATE_LIMITER) {
+      const allowed = await env.CONTACT_RATE_LIMITER.limit({ key: `flores-contact:${ip}` });
+      if (!allowed.success) {
+        const response = reply(429, 'Please wait a minute before trying again, or call our team.');
+        response.headers.set('Retry-After', '60');
+        return response;
+      }
     }
     let raw: Record<string, unknown>;
     try {

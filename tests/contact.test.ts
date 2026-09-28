@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { handleContact, type ContactEnv } from '../worker/contact.ts';
 import worker from '../worker/index.ts';
+import { onRequest as pagesContact } from '../functions/api/contact.ts';
 
 const origin = 'https://flores.example';
 const data = {
@@ -54,6 +55,31 @@ test('rate limiting prevents provider calls and advertises when to retry', async
   } } }, noNetwork);
   assert.equal(response.status, 429);
   assert.equal(response.headers.get('Retry-After'), '60');
+});
+
+test('Pages configuration requires both Turnstile keys, without a Worker-only binding', async () => {
+  const pagesEnv = { ...env, CONTACT_RATE_LIMITER: undefined };
+  const get = new Request(`${origin}/api/contact`);
+  assert.deepEqual(await (await pagesContact({ request: get, env: pagesEnv })).json(), {
+    available: true, siteKey: env.TURNSTILE_SITE_KEY, message: '',
+  });
+  for (const missing of ['TURNSTILE_SITE_KEY', 'TURNSTILE_SECRET_KEY'] as const) {
+    const incomplete = { ...pagesEnv, [missing]: undefined };
+    assert.equal((await (await pagesContact({ request: get, env: incomplete })).json()).available, false);
+    assert.equal((await pagesContact({ request: request(), env: incomplete })).status, 503);
+  }
+});
+
+test('Pages sends only after a valid Turnstile check even without native throttling', async () => {
+  const pagesEnv = { ...env, CONTACT_RATE_LIMITER: undefined };
+  const failed = providers({ verification: { success: false } });
+  assert.equal((await handleContact(request(), pagesEnv, failed.fetcher)).status, 422);
+  assert.equal(failed.calls.length, 1);
+  const valid = providers();
+  assert.equal((await handleContact(request(), pagesEnv, valid.fetcher)).status, 200);
+  assert.equal(valid.calls.length, 2);
+  assert.equal(valid.calls[1].body.reply_to, data.email);
+  assert.deepEqual(valid.calls[1].body.to, [env.CONTACT_TO_EMAIL]);
 });
 
 test('malformed and oversized bodies are rejected before contacting providers', async () => {

@@ -1,5 +1,5 @@
 # Copy to .dev.vars for LOCAL testing. Never commit real values.
-# In production, configure these as Cloudflare Worker secrets/variables.
+# In production, configure these as Cloudflare Pages secrets/variables.
 RESEND_API_KEY=""
 CONTACT_FROM_EMAIL=""
 CONTACT_TO_EMAIL=""

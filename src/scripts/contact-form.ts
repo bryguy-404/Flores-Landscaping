@@ -30,8 +30,8 @@ if (form && submit && status && widget) {
   const selection = new URLSearchParams(location.search).get('service');
   if (service && selection && [...service.options].some(option => option.value === selection)) service.value = selection;
 
-  // The static Astro preview intentionally stays unavailable until a Worker is configured.
-  // Run `npm run preview:worker` to exercise the production endpoint locally.
+  // Astro's design preview cannot send email. The deployed Pages endpoint
+  // exposes only availability and the public Turnstile site key.
   async function prepare() {
     try {
       const response = await fetch('/api/contact', { signal: AbortSignal.timeout(8000), cache: 'no-store' });
