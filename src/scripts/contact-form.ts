@@ -19,6 +19,7 @@ if (form && submit && status && widget) {
   let token = '';
   let widgetId: string | undefined;
   let requestId = crypto.randomUUID();
+  const idleButtonLabel = buttonLabel.textContent || 'SEND MY REQUEST';
   const announce = (message: string, state = '') => { status.textContent = message; status.dataset.state = state; };
   const updateButton = () => { submit.disabled = !ready || !token || sending; };
   const resetChallenge = () => {
@@ -97,7 +98,7 @@ if (form && submit && status && widget) {
       sending = false;
       fields.forEach(field => { field.disabled = false; });
       form.removeAttribute('aria-busy');
-      buttonLabel.textContent = 'SEND MY REQUEST';
+      buttonLabel.textContent = idleButtonLabel;
       resetChallenge();
     }
   });

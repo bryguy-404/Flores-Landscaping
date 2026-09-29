@@ -1,0 +1,106 @@
+{
+  "questions": {
+    "item1": {
+      "question": "Is the estimate really free?",
+      "answer": "Yes. Tell us what you have in mind, and we’ll start with a conversation about your property and a free estimate."
+    },
+    "item2": {
+      "question": "What should I include in my message?",
+      "answer": "Your city, the kind of care you’re looking for, and a little about your outdoor space are a great start. If you have a preferred time of year or a particular area that needs attention, mention that too."
+    },
+    "item3": {
+      "question": "Can I ask about more than one service?",
+      "answer": "Absolutely. Choose “A few things / not sure yet” and tell us about the work you’re considering. We can talk through the options together."
+    },
+    "item4": {
+      "question": "Do you work with businesses as well as homeowners?",
+      "answer": "Yes. Flores offers landscaping and property care for residential and commercial properties in {{city}} and nearby communities."
+    }
+  },
+  "seo": {
+    "title": "Contact & Free Estimates | Flores Landscaping, {{city}}",
+    "description": "Tell Flores Landscaping about your yard. Request a free estimate for lawn care, landscaping, and seasonal services in {{communities}}."
+  },
+  "inquiryIntro": {
+    "link": "/",
+    "linkLabel": "Home",
+    "text": "Contact",
+    "eyebrow": "LET’S MAKE SOMETHING BEAUTIFUL",
+    "heading": "A better yard",
+    "text2": "starts with hello.",
+    "paragraph": "A fresh start. A little upkeep. Something you’ve been imagining for a while. We’d love to hear what you have in mind.",
+    "link2": "#estimate",
+    "linkLabel2": "TELL US ABOUT YOUR SPACE",
+    "text3": "FREE ESTIMATES",
+    "text4": "LICENSED & INSURED",
+    "text5": "LOCALLY ROOTED"
+  },
+  "inquiryMain": {
+    "eyebrow": "YOUR LOCAL FLORES TEAM",
+    "heading": "Good people.",
+    "text": "Easy to reach.",
+    "paragraph": "Prefer a conversation? Call or text our team. We’re happy to talk through your ideas.",
+    "text2": "GIVE US A CALL",
+    "linkLabel": "Also available: {{secondaryPhone}}",
+    "text3": "START WITH A TEXT",
+    "linkLabel2": "Tell us about your project",
+    "text4": "DROP US A NOTE",
+    "text5": "WHAT HAPPENS NEXT?",
+    "heading2": "You share the idea.",
+    "paragraph2": "A few details about your space help us get to know your project.",
+    "heading3": "We talk it through.",
+    "paragraph3": "Our team follows up to discuss the work and the next step for your estimate.",
+    "text6": "YOUR NEXT CHAPTER STARTS OUTSIDE",
+    "heading4": "Let’s hear your ideas.",
+    "paragraph4": "Tell us a little about yourself and your property.",
+    "paragraph5": "Fields marked",
+    "text7": "with an asterisk",
+    "paragraph6": "are required.",
+    "text8": "Your name",
+    "placeholder": "First and last name",
+    "text9": "Email address",
+    "placeholder2": "you@example.com",
+    "text10": "Phone number",
+    "text11": "(optional)",
+    "placeholder3": "(574) 000-0000",
+    "text12": "Property city / town",
+    "placeholder4": "Where’s your property?",
+    "text13": "How can we help?",
+    "text14": "Select a service",
+    "text15": "Property type",
+    "text16": "Select a property type",
+    "text17": "A little about your project",
+    "placeholder5": "Tell us about your outdoor space and what you’d like help with…",
+    "text18": "A few details are plenty to get the conversation started.",
+    "text19": "SEND MY REQUEST",
+    "paragraph7": "We’ll use these details to follow up about your request."
+  },
+  "inquiryArea": {
+    "photo": {
+      "image": "/src/assets/client/garden-work-in-progress.jpg",
+      "alt": "Fresh dark mulch and flowering plants beside a stone porch and front walkway",
+      "position": "50% 70%",
+      "mobilePosition": "50% 70%"
+    },
+    "paragraph": "Welcoming spaces. Thoughtful care.",
+    "eyebrow": "AROUND THE NEIGHBORHOOD",
+    "heading": "Rooted here.",
+    "text": "Ready to help.",
+    "paragraph2": "We care for homes and businesses in {{city}} and the surrounding communities.",
+    "paragraph3": "Nearby, but don’t see your town?",
+    "linkLabel": "Call to check your area."
+  },
+  "inquiryFaq": {
+    "eyebrow": "BEFORE WE SAY HELLO",
+    "heading": "A few things",
+    "text": "you might wonder.",
+    "link": "/services/",
+    "linkLabel": "EXPLORE OUR SERVICES"
+  },
+  "formChoices": {
+    "notSureService": "A few things / not sure yet",
+    "residential": "Residential",
+    "commercial": "Commercial",
+    "notSureProperty": "Not sure yet"
+  }
+}

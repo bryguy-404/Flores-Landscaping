@@ -1,0 +1,146 @@
+{
+  "front-yard": {
+    "title": "A fresh start out front",
+    "category": "Landscaping & garden beds",
+    "before": {
+      "image": "/src/assets/client/front-yard-before.jpg",
+      "alt": "Overgrown beds along a single-story brick home",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "after": {
+      "image": "/src/assets/client/front-yard-after.jpg",
+      "alt": "Stone beds and spaced shrubs along the same brick home",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "fall-cleanup": {
+    "title": "A yard ready to enjoy again",
+    "category": "Fall cleanup",
+    "before": {
+      "image": "/src/assets/client/leaf-cleanup-before.jpg",
+      "alt": "Fallen leaves covering a backyard around a large tree",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "after": {
+      "image": "/src/assets/client/leaf-cleanup-after.jpg",
+      "alt": "The same backyard lawn after fallen leaves have been cleared",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "deck-garden": {
+    "title": "A little room to grow",
+    "category": "Garden bed refresh",
+    "before": {
+      "image": "/src/assets/client/deck-garden-before.jpg",
+      "alt": "Large overgrown shrubs hiding the railing of a backyard deck",
+      "position": "50% 45%",
+      "mobilePosition": "50% 45%"
+    },
+    "after": {
+      "image": "/src/assets/backyard.jpg",
+      "alt": "The same backyard deck with a curved stone bed and small, spaced shrubs",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "evergreen-border": {
+    "title": "A softer edge. A fresh finish.",
+    "category": "Mulch & garden beds",
+    "before": {
+      "image": "/src/assets/client/evergreen-border-before.jpg",
+      "alt": "Thin ground cover beneath an evergreen beside a wooden and white fence",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "after": {
+      "image": "/src/assets/client/evergreen-border-after.jpg",
+      "alt": "Fresh mulch and a defined curved border around the same evergreen",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "backyard-border": {
+    "title": "Space for the garden to shine.",
+    "category": "Landscape cleanup & mulch",
+    "before": {
+      "image": "/src/assets/client/backyard-border-before.jpg",
+      "alt": "Overgrown planting area along a backyard fence",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "after": {
+      "image": "/src/assets/client/backyard-border-after.jpg",
+      "alt": "The same backyard trees surrounded by a clean, dark mulch bed",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "brick-path": {
+    "title": "A more welcoming way through.",
+    "category": "Stone beds & planting",
+    "before": {
+      "image": "/src/assets/client/brick-path-before.jpg",
+      "alt": "Weeds and overgrown plants beside a curved brick path",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "after": {
+      "image": "/src/assets/client/brick-path-after.jpg",
+      "alt": "The same brick path beside a refreshed stone bed and small plants",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "spring-garden": {
+    "title": "A fresh season starts here.",
+    "category": "Spring garden refresh",
+    "before": {
+      "image": "/src/assets/client/gallery/img-5290.jpg",
+      "alt": "Leaves and sparse ground cover in a curved bed beside a house before refresh",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "after": {
+      "image": "/src/assets/client/spring-bed-refresh.jpg",
+      "alt": "Fresh red mulch around trees and shrubs beside a green spring lawn",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "front-garden": {
+    "title": "Room for something beautiful.",
+    "category": "Garden cleanup & planting",
+    "before": {
+      "image": "/src/assets/client/front-garden-before.jpg",
+      "alt": "Overgrown bed below a blue-shuttered window beside a chain-link fence",
+      "position": "50% 35%",
+      "mobilePosition": "50% 35%"
+    },
+    "after": {
+      "image": "/src/assets/client/front-garden-after.jpg",
+      "alt": "Dark mulch, small shrubs, and a stone border below a blue-shuttered window",
+      "position": "50% 25%",
+      "mobilePosition": "50% 25%"
+    }
+  },
+  "courtyard-mulch": {
+    "title": "The finishing touch.",
+    "category": "Courtyard mulch refresh",
+    "before": {
+      "image": "/src/assets/client/courtyard-garden.jpg",
+      "alt": "A green courtyard lawn and surrounding beds before the mulch refresh",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "after": {
+      "image": "/src/assets/client/courtyard-after-mulch.jpg",
+      "alt": "Fresh mulch in garden beds around a sunny courtyard lawn",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  }
+}

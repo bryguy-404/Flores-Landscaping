@@ -1,0 +1,83 @@
+{
+  "overview": {
+    "title": "Lawn Care",
+    "summary": "Fresh cuts, crisp edges, and a lawn you’ll love coming home to.",
+    "description": "A well-kept lawn makes the whole property feel cared for. From a fresh cut to a tidy finish, we bring a little extra pride to your everyday outdoor space.",
+    "highlights": {
+      "item1": "Lawn mowing",
+      "item2": "Clean edges",
+      "item3": "Ongoing lawn care"
+    },
+    "caption": "A greener everyday.",
+    "link": "/services/lawn-care/"
+  },
+  "detail": {
+    "headline": "A lawn you’ll love",
+    "accent": "coming home to.",
+    "introduction": "Freshly cut grass. Neat edges. That feeling when the whole yard looks cared for. Our family-owned team brings a personal touch to lawn care around {{city}}.",
+    "sectionTitle": "Everyday care.",
+    "sectionAccent": "A greener welcome.",
+    "sectionCopy": "Your lawn is part of daily life, from the walk to your front door to time spent outside. We help keep it looking neat so your outdoor space feels welcoming throughout the growing season.",
+    "focus": {
+      "item1": {
+        "title": "A fresh, even cut",
+        "copy": "Lawn mowing brings a tidy appearance to the open spaces around your home or business."
+      },
+      "item2": {
+        "title": "Pride around the edges",
+        "copy": "Clean lawn edges help define the meeting points between grass, paths, and planting beds."
+      },
+      "item3": {
+        "title": "Care that keeps going",
+        "copy": "Talk with us about ongoing lawn care and the attention your property needs as the season changes."
+      }
+    },
+    "planningTitle": "Tell us a little about your lawn.",
+    "planningCopy": "Share your address, the areas you’d like maintained, and whether you’re looking for ongoing care. A few current photos are a helpful starting point.",
+    "faqs": {
+      "item1": {
+        "question": "Can I ask about ongoing lawn care?",
+        "answer": "Yes. Tell us about your lawn and the schedule you have in mind. We’ll discuss available options for your property when you contact us."
+      },
+      "item2": {
+        "question": "Can lawn care be discussed alongside landscaping?",
+        "answer": "Absolutely. We also offer landscaping, mulch and planting, trimming, and seasonal cleanups. Mention the areas you’d like help with when requesting your estimate."
+      },
+      "item3": {
+        "question": "Where do you provide lawn care?",
+        "answer": "We serve {{communities}}. If your property is nearby, contact us to check whether it’s in our service area."
+      }
+    },
+    "estimateTitle": "Give your lawn",
+    "estimateAccent": "a little love."
+  },
+  "photos": {
+    "homeCard": {
+      "image": "/src/assets/client/home-lawn-care.jpg",
+      "alt": "Fresh mowing stripes across a lawn in front of a modern home",
+      "position": "50% 100%",
+      "mobilePosition": "50% 100%"
+    },
+    "hero": {
+      "image": "/src/assets/client/tree-lined-lawn.jpg",
+      "alt": "Long mowing stripes framed by mature trees",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "detail": {
+      "image": "/src/assets/client/crosscut-lawn.jpg",
+      "alt": "Crosshatched mowing lines across a green backyard",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "preview": {
+      "image": "/src/assets/client/backyard-mowing-stripes.jpg",
+      "alt": "Fresh mowing stripes across a green backyard beside homes and a wooden fence",
+      "position": "50% 65%",
+      "mobilePosition": "50% 65%"
+    }
+  },
+  "links": {
+    "estimate": "/contact/?service=lawn-care#estimate"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "img-8290": {
+    "title": "A fresh courtyard border",
+    "photo": {
+      "image": "/src/assets/client/fresh-courtyard-mulch.jpg",
+      "alt": "Fresh dark mulch around courtyard trees and shrubs",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8345": {
+    "title": "Fresh stripes by the walk",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8345.jpg",
+      "alt": "Freshly mowed lawn beside a sidewalk under a blue sky",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8415": {
+    "title": "Curves around the entry",
+    "photo": {
+      "image": "/src/assets/client/curved-stone-entry.jpg",
+      "alt": "A finished curved stone bed around a brick entryway",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8416": {
+    "title": "A neat side border",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8416.jpg",
+      "alt": "Fresh stone beds along brown house siding and timber posts",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8445": {
+    "title": "Fresh backyard stripes",
+    "photo": {
+      "image": "/src/assets/client/backyard-mowing-stripes.jpg",
+      "alt": "Fresh mowing stripes across a green backyard beside homes and a wooden fence",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-1852": {
+    "title": "Ground preparation",
+    "photo": {
+      "image": "/src/assets/client/ground-preparation.jpg",
+      "alt": "Loose soil, a wheelbarrow, and tools beside a lawn under preparation",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-5290": {
+    "title": "Spring garden",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-5290.jpg",
+      "alt": "Leaves and sparse ground cover in a curved bed beside a house before refresh",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-5988": {
+    "title": "Around the deck",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-5988.jpg",
+      "alt": "Straw-covered ground, stone edging, and a wheelbarrow beside a raised deck",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-5997": {
+    "title": "Deck-side ground work",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-5997.jpg",
+      "alt": "A stone border and straw-covered ground below a raised wooden deck",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-6401": {
+    "title": "A yard taking shape",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-6401.jpg",
+      "alt": "Straw-covered ground across a yard during landscape work",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-6619": {
+    "title": "Fall cleanup",
+    "photo": {
+      "image": "/src/assets/client/leaf-cleanup-before.jpg",
+      "alt": "Fallen leaves covering a backyard around a large tree",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7527": {
+    "title": "New turf",
+    "photo": {
+      "image": "/src/assets/client/new-turf-area.jpg",
+      "alt": "A newly laid patch of turf beside trees and work equipment",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  }
+}

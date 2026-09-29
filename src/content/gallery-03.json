@@ -1,0 +1,110 @@
+{
+  "img-7608": {
+    "title": "Curves and clean edges",
+    "photo": {
+      "image": "/src/assets/stone-edging.jpg",
+      "alt": "Neatly shaped shrubs surrounded by dark stone and curved edging",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7612": {
+    "title": "Shaped shrubs",
+    "photo": {
+      "image": "/src/assets/client/shaped-shrub-detail.jpg",
+      "alt": "Trimmed shrubs and stone beds beside a brick home",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7651": {
+    "title": "Evergreen border refreshed",
+    "photo": {
+      "image": "/src/assets/client/evergreen-border-after.jpg",
+      "alt": "Fresh mulch and a curved edge beneath an evergreen beside a fence",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7676": {
+    "title": "A clean front entrance",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7676.jpg",
+      "alt": "Light stone beds and small shrubs along a brick home's entrance",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7678": {
+    "title": "Front garden renewed",
+    "photo": {
+      "image": "/src/assets/client/brick-house-stone-bed.jpg",
+      "alt": "Light stone beds and spaced shrubs below brick-house windows",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7679": {
+    "title": "A fresh start out front",
+    "photo": {
+      "image": "/src/assets/client/front-yard-after.jpg",
+      "alt": "The front of a brick home after stone beds and shrubs were installed",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7680": {
+    "title": "Side garden renewed",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7680.jpg",
+      "alt": "A light stone bed beneath a side window of a brick home",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7701": {
+    "title": "Backyard border refreshed",
+    "photo": {
+      "image": "/src/assets/client/backyard-border-after.jpg",
+      "alt": "Fresh dark mulch beneath small trees along a backyard fence",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7769": {
+    "title": "Care around every curve",
+    "photo": {
+      "image": "/src/assets/client/curving-lawn.jpg",
+      "alt": "Curved mowing stripes across a street-side lawn",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7925": {
+    "title": "Lawn stripes",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7925.jpg",
+      "alt": "Parallel mowing stripes beside a sidewalk, photographed at an angle",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7935": {
+    "title": "A greener backyard",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7935.jpg",
+      "alt": "Fresh mowing stripes through a sunny backyard with mature trees",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7936": {
+    "title": "Open green space",
+    "photo": {
+      "image": "/src/assets/client/backyard-lawn.jpg",
+      "alt": "Even mowing lines across an open backyard lawn",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  }
+}

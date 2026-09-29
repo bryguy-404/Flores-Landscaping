@@ -1,0 +1,110 @@
+{
+  "img-7993": {
+    "title": "Deck-side shrubs",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7993.jpg",
+      "alt": "Large shrubs beside a house and backyard deck before the garden refresh",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8237": {
+    "title": "Entry garden starting point",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8237.jpg",
+      "alt": "Overgrown planting bed beside the entrance of a blue-shuttered house",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8238": {
+    "title": "Front garden starting point",
+    "photo": {
+      "image": "/src/assets/client/front-garden-before.jpg",
+      "alt": "Overgrown bed below a blue-shuttered window beside a chain-link fence",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8257": {
+    "title": "Brick-path garden",
+    "photo": {
+      "image": "/src/assets/client/brick-path-before.jpg",
+      "alt": "Overgrown plants beside a curved brick path and wooden enclosure",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8258": {
+    "title": "Path-side starting point",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8258.jpg",
+      "alt": "Weeds and plants crowding a brick path beside a wooden fence",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8259": {
+    "title": "Foundation garden starting point",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8259.jpg",
+      "alt": "Overgrown plants between a brick path and house siding",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8281": {
+    "title": "Porch bed before mulch",
+    "photo": {
+      "image": "/src/assets/client/welcoming-front-garden.jpg",
+      "alt": "Flowering plants beside a stone porch before the mulch refresh",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8282": {
+    "title": "Porch garden starting point",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8282.jpg",
+      "alt": "Plants beside a white front porch before the mulch refresh",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8284": {
+    "title": "Courtyard border starting point",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8284.jpg",
+      "alt": "A planted curved bed beside a courtyard before fresh mulch",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8285": {
+    "title": "Courtyard before mulch",
+    "photo": {
+      "image": "/src/assets/client/courtyard-garden.jpg",
+      "alt": "A green courtyard lawn and surrounding beds before the mulch refresh",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8407": {
+    "title": "Preparing a new border",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8407.jpg",
+      "alt": "Lifted edging and a dug border around a brick entryway during preparation",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8409": {
+    "title": "Side-bed preparation",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8409.jpg",
+      "alt": "A garden bed along brown house siding during border preparation",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  }
+}

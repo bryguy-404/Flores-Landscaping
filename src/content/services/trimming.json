@@ -1,0 +1,83 @@
+{
+  "overview": {
+    "title": "Trimming",
+    "summary": "Neat hedges and carefully shaped shrubs, season after season.",
+    "description": "A little shaping can make a big difference. Neatly trimmed hedges and shrubs bring definition back to your landscape and help the rest of your outdoor space shine.",
+    "highlights": {
+      "item1": "Hedge trimming",
+      "item2": "Shrub shaping",
+      "item3": "A tidy finish"
+    },
+    "caption": "Good care. Clean lines.",
+    "link": "/services/trimming/"
+  },
+  "detail": {
+    "headline": "Good care.",
+    "accent": "Clean lines.",
+    "introduction": "Bring a little definition back to your landscape. Neatly trimmed hedges and shaped shrubs help the spaces around your home or business feel intentional and cared for.",
+    "sectionTitle": "A little shaping.",
+    "sectionAccent": "A noticeable difference.",
+    "sectionCopy": "Hedges and shrubs help frame a property. When those details look tidy, the rest of the landscape comes into focus. We bring care to the trimming work that gives your yard its finished feel.",
+    "focus": {
+      "item1": {
+        "title": "Neatly trimmed hedges",
+        "copy": "Give established hedges a tidier appearance and bring their lines back into the landscape."
+      },
+      "item2": {
+        "title": "Carefully shaped shrubs",
+        "copy": "Refresh the shape of shrubs around entrances, garden beds, and the other areas you want to highlight."
+      },
+      "item3": {
+        "title": "A more finished landscape",
+        "copy": "Coordinate trimming with the attention your lawn and garden beds need for a cohesive, cared-for look."
+      }
+    },
+    "planningTitle": "Let us see what needs a little shaping.",
+    "planningCopy": "Photos of the hedges and shrubs are a useful start. Mention their approximate height, the areas you want trimmed, and the look you have in mind.",
+    "faqs": {
+      "item1": {
+        "question": "What trimming work can I ask about?",
+        "answer": "We trim hedges and shrubs. Send photos of what you have in mind so the team can confirm the work for your property."
+      },
+      "item2": {
+        "question": "Can trimming be discussed with regular yard care?",
+        "answer": "Yes. Tell us if you also need lawn care, landscape maintenance, or a seasonal cleanup so we can discuss the services together."
+      },
+      "item3": {
+        "question": "How do I explain the shape I want?",
+        "answer": "Current photos and a reference image can help. Point out any areas you especially want addressed when speaking with the team."
+      }
+    },
+    "estimateTitle": "Bring the details",
+    "estimateAccent": "back into focus."
+  },
+  "photos": {
+    "homeCard": {
+      "image": "/src/assets/trimming.jpg",
+      "alt": "Hedge trimming with a powered trimmer",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "hero": {
+      "image": "/src/assets/client/shaped-foundation-shrubs.jpg",
+      "alt": "Rounded and box-shaped shrubs beside a brick home",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "detail": {
+      "image": "/src/assets/client/shaped-shrub-detail.jpg",
+      "alt": "Neatly shaped shrubs along a stone bed beside a brick home",
+      "position": "50% 40%",
+      "mobilePosition": "50% 40%"
+    },
+    "preview": {
+      "image": "/src/assets/client/rounded-border-shrubs.jpg",
+      "alt": "Rounded shrubs beside a freshly edged stone garden bed",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "links": {
+    "estimate": "/contact/?service=trimming#estimate"
+  }
+}

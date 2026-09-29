@@ -1,4 +1,5 @@
 ---
+import content from '../content/reviews-intro.json';
 import { Leaf, ArrowUpRight, ChevronLeft, ChevronRight } from '@lucide/astro';
 import { googleReviewsUrl } from '../lib/google-reviews';
 import '../styles/reviews.css';
@@ -6,8 +7,8 @@ import '../styles/reviews.css';
 <section id="reviews" class="reviews-section section-pad" aria-labelledby="reviews-title" data-review-state="fallback">
   <div class="container">
     <div class="reviews-heading">
-      <div><div class="eyebrow"><Leaf size={19} aria-hidden="true" /> WORDS FROM OUR COMMUNITY</div><h2 id="reviews-title">Good work.<br /><em>Happy neighbors.</em></h2></div>
-      <div class="reviews-heading-copy"><p>See what customers have shared about their experience with Flores Landscaping.</p><a class="text-link" href={googleReviewsUrl} target="_blank" rel="noopener noreferrer">READ OUR GOOGLE REVIEWS <ArrowUpRight size={18} aria-hidden="true" /></a></div>
+      <div><div class="eyebrow"><Leaf size={19} aria-hidden="true" /> {content.eyebrow}</div><h2 id="reviews-title">{content.heading}<br /><em>{content.accent}</em></h2></div>
+      <div class="reviews-heading-copy"><p>{content.description}</p><a class="text-link" href={googleReviewsUrl} target="_blank" rel="noopener noreferrer">{content.linkLabel} <ArrowUpRight size={18} aria-hidden="true" /></a></div>
     </div>
     <p class="reviews-fallback" data-review-fallback>Visit our Google profile to read customer reviews and share your experience.</p>
     <div data-review-content hidden>

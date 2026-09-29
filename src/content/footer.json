@@ -1,0 +1,38 @@
+{
+  "footerBrand": {
+    "photo": {
+      "image": "/src/assets/flores-logo.png",
+      "alt": "Flores Landscaping",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "paragraph": "Family owned. Locally rooted.",
+    "paragraph2": "Taking pride in every property."
+  },
+  "general": {
+    "heading": "Explore",
+    "link": "/about/",
+    "linkLabel": "About Flores",
+    "link2": "/services/",
+    "linkLabel2": "Our services",
+    "link3": "/our-work/",
+    "linkLabel3": "Our recent work",
+    "link4": "/contact/",
+    "linkLabel4": "Contact & free estimates",
+    "linkLabel5": "Common questions",
+    "link5": "/google-reviews/",
+    "linkLabel6": "Google reviews terms & privacy",
+    "heading2": "Our services",
+    "text": "{{businessName}}. All rights reserved.",
+    "linkLabel7": "Back to top"
+  },
+  "footerContact": {
+    "heading": "Let’s talk about your yard",
+    "text": "{{city}}, {{state}} & nearby communities"
+  },
+  "footerCredit": {
+    "text": "Designed By:",
+    "link": "https://bryandevelops.com/",
+    "linkLabel": "Bryan Develops"
+  }
+}

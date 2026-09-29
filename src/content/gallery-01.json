@@ -1,0 +1,110 @@
+{
+  "img-7788": {
+    "title": "A tree-lined lawn",
+    "photo": {
+      "image": "/src/assets/client/tree-lined-lawn.jpg",
+      "alt": "Long mowing stripes framed by mature trees and a home",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7620": {
+    "title": "A welcoming front yard",
+    "photo": {
+      "image": "/src/assets/landscape-beds.jpg",
+      "alt": "A green lawn framed by curved stone beds and a brick home",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8291": {
+    "title": "Courtyard refreshed",
+    "photo": {
+      "image": "/src/assets/client/courtyard-after-mulch.jpg",
+      "alt": "Fresh mulch in garden beds around a sunny courtyard lawn",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8288": {
+    "title": "Good things at your doorstep",
+    "photo": {
+      "image": "/src/assets/client/porch-garden.jpg",
+      "alt": "Fresh dark mulch and flowering plants along a white porch",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-3150": {
+    "title": "Pondside lawn",
+    "photo": {
+      "image": "/src/assets/client/pondside-lawn.jpg",
+      "alt": "Freshly mowed lawn overlooking a neighborhood pond",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8009": {
+    "title": "An island of green",
+    "photo": {
+      "image": "/src/assets/client/evergreen-mulch-island.jpg",
+      "alt": "Evergreen shrubs surrounded by a curved red mulch bed",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7948": {
+    "title": "A little shaping",
+    "photo": {
+      "image": "/src/assets/client/shaped-foundation-shrubs.jpg",
+      "alt": "Rounded and box-shaped shrubs beside a brick house",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8128": {
+    "title": "A lawn to come home to",
+    "photo": {
+      "image": "/src/assets/client/home-lawn-care.jpg",
+      "alt": "Fresh mowing stripes across a lawn in front of a modern home",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8008": {
+    "title": "A backyard to enjoy",
+    "photo": {
+      "image": "/src/assets/backyard.jpg",
+      "alt": "A backyard deck framed by stone beds and spaced shrubs",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8380": {
+    "title": "Color along the border",
+    "photo": {
+      "image": "/src/assets/client/yellow-flower-border.jpg",
+      "alt": "Yellow flowers and rounded shrubs in a fresh dark mulch bed",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8419": {
+    "title": "The details bring it together",
+    "photo": {
+      "image": "/src/assets/client/side-yard-stone.jpg",
+      "alt": "A tidy stone border around a side yard beside brown siding",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8026": {
+    "title": "Fresh crosscut lawn",
+    "photo": {
+      "image": "/src/assets/client/crosscut-lawn.jpg",
+      "alt": "Crosshatched mowing lines across a green backyard",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  }
+}

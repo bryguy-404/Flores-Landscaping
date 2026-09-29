@@ -1,0 +1,83 @@
+{
+  "overview": {
+    "title": "Landscaping",
+    "summary": "Thoughtful landscapes that bring out the best in your property.",
+    "description": "Give your outdoor space a fresh perspective. We help bring together planting areas, thoughtful details, and landscape maintenance for a property that feels welcoming from the moment you arrive.",
+    "highlights": {
+      "item1": "Landscape design",
+      "item2": "Garden beds",
+      "item3": "Landscape maintenance"
+    },
+    "caption": "A welcome you can see.",
+    "link": "/services/landscaping/"
+  },
+  "detail": {
+    "headline": "Your outdoor space.",
+    "accent": "A fresh perspective.",
+    "introduction": "A more welcoming entrance. A garden bed with a little more character. A yard that feels like your own. Let’s bring thoughtful care to the landscape around your home or business.",
+    "sectionTitle": "Bring the whole",
+    "sectionAccent": "yard together.",
+    "sectionCopy": "Good landscaping is about how the details work together. We help you think through the spaces you want to refresh, then bring care to the planting areas and finishing touches that make a property feel complete.",
+    "focus": {
+      "item1": {
+        "title": "Thoughtful landscape design",
+        "copy": "Start with your ideas, the way you use your space, and the parts of your property you’d like to change."
+      },
+      "item2": {
+        "title": "Garden beds with purpose",
+        "copy": "Defined planting areas can bring shape, color, and a welcoming feel to the landscape around your home."
+      },
+      "item3": {
+        "title": "Attention beyond the first visit",
+        "copy": "Landscape maintenance helps carry that cared-for feeling forward. Talk with us about the ongoing needs of your outdoor space."
+      }
+    },
+    "planningTitle": "Bring us your ideas, big or small.",
+    "planningCopy": "Share current photos, the areas you want to change, and any inspiration you’ve collected. Let us know what you like about your yard and what you’d love to improve.",
+    "faqs": {
+      "item1": {
+        "question": "Do I need a finished design before contacting you?",
+        "answer": "You can start with an idea or a part of your property you’d like to improve. We offer landscape design and can discuss what you have in mind during the estimate process."
+      },
+      "item2": {
+        "question": "Can I start with just one area of my yard?",
+        "answer": "Tell us which area you want to focus on, such as the front entrance or an existing garden bed. We’ll discuss the scope of your project with you."
+      },
+      "item3": {
+        "question": "Do you work on commercial properties?",
+        "answer": "Yes. Flores Landscaping serves residential and commercial properties in {{city}} and the surrounding communities."
+      }
+    },
+    "estimateTitle": "Let’s make room for",
+    "estimateAccent": "something beautiful."
+  },
+  "photos": {
+    "homeCard": {
+      "image": "/src/assets/landscape-beds.jpg",
+      "alt": "Curved planting beds with shrubs and decorative stone",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "hero": {
+      "image": "/src/assets/client/curved-stone-entry.jpg",
+      "alt": "A curved stone bed around a brick entryway",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "detail": {
+      "image": "/src/assets/client/deck-stone-bed.jpg",
+      "alt": "Stone beds and small shrubs along a raised deck",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "preview": {
+      "image": "/src/assets/client/brick-house-stone-bed.jpg",
+      "alt": "Light-colored stone beds and small shrubs along a brick house",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "links": {
+    "estimate": "/contact/?service=landscaping#estimate"
+  }
+}

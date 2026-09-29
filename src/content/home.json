@@ -1,0 +1,176 @@
+{
+  "faqs": {
+    "item1": {
+      "q": "What areas do you serve?",
+      "a": "We serve residential and commercial properties in {{communities}}. If you’re nearby and aren’t sure whether we cover your area, give us a call or send us a text."
+    },
+    "item2": {
+      "q": "Do you offer free estimates?",
+      "a": "Yes! We offer free estimates for lawn care and landscaping projects. Call or text us to tell us about your property and schedule a consultation."
+    },
+    "item3": {
+      "q": "Are you licensed and insured?",
+      "a": "Yes, Flores Landscaping is fully licensed and insured. We take care to protect your property while delivering professional, reliable service."
+    },
+    "item4": {
+      "q": "Can you help throughout the year?",
+      "a": "Yes. Our services include lawn care, landscape maintenance, spring and fall cleanups, and winter snow plowing. Contact us to discuss what your property needs this season."
+    }
+  },
+  "hero": {
+    "photo": {
+      "image": "/src/assets/hedge-hero.jpg",
+      "alt": "A landscaper carefully trimming a hedge",
+      "position": "50% 55%",
+      "mobilePosition": "30% 50%"
+    },
+    "photo2": {
+      "image": "/src/assets/lawn-stripes.jpg",
+      "alt": "A freshly mowed Flores Landscaping lawn framed by mature trees",
+      "position": "50% 55%",
+      "mobilePosition": "43% 50%"
+    },
+    "photo3": {
+      "image": "/src/assets/landscape-beds.jpg",
+      "alt": "Professionally maintained shrubs and landscape beds",
+      "position": "50% 55%",
+      "mobilePosition": "43% 50%"
+    },
+    "photo4": {
+      "image": "/src/assets/flower-garden.jpg",
+      "alt": "A colorful flower garden beside a home",
+      "position": "50% 55%",
+      "mobilePosition": "43% 50%"
+    },
+    "text": "Rooted in family.",
+    "text2": "Growing beautiful spaces.",
+    "heading": "Beautiful landscapes.",
+    "heading2": "Made for",
+    "text3": "living.",
+    "paragraph": "A little more green. A lot more care. Your local Flores team brings out the best in your outdoor space.",
+    "link": "/contact/#estimate",
+    "linkLabel": "GET A FREE ESTIMATE",
+    "link2": "/our-work/",
+    "linkLabel2": "EXPLORE OUR WORK",
+    "text4": "LOCAL ROOTS. LASTING BEAUTY."
+  },
+  "propertyServices": {
+    "link": "/contact/#estimate",
+    "heading": "Residential",
+    "heading2": "Services",
+    "text": "GET IN TOUCH",
+    "photo": {
+      "image": "/src/assets/landscape-beds.jpg",
+      "alt": "Well-maintained landscaping in front of a home",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "link2": "/contact/#estimate",
+    "heading3": "Commercial",
+    "heading4": "Services",
+    "text2": "GET IN TOUCH",
+    "photo2": {
+      "image": "/src/assets/lawn-stripes.jpg",
+      "alt": "Wide, neatly maintained green lawn",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "about": {
+    "photo": {
+      "image": "/src/assets/landscape-beds.jpg",
+      "alt": "Flores landscaping with curved stone beds and carefully trimmed shrubs",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "photo2": {
+      "image": "/src/assets/mulch.jpg",
+      "alt": "Red mulch and decorative white rock around trees",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "text": "YEARS OF",
+    "text2": "HANDS-ON CARE",
+    "text3": "A little pride in every detail.",
+    "eyebrow": "ABOUT FLORES LANDSCAPING",
+    "heading": "Your yard.",
+    "heading2": "Our family’s",
+    "text4": "pride.",
+    "paragraph": "Good landscaping starts with people who care.",
+    "paragraph2": "We’re a family-owned team with more than {{experienceYears}} years of experience caring for outdoor spaces around {{city}}. From a freshly cut lawn to a whole new landscape, we bring a personal touch to every job.",
+    "heading3": "Care that goes beyond the cut",
+    "paragraph3": "Thoughtful work, from the first visit to the finishing touches.",
+    "heading4": "Your neighbors, your landscaping team",
+    "paragraph4": "Local experience. Friendly faces. Pride in our community.",
+    "link": "/about/",
+    "linkLabel": "GET TO KNOW FLORES",
+    "text5": "LICENSED & INSURED",
+    "text6": "FAMILY OWNED & OPERATED",
+    "text7": "FREE, NO-OBLIGATION ESTIMATES"
+  },
+  "services": {
+    "eyebrow": "A LITTLE CARE. A BIG DIFFERENCE.",
+    "heading": "Good things grow",
+    "heading2": "with the right",
+    "text": "care.",
+    "paragraph": "Everything your outdoor space needs, from the ground up.",
+    "linkLabel": "EXPLORE THIS SERVICE",
+    "text2": "Lawn care to seasonal cleanups. We’ve got you covered."
+  },
+  "projects": {
+    "eyebrow": "A LITTLE BEFORE. A BEAUTIFUL AFTER.",
+    "heading": "Real yards.",
+    "text": "Real transformations.",
+    "paragraph": "See the difference a little care and craftsmanship can make, one outdoor space at a time.",
+    "text2": "Swipe to explore",
+    "link": "/our-work/",
+    "linkLabel": "EXPLORE OUR WORK & GALLERY"
+  },
+  "promiseBand": {
+    "text": "Years of experience",
+    "text2": "Family",
+    "text3": "Owned & operated",
+    "text4": "Local",
+    "text5": "Care you can count on",
+    "text6": "Every season",
+    "text7": "Here for your outdoor space"
+  },
+  "faq": {
+    "eyebrow": "GOOD TO KNOW",
+    "heading": "A few questions,",
+    "text": "before we grow.",
+    "paragraph": "Getting started should feel easy. Here are a few things you might be wondering.",
+    "linkLabel": "WE’RE ALWAYS HAPPY TO HELP"
+  },
+  "contact": {
+    "photo": {
+      "image": "/src/assets/flower-garden.jpg",
+      "alt": "A beautifully planted flower bed with red and pink blooms",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "eyebrow": "LET’S MAKE SOMETHING BEAUTIFUL",
+    "heading": "A better yard",
+    "heading2": "starts with",
+    "heading3": "a",
+    "text": "hello.",
+    "paragraph": "Tell us what you have in mind.",
+    "paragraph2": "We’ll take it from there.",
+    "eyebrow2": "YOUR NEXT CHAPTER STARTS OUTSIDE",
+    "heading4": "Let’s talk about",
+    "heading5": "your outdoor space.",
+    "paragraph3": "From regular lawn care to a fresh start for your landscape, we’d love to help. Call or text for your free estimate.",
+    "text2": "CALL OR TEXT OUR TEAM",
+    "link": "/contact/#estimate",
+    "linkLabel": "REQUEST A FREE ESTIMATE",
+    "linkLabel2": "Prefer email? Let’s talk.",
+    "text3": "Free estimates. Friendly advice. No pressure."
+  },
+  "serviceArea": {
+    "text": "YOUR LOCAL LANDSCAPING TEAM"
+  },
+  "seo": {
+    "title": "Flores Landscaping | Lawn Care & Landscaping in {{city}}, IN",
+    "description": "Family-owned landscaping with over {{experienceYears}} years of experience. Lawn care, planting, mulch, sod, seasonal cleanups, and snow plowing in {{city}} and surrounding communities. Free estimates."
+  }
+}

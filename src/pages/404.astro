@@ -1,11 +1,14 @@
 ---
+import rawContent from '../content/not-found.json';
+import { readContent, safeLink } from '../lib/cms';
+const content = readContent(rawContent);
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Page not found | Flores Landscaping">
+<BaseLayout title={content.seo.title}>
   <main id="main" class="container" style="padding-block: 20vh; max-width: 700px;">
-    <p class="eyebrow">FLORES LANDSCAPING · 404</p>
-    <h1 style="font-size: 3rem; margin-bottom: 20px;">Let’s get you back<br />on the right path.</h1>
-    <p style="margin-bottom: 30px;">We couldn’t find that page. Our homepage is a good place to start.</p>
-    <a class="button button-red" href="/">BACK TO HOME</a>
+    <p class="eyebrow">{content.general.paragraph}</p>
+    <h1 style="font-size: 3rem; margin-bottom: 20px;">{content.general.heading}<br />{content.general.heading2}</h1>
+    <p style="margin-bottom: 30px;">{content.general.paragraph2}</p>
+    <a class="button button-red" href={safeLink(content.general.link)}>{content.general.linkLabel}</a>
   </main>
 </BaseLayout>

@@ -1,0 +1,98 @@
+{
+  "video7804": {
+    "title": "A fresh-cut perspective.",
+    "category": "Lawn care",
+    "description": "A sweep across a freshly striped lawn, with homes and mature trees in the background.",
+    "link": "/videos/project-7804.mp4",
+    "poster": {
+      "image": "/src/assets/video-posters/project-7804.jpg",
+      "alt": "",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "video5880": {
+    "title": "Care in every direction.",
+    "category": "Lawn care",
+    "description": "Crossing mowing stripes frame a green backyard bordered by trees and a wooden fence.",
+    "link": "/videos/project-5880.mp4",
+    "poster": {
+      "image": "/src/assets/video-posters/project-5880.jpg",
+      "alt": "",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "video6622": {
+    "title": "Room to enjoy fall.",
+    "category": "Fall cleanup",
+    "description": "A look around the lawn and walkway after fallen leaves have been cleared.",
+    "link": "/videos/project-6622.mp4",
+    "poster": {
+      "image": "/src/assets/video-posters/project-6622.jpg",
+      "alt": "",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "video6879": {
+    "title": "Here through the seasons.",
+    "category": "Snow plowing",
+    "description": "A winter look at a snowy lot, with a plow truck moving between parked trailers.",
+    "link": "/videos/project-6879.mp4",
+    "poster": {
+      "image": "/src/assets/video-posters/project-6879.jpg",
+      "alt": "",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "video7712": {
+    "title": "A lawn worth a closer look.",
+    "category": "Lawn care",
+    "description": "Even mowing stripes stretch across an open lawn toward a white fence and a line of trees.",
+    "link": "/videos/project-7712.mp4",
+    "poster": {
+      "image": "/src/assets/video-posters/project-7712.jpg",
+      "alt": "",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "video7713": {
+    "title": "From corner to corner.",
+    "category": "Lawn care",
+    "description": "A walk alongside a home shows fresh mowing stripes beside shrubs and a raised deck.",
+    "link": "/videos/project-7713.mp4",
+    "poster": {
+      "image": "/src/assets/video-posters/project-7713.jpg",
+      "alt": "",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "video5903": {
+    "title": "Your own stretch of green.",
+    "category": "Lawn care",
+    "description": "A short view across a mowed backyard bordered by neighboring homes and a wooden fence.",
+    "link": "/videos/project-5903.mp4",
+    "poster": {
+      "image": "/src/assets/video-posters/project-5903.jpg",
+      "alt": "",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "video6618": {
+    "title": "Before the cleanup.",
+    "category": "Fall cleanup · Before",
+    "description": "Fallen leaves cover the backyard around a mature tree before the fall cleanup.",
+    "link": "/videos/project-6618.mp4",
+    "poster": {
+      "image": "/src/assets/video-posters/project-6618.jpg",
+      "alt": "",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  }
+}

@@ -1,4 +1,5 @@
 ---
+import { business, emailHref } from '../lib/cms';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -16,7 +17,7 @@ import Footer from '../components/Footer.astro';
     <p>When you approach the reviews section, our server requests reviews from Google. This request identifies the business; it does not send your contact-form information to Google. Reviewer names, profile images, profile links, review text, and dates are displayed when available.</p>
     <p>Profile images load from Google in your browser. Google may receive your IP address and browser information when images load or you follow Google links. The <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> is incorporated into this feature’s privacy policy. This review feature does not use browser storage to retain reviews, and we do not maintain a stored copy of Google’s review responses.</p>
     <h2>Contact</h2>
-    <p>For questions about this feature, contact <a href="mailto:floreslandscaping098@gmail.com">floreslandscaping098@gmail.com</a>.</p>
+    <p>For questions about this feature, contact <a href={emailHref}>{business.email}</a>.</p>
     <a class="text-link" href="/#reviews">BACK TO CUSTOMER REVIEWS →</a>
   </main>
   <Footer />

@@ -1,0 +1,64 @@
+{
+  "overview": {
+    "title": "Snow Plowing",
+    "summary": "Keep your property accessible when winter weather rolls in.",
+    "description": "Our work continues when the growing season ends. When snow arrives, contact our team about plowing for your property and keeping outdoor access clear.",
+    "highlights": {
+      "item1": "Winter snow plowing",
+      "item2": "Residential & commercial"
+    },
+    "caption": "Here through every season.",
+    "link": "/services/snow-plowing/"
+  },
+  "detail": {
+    "headline": "When winter arrives,",
+    "accent": "we’re still here.",
+    "introduction": "Our work continues beyond the growing season. Contact Flores Landscaping about snow plowing for your home or business in {{city}} and nearby communities.",
+    "sectionTitle": "Winter care.",
+    "sectionAccent": "For your property.",
+    "sectionCopy": "Snow changes the way you use your outdoor space. Tell us about the areas you need plowed, the access your property needs, and the winter service you’re looking for.",
+    "focus": {
+      "item1": {
+        "title": "Residential properties",
+        "copy": "Talk with us about snow plowing for the driveway and access areas around your home."
+      },
+      "item2": {
+        "title": "Commercial properties",
+        "copy": "Discuss plowing needs for your business, including the areas visitors and vehicles use to reach the property."
+      },
+      "item3": {
+        "title": "A conversation before the snow",
+        "copy": "Share your property details and ask about availability and service arrangements before making winter plans."
+      }
+    },
+    "planningTitle": "Tell us where access matters most.",
+    "planningCopy": "Share the address, whether the property is residential or commercial, and the areas you want plowed. Discuss timing, access, and the scope of the work directly with the team.",
+    "faqs": {
+      "item1": {
+        "question": "Do you offer residential and commercial snow plowing?",
+        "answer": "Yes. We offer snow plowing for residential and commercial properties. Contact us to discuss your location and plowing needs."
+      },
+      "item2": {
+        "question": "How do I check winter availability?",
+        "answer": "Call or text the team with your address and the service you’re looking for. Availability and scheduling should be confirmed directly for your property."
+      },
+      "item3": {
+        "question": "What should I share when requesting service?",
+        "answer": "Photos of the driveway or access areas, the property address, and any important access details help explain the work you have in mind."
+      }
+    },
+    "estimateTitle": "Let’s talk about",
+    "estimateAccent": "your winter plans."
+  },
+  "photos": {
+    "homeCard": {
+      "image": "/src/assets/snow-removal.jpg",
+      "alt": "Snow removal equipment working on a snowy property",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "links": {
+    "estimate": "/contact/?service=snow-plowing#estimate"
+  }
+}

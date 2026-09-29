@@ -1,0 +1,16 @@
+{
+  "name": "Flores Landscaping LLC",
+  "primaryPhone": "(574) 386-6078",
+  "secondaryPhone": "(574) 472-0183",
+  "email": "floreslandscaping098@gmail.com",
+  "city": "South Bend",
+  "state": "Indiana",
+  "communities": {
+    "item1": "South Bend",
+    "item2": "Mishawaka",
+    "item3": "Granger",
+    "item4": "Osceola"
+  },
+  "experienceYears": "20",
+  "hours": ""
+}

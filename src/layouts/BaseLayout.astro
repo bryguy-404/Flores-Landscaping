@@ -4,21 +4,23 @@ import '@fontsource/poppins/400.css';
 import '@fontsource/poppins/500.css';
 import '@fontsource/poppins/600.css';
 import '../styles/global.css';
+import { business as businessDetails, phoneHref, serviceAreas, readContent } from '../lib/cms';
+import home from '../content/home.json';
 
 interface Props { title?: string; description?: string; }
 const {
-  title = 'Flores Landscaping | Lawn Care & Landscaping in South Bend, IN',
-  description = 'Family-owned landscaping with over 20 years of experience. Lawn care, planting, mulch, sod, seasonal cleanups, and snow plowing in South Bend and surrounding communities. Free estimates.',
+  title = readContent(home.seo.title),
+  description = readContent(home.seo.description),
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const business = {
   '@context': 'https://schema.org',
   '@type': 'LandscapingBusiness',
-  name: 'Flores Landscaping LLC',
+  name: businessDetails.name,
   url: Astro.site?.toString(),
-  telephone: '+1-574-386-6078',
-  email: 'floreslandscaping098@gmail.com',
-  areaServed: ['South Bend', 'Mishawaka', 'Granger', 'Osceola'],
+  telephone: phoneHref.replace('tel:', ''),
+  email: businessDetails.email,
+  areaServed: serviceAreas,
 };
 ---
 <!doctype html>

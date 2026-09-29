@@ -1,0 +1,5331 @@
+# Pages CMS 2.x — existing content only. See PAGES_CMS.md.
+# Routes, layout, API settings and provider reviews are intentionally outside this schema.
+media:
+  - name: photos
+    label: Website photos
+    input: src/assets
+    output: /src/assets
+    extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+      - avif
+    rename: random
+content:
+  - name: shared
+    label: Shared website details
+    type: group
+    items:
+      - name: business
+        label: Business details
+        type: file
+        path: src/content/business.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: name
+            label: Name
+            type: string
+            required: true
+          - name: primaryPhone
+            label: Primary Phone
+            type: string
+            required: true
+            pattern:
+              regex: ^\+?[0-9() .-]{10,22}$
+              message: Enter the business phone number, including area code.
+          - name: secondaryPhone
+            label: Secondary Phone
+            type: string
+            required: true
+            pattern:
+              regex: ^\+?[0-9() .-]{10,22}$
+              message: Enter the business phone number, including area code.
+          - name: email
+            label: Email
+            type: string
+            required: true
+            pattern:
+              regex: ^[^\s@]+@[^\s@]+\.[^\s@]+$
+              message: Enter a valid email address.
+          - name: city
+            label: City
+            type: string
+            required: true
+          - name: state
+            label: State
+            type: string
+            required: true
+          - name: communities
+            label: Service area — existing communities
+            type: object
+            fields:
+              - name: item1
+                label: Item 1
+                type: string
+                required: true
+              - name: item2
+                label: Item 2
+                type: string
+                required: true
+              - name: item3
+                label: Item 3
+                type: string
+                required: true
+              - name: item4
+                label: Item 4
+                type: string
+                required: true
+            description: >-
+              These four existing slots appear throughout the site. Page layout and the number of locations
+              stay fixed.
+          - name: experienceYears
+            label: Experience Years
+            type: string
+            required: true
+            pattern: ^[0-9]{1,3}$
+          - name: hours
+            label: Hours
+            type: string
+            required: false
+            description: >-
+              Optional. Displayed in the footer only when filled in. Leave blank until business hours are
+              confirmed.
+      - name: header
+        label: Header and navigation
+        type: file
+        path: src/content/header.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: topbar
+            label: Topbar
+            type: object
+            fields:
+              - name: text
+                label: Text — Proudly serving shared detail & surrounding c…
+                type: string
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — Let’s bring your outdoor space to life
+                type: string
+                required: true
+          - name: general
+            label: Labels and links
+            type: object
+            fields:
+              - name: photo
+                label: Photo
+                component: photo
+              - name: text
+                label: Text — CARE FOR EVERY CORNER
+                type: string
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — VIEW ALL SERVICES
+                type: string
+                required: true
+              - name: text2
+                label: Text 2 — CALL FOR A FREE ESTIMATE
+                type: string
+                required: true
+          - name: navigation
+            label: Navigation
+            type: object
+            fields:
+              - name: home
+                label: Home
+                type: object
+                fields:
+                  - name: label
+                    label: Label
+                    type: string
+                    required: true
+                  - name: link
+                    label: Link destination
+                    type: string
+                    required: true
+                    pattern:
+                      regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                      message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: about
+                label: About
+                type: object
+                fields:
+                  - name: label
+                    label: Label
+                    type: string
+                    required: true
+                  - name: link
+                    label: Link destination
+                    type: string
+                    required: true
+                    pattern:
+                      regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                      message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: services
+                label: Services
+                type: object
+                fields:
+                  - name: label
+                    label: Label
+                    type: string
+                    required: true
+                  - name: link
+                    label: Link destination
+                    type: string
+                    required: true
+                    pattern:
+                      regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                      message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: projects
+                label: Projects
+                type: object
+                fields:
+                  - name: label
+                    label: Label
+                    type: string
+                    required: true
+                  - name: link
+                    label: Link destination
+                    type: string
+                    required: true
+                    pattern:
+                      regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                      message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: contact
+                label: Contact
+                type: object
+                fields:
+                  - name: label
+                    label: Label
+                    type: string
+                    required: true
+                  - name: link
+                    label: Link destination
+                    type: string
+                    required: true
+                    pattern:
+                      regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                      message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+      - name: footer
+        label: Footer
+        type: file
+        path: src/content/footer.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: footerBrand
+            label: Logo and introduction
+            type: object
+            fields:
+              - name: photo
+                label: Photo
+                component: photo
+              - name: paragraph
+                label: Paragraph — Family owned. Locally rooted.
+                type: text
+                required: true
+              - name: paragraph2
+                label: Paragraph 2 — Taking pride in every property.
+                type: text
+                required: true
+          - name: general
+            label: Labels and links
+            type: object
+            fields:
+              - name: heading
+                label: Heading — Explore
+                type: string
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — About Flores
+                type: string
+                required: true
+              - name: link2
+                label: Link 2
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel2
+                label: Link Label 2 — Our services
+                type: string
+                required: true
+              - name: link3
+                label: Link 3
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel3
+                label: Link Label 3 — Our recent work
+                type: string
+                required: true
+              - name: link4
+                label: Link 4
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel4
+                label: Link Label 4 — Contact & free estimates
+                type: string
+                required: true
+              - name: linkLabel5
+                label: Link Label 5 — Common questions
+                type: string
+                required: true
+              - name: link5
+                label: Link 5
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel6
+                label: Link Label 6 — Google reviews terms & privacy
+                type: string
+                required: true
+              - name: heading2
+                label: Heading 2 — Our services
+                type: string
+                required: true
+              - name: text
+                label: Text — shared detail. All rights reserved.
+                type: string
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+              - name: linkLabel7
+                label: Link Label 7 — Back to top
+                type: string
+                required: true
+          - name: footerContact
+            label: Contact details
+            type: object
+            fields:
+              - name: heading
+                label: Heading — Let’s talk about your yard
+                type: string
+                required: true
+              - name: text
+                label: Text — shared detail, shared detail & nearby communi
+                type: string
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+          - name: footerCredit
+            label: Website credit
+            type: object
+            fields:
+              - name: text
+                label: "Text — Designed By:"
+                type: string
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — Bryan Develops
+                type: string
+                required: true
+  - name: homepage
+    label: Home
+    type: group
+    items:
+      - name: home
+        label: Page sections
+        type: file
+        path: src/content/home.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: faqs
+            label: Frequently asked questions
+            type: object
+            fields:
+              - name: item1
+                label: What areas do you serve?
+                type: object
+                fields:
+                  - name: q
+                    label: Question
+                    type: string
+                    required: true
+                  - name: a
+                    label: Answer
+                    type: text
+                    required: true
+                    description: >-
+                      Shared details in {{double braces}} update from Business details. Keep these tokens when
+                      editing nearby words.
+              - name: item2
+                label: Do you offer free estimates?
+                type: object
+                fields:
+                  - name: q
+                    label: Question
+                    type: string
+                    required: true
+                  - name: a
+                    label: Answer
+                    type: text
+                    required: true
+              - name: item3
+                label: Are you licensed and insured?
+                type: object
+                fields:
+                  - name: q
+                    label: Question
+                    type: string
+                    required: true
+                  - name: a
+                    label: Answer
+                    type: text
+                    required: true
+              - name: item4
+                label: Can you help throughout the year?
+                type: object
+                fields:
+                  - name: q
+                    label: Question
+                    type: string
+                    required: true
+                  - name: a
+                    label: Answer
+                    type: text
+                    required: true
+          - name: hero
+            label: Hero
+            type: object
+            fields:
+              - name: photo
+                label: Photo
+                component: photo
+              - name: photo2
+                label: Photo 2
+                component: photo
+              - name: photo3
+                label: Photo 3
+                component: photo
+              - name: photo4
+                label: Photo 4
+                component: photo
+              - name: text
+                label: Text — Rooted in family.
+                type: string
+                required: true
+              - name: text2
+                label: Text 2 — Growing beautiful spaces.
+                type: string
+                required: true
+              - name: heading
+                label: Heading — Beautiful landscapes.
+                type: string
+                required: true
+              - name: heading2
+                label: Heading 2 — Made for
+                type: string
+                required: true
+              - name: text3
+                label: Text 3 — living.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — A little more green. A lot more care. Your lo…
+                type: text
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — GET A FREE ESTIMATE
+                type: string
+                required: true
+              - name: link2
+                label: Link 2
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel2
+                label: Link Label 2 — EXPLORE OUR WORK
+                type: string
+                required: true
+              - name: text4
+                label: Text 4 — LOCAL ROOTS. LASTING BEAUTY.
+                type: string
+                required: true
+          - name: propertyServices
+            label: Residential and commercial cards
+            type: object
+            fields:
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: heading
+                label: Heading — Residential
+                type: string
+                required: true
+              - name: heading2
+                label: Heading 2 — Services
+                type: string
+                required: true
+              - name: text
+                label: Text — GET IN TOUCH
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+              - name: link2
+                label: Link 2
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: heading3
+                label: Heading 3 — Commercial
+                type: string
+                required: true
+              - name: heading4
+                label: Heading 4 — Services
+                type: string
+                required: true
+              - name: text2
+                label: Text 2 — GET IN TOUCH
+                type: string
+                required: true
+              - name: photo2
+                label: Photo 2
+                component: photo
+          - name: about
+            label: About
+            type: object
+            fields:
+              - name: photo
+                label: Photo
+                component: photo
+              - name: photo2
+                label: Photo 2
+                component: photo
+              - name: text
+                label: Text — YEARS OF
+                type: string
+                required: true
+              - name: text2
+                label: Text 2 — HANDS-ON CARE
+                type: string
+                required: true
+              - name: text3
+                label: Text 3 — A little pride in every detail.
+                type: string
+                required: true
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — Your yard.
+                type: string
+                required: true
+              - name: heading2
+                label: Heading 2 — Our family’s
+                type: string
+                required: true
+              - name: text4
+                label: Text 4 — pride.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — Good landscaping starts with people who care.
+                type: text
+                required: true
+              - name: paragraph2
+                label: Paragraph 2 — We’re a family-owned team with more than shar…
+                type: text
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+              - name: heading3
+                label: Heading 3 — Care that goes beyond the cut
+                type: string
+                required: true
+              - name: paragraph3
+                label: Paragraph 3 — Thoughtful work, from the first visit to the …
+                type: text
+                required: true
+              - name: heading4
+                label: Heading 4 — Your neighbors, your landscaping team
+                type: string
+                required: true
+              - name: paragraph4
+                label: Paragraph 4 — Local experience. Friendly faces. Pride in ou…
+                type: text
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — GET TO KNOW FLORES
+                type: string
+                required: true
+              - name: text5
+                label: Text 5 — LICENSED & INSURED
+                type: string
+                required: true
+              - name: text6
+                label: Text 6 — FAMILY OWNED & OPERATED
+                type: string
+                required: true
+              - name: text7
+                label: Text 7 — FREE, NO-OBLIGATION ESTIMATES
+                type: string
+                required: true
+          - name: services
+            label: Services
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — Good things grow
+                type: string
+                required: true
+              - name: heading2
+                label: Heading 2 — with the right
+                type: string
+                required: true
+              - name: text
+                label: Text — care.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — Everything your outdoor space needs, from the…
+                type: text
+                required: true
+              - name: linkLabel
+                label: Link Label — EXPLORE THIS SERVICE
+                type: string
+                required: true
+              - name: text2
+                label: Text 2 — Lawn care to seasonal cleanups. We’ve got you…
+                type: string
+                required: true
+          - name: projects
+            label: Projects
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — Real yards.
+                type: string
+                required: true
+              - name: text
+                label: Text — Real transformations.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — See the difference a little care and craftsma…
+                type: text
+                required: true
+              - name: text2
+                label: Text 2 — Swipe to explore
+                type: string
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — EXPLORE OUR WORK & GALLERY
+                type: string
+                required: true
+          - name: promiseBand
+            label: Business highlights
+            type: object
+            fields:
+              - name: text
+                label: Text — Years of experience
+                type: string
+                required: true
+              - name: text2
+                label: Text 2 — Family
+                type: string
+                required: true
+              - name: text3
+                label: Text 3 — Owned & operated
+                type: string
+                required: true
+              - name: text4
+                label: Text 4 — Local
+                type: string
+                required: true
+              - name: text5
+                label: Text 5 — Care you can count on
+                type: string
+                required: true
+              - name: text6
+                label: Text 6 — Every season
+                type: string
+                required: true
+              - name: text7
+                label: Text 7 — Here for your outdoor space
+                type: string
+                required: true
+          - name: faq
+            label: Faq
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — A few questions,
+                type: string
+                required: true
+              - name: text
+                label: Text — before we grow.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — Getting started should feel easy. Here are a …
+                type: text
+                required: true
+              - name: linkLabel
+                label: Link Label — WE’RE ALWAYS HAPPY TO HELP
+                type: string
+                required: true
+          - name: contact
+            label: Contact
+            type: object
+            fields:
+              - name: photo
+                label: Photo
+                component: photo
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — A better yard
+                type: string
+                required: true
+              - name: heading2
+                label: Heading 2 — starts with
+                type: string
+                required: true
+              - name: heading3
+                label: Heading 3 — a
+                type: string
+                required: true
+              - name: text
+                label: Text — hello.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — Tell us what you have in mind.
+                type: text
+                required: true
+              - name: paragraph2
+                label: Paragraph 2 — We’ll take it from there.
+                type: text
+                required: true
+              - name: eyebrow2
+                label: Eyebrow 2
+                type: string
+                required: true
+              - name: heading4
+                label: Heading 4 — Let’s talk about
+                type: string
+                required: true
+              - name: heading5
+                label: Heading 5 — your outdoor space.
+                type: string
+                required: true
+              - name: paragraph3
+                label: Paragraph 3 — From regular lawn care to a fresh start for y…
+                type: text
+                required: true
+              - name: text2
+                label: Text 2 — CALL OR TEXT OUR TEAM
+                type: string
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — REQUEST A FREE ESTIMATE
+                type: string
+                required: true
+              - name: linkLabel2
+                label: Link Label 2 — Prefer email? Let’s talk.
+                type: string
+                required: true
+              - name: text3
+                label: Text 3 — Free estimates. Friendly advice. No pressure.
+                type: string
+                required: true
+          - name: serviceArea
+            label: Service area
+            type: object
+            fields:
+              - name: text
+                label: Text — YOUR LOCAL LANDSCAPING TEAM
+                type: string
+                required: true
+          - name: seo
+            label: Search and social preview
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+              - name: description
+                label: Description
+                type: text
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+      - name: reviews-intro
+        label: Google Reviews introduction
+        type: file
+        path: src/content/reviews-intro.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+            required: true
+          - name: heading
+            label: Heading — Good work.
+            type: string
+            required: true
+          - name: accent
+            label: Accent
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: text
+            required: true
+          - name: linkLabel
+            label: Link Label — READ OUR GOOGLE REVIEWS
+            type: string
+            required: true
+  - name: about
+    label: About Us
+    type: file
+    path: src/content/about.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: values
+        label: Values
+        type: object
+        fields:
+          - name: item1
+            label: A personal touch.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: copy
+                label: Copy
+                type: text
+                required: true
+          - name: item2
+            label: Pride in the details.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: copy
+                label: Copy
+                type: text
+                required: true
+          - name: item3
+            label: Experience, put to work.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: copy
+                label: Copy
+                type: text
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+      - name: seo
+        label: Search and social preview
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+            description: >-
+              Shared details in {{double braces}} update from Business details. Keep these tokens when editing
+              nearby words.
+          - name: description
+            label: Description
+            type: text
+            required: true
+            description: >-
+              Shared details in {{double braces}} update from Business details. Keep these tokens when editing
+              nearby words.
+      - name: companyIntro
+        label: Introduction
+        type: object
+        fields:
+          - name: link
+            label: Link destination
+            type: string
+            required: true
+            pattern:
+              regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+              message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: linkLabel
+            label: Link Label — Home
+            type: string
+            required: true
+          - name: text
+            label: Text — About us
+            type: string
+            required: true
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+            required: true
+          - name: heading
+            label: Heading — Local roots.
+            type: string
+            required: true
+          - name: text2
+            label: Text 2 — Lasting care.
+            type: string
+            required: true
+          - name: paragraph
+            label: Paragraph — Behind every well-cared-for yard are people w…
+            type: text
+            required: true
+            description: >-
+              Shared details in {{double braces}} update from Business details. Keep these tokens when editing
+              nearby words.
+          - name: link2
+            label: Link 2
+            type: string
+            required: true
+            pattern:
+              regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+              message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: linkLabel2
+            label: Link Label 2 — GET TO KNOW US
+            type: string
+            required: true
+          - name: link3
+            label: Link 3
+            type: string
+            required: true
+            pattern:
+              regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+              message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: linkLabel3
+            label: Link Label 3 — EXPLORE OUR SERVICES
+            type: string
+            required: true
+          - name: text3
+            label: Text 3 — Family owned.
+            type: string
+            required: true
+          - name: text4
+            label: Text 4 — Community minded.
+            type: string
+            required: true
+          - name: text5
+            label: Text 5 — THE PEOPLE BEHIND THE CARE
+            type: string
+            required: true
+          - name: text6
+            label: Text 6 — YEARS OF
+            type: string
+            required: true
+          - name: text7
+            label: Text 7 — HANDS-ON EXPERIENCE
+            type: string
+            required: true
+          - name: text8
+            label: Text 8 — LICENSED
+            type: string
+            required: true
+          - name: text9
+            label: Text 9 — & INSURED
+            type: string
+            required: true
+          - name: text10
+            label: Text 10 — HERE FOR HOMES
+            type: string
+            required: true
+          - name: text11
+            label: Text 11 — & BUSINESSES
+            type: string
+            required: true
+      - name: ourStory
+        label: Our story
+        type: object
+        fields:
+          - name: photo
+            label: Photo
+            component: photo
+          - name: text
+            label: Text — Good people. Thoughtful work. A little pride …
+            type: string
+            required: true
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+            required: true
+          - name: heading
+            label: Heading — People who care.
+            type: string
+            required: true
+          - name: text2
+            label: Text 2 — Work that shows.
+            type: string
+            required: true
+          - name: paragraph
+            label: Paragraph — Good landscaping starts with a personal conne…
+            type: text
+            required: true
+          - name: paragraph2
+            label: Paragraph 2 — Flores Landscaping is a family-owned and oper…
+            type: text
+            required: true
+            description: >-
+              Shared details in {{double braces}} update from Business details. Keep these tokens when editing
+              nearby words.
+          - name: paragraph3
+            label: Paragraph 3 — We know a yard is more than the space around …
+            type: text
+            required: true
+          - name: paragraph4
+            label: Paragraph 4 — Your property deserves the care
+            type: text
+            required: true
+          - name: paragraph5
+            label: Paragraph 5 — we’d give our own.
+            type: text
+            required: true
+          - name: link
+            label: Link destination
+            type: string
+            required: true
+            pattern:
+              regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+              message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: linkLabel
+            label: Link Label — LET’S TALK ABOUT YOUR SPACE
+            type: string
+            required: true
+      - name: companyValues
+        label: Our approach
+        type: object
+        fields:
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+            required: true
+          - name: heading
+            label: Heading — Care is personal.
+            type: string
+            required: true
+          - name: text
+            label: Text — So is our approach.
+            type: string
+            required: true
+          - name: paragraph
+            label: Paragraph — From the first conversation to the finishing …
+            type: text
+            required: true
+      - name: companyCommunity
+        label: Service area
+        type: object
+        fields:
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+            required: true
+          - name: heading
+            label: Heading — Rooted here.
+            type: string
+            required: true
+          - name: text
+            label: Text — Ready for your yard.
+            type: string
+            required: true
+          - name: paragraph
+            label: Paragraph — We serve residential and commercial propertie…
+            type: text
+            required: true
+            description: >-
+              Shared details in {{double braces}} update from Business details. Keep these tokens when editing
+              nearby words.
+          - name: text2
+            label: Text 2 — RESIDENTIAL
+            type: string
+            required: true
+          - name: text3
+            label: Text 3 — COMMERCIAL
+            type: string
+            required: true
+          - name: link
+            label: Link destination
+            type: string
+            required: true
+            pattern:
+              regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+              message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: linkLabel
+            label: Link Label — FIND THE RIGHT CARE
+            type: string
+            required: true
+          - name: text4
+            label: Text 4 — PROUDLY SERVING
+            type: string
+            required: true
+          - name: text5
+            label: Text 5 — INDIANA
+            type: string
+            required: true
+          - name: paragraph2
+            label: Paragraph 2 — Nearby, but don’t see your community?
+            type: text
+            required: true
+          - name: linkLabel2
+            label: Link Label 2 — Give us a call to check your area.
+            type: string
+            required: true
+      - name: estimate
+        label: Estimate
+        type: object
+        fields:
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+            required: true
+          - name: heading
+            label: Heading — Let’s get to know
+            type: string
+            required: true
+          - name: text
+            label: Text — your outdoor space.
+            type: string
+            required: true
+          - name: paragraph
+            label: Paragraph — Tell us a little about your property and the …
+            type: text
+            required: true
+          - name: text2
+            label: Text 2 — CALL OR TEXT THE FLORES TEAM
+            type: string
+            required: true
+          - name: link
+            label: Link destination
+            type: string
+            required: true
+            pattern:
+              regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+              message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: linkLabel
+            label: Link Label — REQUEST A FREE ESTIMATE
+            type: string
+            required: true
+          - name: linkLabel2
+            label: Link Label 2 — Prefer email? We’d love to hear from you.
+            type: string
+            required: true
+  - name: service-pages
+    label: Services
+    type: group
+    items:
+      - name: services-overview
+        label: Services overview
+        type: file
+        path: src/content/services-overview.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: steps
+            label: Steps
+            type: object
+            fields:
+              - name: item1
+                label: Tell us what you have in mind.
+                type: object
+                fields:
+                  - name: title
+                    label: Title
+                    type: string
+                    required: true
+                  - name: description
+                    label: Description
+                    type: text
+                    required: true
+              - name: item2
+                label: Let’s take a closer look.
+                type: object
+                fields:
+                  - name: title
+                    label: Title
+                    type: string
+                    required: true
+                  - name: description
+                    label: Description
+                    type: text
+                    required: true
+              - name: item3
+                label: Make room for something beautiful.
+                type: object
+                fields:
+                  - name: title
+                    label: Title
+                    type: string
+                    required: true
+                  - name: description
+                    label: Description
+                    type: text
+                    required: true
+          - name: seo
+            label: Search and social preview
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+              - name: description
+                label: Description
+                type: text
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+          - name: servicesIntro
+            label: Introduction
+            type: object
+            fields:
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — Home
+                type: string
+                required: true
+              - name: text
+                label: Text — Our services
+                type: string
+                required: true
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — A little care.
+                type: string
+                required: true
+              - name: heading2
+                label: Heading 2 — A beautiful
+                type: string
+                required: true
+              - name: text2
+                label: Text 2 — difference.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — From the lawn you walk across every day to th…
+                type: text
+                required: true
+              - name: link2
+                label: Link 2
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel2
+                label: Link Label 2 — FIND YOUR SERVICE
+                type: string
+                required: true
+              - name: link3
+                label: Link 3
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel3
+                label: Link Label 3 — GET A FREE ESTIMATE
+                type: string
+                required: true
+              - name: text3
+                label: Text 3 — Family owned. Locally rooted. Here for your y…
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+              - name: text4
+                label: Text 4 — YEARS OF
+                type: string
+                required: true
+              - name: text5
+                label: Text 5 — HANDS-ON CARE
+                type: string
+                required: true
+              - name: text6
+                label: Text 6 — A little pride in every detail.
+                type: string
+                required: true
+              - name: text7
+                label: Text 7 — FLORES LANDSCAPING
+                type: string
+                required: true
+              - name: text8
+                label: Text 8 — YOUR LOCAL LANDSCAPING TEAM
+                type: string
+                required: true
+          - name: ourServices
+            label: Service explorer
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — Your space.
+                type: string
+                required: true
+              - name: heading2
+                label: Heading 2 — Our kind of
+                type: string
+                required: true
+              - name: text
+                label: Text — work.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — A fresh start, a seasonal refresh, or a littl…
+                type: text
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — SEE THE DIFFERENCE WE MAKE
+                type: string
+                required: true
+              - name: linkLabel2
+                label: Link Label 2 — EXPLORE THIS SERVICE
+                type: string
+                required: true
+          - name: servicesPropertyBand
+            label: Home and business
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — At home.
+                type: string
+                required: true
+              - name: heading2
+                label: Heading 2 — At work.
+                type: string
+                required: true
+              - name: text
+                label: Text — Always with care.
+                type: string
+                required: true
+              - name: heading3
+                label: Heading 3 — For your home.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — A welcoming front yard. A backyard to enjoy. …
+                type: text
+                required: true
+              - name: heading4
+                label: Heading 4 — For your business.
+                type: string
+                required: true
+              - name: paragraph2
+                label: Paragraph 2 — Make a good first impression with outdoor spa…
+                type: text
+                required: true
+          - name: servicesProcess
+            label: How it works
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — Good things start
+                type: string
+                required: true
+              - name: heading2
+                label: Heading 2 — with a
+                type: string
+                required: true
+              - name: text
+                label: Text — conversation.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — A few simple steps. A team that cares from th…
+                type: text
+                required: true
+          - name: estimate
+            label: Estimate
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — What can we
+                type: string
+                required: true
+              - name: heading2
+                label: Heading 2 — help you
+                type: string
+                required: true
+              - name: text
+                label: Text — grow?
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — Tell us about your property and what you have…
+                type: text
+                required: true
+              - name: text2
+                label: Text 2 — Licensed & insured
+                type: string
+                required: true
+              - name: text3
+                label: Text 3 — Free estimates
+                type: string
+                required: true
+              - name: text4
+                label: Text 4 — CALL OR TEXT OUR TEAM
+                type: string
+                required: true
+              - name: paragraph2
+                label: Paragraph 2 — shared detail
+                type: text
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — REQUEST A FREE ESTIMATE
+                type: string
+                required: true
+              - name: linkLabel2
+                label: Link Label 2 — Prefer email? We’d love to hear from you.
+                type: string
+                required: true
+      - name: services-lawn-care
+        label: Lawn care
+        type: file
+        path: src/content/services/lawn-care.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: overview
+            label: Service cards and navigation
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: summary
+                label: Summary
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: highlights
+                label: Highlights
+                type: object
+                fields:
+                  - name: item1
+                    label: Item 1
+                    type: string
+                    required: true
+                  - name: item2
+                    label: Item 2
+                    type: string
+                    required: true
+                  - name: item3
+                    label: Item 3
+                    type: string
+                    required: true
+              - name: caption
+                label: Caption
+                type: string
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: detail
+            label: Service page copy
+            type: object
+            fields:
+              - name: headline
+                label: Headline
+                type: string
+                required: true
+              - name: accent
+                label: Accent
+                type: string
+                required: true
+              - name: introduction
+                label: Introduction
+                type: text
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+              - name: sectionTitle
+                label: Section Title
+                type: string
+                required: true
+              - name: sectionAccent
+                label: Section Accent
+                type: string
+                required: true
+              - name: sectionCopy
+                label: Section Copy
+                type: text
+                required: true
+              - name: focus
+                label: Focus
+                type: object
+                fields:
+                  - name: item1
+                    label: A fresh, even cut
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+                  - name: item2
+                    label: Pride around the edges
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+                  - name: item3
+                    label: Care that keeps going
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+              - name: planningTitle
+                label: Planning Title
+                type: string
+                required: true
+              - name: planningCopy
+                label: Planning Copy
+                type: text
+                required: true
+              - name: faqs
+                label: Frequently asked questions
+                type: object
+                fields:
+                  - name: item1
+                    label: Can I ask about ongoing lawn care?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                  - name: item2
+                    label: Can lawn care be discussed alongside landscaping?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                  - name: item3
+                    label: Where do you provide lawn care?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                        description: >-
+                          Shared details in {{double braces}} update from Business details. Keep these tokens
+                          when editing nearby words.
+              - name: estimateTitle
+                label: Estimate Title
+                type: string
+                required: true
+              - name: estimateAccent
+                label: Estimate Accent
+                type: string
+                required: true
+          - name: photos
+            label: Photos
+            type: object
+            fields:
+              - name: homeCard
+                label: Homepage card photo
+                component: photo
+              - name: hero
+                label: Hero
+                component: photo
+              - name: detail
+                label: Service page copy
+                component: photo
+              - name: preview
+                label: Services overview photo
+                component: photo
+          - name: links
+            label: Links
+            type: object
+            fields:
+              - name: estimate
+                label: Estimate
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+      - name: services-landscaping
+        label: Landscaping
+        type: file
+        path: src/content/services/landscaping.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: overview
+            label: Service cards and navigation
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: summary
+                label: Summary
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: highlights
+                label: Highlights
+                type: object
+                fields:
+                  - name: item1
+                    label: Item 1
+                    type: string
+                    required: true
+                  - name: item2
+                    label: Item 2
+                    type: string
+                    required: true
+                  - name: item3
+                    label: Item 3
+                    type: string
+                    required: true
+              - name: caption
+                label: Caption
+                type: string
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: detail
+            label: Service page copy
+            type: object
+            fields:
+              - name: headline
+                label: Headline
+                type: string
+                required: true
+              - name: accent
+                label: Accent
+                type: string
+                required: true
+              - name: introduction
+                label: Introduction
+                type: text
+                required: true
+              - name: sectionTitle
+                label: Section Title
+                type: string
+                required: true
+              - name: sectionAccent
+                label: Section Accent
+                type: string
+                required: true
+              - name: sectionCopy
+                label: Section Copy
+                type: text
+                required: true
+              - name: focus
+                label: Focus
+                type: object
+                fields:
+                  - name: item1
+                    label: Thoughtful landscape design
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+                  - name: item2
+                    label: Garden beds with purpose
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+                  - name: item3
+                    label: Attention beyond the first visit
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+              - name: planningTitle
+                label: Planning Title
+                type: string
+                required: true
+              - name: planningCopy
+                label: Planning Copy
+                type: text
+                required: true
+              - name: faqs
+                label: Frequently asked questions
+                type: object
+                fields:
+                  - name: item1
+                    label: Do I need a finished design before contacting you?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                  - name: item2
+                    label: Can I start with just one area of my yard?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                  - name: item3
+                    label: Do you work on commercial properties?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                        description: >-
+                          Shared details in {{double braces}} update from Business details. Keep these tokens
+                          when editing nearby words.
+              - name: estimateTitle
+                label: Estimate Title
+                type: string
+                required: true
+              - name: estimateAccent
+                label: Estimate Accent
+                type: string
+                required: true
+          - name: photos
+            label: Photos
+            type: object
+            fields:
+              - name: homeCard
+                label: Homepage card photo
+                component: photo
+              - name: hero
+                label: Hero
+                component: photo
+              - name: detail
+                label: Service page copy
+                component: photo
+              - name: preview
+                label: Services overview photo
+                component: photo
+          - name: links
+            label: Links
+            type: object
+            fields:
+              - name: estimate
+                label: Estimate
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+      - name: services-mulch-planting
+        label: Mulch & Planting
+        type: file
+        path: src/content/services/mulch-planting.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: overview
+            label: Service cards and navigation
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: summary
+                label: Summary
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: highlights
+                label: Highlights
+                type: object
+                fields:
+                  - name: item1
+                    label: Item 1
+                    type: string
+                    required: true
+                  - name: item2
+                    label: Item 2
+                    type: string
+                    required: true
+                  - name: item3
+                    label: Item 3
+                    type: string
+                    required: true
+              - name: caption
+                label: Caption
+                type: string
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: detail
+            label: Service page copy
+            type: object
+            fields:
+              - name: headline
+                label: Headline
+                type: string
+                required: true
+              - name: accent
+                label: Accent
+                type: string
+                required: true
+              - name: introduction
+                label: Introduction
+                type: text
+                required: true
+              - name: sectionTitle
+                label: Section Title
+                type: string
+                required: true
+              - name: sectionAccent
+                label: Section Accent
+                type: string
+                required: true
+              - name: sectionCopy
+                label: Section Copy
+                type: text
+                required: true
+              - name: focus
+                label: Focus
+                type: object
+                fields:
+                  - name: item1
+                    label: A freshly mulched finish
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+                  - name: item2
+                    label: Plants with a place to shine
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+                  - name: item3
+                    label: A garden bed refresh
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+              - name: planningTitle
+                label: Planning Title
+                type: string
+                required: true
+              - name: planningCopy
+                label: Planning Copy
+                type: text
+                required: true
+              - name: faqs
+                label: Frequently asked questions
+                type: object
+                fields:
+                  - name: item1
+                    label: Can you refresh existing garden beds?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                  - name: item2
+                    label: Can I share plant or mulch preferences?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                  - name: item3
+                    label: Can I request mulch or planting separately?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+              - name: estimateTitle
+                label: Estimate Title
+                type: string
+                required: true
+              - name: estimateAccent
+                label: Estimate Accent
+                type: string
+                required: true
+          - name: photos
+            label: Photos
+            type: object
+            fields:
+              - name: homeCard
+                label: Homepage card photo
+                component: photo
+              - name: hero
+                label: Hero
+                component: photo
+              - name: detail
+                label: Service page copy
+                component: photo
+              - name: preview
+                label: Services overview photo
+                component: photo
+          - name: links
+            label: Links
+            type: object
+            fields:
+              - name: estimate
+                label: Estimate
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+      - name: services-sod-installation
+        label: Sod installation
+        type: file
+        path: src/content/services/sod-installation.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: overview
+            label: Service cards and navigation
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: summary
+                label: Summary
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: highlights
+                label: Highlights
+                type: object
+                fields:
+                  - name: item1
+                    label: Item 1
+                    type: string
+                    required: true
+                  - name: item2
+                    label: Item 2
+                    type: string
+                    required: true
+              - name: caption
+                label: Caption
+                type: string
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: detail
+            label: Service page copy
+            type: object
+            fields:
+              - name: headline
+                label: Headline
+                type: string
+                required: true
+              - name: accent
+                label: Accent
+                type: string
+                required: true
+              - name: introduction
+                label: Introduction
+                type: text
+                required: true
+              - name: sectionTitle
+                label: Section Title
+                type: string
+                required: true
+              - name: sectionAccent
+                label: Section Accent
+                type: string
+                required: true
+              - name: sectionCopy
+                label: Section Copy
+                type: text
+                required: true
+              - name: focus
+                label: Focus
+                type: object
+                fields:
+                  - name: item1
+                    label: Sod installation
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+                  - name: item2
+                    label: Your space, considered
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+                  - name: item3
+                    label: Part of a bigger picture
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+              - name: planningTitle
+                label: Planning Title
+                type: string
+                required: true
+              - name: planningCopy
+                label: Planning Copy
+                type: text
+                required: true
+              - name: faqs
+                label: Frequently asked questions
+                type: object
+                fields:
+                  - name: item1
+                    label: What information helps with a sod estimate?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                  - name: item2
+                    label: Can sod be part of a landscaping project?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                  - name: item3
+                    label: When should I ask about care for the new lawn?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+              - name: estimateTitle
+                label: Estimate Title
+                type: string
+                required: true
+              - name: estimateAccent
+                label: Estimate Accent
+                type: string
+                required: true
+          - name: photos
+            label: Photos
+            type: object
+            fields:
+              - name: homeCard
+                label: Homepage card photo
+                component: photo
+              - name: hero
+                label: Hero
+                component: photo
+              - name: detail
+                label: Service page copy
+                component: photo
+              - name: preview
+                label: Services overview photo
+                component: photo
+          - name: links
+            label: Links
+            type: object
+            fields:
+              - name: estimate
+                label: Estimate
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+      - name: services-seasonal-cleanup
+        label: Spring & Fall Cleanup
+        type: file
+        path: src/content/services/seasonal-cleanup.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: overview
+            label: Service cards and navigation
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: summary
+                label: Summary
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: highlights
+                label: Highlights
+                type: object
+                fields:
+                  - name: item1
+                    label: Item 1
+                    type: string
+                    required: true
+                  - name: item2
+                    label: Item 2
+                    type: string
+                    required: true
+                  - name: item3
+                    label: Item 3
+                    type: string
+                    required: true
+              - name: caption
+                label: Caption
+                type: string
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: detail
+            label: Service page copy
+            type: object
+            fields:
+              - name: headline
+                label: Headline
+                type: string
+                required: true
+              - name: accent
+                label: Accent
+                type: string
+                required: true
+              - name: introduction
+                label: Introduction
+                type: text
+                required: true
+              - name: sectionTitle
+                label: Section Title
+                type: string
+                required: true
+              - name: sectionAccent
+                label: Section Accent
+                type: string
+                required: true
+              - name: sectionCopy
+                label: Section Copy
+                type: text
+                required: true
+              - name: focus
+                label: Focus
+                type: object
+                fields:
+                  - name: item1
+                    label: A spring freshening
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+                  - name: item2
+                    label: A fall tidy-up
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+                  - name: item3
+                    label: Care where it’s needed
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+              - name: planningTitle
+                label: Planning Title
+                type: string
+                required: true
+              - name: planningCopy
+                label: Planning Copy
+                type: text
+                required: true
+              - name: faqs
+                label: Frequently asked questions
+                type: object
+                fields:
+                  - name: item1
+                    label: Do you offer both spring and fall cleanups?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                  - name: item2
+                    label: What should I include in my request?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                  - name: item3
+                    label: Can I also discuss trimming or fresh mulch?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+              - name: estimateTitle
+                label: Estimate Title
+                type: string
+                required: true
+              - name: estimateAccent
+                label: Estimate Accent
+                type: string
+                required: true
+          - name: photos
+            label: Photos
+            type: object
+            fields:
+              - name: homeCard
+                label: Homepage card photo
+                component: photo
+              - name: hero
+                label: Hero
+                component: photo
+              - name: detail
+                label: Service page copy
+                component: photo
+              - name: preview
+                label: Services overview photo
+                component: photo
+          - name: links
+            label: Links
+            type: object
+            fields:
+              - name: estimate
+                label: Estimate
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+      - name: services-trimming
+        label: Trimming
+        type: file
+        path: src/content/services/trimming.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: overview
+            label: Service cards and navigation
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: summary
+                label: Summary
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: highlights
+                label: Highlights
+                type: object
+                fields:
+                  - name: item1
+                    label: Item 1
+                    type: string
+                    required: true
+                  - name: item2
+                    label: Item 2
+                    type: string
+                    required: true
+                  - name: item3
+                    label: Item 3
+                    type: string
+                    required: true
+              - name: caption
+                label: Caption
+                type: string
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: detail
+            label: Service page copy
+            type: object
+            fields:
+              - name: headline
+                label: Headline
+                type: string
+                required: true
+              - name: accent
+                label: Accent
+                type: string
+                required: true
+              - name: introduction
+                label: Introduction
+                type: text
+                required: true
+              - name: sectionTitle
+                label: Section Title
+                type: string
+                required: true
+              - name: sectionAccent
+                label: Section Accent
+                type: string
+                required: true
+              - name: sectionCopy
+                label: Section Copy
+                type: text
+                required: true
+              - name: focus
+                label: Focus
+                type: object
+                fields:
+                  - name: item1
+                    label: Neatly trimmed hedges
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+                  - name: item2
+                    label: Carefully shaped shrubs
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+                  - name: item3
+                    label: A more finished landscape
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+              - name: planningTitle
+                label: Planning Title
+                type: string
+                required: true
+              - name: planningCopy
+                label: Planning Copy
+                type: text
+                required: true
+              - name: faqs
+                label: Frequently asked questions
+                type: object
+                fields:
+                  - name: item1
+                    label: What trimming work can I ask about?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                  - name: item2
+                    label: Can trimming be discussed with regular yard care?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                  - name: item3
+                    label: How do I explain the shape I want?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+              - name: estimateTitle
+                label: Estimate Title
+                type: string
+                required: true
+              - name: estimateAccent
+                label: Estimate Accent
+                type: string
+                required: true
+          - name: photos
+            label: Photos
+            type: object
+            fields:
+              - name: homeCard
+                label: Homepage card photo
+                component: photo
+              - name: hero
+                label: Hero
+                component: photo
+              - name: detail
+                label: Service page copy
+                component: photo
+              - name: preview
+                label: Services overview photo
+                component: photo
+          - name: links
+            label: Links
+            type: object
+            fields:
+              - name: estimate
+                label: Estimate
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+      - name: services-snow-plowing
+        label: Snow plowing
+        type: file
+        path: src/content/services/snow-plowing.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: overview
+            label: Service cards and navigation
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: summary
+                label: Summary
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: highlights
+                label: Highlights
+                type: object
+                fields:
+                  - name: item1
+                    label: Item 1
+                    type: string
+                    required: true
+                  - name: item2
+                    label: Item 2
+                    type: string
+                    required: true
+              - name: caption
+                label: Caption
+                type: string
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: detail
+            label: Service page copy
+            type: object
+            fields:
+              - name: headline
+                label: Headline
+                type: string
+                required: true
+              - name: accent
+                label: Accent
+                type: string
+                required: true
+              - name: introduction
+                label: Introduction
+                type: text
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+              - name: sectionTitle
+                label: Section Title
+                type: string
+                required: true
+              - name: sectionAccent
+                label: Section Accent
+                type: string
+                required: true
+              - name: sectionCopy
+                label: Section Copy
+                type: text
+                required: true
+              - name: focus
+                label: Focus
+                type: object
+                fields:
+                  - name: item1
+                    label: Residential properties
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+                  - name: item2
+                    label: Commercial properties
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+                  - name: item3
+                    label: A conversation before the snow
+                    type: object
+                    fields:
+                      - name: title
+                        label: Title
+                        type: string
+                        required: true
+                      - name: copy
+                        label: Copy
+                        type: text
+                        required: true
+              - name: planningTitle
+                label: Planning Title
+                type: string
+                required: true
+              - name: planningCopy
+                label: Planning Copy
+                type: text
+                required: true
+              - name: faqs
+                label: Frequently asked questions
+                type: object
+                fields:
+                  - name: item1
+                    label: Do you offer residential and commercial snow plowing?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                  - name: item2
+                    label: How do I check winter availability?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+                  - name: item3
+                    label: What should I share when requesting service?
+                    type: object
+                    fields:
+                      - name: question
+                        label: Question
+                        type: string
+                        required: true
+                      - name: answer
+                        label: Answer
+                        type: text
+                        required: true
+              - name: estimateTitle
+                label: Estimate Title
+                type: string
+                required: true
+              - name: estimateAccent
+                label: Estimate Accent
+                type: string
+                required: true
+          - name: photos
+            label: Photos
+            type: object
+            fields:
+              - name: homeCard
+                label: Homepage card photo
+                component: photo
+          - name: links
+            label: Links
+            type: object
+            fields:
+              - name: estimate
+                label: Estimate
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+      - name: service-shared
+        label: Shared service page labels
+        type: file
+        path: src/content/service-shared.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: offeringHero
+            label: Introduction
+            type: object
+            fields:
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — Home
+                type: string
+                required: true
+              - name: link2
+                label: Link 2
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel2
+                label: Link Label 2 — Our services
+                type: string
+                required: true
+              - name: linkLabel3
+                label: Link Label 3 — GET A FREE ESTIMATE
+                type: string
+                required: true
+              - name: link3
+                label: Link 3
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel4
+                label: Link Label 4 — TAKE A CLOSER LOOK
+                type: string
+                required: true
+              - name: text
+                label: Text — FLORES LANDSCAPING
+                type: string
+                required: true
+              - name: text2
+                label: Text 2 — FAMILY OWNED
+                type: string
+                required: true
+              - name: text3
+                label: Text 3 — LICENSED & INSURED
+                type: string
+                required: true
+              - name: text4
+                label: Text 4 — FREE ESTIMATES
+                type: string
+                required: true
+          - name: general
+            label: Labels and links
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — Our services
+                type: string
+                required: true
+              - name: heading2
+                label: Heading 2 — A little advice.
+                type: string
+                required: true
+              - name: heading3
+                label: Heading 3 — A good place to start.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — Tell us about your property. We’re happy to t…
+                type: text
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — ALL SERVICES
+                type: string
+                required: true
+          - name: serviceDetails
+            label: Service details
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+          - name: offeringProject
+            label: Offering Project
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+          - name: offeringFaq
+            label: Offering Faq
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — Before we
+                type: string
+                required: true
+              - name: text
+                label: Text — get started.
+                type: string
+                required: true
+          - name: offeringRelated
+            label: Related services
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — Good things
+                type: string
+                required: true
+              - name: text
+                label: Text — grow together.
+                type: string
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — EXPLORE ALL SERVICES
+                type: string
+                required: true
+          - name: estimate
+            label: Estimate
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — Call or text to tell us about your property.
+                type: text
+                required: true
+              - name: paragraph2
+                label: Paragraph 2 — Your estimate is free. The conversation is ea…
+                type: text
+                required: true
+              - name: text
+                label: Text — shared detail
+                type: string
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+              - name: text2
+                label: Text 2 — CALL OR TEXT OUR TEAM
+                type: string
+                required: true
+              - name: linkLabel
+                label: Link Label — REQUEST A FREE ESTIMATE
+                type: string
+                required: true
+              - name: linkLabel2
+                label: Link Label 2 — Prefer email? Let’s talk.
+                type: string
+                required: true
+  - name: work
+    label: Our Work
+    type: group
+    items:
+      - name: our-work
+        label: Page sections
+        type: file
+        path: src/content/our-work.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: seo
+            label: Search and social preview
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+              - name: description
+                label: Description
+                type: text
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+          - name: workIntro
+            label: Introduction
+            type: object
+            fields:
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — Home
+                type: string
+                required: true
+              - name: text
+                label: Text — Our work
+                type: string
+                required: true
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — In every yard,
+                type: string
+                required: true
+              - name: text2
+                label: Text 2 — there’s possibility.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — A fresh first impression. A more inviting bac…
+                type: text
+                required: true
+              - name: link2
+                label: Link 2
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel2
+                label: Link Label 2 — BEFORE & AFTER
+                type: string
+                required: true
+              - name: link3
+                label: Link 3
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel3
+                label: Link Label 3 — BROWSE THE GALLERY
+                type: string
+                required: true
+              - name: text3
+                label: Text 3 — shared detail & NEARBY COMMUNITIES
+                type: string
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+              - name: link4
+                label: Link 4
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel4
+                label: Link Label 4 — transformations
+                type: string
+                required: true
+              - name: link5
+                label: Link 5
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel5
+                label: Link Label 5 — photos
+                type: string
+                required: true
+              - name: link6
+                label: Link 6
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel6
+                label: Link Label 6 — videos
+                type: string
+                required: true
+          - name: beforeAfter
+            label: Before and after
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — The same space.
+                type: string
+                required: true
+              - name: text
+                label: Text — A fresh start.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — Every transformation has a starting point. Se…
+                type: text
+                required: true
+              - name: text2
+                label: Text 2 — Swipe to explore
+                type: string
+                required: true
+              - name: paragraph2
+                label: Paragraph 2 — Open any comparison to see both full photos.
+                type: text
+                required: true
+              - name: text3
+                label: Text 3 — View
+                type: string
+                required: true
+              - name: text4
+                label: Text 4 — more transformations
+                type: string
+                required: true
+              - name: text5
+                label: Text 5 — Show fewer transformations
+                type: string
+                required: true
+          - name: gallery
+            label: Gallery
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — Good things grow.
+                type: string
+                required: true
+              - name: text
+                label: Text — Take a look around.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — Fresh stripes, welcoming gardens, and the wor…
+                type: text
+                required: true
+              - name: paragraph2
+                label: Paragraph 2 — Every photo has a story. Tap one for a closer…
+                type: text
+                required: true
+              - name: text2
+                label: Text 2 — View all
+                type: string
+                required: true
+              - name: text3
+                label: Text 3 — photos
+                type: string
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — WATCH OUR WORK IN ACTION
+                type: string
+                required: true
+          - name: videos
+            label: Videos
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — Our work.
+                type: string
+                required: true
+              - name: text
+                label: Text — In action.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — Fresh cuts, seasonal changes, and a closer lo…
+                type: text
+                required: true
+              - name: text2
+                label: Text 2 — View more videos
+                type: string
+                required: true
+          - name: estimate
+            label: Estimate
+            type: object
+            fields:
+              - name: eyebrow
+                label: Eyebrow
+                type: string
+                required: true
+              - name: heading
+                label: Heading — Picture the possibilities
+                type: string
+                required: true
+              - name: text
+                label: Text — for your own yard.
+                type: string
+                required: true
+              - name: paragraph
+                label: Paragraph — Tell us about the space you’d love to change.…
+                type: text
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel
+                label: Link Label — EXPLORE OUR SERVICES
+                type: string
+                required: true
+              - name: text2
+                label: Text 2 — CALL OR TEXT OUR TEAM
+                type: string
+                required: true
+              - name: link2
+                label: Link 2
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: linkLabel2
+                label: Link Label 2 — REQUEST A FREE ESTIMATE
+                type: string
+                required: true
+              - name: linkLabel3
+                label: Link Label 3 — Prefer email? Let’s talk.
+                type: string
+                required: true
+      - name: comparisons
+        label: Before-and-after projects (also on Home)
+        type: file
+        path: src/content/comparisons.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: front-yard
+            label: A fresh start out front
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: before
+                label: Before
+                component: photo
+              - name: after
+                label: After
+                component: photo
+          - name: fall-cleanup
+            label: A yard ready to enjoy again
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: before
+                label: Before
+                component: photo
+              - name: after
+                label: After
+                component: photo
+          - name: deck-garden
+            label: A little room to grow
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: before
+                label: Before
+                component: photo
+              - name: after
+                label: After
+                component: photo
+          - name: evergreen-border
+            label: A softer edge. A fresh finish.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: before
+                label: Before
+                component: photo
+              - name: after
+                label: After
+                component: photo
+          - name: backyard-border
+            label: Space for the garden to shine.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: before
+                label: Before
+                component: photo
+              - name: after
+                label: After
+                component: photo
+          - name: brick-path
+            label: A more welcoming way through.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: before
+                label: Before
+                component: photo
+              - name: after
+                label: After
+                component: photo
+          - name: spring-garden
+            label: A fresh season starts here.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: before
+                label: Before
+                component: photo
+              - name: after
+                label: After
+                component: photo
+          - name: front-garden
+            label: Room for something beautiful.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: before
+                label: Before
+                component: photo
+              - name: after
+                label: After
+                component: photo
+          - name: courtyard-mulch
+            label: The finishing touch.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: before
+                label: Before
+                component: photo
+              - name: after
+                label: After
+                component: photo
+      - name: gallery-01
+        label: Photo gallery · 1–12
+        type: file
+        path: src/content/gallery-01.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: img-7788
+            label: A tree-lined lawn
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7620
+            label: A welcoming front yard
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8291
+            label: Courtyard refreshed
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8288
+            label: Good things at your doorstep
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-3150
+            label: Pondside lawn
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8009
+            label: An island of green
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7948
+            label: A little shaping
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8128
+            label: A lawn to come home to
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8008
+            label: A backyard to enjoy
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8380
+            label: Color along the border
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8419
+            label: The details bring it together
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8026
+            label: Fresh crosscut lawn
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+      - name: gallery-02
+        label: Photo gallery · 13–24
+        type: file
+        path: src/content/gallery-02.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: img-1915
+            label: Summer lawn
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-3104
+            label: A stretch of green
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-4354
+            label: Lawn care in the sunshine
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-5253
+            label: A welcoming entrance
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-5254
+            label: Front garden details
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-5267
+            label: Around the trees
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-5292
+            label: Spring garden refreshed
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-6621
+            label: Room to enjoy again
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7562
+            label: Spring planting beds
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7563
+            label: A garden in bloom
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7564
+            label: Brick-building garden
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7604
+            label: A fresh stone finish
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+      - name: gallery-03
+        label: Photo gallery · 25–36
+        type: file
+        path: src/content/gallery-03.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: img-7608
+            label: Curves and clean edges
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7612
+            label: Shaped shrubs
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7651
+            label: Evergreen border refreshed
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7676
+            label: A clean front entrance
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7678
+            label: Front garden renewed
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7679
+            label: A fresh start out front
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7680
+            label: Side garden renewed
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7701
+            label: Backyard border refreshed
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7769
+            label: Care around every curve
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7925
+            label: Lawn stripes
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7935
+            label: A greener backyard
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7936
+            label: Open green space
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+      - name: gallery-04
+        label: Photo gallery · 37–48
+        type: file
+        path: src/content/gallery-04.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: img-8004
+            label: A fresh edge by the deck
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8005
+            label: Room around the deck
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8006
+            label: Deck garden details
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8129
+            label: Lawn care from another angle
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8248
+            label: A little room to grow
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8249
+            label: A welcoming entry garden
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8361
+            label: A clearer way through
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8362
+            label: Around the garden path
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8364
+            label: Path-side details
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8366
+            label: A clean finish close to home
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8369
+            label: The finished garden path
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8289
+            label: Fresh mulch by the porch
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+      - name: gallery-05
+        label: Photo gallery · 49–60
+        type: file
+        path: src/content/gallery-05.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: img-8290
+            label: A fresh courtyard border
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8345
+            label: Fresh stripes by the walk
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8415
+            label: Curves around the entry
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8416
+            label: A neat side border
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8445
+            label: Fresh backyard stripes
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-1852
+            label: Ground preparation
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-5290
+            label: Spring garden
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-5988
+            label: Around the deck
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-5997
+            label: Deck-side ground work
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-6401
+            label: A yard taking shape
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-6619
+            label: Fall cleanup
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7527
+            label: New turf
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+      - name: gallery-06
+        label: Photo gallery · 61–72
+        type: file
+        path: src/content/gallery-06.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: img-7597
+            label: Shaping a border
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7599
+            label: Shrub border
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7601
+            label: Side garden
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7644
+            label: Evergreen border
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7667
+            label: Front bed starting point
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7668
+            label: Front entrance starting point
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7669
+            label: Front yard starting point
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7671
+            label: Side bed starting point
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7696
+            label: Backyard border
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7990
+            label: Evergreen garden detail
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7991
+            label: Deck garden starting point
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-7992
+            label: A garden ready for change
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+      - name: gallery-07
+        label: Photo gallery · 73–84
+        type: file
+        path: src/content/gallery-07.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: img-7993
+            label: Deck-side shrubs
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8237
+            label: Entry garden starting point
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8238
+            label: Front garden starting point
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8257
+            label: Brick-path garden
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8258
+            label: Path-side starting point
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8259
+            label: Foundation garden starting point
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8281
+            label: Porch bed before mulch
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8282
+            label: Porch garden starting point
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8284
+            label: Courtyard border starting point
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8285
+            label: Courtyard before mulch
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8407
+            label: Preparing a new border
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+          - name: img-8409
+            label: Side-bed preparation
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: photo
+                label: Photo
+                component: photo
+      - name: videos
+        label: Video titles, links and cover photos
+        type: file
+        path: src/content/videos.json
+        format: json
+        operations:
+          create: false
+          rename: false
+          delete: false
+        fields:
+          - name: video7804
+            label: A fresh-cut perspective.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: poster
+                label: Poster
+                component: photo
+          - name: video5880
+            label: Care in every direction.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: poster
+                label: Poster
+                component: photo
+          - name: video6622
+            label: Room to enjoy fall.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: poster
+                label: Poster
+                component: photo
+          - name: video6879
+            label: Here through the seasons.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: poster
+                label: Poster
+                component: photo
+          - name: video7712
+            label: A lawn worth a closer look.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: poster
+                label: Poster
+                component: photo
+          - name: video7713
+            label: From corner to corner.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: poster
+                label: Poster
+                component: photo
+          - name: video5903
+            label: Your own stretch of green.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: poster
+                label: Poster
+                component: photo
+          - name: video6618
+            label: Before the cleanup.
+            type: object
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: category
+                label: Category
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: link
+                label: Link destination
+                type: string
+                required: true
+                pattern:
+                  regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+                  message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+              - name: poster
+                label: Poster
+                component: photo
+  - name: contact
+    label: Contact
+    type: file
+    path: src/content/contact.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: questions
+        label: Questions
+        type: object
+        fields:
+          - name: item1
+            label: Is the estimate really free?
+            type: object
+            fields:
+              - name: question
+                label: Question
+                type: string
+                required: true
+              - name: answer
+                label: Answer
+                type: text
+                required: true
+          - name: item2
+            label: What should I include in my message?
+            type: object
+            fields:
+              - name: question
+                label: Question
+                type: string
+                required: true
+              - name: answer
+                label: Answer
+                type: text
+                required: true
+          - name: item3
+            label: Can I ask about more than one service?
+            type: object
+            fields:
+              - name: question
+                label: Question
+                type: string
+                required: true
+              - name: answer
+                label: Answer
+                type: text
+                required: true
+          - name: item4
+            label: Do you work with businesses as well as homeowners?
+            type: object
+            fields:
+              - name: question
+                label: Question
+                type: string
+                required: true
+              - name: answer
+                label: Answer
+                type: text
+                required: true
+                description: >-
+                  Shared details in {{double braces}} update from Business details. Keep these tokens when
+                  editing nearby words.
+      - name: seo
+        label: Search and social preview
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+            description: >-
+              Shared details in {{double braces}} update from Business details. Keep these tokens when editing
+              nearby words.
+          - name: description
+            label: Description
+            type: text
+            required: true
+            description: >-
+              Shared details in {{double braces}} update from Business details. Keep these tokens when editing
+              nearby words.
+      - name: inquiryIntro
+        label: Introduction
+        type: object
+        fields:
+          - name: link
+            label: Link destination
+            type: string
+            required: true
+            pattern:
+              regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+              message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: linkLabel
+            label: Link Label — Home
+            type: string
+            required: true
+          - name: text
+            label: Text — Contact
+            type: string
+            required: true
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+            required: true
+          - name: heading
+            label: Heading — A better yard
+            type: string
+            required: true
+          - name: text2
+            label: Text 2 — starts with hello.
+            type: string
+            required: true
+          - name: paragraph
+            label: Paragraph — A fresh start. A little upkeep. Something you…
+            type: text
+            required: true
+          - name: link2
+            label: Link 2
+            type: string
+            required: true
+            pattern:
+              regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+              message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: linkLabel2
+            label: Link Label 2 — TELL US ABOUT YOUR SPACE
+            type: string
+            required: true
+          - name: text3
+            label: Text 3 — FREE ESTIMATES
+            type: string
+            required: true
+          - name: text4
+            label: Text 4 — LICENSED & INSURED
+            type: string
+            required: true
+          - name: text5
+            label: Text 5 — LOCALLY ROOTED
+            type: string
+            required: true
+      - name: inquiryMain
+        label: Contact details and estimate form
+        type: object
+        fields:
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+            required: true
+          - name: heading
+            label: Heading — Good people.
+            type: string
+            required: true
+          - name: text
+            label: Text — Easy to reach.
+            type: string
+            required: true
+          - name: paragraph
+            label: Paragraph — Prefer a conversation? Call or text our team.…
+            type: text
+            required: true
+          - name: text2
+            label: Text 2 — GIVE US A CALL
+            type: string
+            required: true
+          - name: linkLabel
+            label: "Link Label — Also available: shared detail"
+            type: string
+            required: true
+            description: >-
+              Shared details in {{double braces}} update from Business details. Keep these tokens when editing
+              nearby words.
+          - name: text3
+            label: Text 3 — START WITH A TEXT
+            type: string
+            required: true
+          - name: linkLabel2
+            label: Link Label 2 — Tell us about your project
+            type: string
+            required: true
+          - name: text4
+            label: Text 4 — DROP US A NOTE
+            type: string
+            required: true
+          - name: text5
+            label: Text 5 — WHAT HAPPENS NEXT?
+            type: string
+            required: true
+          - name: heading2
+            label: Heading 2 — You share the idea.
+            type: string
+            required: true
+          - name: paragraph2
+            label: Paragraph 2 — A few details about your space help us get to…
+            type: text
+            required: true
+          - name: heading3
+            label: Heading 3 — We talk it through.
+            type: string
+            required: true
+          - name: paragraph3
+            label: Paragraph 3 — Our team follows up to discuss the work and t…
+            type: text
+            required: true
+          - name: text6
+            label: Text 6 — YOUR NEXT CHAPTER STARTS OUTSIDE
+            type: string
+            required: true
+          - name: heading4
+            label: Heading 4 — Let’s hear your ideas.
+            type: string
+            required: true
+          - name: paragraph4
+            label: Paragraph 4 — Tell us a little about yourself and your prop…
+            type: text
+            required: true
+          - name: paragraph5
+            label: Paragraph 5 — Fields marked
+            type: text
+            required: true
+          - name: text7
+            label: Text 7 — with an asterisk
+            type: string
+            required: true
+          - name: paragraph6
+            label: Paragraph 6 — are required.
+            type: text
+            required: true
+          - name: text8
+            label: Text 8 — Your name
+            type: string
+            required: true
+          - name: placeholder
+            label: Placeholder
+            type: string
+            required: true
+          - name: text9
+            label: Text 9 — Email address
+            type: string
+            required: true
+          - name: placeholder2
+            label: Placeholder 2
+            type: string
+            required: true
+          - name: text10
+            label: Text 10 — Phone number
+            type: string
+            required: true
+          - name: text11
+            label: Text 11 — (optional)
+            type: string
+            required: true
+          - name: placeholder3
+            label: Placeholder 3
+            type: string
+            required: true
+          - name: text12
+            label: Text 12 — Property city / town
+            type: string
+            required: true
+          - name: placeholder4
+            label: Placeholder 4
+            type: string
+            required: true
+          - name: text13
+            label: Text 13 — How can we help?
+            type: string
+            required: true
+          - name: text14
+            label: Text 14 — Select a service
+            type: string
+            required: true
+          - name: text15
+            label: Text 15 — Property type
+            type: string
+            required: true
+          - name: text16
+            label: Text 16 — Select a property type
+            type: string
+            required: true
+          - name: text17
+            label: Text 17 — A little about your project
+            type: string
+            required: true
+          - name: placeholder5
+            label: Placeholder 5
+            type: string
+            required: true
+          - name: text18
+            label: Text 18 — A few details are plenty to get the conversat…
+            type: string
+            required: true
+          - name: text19
+            label: Text 19 — SEND MY REQUEST
+            type: string
+            required: true
+          - name: paragraph7
+            label: Paragraph 7 — We’ll use these details to follow up about yo…
+            type: text
+            required: true
+      - name: inquiryArea
+        label: Service area
+        type: object
+        fields:
+          - name: photo
+            label: Photo
+            component: photo
+          - name: paragraph
+            label: Paragraph — Welcoming spaces. Thoughtful care.
+            type: text
+            required: true
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+            required: true
+          - name: heading
+            label: Heading — Rooted here.
+            type: string
+            required: true
+          - name: text
+            label: Text — Ready to help.
+            type: string
+            required: true
+          - name: paragraph2
+            label: Paragraph 2 — We care for homes and businesses in shared de…
+            type: text
+            required: true
+            description: >-
+              Shared details in {{double braces}} update from Business details. Keep these tokens when editing
+              nearby words.
+          - name: paragraph3
+            label: Paragraph 3 — Nearby, but don’t see your town?
+            type: text
+            required: true
+          - name: linkLabel
+            label: Link Label — Call to check your area.
+            type: string
+            required: true
+      - name: inquiryFaq
+        label: Questions
+        type: object
+        fields:
+          - name: eyebrow
+            label: Eyebrow
+            type: string
+            required: true
+          - name: heading
+            label: Heading — A few things
+            type: string
+            required: true
+          - name: text
+            label: Text — you might wonder.
+            type: string
+            required: true
+          - name: link
+            label: Link destination
+            type: string
+            required: true
+            pattern:
+              regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+              message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: linkLabel
+            label: Link Label — EXPLORE OUR SERVICES
+            type: string
+            required: true
+      - name: formChoices
+        label: Form Choices
+        type: object
+        fields:
+          - name: notSureService
+            label: Not Sure Service
+            type: string
+            required: true
+          - name: residential
+            label: Residential
+            type: string
+            required: true
+          - name: commercial
+            label: Commercial
+            type: string
+            required: true
+          - name: notSureProperty
+            label: Not Sure Property
+            type: string
+            required: true
+  - name: not-found
+    label: Page not found
+    type: file
+    path: src/content/not-found.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: seo
+        label: Search and social preview
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+      - name: general
+        label: Labels and links
+        type: object
+        fields:
+          - name: paragraph
+            label: Paragraph — FLORES LANDSCAPING · 404
+            type: text
+            required: true
+          - name: heading
+            label: Heading — Let’s get you back
+            type: string
+            required: true
+          - name: heading2
+            label: Heading 2 — on the right path.
+            type: string
+            required: true
+          - name: paragraph2
+            label: Paragraph 2 — We couldn’t find that page. Our homepage is a…
+            type: text
+            required: true
+          - name: link
+            label: Link destination
+            type: string
+            required: true
+            pattern:
+              regex: ^(\/(?!\/)|#|https?:\/\/|mailto:|tel:|sms:)[^\s\\<>]*$
+              message: Use a site path (/contact/), anchor (#estimate), or full https:// link.
+          - name: linkLabel
+            label: Link Label — BACK TO HOME
+            type: string
+            required: true
+components:
+  photo:
+    type: object
+    fields:
+      - name: image
+        label: Choose or upload a photo
+        type: image
+        required: true
+        options:
+          media: photos
+          extensions:
+            - jpg
+            - jpeg
+            - png
+            - webp
+            - avif
+          rename: random
+        description: >-
+          Select an existing photo or upload a replacement. Save this page after selecting it. Keep older
+          files for other pages that may use them.
+      - name: alt
+        label: Alternative text
+        type: string
+        description: Describe the photo for people using screen readers. A decorative video cover can stay blank.
+      - name: position
+        label: Desktop crop focus
+        type: string
+        required: true
+        pattern:
+          regex: ^(100|[0-9]{1,2})% (100|[0-9]{1,2})%$
+          message: Use two whole percentages from 0% to 100%, for example 50% 50%.
+        description: >-
+          Horizontal then vertical. 0% = left/top, 50% = center, 100% = right/bottom. The photo frame and page
+          layout stay fixed.
+      - name: mobilePosition
+        label: Mobile crop focus
+        type: string
+        required: true
+        pattern:
+          regex: ^(100|[0-9]{1,2})% (100|[0-9]{1,2})%$
+          message: Use two whole percentages from 0% to 100%, for example 30% 50%.
+        description: >-
+          Used at screen widths up to 767px. Adjust to keep the subject visible on phones. Full-photo viewers
+          remain uncropped.
+settings:
+  hide: true
+  content:
+    merge: true
+  commit:
+    templates:
+      update: "content: update {path} via Pages CMS"

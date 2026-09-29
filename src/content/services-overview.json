@@ -1,0 +1,87 @@
+{
+  "steps": {
+    "item1": {
+      "title": "Tell us what you have in mind.",
+      "description": "A yard that needs regular care? A landscape ready for a fresh start? Call or text and tell us a little about your space."
+    },
+    "item2": {
+      "title": "Let’s take a closer look.",
+      "description": "We’ll discuss your property, what you’d like to change, and the services that fit. Your estimate is free."
+    },
+    "item3": {
+      "title": "Make room for something beautiful.",
+      "description": "Once you’re happy with the plan, we’ll arrange the work with you and bring care to the details."
+    }
+  },
+  "seo": {
+    "title": "Landscaping Services in {{city}}, IN | Flores Landscaping",
+    "description": "Explore lawn care, landscaping, mulch and planting, sod installation, seasonal cleanups, trimming, and snow plowing from Flores Landscaping. Serving {{communities}}. Free estimates."
+  },
+  "servicesIntro": {
+    "link": "/",
+    "linkLabel": "Home",
+    "text": "Our services",
+    "eyebrow": "GOOD THINGS START WITH GOOD CARE",
+    "heading": "A little care.",
+    "heading2": "A beautiful",
+    "text2": "difference.",
+    "paragraph": "From the lawn you walk across every day to the landscape you’ve been dreaming of. We’re here to help your outdoor space feel like you.",
+    "link2": "#our-services",
+    "linkLabel2": "FIND YOUR SERVICE",
+    "link3": "/contact/#estimate",
+    "linkLabel3": "GET A FREE ESTIMATE",
+    "text3": "Family owned. Locally rooted. Here for your yard.",
+    "photo": {
+      "image": "/src/assets/client/courtyard-after-mulch.jpg",
+      "alt": "Fresh dark mulch around courtyard trees and shrubs bordering a green lawn",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "text4": "YEARS OF",
+    "text5": "HANDS-ON CARE",
+    "text6": "A little pride in every detail.",
+    "text7": "FLORES LANDSCAPING",
+    "text8": "YOUR LOCAL LANDSCAPING TEAM"
+  },
+  "ourServices": {
+    "eyebrow": "THE RIGHT CARE, RIGHT HERE",
+    "heading": "Your space.",
+    "heading2": "Our kind of",
+    "text": "work.",
+    "paragraph": "A fresh start, a seasonal refresh, or a little everyday upkeep. Explore the ways we can help.",
+    "link": "/our-work/",
+    "linkLabel": "SEE THE DIFFERENCE WE MAKE",
+    "linkLabel2": "EXPLORE THIS SERVICE"
+  },
+  "servicesPropertyBand": {
+    "eyebrow": "SAME PRIDE. EVERY PROPERTY.",
+    "heading": "At home.",
+    "heading2": "At work.",
+    "text": "Always with care.",
+    "heading3": "For your home.",
+    "paragraph": "A welcoming front yard. A backyard to enjoy. Care for the outdoor spaces that are part of your everyday life.",
+    "heading4": "For your business.",
+    "paragraph2": "Make a good first impression with outdoor spaces that reflect the care you put into your business."
+  },
+  "servicesProcess": {
+    "eyebrow": "FROM HELLO TO SOMETHING BEAUTIFUL",
+    "heading": "Good things start",
+    "heading2": "with a",
+    "text": "conversation.",
+    "paragraph": "A few simple steps. A team that cares from the start."
+  },
+  "estimate": {
+    "eyebrow": "A BETTER YARD STARTS HERE",
+    "heading": "What can we",
+    "heading2": "help you",
+    "text": "grow?",
+    "paragraph": "Tell us about your property and what you have in mind. We’ll help you find a good place to start.",
+    "text2": "Licensed & insured",
+    "text3": "Free estimates",
+    "text4": "CALL OR TEXT OUR TEAM",
+    "paragraph2": "{{communitiesAmp}}",
+    "link": "/contact/#estimate",
+    "linkLabel": "REQUEST A FREE ESTIMATE",
+    "linkLabel2": "Prefer email? We’d love to hear from you."
+  }
+}

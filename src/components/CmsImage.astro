@@ -1,0 +1,26 @@
+---
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import type { HTMLAttributes } from 'astro/types';
+import { cropPosition } from '../lib/cms';
+interface Props extends Omit<HTMLAttributes<'img'>, 'src' | 'width' | 'height'> {
+  src: ImageMetadata;
+  alt: string;
+  width: number;
+  height?: number;
+  widths?: number[];
+  format?: 'webp' | 'avif' | 'png' | 'jpg';
+  position?: string;
+  mobilePosition?: string;
+}
+const { src, alt, width, height, widths = [480, 800, width], format = 'webp', position = '50% 50%', mobilePosition = position, style, ...attrs } = Astro.props;
+const candidates = [...new Set([...widths, width].map(w => Math.min(w, src.width)))].sort((a,b) => a-b);
+// Resize the complete photograph; CSS crops the frame using the editor's focal point.
+const variants = await Promise.all(candidates.map(w => getImage({ src, width: w, format })));
+const primary = variants[candidates.indexOf(Math.min(width, src.width))];
+---
+<img {...attrs} src={primary.src} srcset={variants.map((v, i) => `${v.src} ${candidates[i]}w`).join(', ')} alt={alt} width={width} height={height ?? Math.round(width * src.height / src.width)} data-cms-image style={`${style ? `${style};` : ''}--cms-position:${cropPosition(position)};--cms-mobile-position:${cropPosition(mobilePosition)}`} />
+<style is:global>
+  img[data-cms-image] { object-fit: cover; object-position: var(--cms-position) !important; }
+  @media (max-width: 767px) { img[data-cms-image] { object-position: var(--cms-mobile-position) !important; } }
+</style>

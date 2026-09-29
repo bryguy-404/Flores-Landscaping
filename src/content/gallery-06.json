@@ -1,0 +1,110 @@
+{
+  "img-7597": {
+    "title": "Shaping a border",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7597.jpg",
+      "alt": "Loose edging stones and a marked bed outline beside rounded shrubs",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7599": {
+    "title": "Shrub border",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7599.jpg",
+      "alt": "Rounded shrubs in a red mulch bed before a stone-bed refresh",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7601": {
+    "title": "Side garden",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7601.jpg",
+      "alt": "A red mulch bed beneath shrubs along house siding before refresh",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7644": {
+    "title": "Evergreen border",
+    "photo": {
+      "image": "/src/assets/client/evergreen-border-before.jpg",
+      "alt": "Thin ground cover beneath an evergreen beside a wooden and white fence",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7667": {
+    "title": "Front bed starting point",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7667.jpg",
+      "alt": "Overgrown plants below the windows of a single-story brick home",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7668": {
+    "title": "Front entrance starting point",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7668.jpg",
+      "alt": "Tall plants and untrimmed growth along a brick home's front entrance",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7669": {
+    "title": "Front yard starting point",
+    "photo": {
+      "image": "/src/assets/client/front-yard-before.jpg",
+      "alt": "Overgrown planting beds across the front of a brick home",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7671": {
+    "title": "Side bed starting point",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7671.jpg",
+      "alt": "Tall grass and growth beneath a side window of a brick home",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7696": {
+    "title": "Backyard border",
+    "photo": {
+      "image": "/src/assets/client/backyard-border-before.jpg",
+      "alt": "Overgrown planting areas along a fence with small trees and a garden statue",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7990": {
+    "title": "Evergreen garden detail",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7990.jpg",
+      "alt": "Tall evergreens beside a wooden fence and neighboring homes",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7991": {
+    "title": "Deck garden starting point",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7991.jpg",
+      "alt": "Large shrubs covering the edge of a raised backyard deck",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7992": {
+    "title": "A garden ready for change",
+    "photo": {
+      "image": "/src/assets/client/deck-garden-before.jpg",
+      "alt": "Overgrown shrubs hiding backyard deck railings beside a house",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  }
+}

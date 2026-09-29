@@ -1,0 +1,82 @@
+{
+  "overview": {
+    "title": "Sod Installation",
+    "summary": "Give your outdoor space a fresh start with a new lawn.",
+    "description": "Sometimes a yard is ready for a new beginning. Sod installation brings a fresh layer of green to your outdoor space. Tell us about your property and we’ll talk through the next steps.",
+    "highlights": {
+      "item1": "New sod",
+      "item2": "Fresh lawn spaces"
+    },
+    "caption": "A fresh start from the ground up.",
+    "link": "/services/sod-installation/"
+  },
+  "detail": {
+    "headline": "A fresh start.",
+    "accent": "From the ground up.",
+    "introduction": "Ready to give your lawn a new beginning? Talk with the Flores team about sod installation for the outdoor space you have in mind.",
+    "sectionTitle": "New grass.",
+    "sectionAccent": "New possibilities.",
+    "sectionCopy": "A lawn helps tie the rest of your property together. Whether you’re thinking about a new grass area or a fresh start for an existing space, we’ll begin with a conversation about your yard and what you want to achieve.",
+    "focus": {
+      "item1": {
+        "title": "Sod installation",
+        "copy": "Bring a fresh layer of grass to the areas of your property you want to turn into lawn."
+      },
+      "item2": {
+        "title": "Your space, considered",
+        "copy": "Share the size, current condition, and location of the area so we can discuss the project you have in mind."
+      },
+      "item3": {
+        "title": "Part of a bigger picture",
+        "copy": "If your lawn is one piece of a landscaping refresh, tell us about nearby beds and other areas you’d like to improve."
+      }
+    },
+    "planningTitle": "Show us the space you’re starting with.",
+    "planningCopy": "Current photos and approximate dimensions help start the conversation. Mention the condition of the area and ask about preparation, scheduling, and care for the new lawn when discussing your estimate.",
+    "faqs": {
+      "item1": {
+        "question": "What information helps with a sod estimate?",
+        "answer": "Share your address, photos of the area, and approximate dimensions if you have them. Let us know whether it is an existing lawn or a new area for grass."
+      },
+      "item2": {
+        "question": "Can sod be part of a landscaping project?",
+        "answer": "Yes, you can discuss sod installation alongside our landscaping services. Tell us about the full project so the areas you want to improve can be considered together."
+      },
+      "item3": {
+        "question": "When should I ask about care for the new lawn?",
+        "answer": "Bring up watering, mowing, and use of the lawn while discussing your project. Ask the team for guidance suited to the sod and work agreed for your property."
+      }
+    },
+    "estimateTitle": "Let’s talk about",
+    "estimateAccent": "your fresh start."
+  },
+  "photos": {
+    "homeCard": {
+      "image": "/src/assets/sod-installation.jpg",
+      "alt": "Newly installed sod alongside a residential walkway",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "hero": {
+      "image": "/src/assets/client/new-turf-area.jpg",
+      "alt": "A newly laid patch of turf beside mature trees with work equipment nearby",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "detail": {
+      "image": "/src/assets/client/ground-preparation.jpg",
+      "alt": "Loose soil, a wheelbarrow, and lawn tools beside an area being prepared",
+      "position": "50% 65%",
+      "mobilePosition": "50% 65%"
+    },
+    "preview": {
+      "image": "/src/assets/sod-installation.jpg",
+      "alt": "Newly installed sod alongside a residential walkway",
+      "position": "50% 65%",
+      "mobilePosition": "50% 65%"
+    }
+  },
+  "links": {
+    "estimate": "/contact/?service=sod-installation#estimate"
+  }
+}

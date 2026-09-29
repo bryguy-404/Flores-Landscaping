@@ -1,7 +1,10 @@
 ---
-import { Image } from 'astro:assets';
+import rawContent from '../content/footer.json';
+import { readContent, resolvePhoto, safeLink, business, phoneHref, secondaryPhoneHref, emailHref } from '../lib/cms';
+const content = readContent(rawContent);
+import Image from '../components/CmsImage.astro';
 import { Phone, Mail, MapPin, ArrowUpRight } from '@lucide/astro';
-import logo from '../assets/flores-logo.png';
+
 import { serviceOfferings } from '../data/services';
 const isHome = Astro.url.pathname === '/';
 const homeAnchor = (id: string) => isHome ? `#${id}` : `/#${id}`;
@@ -9,37 +12,38 @@ const homeAnchor = (id: string) => isHome ? `#${id}` : `/#${id}`;
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <a href={isHome ? '#home' : '/'} aria-label="Flores Landscaping home"><Image src={logo} alt="Flores Landscaping" width={300} height={200} format="webp" loading="lazy" /></a>
-      <p>Family owned. Locally rooted.<br />Taking pride in every property.</p>
+      <a href={isHome ? '#home' : '/'} aria-label="Flores Landscaping home"><Image src={resolvePhoto(content.footerBrand.photo).src} alt={content.footerBrand.photo.alt} width={300} height={200} format="webp" loading="lazy"  position={content.footerBrand.photo.position} mobilePosition={content.footerBrand.photo.mobilePosition} /></a>
+      <p>{content.footerBrand.paragraph}<br />{content.footerBrand.paragraph2}</p>
     </div>
     <div>
-      <h3>Explore</h3>
+      <h3>{content.general.heading}</h3>
       <ul>
-        <li><a href="/about/">About Flores</a></li>
-        <li><a href="/services/">Our services</a></li>
-        <li><a href="/our-work/">Our recent work</a></li>
-        <li><a href="/contact/">Contact & free estimates</a></li>
-        <li><a href={homeAnchor('faq')}>Common questions</a></li>
-        <li><a href="/google-reviews/">Google reviews terms & privacy</a></li>
+        <li><a href={safeLink(content.general.link)}>{content.general.linkLabel}</a></li>
+        <li><a href={safeLink(content.general.link2)}>{content.general.linkLabel2}</a></li>
+        <li><a href={safeLink(content.general.link3)}>{content.general.linkLabel3}</a></li>
+        <li><a href={safeLink(content.general.link4)}>{content.general.linkLabel4}</a></li>
+        <li><a href={homeAnchor('faq')}>{content.general.linkLabel5}</a></li>
+        <li><a href={safeLink(content.general.link5)}>{content.general.linkLabel6}</a></li>
       </ul>
     </div>
     <div>
-      <h3>Our services</h3>
+      <h3>{content.general.heading2}</h3>
       <ul>
-        {serviceOfferings.map(service => <li><a href={`/services/${service.id}/`}>{service.title}</a></li>)}
+        {serviceOfferings.map(service => <li><a href={safeLink(service.link)}>{service.title}</a></li>)}
       </ul>
     </div>
     <div class="footer-contact">
-      <h3>Let’s talk about your yard</h3>
-      <a href="tel:+15743866078"><Phone size={18} aria-hidden="true" /> (574) 386-6078</a>
-      <a href="tel:+15744720183"><Phone size={18} aria-hidden="true" /> (574) 472-0183</a>
-      <a href="mailto:floreslandscaping098@gmail.com"><Mail size={18} aria-hidden="true" /> floreslandscaping098@gmail.com</a>
-      <span><MapPin size={18} aria-hidden="true" /> South Bend, Indiana & nearby communities</span>
+      <h3>{content.footerContact.heading}</h3>
+      <a href={phoneHref}><Phone size={18} aria-hidden="true" /> {business.primaryPhone}</a>
+      <a href={secondaryPhoneHref}><Phone size={18} aria-hidden="true" /> {business.secondaryPhone}</a>
+      <a href={emailHref}><Mail size={18} aria-hidden="true" />{business.email}</a>
+      <span><MapPin size={18} aria-hidden="true" /> {content.footerContact.text}</span>
+    {business.hours && <span>{business.hours}</span>}
     </div>
   </div>
   <div class="container footer-bottom">
-    <span>© {new Date().getFullYear()} Flores Landscaping LLC. All rights reserved.</span>
-    <span class="footer-credit">Designed By: <a href="https://bryandevelops.com/">Bryan Develops</a></span>
-    <a href={isHome ? '#home' : '#top'}>Back to top <ArrowUpRight size={16} aria-hidden="true" /></a>
+    <span>© {new Date().getFullYear()} {content.general.text}</span>
+    <span class="footer-credit">{content.footerCredit.text} <a href={safeLink(content.footerCredit.link)}>{content.footerCredit.linkLabel}</a></span>
+    <a href={isHome ? '#home' : '#top'}>{content.general.linkLabel7} <ArrowUpRight size={16} aria-hidden="true" /></a>
   </div>
 </footer>

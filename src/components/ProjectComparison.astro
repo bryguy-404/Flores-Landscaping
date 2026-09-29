@@ -1,5 +1,6 @@
 ---
-import { Image, getImage } from 'astro:assets';
+import { getImage } from 'astro:assets';
+import Image from './CmsImage.astro';
 import type { ImageMetadata } from 'astro';
 import { ChevronLeft, ChevronRight, Expand } from '@lucide/astro';
 interface Props {
@@ -7,15 +8,15 @@ interface Props {
   before: ImageMetadata; after: ImageMetadata;
   beforeAlt: string; afterAlt: string;
   variant?: 'home' | 'work';
-  beforePosition?: string; afterPosition?: string;
+  beforePosition?: string; afterPosition?: string; beforeMobilePosition?: string; afterMobilePosition?: string;
 }
-const { id, title, category, before, after, beforeAlt, afterAlt, variant = 'home', beforePosition = '50% 50%', afterPosition = '50% 50%' } = Astro.props;
+const { id, title, category, before, after, beforeAlt, afterAlt, variant = 'home', beforePosition = '50% 50%', afterPosition = '50% 50%', beforeMobilePosition = beforePosition, afterMobilePosition = afterPosition } = Astro.props;
 const [beforeFull, afterFull] = await Promise.all([before, after].map(src => getImage({ src, width: Math.min(src.width, Math.round(1600 * src.width / Math.max(src.width, src.height))), format: 'webp', quality: 80 })));
 ---
 <article class:list={['project-card', 'comparison-card', { 'work-pair': variant === 'work' }]} data-comparison aria-labelledby={`${id}-title`}>
   <div class="comparison-stage" id={`${id}-images`}>
-    <div class="comparison-layer comparison-after"><Image class="comparison-photo" style={`object-position: ${afterPosition}`} src={after} width={1080} alt={afterAlt} widths={[480, 800, 1080]} sizes="(max-width: 767px) 90vw, (max-width: 1023px) 60vw, 33vw" format="webp" loading="lazy" /></div>
-    <div class="comparison-layer comparison-before"><Image class="comparison-photo" style={`object-position: ${beforePosition}`} src={before} width={1080} alt={beforeAlt} widths={[480, 800, 1080]} sizes="(max-width: 767px) 90vw, (max-width: 1023px) 60vw, 33vw" format="webp" loading="lazy" /></div>
+    <div class="comparison-layer comparison-after"><Image class="comparison-photo" position={afterPosition} mobilePosition={afterMobilePosition} src={after} width={1080} alt={afterAlt} widths={[480, 800, 1080]} sizes="(max-width: 767px) 90vw, (max-width: 1023px) 60vw, 33vw" format="webp" loading="lazy" /></div>
+    <div class="comparison-layer comparison-before"><Image class="comparison-photo" position={beforePosition} mobilePosition={beforeMobilePosition} src={before} width={1080} alt={beforeAlt} widths={[480, 800, 1080]} sizes="(max-width: 767px) 90vw, (max-width: 1023px) 60vw, 33vw" format="webp" loading="lazy" /></div>
     <div class="comparison-labels" aria-hidden="true"><span>BEFORE</span><span>AFTER</span></div>
     <div class="comparison-divider" aria-hidden="true"><span><ChevronLeft size={16} /><ChevronRight size={16} /></span></div>
     <input class="comparison-range" type="range" min="0" max="100" value="50" aria-label={`Compare before and after: ${title}`} aria-valuetext="Before 50%, after 50%" aria-controls={`${id}-images`} hidden />

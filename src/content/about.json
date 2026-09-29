@@ -1,0 +1,91 @@
+{
+  "values": {
+    "item1": {
+      "title": "A personal touch.",
+      "copy": "Every property belongs to someone. We start by listening to what you have in mind and the way you want to enjoy your outdoor space."
+    },
+    "item2": {
+      "title": "Pride in the details.",
+      "copy": "A neat edge. A thoughtfully placed plant. A freshly cared-for bed. We believe the little things help bring the whole yard together."
+    },
+    "item3": {
+      "title": "Experience, put to work.",
+      "copy": "More than {{experienceYears}} years of hands-on landscaping experience guide the care we bring to the homes and businesses around our community."
+    }
+  },
+  "seo": {
+    "title": "About Our Family-Owned Team | Flores Landscaping, {{city}}",
+    "description": "Get to know Flores Landscaping, a family-owned and operated business with over {{experienceYears}} years of experience serving {{city}} and nearby communities. Licensed and insured. Free estimates."
+  },
+  "companyIntro": {
+    "link": "/",
+    "linkLabel": "Home",
+    "text": "About us",
+    "eyebrow": "ABOUT FLORES LANDSCAPING",
+    "heading": "Local roots.",
+    "text2": "Lasting care.",
+    "paragraph": "Behind every well-cared-for yard are people who take pride in it. We’re Flores Landscaping—a family-owned team helping outdoor spaces around {{city}} feel a little more like home.",
+    "link2": "#our-story",
+    "linkLabel2": "GET TO KNOW US",
+    "link3": "/services/",
+    "linkLabel3": "EXPLORE OUR SERVICES",
+    "text3": "Family owned.",
+    "text4": "Community minded.",
+    "text5": "THE PEOPLE BEHIND THE CARE",
+    "text6": "YEARS OF",
+    "text7": "HANDS-ON EXPERIENCE",
+    "text8": "LICENSED",
+    "text9": "& INSURED",
+    "text10": "HERE FOR HOMES",
+    "text11": "& BUSINESSES"
+  },
+  "ourStory": {
+    "photo": {
+      "image": "/src/assets/client/garden-work-in-progress.jpg",
+      "alt": "A person working near newly mulched beds beside a porch",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "text": "Good people. Thoughtful work. A little pride in every detail.",
+    "eyebrow": "ROOTED IN OUR COMMUNITY",
+    "heading": "People who care.",
+    "text2": "Work that shows.",
+    "paragraph": "Good landscaping starts with a personal connection.",
+    "paragraph2": "Flores Landscaping is a family-owned and operated business with more than {{experienceYears}} years of experience serving {{city}} and the surrounding communities. Caring for local outdoor spaces is what we do, from everyday lawn care to landscape design and seasonal cleanups.",
+    "paragraph3": "We know a yard is more than the space around a building. It’s the welcome at your front door, the view from your window, and a place to spend time outside. We bring that same personal attention to the properties we care for.",
+    "paragraph4": "Your property deserves the care",
+    "paragraph5": "we’d give our own.",
+    "link": "/contact/#estimate",
+    "linkLabel": "LET’S TALK ABOUT YOUR SPACE"
+  },
+  "companyValues": {
+    "eyebrow": "THE FLORES APPROACH",
+    "heading": "Care is personal.",
+    "text": "So is our approach.",
+    "paragraph": "From the first conversation to the finishing touches, these are the things that matter to us."
+  },
+  "companyCommunity": {
+    "eyebrow": "YOUR LOCAL LANDSCAPING TEAM",
+    "heading": "Rooted here.",
+    "text": "Ready for your yard.",
+    "paragraph": "We serve residential and commercial properties in {{city}} and nearby communities. Wherever you are in our service area, we’d love to hear what you have in mind for your space.",
+    "text2": "RESIDENTIAL",
+    "text3": "COMMERCIAL",
+    "link": "/services/",
+    "linkLabel": "FIND THE RIGHT CARE",
+    "text4": "PROUDLY SERVING",
+    "text5": "INDIANA",
+    "paragraph2": "Nearby, but don’t see your community?",
+    "linkLabel2": "Give us a call to check your area."
+  },
+  "estimate": {
+    "eyebrow": "A GOOD PLACE TO START",
+    "heading": "Let’s get to know",
+    "text": "your outdoor space.",
+    "paragraph": "Tell us a little about your property and the care you’re looking for. We’ll start with a conversation and a free estimate.",
+    "text2": "CALL OR TEXT THE FLORES TEAM",
+    "link": "/contact/#estimate",
+    "linkLabel": "REQUEST A FREE ESTIMATE",
+    "linkLabel2": "Prefer email? We’d love to hear from you."
+  }
+}

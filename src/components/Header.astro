@@ -1,29 +1,32 @@
 ---
-import { Image } from 'astro:assets';
+import rawContent from '../content/header.json';
+import { business, readContent, resolvePhoto, safeLink, phoneHref } from '../lib/cms';
+const content = readContent(rawContent);
+import Image from '../components/CmsImage.astro';
 import { MapPin, Phone, ArrowUpRight, ChevronDown, Menu, X } from '@lucide/astro';
-import logo from '../assets/flores-logo-transparent.png';
+
 import { serviceOfferings } from '../data/services';
 import '../styles/navigation.css';
 const isHome = Astro.url.pathname === '/';
 const isServicesOverview = Astro.url.pathname.replace(/\/$/, '') === '/services';
 const links = [
-  { label: 'Home', href: isHome ? '#home' : '/', section: 'home', current: isHome },
-  { label: 'About Us', href: '/about/', section: 'about', current: Astro.url.pathname.replace(/\/$/, '') === '/about' },
-  { label: 'Our Services', href: '/services/', section: 'services', current: Astro.url.pathname.startsWith('/services') },
-  { label: 'Our Work', href: '/our-work/', section: 'projects', current: Astro.url.pathname.replace(/\/$/, '') === '/our-work' },
-  { label: 'Contact', href: '/contact/', section: 'contact', current: Astro.url.pathname.replace(/\/$/, '') === '/contact' },
+  { label: content.navigation.home.label, href: isHome && content.navigation.home.link === '/' ? '#home' : safeLink(content.navigation.home.link), section: 'home', current: isHome },
+  { label: content.navigation.about.label, href: safeLink(content.navigation.about.link), section: 'about', current: Astro.url.pathname.replace(/\/$/, '') === '/about' },
+  { label: content.navigation.services.label, href: safeLink(content.navigation.services.link), section: 'services', current: Astro.url.pathname.startsWith('/services') },
+  { label: content.navigation.projects.label, href: safeLink(content.navigation.projects.link), section: 'projects', current: Astro.url.pathname.replace(/\/$/, '') === '/our-work' },
+  { label: content.navigation.contact.label, href: safeLink(content.navigation.contact.link), section: 'contact', current: Astro.url.pathname.replace(/\/$/, '') === '/contact' },
 ];
 ---
 <div class="topbar">
   <div class="container flex items-center justify-between gap-4">
-    <span class="flex items-center gap-2"><MapPin size={16} aria-hidden="true" /> Proudly serving South Bend & surrounding communities</span>
-    <a href="/contact/#estimate" class="topbar-quote">Let’s bring your outdoor space to life <ArrowUpRight size={15} aria-hidden="true" /></a>
+    <span class="flex items-center gap-2"><MapPin size={16} aria-hidden="true" /> {content.topbar.text}</span>
+    <a href={safeLink(content.topbar.link)} class="topbar-quote">{content.topbar.linkLabel} <ArrowUpRight size={15} aria-hidden="true" /></a>
   </div>
 </div>
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href={isHome ? '#home' : '/'} aria-label="Flores Landscaping home">
-      <Image src={logo} alt="Flores Landscaping" width={480} format="webp" loading="eager" />
+      <Image src={resolvePhoto(content.general.photo).src} alt={content.general.photo.alt} width={480} format="webp" loading="eager"  position={content.general.photo.position} mobilePosition={content.general.photo.mobilePosition} />
     </a>
     <nav class="desktop-nav" aria-label="Main navigation">
       {links.map(link => link.section === 'services' ? (
@@ -31,16 +34,16 @@ const links = [
           <a href={link.href} data-section={link.section} class:list={['nav-primary-link', { active: link.current }]} aria-current={isServicesOverview ? 'page' : undefined}>{link.label}</a>
           <button class="services-nav-toggle" type="button" aria-label="Show service pages" aria-controls="desktop-service-links" aria-expanded="false"><ChevronDown size={16} aria-hidden="true" /></button>
           <div id="desktop-service-links" class="services-dropdown" hidden>
-            <span class="services-dropdown-label">CARE FOR EVERY CORNER</span>
-            <ul>{serviceOfferings.map(({ icon: Icon, ...service }) => <li><a href={`/services/${service.id}/`} aria-current={Astro.url.pathname.replace(/\/$/, '') === `/services/${service.id}` ? 'page' : undefined}><Icon size={20} stroke-width={1.4} aria-hidden="true" />{service.title}</a></li>)}</ul>
-            <a class="services-dropdown-all" href="/services/">VIEW ALL SERVICES <ArrowUpRight size={16} aria-hidden="true" /></a>
+            <span class="services-dropdown-label">{content.general.text}</span>
+            <ul>{serviceOfferings.map(({ icon: Icon, ...service }) => <li><a href={safeLink(service.link)} aria-current={Astro.url.pathname.replace(/\/$/, '') === `/services/${service.id}` ? 'page' : undefined}><Icon size={20} stroke-width={1.4} aria-hidden="true" />{service.title}</a></li>)}</ul>
+            <a class="services-dropdown-all" href={safeLink(content.general.link)}>{content.general.linkLabel} <ArrowUpRight size={16} aria-hidden="true" /></a>
           </div>
         </div>
       ) : <a href={link.href} data-section={link.section} class:list={['nav-primary-link', { active: link.current }]} aria-current={link.current ? 'page' : undefined}>{link.label}</a>)}
     </nav>
-    <a class="header-phone" href="tel:+15743866078">
+    <a class="header-phone" href={phoneHref}>
       <span class="phone-icon"><Phone size={23} stroke-width={1.5} aria-hidden="true" /></span>
-      <span><small>CALL FOR A FREE ESTIMATE</small><strong>(574) 386-6078</strong></span>
+      <span><small>{content.general.text2}</small><strong>{business.primaryPhone}</strong></span>
     </a>
     <button id="menu-toggle" class="menu-toggle" aria-label="Open navigation menu" aria-controls="mobile-nav" aria-expanded="false">
       <Menu class="menu-open-icon" aria-hidden="true" /><X class="menu-close-icon" aria-hidden="true" />
@@ -50,10 +53,10 @@ const links = [
     {links.map(link => link.section === 'services' ? (
       <div class="mobile-services-group" data-nav-disclosure>
         <div class="mobile-services-row"><a href={link.href} class:list={[{ active: link.current }]} aria-current={isServicesOverview ? 'page' : undefined}>{link.label}</a><button type="button" class="services-nav-toggle" aria-label="Show service pages" aria-controls="mobile-service-links" aria-expanded="false"><ChevronDown size={18} aria-hidden="true" /></button></div>
-        <ul id="mobile-service-links" class="mobile-service-links" hidden>{serviceOfferings.map(service => <li><a href={`/services/${service.id}/`} aria-current={Astro.url.pathname.replace(/\/$/, '') === `/services/${service.id}` ? 'page' : undefined}>{service.title}<ArrowUpRight size={15} aria-hidden="true" /></a></li>)}</ul>
+        <ul id="mobile-service-links" class="mobile-service-links" hidden>{serviceOfferings.map(service => <li><a href={safeLink(service.link)} aria-current={Astro.url.pathname.replace(/\/$/, '') === `/services/${service.id}` ? 'page' : undefined}>{service.title}<ArrowUpRight size={15} aria-hidden="true" /></a></li>)}</ul>
       </div>
     ) : <a href={link.href} aria-current={link.current ? 'page' : undefined}>{link.label}<ArrowUpRight size={18} aria-hidden="true" /></a>)}
-    <a class="mobile-call" href="tel:+15743866078"><Phone size={18} aria-hidden="true" /> (574) 386-6078</a>
+    <a class="mobile-call" href={phoneHref}><Phone size={18} aria-hidden="true" /> {business.primaryPhone}</a>
   </nav>
 </header>
 <script>

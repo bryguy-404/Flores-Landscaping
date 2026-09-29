@@ -1,0 +1,110 @@
+{
+  "img-8004": {
+    "title": "A fresh edge by the deck",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8004.jpg",
+      "alt": "Small shrubs and stone beds beside house siding and a deck",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8005": {
+    "title": "Room around the deck",
+    "photo": {
+      "image": "/src/assets/client/deck-stone-bed.jpg",
+      "alt": "Curved stone beds and small shrubs alongside a raised deck",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8006": {
+    "title": "Deck garden details",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8006.jpg",
+      "alt": "A curved stone border around the corner of a raised deck",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8129": {
+    "title": "Lawn care from another angle",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8129.jpg",
+      "alt": "Mowing stripes across a broad lawn, photographed at an angle",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8248": {
+    "title": "A little room to grow",
+    "photo": {
+      "image": "/src/assets/client/front-garden-after.jpg",
+      "alt": "Dark mulch, small shrubs, and a stone border below a blue-shuttered window",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8249": {
+    "title": "A welcoming entry garden",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8249.jpg",
+      "alt": "Small shrubs and fresh mulch beside a house entrance and stone edging",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8361": {
+    "title": "A clearer way through",
+    "photo": {
+      "image": "/src/assets/client/brick-path-after.jpg",
+      "alt": "A refreshed stone bed and small plants beside a curved brick path",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8362": {
+    "title": "Around the garden path",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8362.jpg",
+      "alt": "A curved stone bed with small plants below a wooden enclosure",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8364": {
+    "title": "Path-side details",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-8364.jpg",
+      "alt": "Fresh stone beds and shrubs between brick paving and a fence",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8366": {
+    "title": "A clean finish close to home",
+    "photo": {
+      "image": "/src/assets/client/stone-foundation-bed.jpg",
+      "alt": "A curved stone bed and small shrubs below a house window",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8369": {
+    "title": "The finished garden path",
+    "photo": {
+      "image": "/src/assets/client/finished-path-garden.jpg",
+      "alt": "A tidy planted stone bed beside a curved brick path",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-8289": {
+    "title": "Fresh mulch by the porch",
+    "photo": {
+      "image": "/src/assets/client/garden-work-in-progress.jpg",
+      "alt": "Fresh dark mulch and flowers beside a stone porch, with a person in the background",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  }
+}

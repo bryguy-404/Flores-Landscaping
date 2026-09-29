@@ -1,0 +1,67 @@
+{
+  "seo": {
+    "title": "Our Work & Landscaping Gallery | Flores Landscaping, {{city}}",
+    "description": "Explore Flores Landscaping before-and-afters, project photos, and videos. See lawn care, garden beds, seasonal cleanup, and snow plowing around {{city}}."
+  },
+  "workIntro": {
+    "link": "/",
+    "linkLabel": "Home",
+    "text": "Our work",
+    "eyebrow": "A CLOSER LOOK AT OUR WORK",
+    "heading": "In every yard,",
+    "text2": "there’s possibility.",
+    "paragraph": "A fresh first impression. A more inviting backyard. Details that bring it all together. Take a closer look at the difference thoughtful care can make.",
+    "link2": "#before-after",
+    "linkLabel2": "BEFORE & AFTER",
+    "link3": "#gallery",
+    "linkLabel3": "BROWSE THE GALLERY",
+    "text3": "{{cityUpper}} & NEARBY COMMUNITIES",
+    "link4": "#before-after",
+    "linkLabel4": "transformations",
+    "link5": "#gallery",
+    "linkLabel5": "photos",
+    "link6": "#videos",
+    "linkLabel6": "videos"
+  },
+  "beforeAfter": {
+    "eyebrow": "A LITTLE BEFORE. A BEAUTIFUL AFTER.",
+    "heading": "The same space.",
+    "text": "A fresh start.",
+    "paragraph": "Every transformation has a starting point. See both sides of the story, from overgrown beds to fresh mulch, clean borders, and new planting.",
+    "text2": "Swipe to explore",
+    "paragraph2": "Open any comparison to see both full photos.",
+    "text3": "View",
+    "text4": "more transformations",
+    "text5": "Show fewer transformations"
+  },
+  "gallery": {
+    "eyebrow": "THE FLORES GALLERY",
+    "heading": "Good things grow.",
+    "text": "Take a look around.",
+    "paragraph": "Fresh stripes, welcoming gardens, and the work along the way. Explore the full collection, from the first steps to the finishing touches.",
+    "paragraph2": "Every photo has a story. Tap one for a closer look.",
+    "text2": "View all",
+    "text3": "photos",
+    "link": "#videos",
+    "linkLabel": "WATCH OUR WORK IN ACTION"
+  },
+  "videos": {
+    "eyebrow": "A FEW MOMENTS OUTSIDE",
+    "heading": "Our work.",
+    "text": "In action.",
+    "paragraph": "Fresh cuts, seasonal changes, and a closer look around. Short videos from the spaces we care for, throughout the year.",
+    "text2": "View more videos"
+  },
+  "estimate": {
+    "eyebrow": "A LITTLE INSPIRATION. YOUR NEXT STEP.",
+    "heading": "Picture the possibilities",
+    "text": "for your own yard.",
+    "paragraph": "Tell us about the space you’d love to change. We’ll talk through your ideas and start with a free estimate.",
+    "link": "/services/",
+    "linkLabel": "EXPLORE OUR SERVICES",
+    "text2": "CALL OR TEXT OUR TEAM",
+    "link2": "/contact/#estimate",
+    "linkLabel2": "REQUEST A FREE ESTIMATE",
+    "linkLabel3": "Prefer email? Let’s talk."
+  }
+}

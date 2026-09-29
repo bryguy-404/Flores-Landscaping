@@ -1,0 +1,110 @@
+{
+  "img-1915": {
+    "title": "Summer lawn",
+    "photo": {
+      "image": "/src/assets/client/summer-lawn.jpg",
+      "alt": "Fresh mowing stripes on a lawn beneath mature trees",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-3104": {
+    "title": "A stretch of green",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-3104.jpg",
+      "alt": "Mowing stripes beside a split-rail fence and evergreen trees",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-4354": {
+    "title": "Lawn care in the sunshine",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-4354.jpg",
+      "alt": "Mowing stripes across a sunny lawn, photographed from a mower",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-5253": {
+    "title": "A welcoming entrance",
+    "photo": {
+      "image": "/src/assets/client/front-entry-beds.jpg",
+      "alt": "Dark mulch and trimmed shrubs beside a light-sided home",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-5254": {
+    "title": "Front garden details",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-5254.jpg",
+      "alt": "Neat mulch beds and shrubs around a front porch",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-5267": {
+    "title": "Around the trees",
+    "photo": {
+      "image": "/src/assets/client/red-mulch-border.jpg",
+      "alt": "A long red mulch bed with stone edging beneath mature trees",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-5292": {
+    "title": "Spring garden refreshed",
+    "photo": {
+      "image": "/src/assets/client/spring-bed-refresh.jpg",
+      "alt": "Fresh red mulch around trees and shrubs beside a green spring lawn",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-6621": {
+    "title": "Room to enjoy again",
+    "photo": {
+      "image": "/src/assets/client/leaf-cleanup-after.jpg",
+      "alt": "A cleared backyard lawn around a large tree after leaf cleanup",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7562": {
+    "title": "Spring planting beds",
+    "photo": {
+      "image": "/src/assets/client/brick-building-garden.jpg",
+      "alt": "Fresh dark mulch and green plants beside an arched brick-building window",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7563": {
+    "title": "A garden in bloom",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7563.jpg",
+      "alt": "Spring flowers and green plants in a mulched bed beside an outbuilding",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7564": {
+    "title": "Brick-building garden",
+    "photo": {
+      "image": "/src/assets/client/gallery/img-7564.jpg",
+      "alt": "A mulched planting bed with spring growth beside a brick building",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "img-7604": {
+    "title": "A fresh stone finish",
+    "photo": {
+      "image": "/src/assets/client/rounded-border-shrubs.jpg",
+      "alt": "Rounded shrubs above a dark stone bed with a defined edge",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  }
+}

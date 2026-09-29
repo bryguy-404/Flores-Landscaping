@@ -1,0 +1,51 @@
+{
+  "offeringHero": {
+    "link": "/",
+    "linkLabel": "Home",
+    "link2": "/services/",
+    "linkLabel2": "Our services",
+    "linkLabel3": "GET A FREE ESTIMATE",
+    "link3": "#service-details",
+    "linkLabel4": "TAKE A CLOSER LOOK",
+    "text": "FLORES LANDSCAPING",
+    "text2": "FAMILY OWNED",
+    "text3": "LICENSED & INSURED",
+    "text4": "FREE ESTIMATES"
+  },
+  "general": {
+    "eyebrow": "CARE FOR EVERY CORNER",
+    "heading": "Our services",
+    "heading2": "A little advice.",
+    "heading3": "A good place to start.",
+    "paragraph": "Tell us about your property. We’re happy to talk it through.",
+    "link": "/services/",
+    "linkLabel": "ALL SERVICES"
+  },
+  "serviceDetails": {
+    "eyebrow": "THE DIFFERENCE IS IN THE CARE"
+  },
+  "offeringProject": {
+    "eyebrow": "LET’S START WITH YOUR SPACE"
+  },
+  "offeringFaq": {
+    "eyebrow": "GOOD TO KNOW",
+    "heading": "Before we",
+    "text": "get started."
+  },
+  "offeringRelated": {
+    "eyebrow": "A LITTLE MORE CARE",
+    "heading": "Good things",
+    "text": "grow together.",
+    "link": "/services/",
+    "linkLabel": "EXPLORE ALL SERVICES"
+  },
+  "estimate": {
+    "eyebrow": "YOUR LOCAL FLORES TEAM",
+    "paragraph": "Call or text to tell us about your property.",
+    "paragraph2": "Your estimate is free. The conversation is easy.",
+    "text": "{{areaDots}}",
+    "text2": "CALL OR TEXT OUR TEAM",
+    "linkLabel": "REQUEST A FREE ESTIMATE",
+    "linkLabel2": "Prefer email? Let’s talk."
+  }
+}

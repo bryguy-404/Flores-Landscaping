@@ -1,0 +1,83 @@
+{
+  "overview": {
+    "title": "Spring & Fall Cleanup",
+    "summary": "A little seasonal care goes a long way toward a beautiful yard.",
+    "description": "Help your yard turn the page with the seasons. From spring freshening to fall cleanup, we give outdoor spaces the attention they need as the weather changes.",
+    "highlights": {
+      "item1": "Spring cleanup",
+      "item2": "Fall cleanup",
+      "item3": "Seasonal yard care"
+    },
+    "caption": "Ready for what comes next.",
+    "link": "/services/seasonal-cleanup/"
+  },
+  "detail": {
+    "headline": "A new season.",
+    "accent": "A fresh-looking yard.",
+    "introduction": "Give your outdoor space some attention as the seasons change. Our spring and fall cleanup services help your yard feel cared for from one chapter to the next.",
+    "sectionTitle": "Turn the page.",
+    "sectionAccent": "Enjoy your space.",
+    "sectionCopy": "After a long winter or a busy growing season, a yard can be ready for a little extra care. Tell us what needs attention, and we’ll discuss a seasonal cleanup for your property.",
+    "focus": {
+      "item1": {
+        "title": "A spring freshening",
+        "copy": "Start the growing season with attention to the outdoor areas that need a refresh after winter."
+      },
+      "item2": {
+        "title": "A fall tidy-up",
+        "copy": "Give your property a cared-for finish as the growing season winds down and the weather changes."
+      },
+      "item3": {
+        "title": "Care where it’s needed",
+        "copy": "Point out the lawns, planting areas, and other parts of your yard you want us to consider in the cleanup."
+      }
+    },
+    "planningTitle": "A few photos help tell the story.",
+    "planningCopy": "Show us the areas you’d like tidied and describe any leaves or accumulated yard debris. Ask which cleanup tasks and removal arrangements are included when reviewing your estimate.",
+    "faqs": {
+      "item1": {
+        "question": "Do you offer both spring and fall cleanups?",
+        "answer": "Yes. Spring and fall cleanup are both part of the services offered by Flores Landscaping."
+      },
+      "item2": {
+        "question": "What should I include in my request?",
+        "answer": "Share your address, current photos, and the areas that need attention. Mention any particular cleanup tasks you want to discuss so the scope can be clear from the start."
+      },
+      "item3": {
+        "question": "Can I also discuss trimming or fresh mulch?",
+        "answer": "Yes. We offer trimming, mulch and planting, and landscaping in addition to seasonal cleanup. Mention any related work when you contact us."
+      }
+    },
+    "estimateTitle": "Help your yard feel",
+    "estimateAccent": "ready for the season."
+  },
+  "photos": {
+    "homeCard": {
+      "image": "/src/assets/garden-bed.jpg",
+      "alt": "Freshly maintained planting bed in a green lawn",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "hero": {
+      "image": "/src/assets/client/spring-bed-refresh.jpg",
+      "alt": "A refreshed mulch bed around trees and shrubs in spring",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "detail": {
+      "image": "/src/assets/client/finished-path-garden.jpg",
+      "alt": "A tidy planted stone bed beside a curved brick path",
+      "position": "50% 60%",
+      "mobilePosition": "50% 60%"
+    },
+    "preview": {
+      "image": "/src/assets/client/spring-bed-refresh.jpg",
+      "alt": "A refreshed mulch bed around trees and shrubs in spring",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "links": {
+    "estimate": "/contact/?service=seasonal-cleanup#estimate"
+  }
+}

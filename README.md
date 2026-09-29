@@ -133,3 +133,7 @@ Service areas, experience, licensing/insurance, free estimates, email, and both 
 - [Astro deployment on Cloudflare](https://docs.astro.build/en/guides/deploy/cloudflare/)
 - [Astro Tailwind integration](https://docs.astro.build/en/guides/styling/#tailwind)
 - [Resend with Cloudflare Workers](https://resend.com/docs/send-with-cloudflare-workers)
+
+## Pages CMS
+
+The existing website content is editable through the root `.pages.yml` configuration. Start with [PAGES_CMS.md](PAGES_CMS.md) for the branch-based review workflow, editable sections, photo replacement/cropping, and client access. Content lives in `src/content/`; templates, routes, form handling, and Google review data remain in code. `npm run build` validates the content before building, and `npm run test:cms` exercises content edits and restores the originals.

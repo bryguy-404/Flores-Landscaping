@@ -1,0 +1,83 @@
+{
+  "overview": {
+    "title": "Mulch & Planting",
+    "summary": "A fresh layer of mulch and the right plants make all the difference.",
+    "description": "Bring color, texture, and a cared-for finish to your garden beds. Fresh mulch and thoughtfully placed plants can give familiar outdoor spaces a whole new feel.",
+    "highlights": {
+      "item1": "Fresh mulch",
+      "item2": "Flowers & plants",
+      "item3": "Garden bed refreshes"
+    },
+    "caption": "Beautiful down to the details.",
+    "link": "/services/mulch-planting/"
+  },
+  "detail": {
+    "headline": "A little color.",
+    "accent": "A whole new feeling.",
+    "introduction": "Refresh the beds you already love or bring a little life to a space that needs attention. Mulch and planting add the details that make a landscape feel cared for.",
+    "sectionTitle": "Fresh layers.",
+    "sectionAccent": "Thoughtful details.",
+    "sectionCopy": "Sometimes the smallest parts of a yard make the biggest impression. A refreshed bed, a new planting, or a touch of seasonal color can help the whole outdoor space feel more inviting.",
+    "focus": {
+      "item1": {
+        "title": "A freshly mulched finish",
+        "copy": "Refresh the appearance of your garden beds with mulch that brings the planting areas together."
+      },
+      "item2": {
+        "title": "Plants with a place to shine",
+        "copy": "Talk with us about flowers and plants for the areas you want to brighten or give a fresh look."
+      },
+      "item3": {
+        "title": "A garden bed refresh",
+        "copy": "Bring attention back to established beds and the details around the plants already in your landscape."
+      }
+    },
+    "planningTitle": "Tell us what you’d like to bring to life.",
+    "planningCopy": "Send photos of the beds, mention any plants you’d like to keep, and share your preferred colors or overall look. We can discuss materials and planting choices as part of your estimate.",
+    "faqs": {
+      "item1": {
+        "question": "Can you refresh existing garden beds?",
+        "answer": "Garden bed refreshes fit within our mulch, planting, and landscaping services. Send us photos and tell us what you’d like to change so we can discuss the work."
+      },
+      "item2": {
+        "question": "Can I share plant or mulch preferences?",
+        "answer": "Yes. Bring your ideas, reference photos, and any material preferences to the conversation. Specific selections can be discussed before the project is agreed."
+      },
+      "item3": {
+        "question": "Can I request mulch or planting separately?",
+        "answer": "We offer both mulch and planting. Tell us which service you need, or whether you’d like to discuss them together, when requesting your estimate."
+      }
+    },
+    "estimateTitle": "A fresh look starts",
+    "estimateAccent": "with a little care."
+  },
+  "photos": {
+    "homeCard": {
+      "image": "/src/assets/flower-garden.jpg",
+      "alt": "Colorful flowering plants in a landscaped garden bed",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "hero": {
+      "image": "/src/assets/client/yellow-flower-border.jpg",
+      "alt": "Yellow flowers and rounded shrubs in a fresh dark mulch bed",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "detail": {
+      "image": "/src/assets/client/evergreen-mulch-island.jpg",
+      "alt": "An island of evergreen shrubs surrounded by red mulch",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "preview": {
+      "image": "/src/assets/client/fresh-courtyard-mulch.jpg",
+      "alt": "Fresh dark mulch around courtyard trees and shrubs",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    }
+  },
+  "links": {
+    "estimate": "/contact/?service=mulch-planting#estimate"
+  }
+}

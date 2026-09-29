@@ -1,11 +1,11 @@
 ---
-import { Image } from 'astro:assets';
+import Image from './CmsImage.astro';
 import type { ClientPhoto } from '../data/client-photos';
 interface Props extends ClientPhoto { eager?: boolean; }
-const { src, alt, position = '50% 50%', eager = false } = Astro.props;
+const { src, alt, position = '50% 50%', mobilePosition = position, eager = false } = Astro.props;
 ---
 <div class="site-photo" style={`--photo-position: ${position}`}>
-  <Image src={src} alt={alt} width={1200} widths={[480, 800, 1200]} sizes="(max-width: 767px) 100vw, 50vw" format="webp" loading={eager ? 'eager' : 'lazy'} />
+  <Image src={src} alt={alt} position={position} mobilePosition={mobilePosition} width={1200} widths={[480, 800, 1200]} sizes="(max-width: 767px) 100vw, 50vw" format="webp" loading={eager ? 'eager' : 'lazy'} />
 </div>
 <style>
   .site-photo { position: relative; min-height: 290px; overflow: hidden; background: #eae5df; }

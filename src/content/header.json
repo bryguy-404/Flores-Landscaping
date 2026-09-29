@@ -1,0 +1,41 @@
+{
+  "topbar": {
+    "text": "Proudly serving {{city}} & surrounding communities",
+    "link": "/contact/#estimate",
+    "linkLabel": "Let’s bring your outdoor space to life"
+  },
+  "general": {
+    "photo": {
+      "image": "/src/assets/flores-logo-transparent.png",
+      "alt": "Flores Landscaping",
+      "position": "50% 50%",
+      "mobilePosition": "50% 50%"
+    },
+    "text": "CARE FOR EVERY CORNER",
+    "link": "/services/",
+    "linkLabel": "VIEW ALL SERVICES",
+    "text2": "CALL FOR A FREE ESTIMATE"
+  },
+  "navigation": {
+    "home": {
+      "label": "Home",
+      "link": "/"
+    },
+    "about": {
+      "label": "About Us",
+      "link": "/about/"
+    },
+    "services": {
+      "label": "Our Services",
+      "link": "/services/"
+    },
+    "projects": {
+      "label": "Our Work",
+      "link": "/our-work/"
+    },
+    "contact": {
+      "label": "Contact",
+      "link": "/contact/"
+    }
+  }
+}
