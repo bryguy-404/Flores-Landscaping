@@ -87,7 +87,7 @@ Resend will need a verified sending domain, a chosen recipient address, and a `R
 
 ## Assets and content
 
-The supplied original logo is preserved in `src/assets/flores-logo.png` and remains in the dark footer. The white header uses an AI-assisted transparent preview adaptation in `src/assets/flores-logo-transparent.png`; the exact editing prompt is recorded in `docs/logo-edit.md`. An original vector master from the designer can replace this raster adaptation if one becomes available.
+The client-supplied `IMG_8651.PNG` is preserved unchanged in `src/assets/flores-logo.png` and used in the header, footer, and browser icon across all pages. Astro creates optimized web images while retaining the source transparency. Source details are recorded in `docs/logo-edit.md`.
 
 Initial photos were selected from the existing Flores website with the user’s permission; URLs are recorded in `docs/image-sources.json`. The client supplied 83 additional photos in six batches. The gallery includes all 83 source files, including the two originals replacing the existing collage. `docs/photo-review/placements.json` maps each selection to its original filename and placement; the original Desktop folders are untouched. Web copies under `src/assets/client/` are resized with metadata removed. The inspection sheets and catalog under `docs/photo-review/` are not part of the public build. The site generates optimized WebP files at build time. Confirm the rights to any third-party-looking images, particularly the trimming photograph, before launch.
 

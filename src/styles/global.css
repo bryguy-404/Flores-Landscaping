@@ -259,7 +259,7 @@ em { color: var(--red); font-style: normal; }
 
 .site-footer { background: #171717; color: #b5b5b5; }
 .footer-grid { padding-block: 65px 55px; display: grid; grid-template-columns: 1.05fr .8fr 1.1fr 1.45fr; gap: 40px; }
-.footer-brand img { width: 195px; height: 118px; object-fit: cover; border-radius: 2px; margin-top: -25px; }
+.footer-brand img { width: 195px; height: 118px; object-fit: contain; border-radius: 2px; margin-top: -25px; }
 .footer-brand p { font-size: .73rem; margin-top: 14px; line-height: 1.9; }
 .site-footer h3 { font-size: 1.03rem; color: white; letter-spacing: 0; margin-bottom: 24px; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
