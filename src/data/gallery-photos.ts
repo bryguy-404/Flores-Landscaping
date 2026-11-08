@@ -1,4 +1,14 @@
 import type { ImageMetadata } from 'astro';
+import backyardLawnCollage from '../assets/client/november-2026/backyard-lawn-collage.jpg';
+import patioPathCollage from '../assets/client/november-2026/patio-path-collage.jpg';
+import frontPorchStoneCollage from '../assets/client/november-2026/front-porch-stone-collage.jpg';
+import windowStoneBorderCollage from '../assets/client/november-2026/window-stone-border-collage.jpg';
+import sideYardStoneCollage from '../assets/client/november-2026/side-yard-stone-collage.jpg';
+import frontEntryStoneCollage from '../assets/client/november-2026/front-entry-stone-collage.jpg';
+import autumnLawnBefore from '../assets/client/november-2026/autumn-lawn-before.jpg';
+import autumnLawnAfter from '../assets/client/november-2026/autumn-lawn-after.jpg';
+import brickGardenBefore from '../assets/client/november-2026/brick-garden-before.jpg';
+import brickGardenAfter from '../assets/client/november-2026/brick-garden-after.png';
 import photo7788 from '../assets/client/tree-lined-lawn.jpg';
 import photo7620 from '../assets/landscape-beds.jpg';
 import photo8291 from '../assets/client/courtyard-after-mulch.jpg';
@@ -84,11 +94,23 @@ import photo8285 from '../assets/client/courtyard-garden.jpg';
 import photo8407 from '../assets/client/gallery/img-8407.jpg';
 import photo8409 from '../assets/client/gallery/img-8409.jpg';
 
-export interface GalleryPhoto { id: string; category: string; stage: 'finished' | 'before' | 'progress' | 'project'; title: string; alt: string; src: ImageMetadata; }
+export interface GalleryPhoto {
+  id: string; category: string; stage: 'finished' | 'before' | 'progress' | 'project' | 'comparison';
+  title: string; alt: string; src: ImageMetadata;
+  before?: { src: ImageMetadata; alt: string };
+}
 
-// All 83 client batch photos plus the separately supplied homepage lawn photo.
-// Source checksums and reuse mapping: docs/photo-review/gallery-manifest.json.
+// Eight November additions followed by the original 84 gallery photos.
+// Source checksums and pair evidence: docs/photo-review/*manifest.json.
 export const galleryPhotos: GalleryPhoto[] = [
+  { id: 'backyard-lawn-collage', category: 'landscaping', stage: 'comparison', title: 'A fresh start for the backyard', alt: 'Client before-and-after collage showing bare backyard ground followed by a green lawn beside a wooden fence', src: backyardLawnCollage },
+  { id: 'patio-path-collage', category: 'landscaping', stage: 'comparison', title: 'A new path beside the patio', alt: 'Client before-and-after collage showing grass along a covered patio replaced with a pebble bed and stepping stones', src: patioPathCollage },
+  { id: 'front-porch-stone-collage', category: 'garden-beds', stage: 'comparison', title: 'A stone finish for the front garden', alt: 'Client before-and-after collage showing a bare bed around shrubs beside a brick porch followed by a decorative stone finish', src: frontPorchStoneCollage },
+  { id: 'window-stone-border-collage', category: 'garden-beds', stage: 'comparison', title: 'A refreshed border beneath the window', alt: 'Client before-and-after collage showing a bed beneath rounded shrubs and a tall window refreshed with decorative stone', src: windowStoneBorderCollage },
+  { id: 'side-yard-stone-collage', category: 'garden-beds', stage: 'comparison', title: 'Clean lines along the side yard', alt: 'Client before-and-after collage showing a narrow bed along house siding filled with decorative stone', src: sideYardStoneCollage },
+  { id: 'front-entry-stone-collage', category: 'garden-beds', stage: 'comparison', title: 'A welcoming front entrance', alt: 'Client before-and-after collage showing a weedy front-entry bed refreshed with dark stone and three small shrubs', src: frontEntryStoneCollage },
+  { id: 'autumn-lawn-cleanup', category: 'lawn-care', stage: 'comparison', title: 'Fall leaves cleared. Fresh stripes revealed.', alt: 'Cleared lawn with fresh mowing stripes beside the same white house and curved driveway after fall cleanup', src: autumnLawnAfter, before: { src: autumnLawnBefore, alt: 'Fallen leaves covering the front lawn beside a white house and curved driveway before fall cleanup' } },
+  { id: 'brick-garden-cleanup', category: 'garden-beds', stage: 'comparison', title: 'A garden ready for the next season', alt: 'Cleared garden bed with cut-back plants and a defined lawn edge beside the same brick building after seasonal cleanup', src: brickGardenAfter, before: { src: brickGardenBefore, alt: 'Overgrown plants and fallen leaves in a curved garden bed beside a brick building before seasonal cleanup' } },
   { id: 'img-7788', category: 'lawn-care', stage: 'finished', title: "A tree-lined lawn", alt: "Long mowing stripes framed by mature trees and a home", src: photo7788 },
   { id: 'img-7620', category: 'landscaping', stage: 'finished', title: "A welcoming front yard", alt: "A green lawn framed by curved stone beds and a brick home", src: photo7620 },
   { id: 'img-8291', category: 'garden-beds', stage: 'finished', title: "Courtyard refreshed", alt: "Fresh mulch in garden beds around a sunny courtyard lawn", src: photo8291 },

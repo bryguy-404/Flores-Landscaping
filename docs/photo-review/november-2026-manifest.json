@@ -1,0 +1,120 @@
+{
+  "received": "2026-11-08",
+  "assets": [
+    {
+      "source": "BD099123-0EC0-4FEC-8C12-4522CA0A119B.jpeg",
+      "sourceSha256": "4cdf36f947d100036c9980251fdd8764e96c19b5e3703449750a8cd1bcdb638d",
+      "asset": "src/assets/client/november-2026/backyard-lawn-collage.jpg",
+      "width": 2048,
+      "height": 1149,
+      "bytes": 833700,
+      "description": "Client-supplied before-and-after collage",
+      "processing": "Copied unchanged; Astro generates optimized web images."
+    },
+    {
+      "source": "8935054B-64BB-47AD-BFAC-017597C963C4.jpeg",
+      "sourceSha256": "7f481594e98ee0deda1303bea8a62fcee5e1ffd2464f38f31354c66ccb23cb9b",
+      "asset": "src/assets/client/november-2026/patio-path-collage.jpg",
+      "width": 2048,
+      "height": 1149,
+      "bytes": 905069,
+      "description": "Client-supplied before-and-after collage",
+      "processing": "Copied unchanged; Astro generates optimized web images."
+    },
+    {
+      "source": "F20E7444-BF1E-40F9-9F58-B97578F23CF6.jpeg",
+      "sourceSha256": "e7bb3d35e6ddcebc0e0f72ae6adaf24e49b843d7b420323edd3c1610d2624654",
+      "asset": "src/assets/client/november-2026/front-porch-stone-collage.jpg",
+      "width": 2048,
+      "height": 1134,
+      "bytes": 810481,
+      "description": "Client-supplied before-and-after collage",
+      "processing": "Copied unchanged; Astro generates optimized web images."
+    },
+    {
+      "source": "686142B3-1F4A-4E4D-9D2F-B7F64B70E47A.jpeg",
+      "sourceSha256": "8bce67032adaddb7bca1fbc8fb91729c861209bf42feb7af5797bd52e7611a62",
+      "asset": "src/assets/client/november-2026/window-stone-border-collage.jpg",
+      "width": 2048,
+      "height": 1155,
+      "bytes": 851107,
+      "description": "Client-supplied before-and-after collage",
+      "processing": "Copied unchanged; Astro generates optimized web images."
+    },
+    {
+      "source": "3538C31F-CF9D-4457-A9CE-9503396CF379.jpeg",
+      "sourceSha256": "7f7bcf625714defe3ce5db8d35f378cf725ccbc44fbe86b13494c1afb514c9c5",
+      "asset": "src/assets/client/november-2026/side-yard-stone-collage.jpg",
+      "width": 2048,
+      "height": 1145,
+      "bytes": 868517,
+      "description": "Client-supplied before-and-after collage",
+      "processing": "Copied unchanged; Astro generates optimized web images."
+    },
+    {
+      "source": "D7048969-FD5B-460C-8BCB-9DD7CA6636E1.jpeg",
+      "sourceSha256": "6d35603d7f40ca676e08180af695ff73f4c6c7d8e993412bb6b799dbdc408310",
+      "asset": "src/assets/client/november-2026/front-entry-stone-collage.jpg",
+      "width": 2048,
+      "height": 1146,
+      "bytes": 807786,
+      "description": "Client-supplied before-and-after collage",
+      "processing": "Copied unchanged; Astro generates optimized web images."
+    },
+    {
+      "source": "EE994E5E-1DC4-4F73-9871-DE79CFD8C129.heic",
+      "sourceSha256": "464462c433d24a22b1af034e4eb9df3a5b98050d8ca6d3df00888f94b529d69b",
+      "asset": "src/assets/client/november-2026/autumn-lawn-before.jpg",
+      "width": 1650,
+      "height": 2200,
+      "bytes": 1571913,
+      "description": "Before: leaves covering the lawn beside the curved driveway",
+      "processing": "HEIC converted to JPEG with macOS sips, then auto-oriented and resized inside 2200 × 2200 pixels with metadata removed."
+    },
+    {
+      "source": "4E9C75BA-B1E8-4DC6-909F-513CBECEBE59.heic",
+      "sourceSha256": "3af79798368803a7c5cefd35920f73038bd8ff5607f6cdccaee29945e784f1b3",
+      "asset": "src/assets/client/november-2026/autumn-lawn-after.jpg",
+      "width": 1650,
+      "height": 2200,
+      "bytes": 1555640,
+      "description": "After: cleared lawn with mowing stripes beside the same house",
+      "processing": "HEIC converted to JPEG with macOS sips, then auto-oriented and resized inside 2200 × 2200 pixels with metadata removed."
+    },
+    {
+      "source": "24ED5836-CA11-4F05-ADCF-A7B8B86DF2ED.heic",
+      "sourceSha256": "66098a1b15754466b6fa6d3616a8869323dcef8779ddcd1e047acc82c4784253",
+      "asset": "src/assets/client/november-2026/brick-garden-before.jpg",
+      "width": 1650,
+      "height": 2200,
+      "bytes": 1706038,
+      "description": "Before: overgrown planting bed and fallen leaves beside the brick building",
+      "processing": "HEIC converted to JPEG with macOS sips, then auto-oriented and resized inside 2200 × 2200 pixels with metadata removed."
+    },
+    {
+      "source": "D572FEC9-515A-41E9-B272-B6BCD9D212B0.png",
+      "sourceSha256": "169135e114122cfc66df3bd58becce0f8c6bc2e18a9d3066e17a66e7eae90925",
+      "asset": "src/assets/client/november-2026/brick-garden-after.png",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 4634330,
+      "description": "After: cleared bed, cut-back plants, and a defined lawn edge by the same building",
+      "processing": "Copied unchanged; Astro generates optimized web images."
+    }
+  ],
+  "pairs": [
+    {
+      "id": "autumn-lawn-cleanup",
+      "before": "EE994E5E-1DC4-4F73-9871-DE79CFD8C129.heic",
+      "after": "4E9C75BA-B1E8-4DC6-909F-513CBECEBE59.heic",
+      "evidence": "Same white house, porch, curved driveway, fence, and trees. Before shows fallen leaves; after shows cleared grass and mowing stripes."
+    },
+    {
+      "id": "brick-garden-cleanup",
+      "before": "24ED5836-CA11-4F05-ADCF-A7B8B86DF2ED.heic",
+      "after": "D572FEC9-515A-41E9-B272-B6BCD9D212B0.png",
+      "evidence": "Same brick outbuilding, glass-block windows, roof-mounted camera, brick paving, and curved bed edge. Before shows overgrown plants and leaves; after shows cleared soil and cut-back plants."
+    }
+  ],
+  "presentation": "Six client collages remain intact. Four individual photos appear as two labeled side-by-side gallery cards; opening either card shows both full photos."
+}

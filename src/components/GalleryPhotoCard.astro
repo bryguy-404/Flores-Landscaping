@@ -1,0 +1,43 @@
+---
+import { Image, getImage } from 'astro:assets';
+import { Expand } from '@lucide/astro';
+import type { GalleryPhoto } from '../data/gallery-photos';
+
+interface Props { photo: GalleryPhoto; }
+const { photo } = Astro.props;
+const stageLabels = { before: 'Before', progress: 'In progress', finished: 'Finished work', project: 'Project detail', comparison: 'Before & after' };
+const panes = photo.before
+  ? [{ ...photo.before, label: 'Before' }, { src: photo.src, alt: photo.alt, label: 'After' }]
+  : [{ src: photo.src, alt: photo.alt, label: '' }];
+const fullImages = await Promise.all(panes.map(({ src }) => getImage({
+  src, width: Math.min(src.width, Math.round(1600 * src.width / Math.max(src.width, src.height))), format: 'webp', quality: 80,
+})));
+const ratio = panes.reduce((total, { src }) => total + src.width / src.height, 0);
+const full = fullImages[fullImages.length - 1].src;
+const beforeFull = photo.before ? fullImages[0].src : undefined;
+---
+<article class="work-gallery-card" data-gallery-category={photo.category} data-gallery-stage={photo.stage} data-gallery-id={photo.id} data-gallery-ratio={ratio}>
+  <a class:list={['work-gallery-photo', { 'work-gallery-photo-pair': !!photo.before }]} style={`aspect-ratio: ${ratio}`} href={full} data-photo-open data-photo-gallery data-photo-title={photo.title} data-photo-caption={stageLabels[photo.stage]} data-photo-alt={photo.alt} data-photo-before={beforeFull} data-photo-before-alt={photo.before?.alt} aria-label={`Enlarge ${photo.title} — ${stageLabels[photo.stage]}`}>
+    {photo.before ? panes.map(pane => (
+      <div class="gallery-pair-pane" style={`flex: ${pane.src.width / pane.src.height}`}>
+        <Image src={pane.src} alt={pane.alt} width={480} widths={[160, 240, 320, 480]} sizes="(max-width: 767px) 22vw, (max-width: 1023px) 15vw, 12vw" format="webp" loading="lazy" />
+        <span class="gallery-pair-label">{pane.label}</span>
+      </div>
+    )) : (
+      <Image src={photo.src} alt={photo.alt} width={Math.min(800, photo.src.width)} widths={[320, 480, 640, 800].filter(width => width <= photo.src.width)} sizes="(max-width: 767px) 45vw, (max-width: 1023px) 30vw, 25vw" format="webp" loading="lazy" />
+    )}
+    {!photo.before && photo.stage !== 'finished' && <span class="work-gallery-stage">{stageLabels[photo.stage]}</span>}
+    <span class="work-gallery-enlarge" aria-hidden="true"><Expand size={18} /></span>
+  </a>
+</article>
+
+<style>
+  .work-gallery-photo-pair { display: flex; background: #202020; }
+  .gallery-pair-pane { position: relative; min-width: 0; height: 100%; overflow: hidden; }
+  .gallery-pair-pane + .gallery-pair-pane::before { content: ''; position: absolute; z-index: 1; inset: 0 auto 0 0; width: 2px; background: #fff; }
+  .gallery-pair-label { position: absolute; bottom: 8px; left: 8px; padding: 3px 7px; border-radius: 3px; background: #242020e6; color: white; font-size: .59rem; line-height: 1.5; }
+  .work-gallery-photo-pair:hover img { transform: none; }
+  @media(max-width: 767px) {
+    .gallery-pair-label { bottom: 6px; left: 6px; padding: 2px 5px; font-size: .53rem; }
+  }
+</style>

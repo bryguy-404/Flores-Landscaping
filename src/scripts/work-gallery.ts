@@ -11,7 +11,8 @@ if (galleryGrid && galleryFilters && galleryStatus && galleryMore) {
   let expanded = false;
   let frame = 0;
   const matchingCards = () => galleryCards.filter(card => category === 'all' ||
-    (category === 'progress' ? ['before', 'progress'].includes(card.dataset.galleryStage || '') : card.dataset.galleryCategory === category));
+    (category === 'comparison' ? card.dataset.galleryStage === 'comparison' :
+      category === 'progress' ? ['before', 'progress'].includes(card.dataset.galleryStage || '') : card.dataset.galleryCategory === category));
 
   // Place complete photos in the shortest column. Intrinsic ratios reserve the
   // space before lazy-loaded images arrive, keeping the layout stable.

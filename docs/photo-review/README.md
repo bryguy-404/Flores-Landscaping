@@ -1,4 +1,8 @@
-# Flores photo review — updated September 26, 2026
+# Flores photo review — updated November 8, 2026
+
+The gallery now has **92 entries**: the original 84 photos, six client-edited before-and-after collages, and two new paired comparisons made from four individual photos. The eight additions appear first and can be viewed together using the **Before & after** filter. The six supplied collages retain their original composition. Each new pair appears side by side as one gallery item and opens both full photos in the existing viewer. Sources, checksums, conversion details, and visual pairing evidence are recorded in `november-2026-manifest.json`.
+
+The new pairs show a fall lawn cleanup at a white house and a seasonal garden cleanup beside a brick building. The original Photos library files are untouched. The following sections retain the September collection review.
 
 All **83 photos in six client batches**, plus the separately supplied **IMG_8128**, are now in the Our Work gallery: **84 unique photos**. The original files are unchanged and verified against their recorded SHA-256 checksums. Existing site assets are reused wherever they match; 37 additional web copies were prepared. All new copies are oriented, limited to a 2,200-pixel edge and stripped of embedded metadata. Embedded metadata was also removed losslessly from three reused website files, with identical decoded pixels.
 

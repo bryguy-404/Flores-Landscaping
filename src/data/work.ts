@@ -19,6 +19,7 @@ export const comparisons = [
 ];
 export const galleryCategories = [
   { id: 'all', label: 'All work' },
+  { id: 'comparison', label: 'Before & after' },
   { id: 'lawn-care', label: 'Lawn care' },
   { id: 'landscaping', label: 'Landscaping' },
   { id: 'garden-beds', label: 'Garden beds' },
